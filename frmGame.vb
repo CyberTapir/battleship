@@ -10,9 +10,17 @@
     ''' </summary>
     Dim opponentBoardArray(,) As PictureBox
 
-
+    ''' <summary>
+    ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ''' Create the control array to access items by coordinate
         initialiseControlArray()
+
+
     End Sub
 
 
@@ -120,14 +128,124 @@
         playerBoardArray(10, 8) = picPlayerJ8
         playerBoardArray(10, 9) = picPlayerJ9
         playerBoardArray(10, 10) = picPlayerJ10
+        opponentBoardArray(1, 1) = picOppA1
+        opponentBoardArray(1, 2) = picOppA2
+        opponentBoardArray(1, 3) = picOppA3
+        opponentBoardArray(1, 4) = picOppA4
+        opponentBoardArray(1, 5) = picOppA5
+        opponentBoardArray(1, 6) = picOppA6
+        opponentBoardArray(1, 7) = picOppA7
+        opponentBoardArray(1, 8) = picOppA8
+        opponentBoardArray(1, 9) = picOppA9
+        opponentBoardArray(1, 10) = picOppA10
+        opponentBoardArray(2, 1) = picOppB1
+        opponentBoardArray(2, 2) = picOppB2
+        opponentBoardArray(2, 3) = picOppB3
+        opponentBoardArray(2, 4) = picOppB4
+        opponentBoardArray(2, 5) = picOppB5
+        opponentBoardArray(2, 6) = picOppB6
+        opponentBoardArray(2, 7) = picOppB7
+        opponentBoardArray(2, 8) = picOppB8
+        opponentBoardArray(2, 9) = picOppB9
+        opponentBoardArray(2, 10) = picOppB10
+        opponentBoardArray(3, 1) = picOppC1
+        opponentBoardArray(3, 2) = picOppC2
+        opponentBoardArray(3, 3) = picOppC3
+        opponentBoardArray(3, 4) = picOppC4
+        opponentBoardArray(3, 5) = picOppC5
+        opponentBoardArray(3, 6) = picOppC6
+        opponentBoardArray(3, 7) = picOppC7
+        opponentBoardArray(3, 8) = picOppC8
+        opponentBoardArray(3, 9) = picOppC9
+        opponentBoardArray(3, 10) = picOppC10
+        opponentBoardArray(4, 1) = picOppD1
+        opponentBoardArray(4, 2) = picOppD2
+        opponentBoardArray(4, 3) = picOppD3
+        opponentBoardArray(4, 4) = picOppD4
+        opponentBoardArray(4, 5) = picOppD5
+        opponentBoardArray(4, 6) = picOppD6
+        opponentBoardArray(4, 7) = picOppD7
+        opponentBoardArray(4, 8) = picOppD8
+        opponentBoardArray(4, 9) = picOppD9
+        opponentBoardArray(4, 10) = picOppD10
+        opponentBoardArray(5, 1) = picOppE1
+        opponentBoardArray(5, 2) = picOppE2
+        opponentBoardArray(5, 3) = picOppE3
+        opponentBoardArray(5, 4) = picOppE4
+        opponentBoardArray(5, 5) = picOppE5
+        opponentBoardArray(5, 6) = picOppE6
+        opponentBoardArray(5, 7) = picOppE7
+        opponentBoardArray(5, 8) = picOppE8
+        opponentBoardArray(5, 9) = picOppE9
+        opponentBoardArray(5, 10) = picOppE10
+        opponentBoardArray(6, 1) = picOppF1
+        opponentBoardArray(6, 2) = picOppF2
+        opponentBoardArray(6, 3) = picOppF3
+        opponentBoardArray(6, 4) = picOppF4
+        opponentBoardArray(6, 5) = picOppF5
+        opponentBoardArray(6, 6) = picOppF6
+        opponentBoardArray(6, 7) = picOppF7
+        opponentBoardArray(6, 8) = picOppF8
+        opponentBoardArray(6, 9) = picOppF9
+        opponentBoardArray(6, 10) = picOppF10
+        opponentBoardArray(7, 1) = picOppG1
+        opponentBoardArray(7, 2) = picOppG2
+        opponentBoardArray(7, 3) = picOppG3
+        opponentBoardArray(7, 4) = picOppG4
+        opponentBoardArray(7, 5) = picOppG5
+        opponentBoardArray(7, 6) = picOppG6
+        opponentBoardArray(7, 7) = picOppG7
+        opponentBoardArray(7, 8) = picOppG8
+        opponentBoardArray(7, 9) = picOppG9
+        opponentBoardArray(7, 10) = picOppG10
+        opponentBoardArray(8, 1) = picOppH1
+        opponentBoardArray(8, 2) = picOppH2
+        opponentBoardArray(8, 3) = picOppH3
+        opponentBoardArray(8, 4) = picOppH4
+        opponentBoardArray(8, 5) = picOppH5
+        opponentBoardArray(8, 6) = picOppH6
+        opponentBoardArray(8, 7) = picOppH7
+        opponentBoardArray(8, 8) = picOppH8
+        opponentBoardArray(8, 9) = picOppH9
+        opponentBoardArray(8, 10) = picOppH10
+        opponentBoardArray(9, 1) = picOppI1
+        opponentBoardArray(9, 2) = picOppI2
+        opponentBoardArray(9, 3) = picOppI3
+        opponentBoardArray(9, 4) = picOppI4
+        opponentBoardArray(9, 5) = picOppI5
+        opponentBoardArray(9, 6) = picOppI6
+        opponentBoardArray(9, 7) = picOppI7
+        opponentBoardArray(9, 8) = picOppI8
+        opponentBoardArray(9, 9) = picOppI9
+        opponentBoardArray(9, 10) = picOppI10
+        opponentBoardArray(10, 1) = picOppJ1
+        opponentBoardArray(10, 2) = picOppJ2
+        opponentBoardArray(10, 3) = picOppJ3
+        opponentBoardArray(10, 4) = picOppJ4
+        opponentBoardArray(10, 5) = picOppJ5
+        opponentBoardArray(10, 6) = picOppJ6
+        opponentBoardArray(10, 7) = picOppJ7
+        opponentBoardArray(10, 8) = picOppJ8
+        opponentBoardArray(10, 9) = picOppJ9
+        opponentBoardArray(10, 10) = picOppJ10
+
     End Sub
 
     Private Sub reset()
         clearPictureBoxes()
     End Sub
 
+    ''' <summary>
+    ''' Clear each of the picture boxes by using two for loops.
+    ''' This is run to reset the board once the player returns to the starting form in preparation for a potential second game
+    ''' </summary>
     Private Sub clearPictureBoxes()
-
+        For I = 1 To 10
+            For j = 1 To 10
+                playerBoardArray(I, j) = Nothing
+                opponentBoardArray(I, j) = Nothing
+            Next j
+        Next i
     End Sub
 
     Private Function getPlayerMove()

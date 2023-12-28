@@ -122,56 +122,56 @@ Partial Class frmGame
         picPlayerF10 = New PictureBox()
         picPlayerF2 = New PictureBox()
         picPlayerF1 = New PictureBox()
-        PictureBox101 = New PictureBox()
-        PictureBox102 = New PictureBox()
-        PictureBox103 = New PictureBox()
-        PictureBox104 = New PictureBox()
-        PictureBox105 = New PictureBox()
-        PictureBox106 = New PictureBox()
-        PictureBox107 = New PictureBox()
-        PictureBox108 = New PictureBox()
-        PictureBox109 = New PictureBox()
-        PictureBox110 = New PictureBox()
-        PictureBox111 = New PictureBox()
-        PictureBox112 = New PictureBox()
-        PictureBox113 = New PictureBox()
-        PictureBox114 = New PictureBox()
-        PictureBox115 = New PictureBox()
-        PictureBox116 = New PictureBox()
-        PictureBox117 = New PictureBox()
-        PictureBox118 = New PictureBox()
-        PictureBox119 = New PictureBox()
-        PictureBox120 = New PictureBox()
-        PictureBox121 = New PictureBox()
-        PictureBox122 = New PictureBox()
-        PictureBox123 = New PictureBox()
-        PictureBox124 = New PictureBox()
-        PictureBox125 = New PictureBox()
-        PictureBox126 = New PictureBox()
-        PictureBox127 = New PictureBox()
-        PictureBox128 = New PictureBox()
-        PictureBox129 = New PictureBox()
-        PictureBox130 = New PictureBox()
-        PictureBox131 = New PictureBox()
-        PictureBox132 = New PictureBox()
-        PictureBox133 = New PictureBox()
-        PictureBox134 = New PictureBox()
-        PictureBox135 = New PictureBox()
-        PictureBox136 = New PictureBox()
-        PictureBox137 = New PictureBox()
-        PictureBox138 = New PictureBox()
-        PictureBox139 = New PictureBox()
-        PictureBox140 = New PictureBox()
-        PictureBox141 = New PictureBox()
-        PictureBox142 = New PictureBox()
-        PictureBox143 = New PictureBox()
-        PictureBox144 = New PictureBox()
-        PictureBox145 = New PictureBox()
-        PictureBox146 = New PictureBox()
-        PictureBox147 = New PictureBox()
-        PictureBox148 = New PictureBox()
-        PictureBox149 = New PictureBox()
-        PictureBox150 = New PictureBox()
+        picOppJ3 = New PictureBox()
+        picOppJ4 = New PictureBox()
+        picOppJ5 = New PictureBox()
+        picOppJ6 = New PictureBox()
+        picOppJ7 = New PictureBox()
+        picOppJ8 = New PictureBox()
+        picOppJ9 = New PictureBox()
+        picOppJ10 = New PictureBox()
+        picOppJ2 = New PictureBox()
+        picOppJ1 = New PictureBox()
+        picOppG3 = New PictureBox()
+        picOppG4 = New PictureBox()
+        picOppG5 = New PictureBox()
+        picOppG6 = New PictureBox()
+        picOppG7 = New PictureBox()
+        picOppG8 = New PictureBox()
+        picOppG9 = New PictureBox()
+        picOppG10 = New PictureBox()
+        picOppG2 = New PictureBox()
+        picOppG1 = New PictureBox()
+        picOppI3 = New PictureBox()
+        picOppI4 = New PictureBox()
+        picOppI5 = New PictureBox()
+        picOppI6 = New PictureBox()
+        picOppI7 = New PictureBox()
+        picOppI8 = New PictureBox()
+        picOppI9 = New PictureBox()
+        picOppI10 = New PictureBox()
+        picOppI2 = New PictureBox()
+        picOppI1 = New PictureBox()
+        picOppH3 = New PictureBox()
+        picOppH4 = New PictureBox()
+        picOppH5 = New PictureBox()
+        picOppH6 = New PictureBox()
+        picOppH7 = New PictureBox()
+        picOppH8 = New PictureBox()
+        picOppH9 = New PictureBox()
+        picOppH10 = New PictureBox()
+        picOppH2 = New PictureBox()
+        picOppH1 = New PictureBox()
+        picOppF3 = New PictureBox()
+        picOppF4 = New PictureBox()
+        picOppF5 = New PictureBox()
+        picOppF6 = New PictureBox()
+        picOppF7 = New PictureBox()
+        picOppF8 = New PictureBox()
+        picOppF9 = New PictureBox()
+        picOppF10 = New PictureBox()
+        picOppF2 = New PictureBox()
+        picOppF1 = New PictureBox()
         picOppE3 = New PictureBox()
         picOppE4 = New PictureBox()
         picOppE5 = New PictureBox()
@@ -322,56 +322,56 @@ Partial Class frmGame
         CType(picPlayerF10, ComponentModel.ISupportInitialize).BeginInit()
         CType(picPlayerF2, ComponentModel.ISupportInitialize).BeginInit()
         CType(picPlayerF1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox101, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox102, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox103, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox104, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox105, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox106, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox107, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox108, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox109, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox110, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox111, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox112, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox113, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox114, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox115, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox116, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox117, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox118, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox119, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox120, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox121, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox122, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox123, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox124, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox125, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox126, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox127, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox128, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox129, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox130, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox131, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox132, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox133, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox134, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox135, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox136, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox137, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox138, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox139, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox140, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox141, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox142, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox143, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox144, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox145, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox146, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox147, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox148, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox149, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox150, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ10, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppJ1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG10, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppG1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI10, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppI1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH10, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppH1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF10, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picOppF1, ComponentModel.ISupportInitialize).BeginInit()
         CType(picOppE3, ComponentModel.ISupportInitialize).BeginInit()
         CType(picOppE4, ComponentModel.ISupportInitialize).BeginInit()
         CType(picOppE5, ComponentModel.ISupportInitialize).BeginInit()
@@ -1224,405 +1224,405 @@ Partial Class frmGame
         picPlayerF1.TabIndex = 50
         picPlayerF1.TabStop = False
         ' 
-        ' PictureBox101
-        ' 
-        PictureBox101.Location = New Point(749, 468)
-        PictureBox101.Name = "PictureBox101"
-        PictureBox101.Size = New Size(30, 30)
-        PictureBox101.TabIndex = 199
-        PictureBox101.TabStop = False
+        ' picOppJ3
+        ' 
+        picOppJ3.Location = New Point(749, 468)
+        picOppJ3.Name = "picOppJ3"
+        picOppJ3.Size = New Size(30, 30)
+        picOppJ3.TabIndex = 199
+        picOppJ3.TabStop = False
         ' 
-        ' PictureBox102
-        ' 
-        PictureBox102.Location = New Point(785, 468)
-        PictureBox102.Name = "PictureBox102"
-        PictureBox102.Size = New Size(30, 30)
-        PictureBox102.TabIndex = 198
-        PictureBox102.TabStop = False
+        ' picOppJ4
+        ' 
+        picOppJ4.Location = New Point(785, 468)
+        picOppJ4.Name = "picOppJ4"
+        picOppJ4.Size = New Size(30, 30)
+        picOppJ4.TabIndex = 198
+        picOppJ4.TabStop = False
         ' 
-        ' PictureBox103
-        ' 
-        PictureBox103.Location = New Point(821, 468)
-        PictureBox103.Name = "PictureBox103"
-        PictureBox103.Size = New Size(30, 30)
-        PictureBox103.TabIndex = 197
-        PictureBox103.TabStop = False
+        ' picOppJ5
+        ' 
+        picOppJ5.Location = New Point(821, 468)
+        picOppJ5.Name = "picOppJ5"
+        picOppJ5.Size = New Size(30, 30)
+        picOppJ5.TabIndex = 197
+        picOppJ5.TabStop = False
         ' 
-        ' PictureBox104
-        ' 
-        PictureBox104.Location = New Point(857, 468)
-        PictureBox104.Name = "PictureBox104"
-        PictureBox104.Size = New Size(30, 30)
-        PictureBox104.TabIndex = 196
-        PictureBox104.TabStop = False
+        ' picOppJ6
+        ' 
+        picOppJ6.Location = New Point(857, 468)
+        picOppJ6.Name = "picOppJ6"
+        picOppJ6.Size = New Size(30, 30)
+        picOppJ6.TabIndex = 196
+        picOppJ6.TabStop = False
         ' 
-        ' PictureBox105
-        ' 
-        PictureBox105.Location = New Point(893, 468)
-        PictureBox105.Name = "PictureBox105"
-        PictureBox105.Size = New Size(30, 30)
-        PictureBox105.TabIndex = 195
-        PictureBox105.TabStop = False
+        ' picOppJ7
+        ' 
+        picOppJ7.Location = New Point(893, 468)
+        picOppJ7.Name = "picOppJ7"
+        picOppJ7.Size = New Size(30, 30)
+        picOppJ7.TabIndex = 195
+        picOppJ7.TabStop = False
         ' 
-        ' PictureBox106
-        ' 
-        PictureBox106.Location = New Point(929, 468)
-        PictureBox106.Name = "PictureBox106"
-        PictureBox106.Size = New Size(30, 30)
-        PictureBox106.TabIndex = 194
-        PictureBox106.TabStop = False
+        ' picOppJ8
+        ' 
+        picOppJ8.Location = New Point(929, 468)
+        picOppJ8.Name = "picOppJ8"
+        picOppJ8.Size = New Size(30, 30)
+        picOppJ8.TabIndex = 194
+        picOppJ8.TabStop = False
         ' 
-        ' PictureBox107
-        ' 
-        PictureBox107.Location = New Point(965, 468)
-        PictureBox107.Name = "PictureBox107"
-        PictureBox107.Size = New Size(30, 30)
-        PictureBox107.TabIndex = 193
-        PictureBox107.TabStop = False
+        ' picOppJ9
+        ' 
+        picOppJ9.Location = New Point(965, 468)
+        picOppJ9.Name = "picOppJ9"
+        picOppJ9.Size = New Size(30, 30)
+        picOppJ9.TabIndex = 193
+        picOppJ9.TabStop = False
         ' 
-        ' PictureBox108
-        ' 
-        PictureBox108.Location = New Point(1001, 468)
-        PictureBox108.Name = "PictureBox108"
-        PictureBox108.Size = New Size(30, 30)
-        PictureBox108.TabIndex = 192
-        PictureBox108.TabStop = False
+        ' picOppJ10
+        ' 
+        picOppJ10.Location = New Point(1001, 468)
+        picOppJ10.Name = "picOppJ10"
+        picOppJ10.Size = New Size(30, 30)
+        picOppJ10.TabIndex = 192
+        picOppJ10.TabStop = False
         ' 
-        ' PictureBox109
-        ' 
-        PictureBox109.Location = New Point(713, 468)
-        PictureBox109.Name = "PictureBox109"
-        PictureBox109.Size = New Size(30, 30)
-        PictureBox109.TabIndex = 191
-        PictureBox109.TabStop = False
+        ' picOppJ2
+        ' 
+        picOppJ2.Location = New Point(713, 468)
+        picOppJ2.Name = "picOppJ2"
+        picOppJ2.Size = New Size(30, 30)
+        picOppJ2.TabIndex = 191
+        picOppJ2.TabStop = False
         ' 
-        ' PictureBox110
-        ' 
-        PictureBox110.Location = New Point(677, 468)
-        PictureBox110.Name = "PictureBox110"
-        PictureBox110.Size = New Size(30, 30)
-        PictureBox110.TabIndex = 190
-        PictureBox110.TabStop = False
+        ' picOppJ1
+        ' 
+        picOppJ1.Location = New Point(677, 468)
+        picOppJ1.Name = "picOppJ1"
+        picOppJ1.Size = New Size(30, 30)
+        picOppJ1.TabIndex = 190
+        picOppJ1.TabStop = False
         ' 
-        ' PictureBox111
-        ' 
-        PictureBox111.Location = New Point(749, 360)
-        PictureBox111.Name = "PictureBox111"
-        PictureBox111.Size = New Size(30, 30)
-        PictureBox111.TabIndex = 189
-        PictureBox111.TabStop = False
+        ' picOppG3
+        ' 
+        picOppG3.Location = New Point(749, 360)
+        picOppG3.Name = "picOppG3"
+        picOppG3.Size = New Size(30, 30)
+        picOppG3.TabIndex = 189
+        picOppG3.TabStop = False
         ' 
-        ' PictureBox112
-        ' 
-        PictureBox112.Location = New Point(785, 360)
-        PictureBox112.Name = "PictureBox112"
-        PictureBox112.Size = New Size(30, 30)
-        PictureBox112.TabIndex = 188
-        PictureBox112.TabStop = False
+        ' picOppG4
+        ' 
+        picOppG4.Location = New Point(785, 360)
+        picOppG4.Name = "picOppG4"
+        picOppG4.Size = New Size(30, 30)
+        picOppG4.TabIndex = 188
+        picOppG4.TabStop = False
         ' 
-        ' PictureBox113
-        ' 
-        PictureBox113.Location = New Point(821, 360)
-        PictureBox113.Name = "PictureBox113"
-        PictureBox113.Size = New Size(30, 30)
-        PictureBox113.TabIndex = 187
-        PictureBox113.TabStop = False
+        ' picOppG5
+        ' 
+        picOppG5.Location = New Point(821, 360)
+        picOppG5.Name = "picOppG5"
+        picOppG5.Size = New Size(30, 30)
+        picOppG5.TabIndex = 187
+        picOppG5.TabStop = False
         ' 
-        ' PictureBox114
-        ' 
-        PictureBox114.Location = New Point(857, 360)
-        PictureBox114.Name = "PictureBox114"
-        PictureBox114.Size = New Size(30, 30)
-        PictureBox114.TabIndex = 186
-        PictureBox114.TabStop = False
+        ' picOppG6
+        ' 
+        picOppG6.Location = New Point(857, 360)
+        picOppG6.Name = "picOppG6"
+        picOppG6.Size = New Size(30, 30)
+        picOppG6.TabIndex = 186
+        picOppG6.TabStop = False
         ' 
-        ' PictureBox115
-        ' 
-        PictureBox115.Location = New Point(893, 360)
-        PictureBox115.Name = "PictureBox115"
-        PictureBox115.Size = New Size(30, 30)
-        PictureBox115.TabIndex = 185
-        PictureBox115.TabStop = False
+        ' picOppG7
+        ' 
+        picOppG7.Location = New Point(893, 360)
+        picOppG7.Name = "picOppG7"
+        picOppG7.Size = New Size(30, 30)
+        picOppG7.TabIndex = 185
+        picOppG7.TabStop = False
         ' 
-        ' PictureBox116
-        ' 
-        PictureBox116.Location = New Point(929, 360)
-        PictureBox116.Name = "PictureBox116"
-        PictureBox116.Size = New Size(30, 30)
-        PictureBox116.TabIndex = 184
-        PictureBox116.TabStop = False
+        ' picOppG8
+        ' 
+        picOppG8.Location = New Point(929, 360)
+        picOppG8.Name = "picOppG8"
+        picOppG8.Size = New Size(30, 30)
+        picOppG8.TabIndex = 184
+        picOppG8.TabStop = False
         ' 
-        ' PictureBox117
-        ' 
-        PictureBox117.Location = New Point(965, 360)
-        PictureBox117.Name = "PictureBox117"
-        PictureBox117.Size = New Size(30, 30)
-        PictureBox117.TabIndex = 183
-        PictureBox117.TabStop = False
+        ' picOppG9
+        ' 
+        picOppG9.Location = New Point(965, 360)
+        picOppG9.Name = "picOppG9"
+        picOppG9.Size = New Size(30, 30)
+        picOppG9.TabIndex = 183
+        picOppG9.TabStop = False
         ' 
-        ' PictureBox118
-        ' 
-        PictureBox118.Location = New Point(1001, 360)
-        PictureBox118.Name = "PictureBox118"
-        PictureBox118.Size = New Size(30, 30)
-        PictureBox118.TabIndex = 182
-        PictureBox118.TabStop = False
+        ' picOppG10
+        ' 
+        picOppG10.Location = New Point(1001, 360)
+        picOppG10.Name = "picOppG10"
+        picOppG10.Size = New Size(30, 30)
+        picOppG10.TabIndex = 182
+        picOppG10.TabStop = False
         ' 
-        ' PictureBox119
-        ' 
-        PictureBox119.Location = New Point(713, 360)
-        PictureBox119.Name = "PictureBox119"
-        PictureBox119.Size = New Size(30, 30)
-        PictureBox119.TabIndex = 181
-        PictureBox119.TabStop = False
+        ' picOppG2
+        ' 
+        picOppG2.Location = New Point(713, 360)
+        picOppG2.Name = "picOppG2"
+        picOppG2.Size = New Size(30, 30)
+        picOppG2.TabIndex = 181
+        picOppG2.TabStop = False
         ' 
-        ' PictureBox120
-        ' 
-        PictureBox120.Location = New Point(677, 360)
-        PictureBox120.Name = "PictureBox120"
-        PictureBox120.Size = New Size(30, 30)
-        PictureBox120.TabIndex = 180
-        PictureBox120.TabStop = False
+        ' picOppG1
+        ' 
+        picOppG1.Location = New Point(677, 360)
+        picOppG1.Name = "picOppG1"
+        picOppG1.Size = New Size(30, 30)
+        picOppG1.TabIndex = 180
+        picOppG1.TabStop = False
         ' 
-        ' PictureBox121
-        ' 
-        PictureBox121.Location = New Point(749, 432)
-        PictureBox121.Name = "PictureBox121"
-        PictureBox121.Size = New Size(30, 30)
-        PictureBox121.TabIndex = 179
-        PictureBox121.TabStop = False
+        ' picOppI3
+        ' 
+        picOppI3.Location = New Point(749, 432)
+        picOppI3.Name = "picOppI3"
+        picOppI3.Size = New Size(30, 30)
+        picOppI3.TabIndex = 179
+        picOppI3.TabStop = False
         ' 
-        ' PictureBox122
-        ' 
-        PictureBox122.Location = New Point(785, 432)
-        PictureBox122.Name = "PictureBox122"
-        PictureBox122.Size = New Size(30, 30)
-        PictureBox122.TabIndex = 178
-        PictureBox122.TabStop = False
+        ' picOppI4
+        ' 
+        picOppI4.Location = New Point(785, 432)
+        picOppI4.Name = "picOppI4"
+        picOppI4.Size = New Size(30, 30)
+        picOppI4.TabIndex = 178
+        picOppI4.TabStop = False
         ' 
-        ' PictureBox123
-        ' 
-        PictureBox123.Location = New Point(821, 432)
-        PictureBox123.Name = "PictureBox123"
-        PictureBox123.Size = New Size(30, 30)
-        PictureBox123.TabIndex = 177
-        PictureBox123.TabStop = False
+        ' picOppI5
+        ' 
+        picOppI5.Location = New Point(821, 432)
+        picOppI5.Name = "picOppI5"
+        picOppI5.Size = New Size(30, 30)
+        picOppI5.TabIndex = 177
+        picOppI5.TabStop = False
         ' 
-        ' PictureBox124
-        ' 
-        PictureBox124.Location = New Point(857, 432)
-        PictureBox124.Name = "PictureBox124"
-        PictureBox124.Size = New Size(30, 30)
-        PictureBox124.TabIndex = 176
-        PictureBox124.TabStop = False
+        ' picOppI6
+        ' 
+        picOppI6.Location = New Point(857, 432)
+        picOppI6.Name = "picOppI6"
+        picOppI6.Size = New Size(30, 30)
+        picOppI6.TabIndex = 176
+        picOppI6.TabStop = False
         ' 
-        ' PictureBox125
-        ' 
-        PictureBox125.Location = New Point(893, 432)
-        PictureBox125.Name = "PictureBox125"
-        PictureBox125.Size = New Size(30, 30)
-        PictureBox125.TabIndex = 175
-        PictureBox125.TabStop = False
+        ' picOppI7
+        ' 
+        picOppI7.Location = New Point(893, 432)
+        picOppI7.Name = "picOppI7"
+        picOppI7.Size = New Size(30, 30)
+        picOppI7.TabIndex = 175
+        picOppI7.TabStop = False
         ' 
-        ' PictureBox126
-        ' 
-        PictureBox126.Location = New Point(929, 432)
-        PictureBox126.Name = "PictureBox126"
-        PictureBox126.Size = New Size(30, 30)
-        PictureBox126.TabIndex = 174
-        PictureBox126.TabStop = False
+        ' picOppI8
+        ' 
+        picOppI8.Location = New Point(929, 432)
+        picOppI8.Name = "picOppI8"
+        picOppI8.Size = New Size(30, 30)
+        picOppI8.TabIndex = 174
+        picOppI8.TabStop = False
         ' 
-        ' PictureBox127
-        ' 
-        PictureBox127.Location = New Point(965, 432)
-        PictureBox127.Name = "PictureBox127"
-        PictureBox127.Size = New Size(30, 30)
-        PictureBox127.TabIndex = 173
-        PictureBox127.TabStop = False
+        ' picOppI9
+        ' 
+        picOppI9.Location = New Point(965, 432)
+        picOppI9.Name = "picOppI9"
+        picOppI9.Size = New Size(30, 30)
+        picOppI9.TabIndex = 173
+        picOppI9.TabStop = False
         ' 
-        ' PictureBox128
-        ' 
-        PictureBox128.Location = New Point(1001, 432)
-        PictureBox128.Name = "PictureBox128"
-        PictureBox128.Size = New Size(30, 30)
-        PictureBox128.TabIndex = 172
-        PictureBox128.TabStop = False
+        ' picOppI10
+        ' 
+        picOppI10.Location = New Point(1001, 432)
+        picOppI10.Name = "picOppI10"
+        picOppI10.Size = New Size(30, 30)
+        picOppI10.TabIndex = 172
+        picOppI10.TabStop = False
         ' 
-        ' PictureBox129
-        ' 
-        PictureBox129.Location = New Point(713, 432)
-        PictureBox129.Name = "PictureBox129"
-        PictureBox129.Size = New Size(30, 30)
-        PictureBox129.TabIndex = 171
-        PictureBox129.TabStop = False
+        ' picOppI2
+        ' 
+        picOppI2.Location = New Point(713, 432)
+        picOppI2.Name = "picOppI2"
+        picOppI2.Size = New Size(30, 30)
+        picOppI2.TabIndex = 171
+        picOppI2.TabStop = False
         ' 
-        ' PictureBox130
-        ' 
-        PictureBox130.Location = New Point(677, 432)
-        PictureBox130.Name = "PictureBox130"
-        PictureBox130.Size = New Size(30, 30)
-        PictureBox130.TabIndex = 170
-        PictureBox130.TabStop = False
+        ' picOppI1
+        ' 
+        picOppI1.Location = New Point(677, 432)
+        picOppI1.Name = "picOppI1"
+        picOppI1.Size = New Size(30, 30)
+        picOppI1.TabIndex = 170
+        picOppI1.TabStop = False
         ' 
-        ' PictureBox131
-        ' 
-        PictureBox131.Location = New Point(749, 396)
-        PictureBox131.Name = "PictureBox131"
-        PictureBox131.Size = New Size(30, 30)
-        PictureBox131.TabIndex = 169
-        PictureBox131.TabStop = False
+        ' picOppH3
+        ' 
+        picOppH3.Location = New Point(749, 396)
+        picOppH3.Name = "picOppH3"
+        picOppH3.Size = New Size(30, 30)
+        picOppH3.TabIndex = 169
+        picOppH3.TabStop = False
         ' 
-        ' PictureBox132
-        ' 
-        PictureBox132.Location = New Point(785, 396)
-        PictureBox132.Name = "PictureBox132"
-        PictureBox132.Size = New Size(30, 30)
-        PictureBox132.TabIndex = 168
-        PictureBox132.TabStop = False
+        ' picOppH4
+        ' 
+        picOppH4.Location = New Point(785, 396)
+        picOppH4.Name = "picOppH4"
+        picOppH4.Size = New Size(30, 30)
+        picOppH4.TabIndex = 168
+        picOppH4.TabStop = False
         ' 
-        ' PictureBox133
-        ' 
-        PictureBox133.Location = New Point(821, 396)
-        PictureBox133.Name = "PictureBox133"
-        PictureBox133.Size = New Size(30, 30)
-        PictureBox133.TabIndex = 167
-        PictureBox133.TabStop = False
+        ' picOppH5
+        ' 
+        picOppH5.Location = New Point(821, 396)
+        picOppH5.Name = "picOppH5"
+        picOppH5.Size = New Size(30, 30)
+        picOppH5.TabIndex = 167
+        picOppH5.TabStop = False
         ' 
-        ' PictureBox134
-        ' 
-        PictureBox134.Location = New Point(857, 396)
-        PictureBox134.Name = "PictureBox134"
-        PictureBox134.Size = New Size(30, 30)
-        PictureBox134.TabIndex = 166
-        PictureBox134.TabStop = False
+        ' picOppH6
+        ' 
+        picOppH6.Location = New Point(857, 396)
+        picOppH6.Name = "picOppH6"
+        picOppH6.Size = New Size(30, 30)
+        picOppH6.TabIndex = 166
+        picOppH6.TabStop = False
         ' 
-        ' PictureBox135
-        ' 
-        PictureBox135.Location = New Point(893, 396)
-        PictureBox135.Name = "PictureBox135"
-        PictureBox135.Size = New Size(30, 30)
-        PictureBox135.TabIndex = 165
-        PictureBox135.TabStop = False
+        ' picOppH7
+        ' 
+        picOppH7.Location = New Point(893, 396)
+        picOppH7.Name = "picOppH7"
+        picOppH7.Size = New Size(30, 30)
+        picOppH7.TabIndex = 165
+        picOppH7.TabStop = False
         ' 
-        ' PictureBox136
-        ' 
-        PictureBox136.Location = New Point(929, 396)
-        PictureBox136.Name = "PictureBox136"
-        PictureBox136.Size = New Size(30, 30)
-        PictureBox136.TabIndex = 164
-        PictureBox136.TabStop = False
+        ' picOppH8
+        ' 
+        picOppH8.Location = New Point(929, 396)
+        picOppH8.Name = "picOppH8"
+        picOppH8.Size = New Size(30, 30)
+        picOppH8.TabIndex = 164
+        picOppH8.TabStop = False
         ' 
-        ' PictureBox137
-        ' 
-        PictureBox137.Location = New Point(965, 396)
-        PictureBox137.Name = "PictureBox137"
-        PictureBox137.Size = New Size(30, 30)
-        PictureBox137.TabIndex = 163
-        PictureBox137.TabStop = False
+        ' picOppH9
+        ' 
+        picOppH9.Location = New Point(965, 396)
+        picOppH9.Name = "picOppH9"
+        picOppH9.Size = New Size(30, 30)
+        picOppH9.TabIndex = 163
+        picOppH9.TabStop = False
         ' 
-        ' PictureBox138
-        ' 
-        PictureBox138.Location = New Point(1001, 396)
-        PictureBox138.Name = "PictureBox138"
-        PictureBox138.Size = New Size(30, 30)
-        PictureBox138.TabIndex = 162
-        PictureBox138.TabStop = False
-        ' 
-        ' PictureBox139
-        ' 
-        PictureBox139.Location = New Point(713, 396)
-        PictureBox139.Name = "PictureBox139"
-        PictureBox139.Size = New Size(30, 30)
-        PictureBox139.TabIndex = 161
-        PictureBox139.TabStop = False
-        ' 
-        ' PictureBox140
-        ' 
-        PictureBox140.Location = New Point(677, 396)
-        PictureBox140.Name = "PictureBox140"
-        PictureBox140.Size = New Size(30, 30)
-        PictureBox140.TabIndex = 160
-        PictureBox140.TabStop = False
-        ' 
-        ' PictureBox141
-        ' 
-        PictureBox141.Location = New Point(749, 324)
-        PictureBox141.Name = "PictureBox141"
-        PictureBox141.Size = New Size(30, 30)
-        PictureBox141.TabIndex = 159
-        PictureBox141.TabStop = False
-        ' 
-        ' PictureBox142
-        ' 
-        PictureBox142.Location = New Point(785, 324)
-        PictureBox142.Name = "PictureBox142"
-        PictureBox142.Size = New Size(30, 30)
-        PictureBox142.TabIndex = 158
-        PictureBox142.TabStop = False
-        ' 
-        ' PictureBox143
-        ' 
-        PictureBox143.Location = New Point(821, 324)
-        PictureBox143.Name = "PictureBox143"
-        PictureBox143.Size = New Size(30, 30)
-        PictureBox143.TabIndex = 157
-        PictureBox143.TabStop = False
-        ' 
-        ' PictureBox144
-        ' 
-        PictureBox144.Location = New Point(857, 324)
-        PictureBox144.Name = "PictureBox144"
-        PictureBox144.Size = New Size(30, 30)
-        PictureBox144.TabIndex = 156
-        PictureBox144.TabStop = False
-        ' 
-        ' PictureBox145
-        ' 
-        PictureBox145.Location = New Point(893, 324)
-        PictureBox145.Name = "PictureBox145"
-        PictureBox145.Size = New Size(30, 30)
-        PictureBox145.TabIndex = 155
-        PictureBox145.TabStop = False
-        ' 
-        ' PictureBox146
-        ' 
-        PictureBox146.Location = New Point(929, 324)
-        PictureBox146.Name = "PictureBox146"
-        PictureBox146.Size = New Size(30, 30)
-        PictureBox146.TabIndex = 154
-        PictureBox146.TabStop = False
-        ' 
-        ' PictureBox147
-        ' 
-        PictureBox147.Location = New Point(965, 324)
-        PictureBox147.Name = "PictureBox147"
-        PictureBox147.Size = New Size(30, 30)
-        PictureBox147.TabIndex = 153
-        PictureBox147.TabStop = False
-        ' 
-        ' PictureBox148
-        ' 
-        PictureBox148.Location = New Point(1001, 324)
-        PictureBox148.Name = "PictureBox148"
-        PictureBox148.Size = New Size(30, 30)
-        PictureBox148.TabIndex = 152
-        PictureBox148.TabStop = False
-        ' 
-        ' PictureBox149
-        ' 
-        PictureBox149.Location = New Point(713, 324)
-        PictureBox149.Name = "PictureBox149"
-        PictureBox149.Size = New Size(30, 30)
-        PictureBox149.TabIndex = 151
-        PictureBox149.TabStop = False
-        ' 
-        ' PictureBox150
-        ' 
-        PictureBox150.Location = New Point(677, 324)
-        PictureBox150.Name = "PictureBox150"
-        PictureBox150.Size = New Size(30, 30)
-        PictureBox150.TabIndex = 150
-        PictureBox150.TabStop = False
+        ' picOppH10
+        ' 
+        picOppH10.Location = New Point(1001, 396)
+        picOppH10.Name = "picOppH10"
+        picOppH10.Size = New Size(30, 30)
+        picOppH10.TabIndex = 162
+        picOppH10.TabStop = False
+        ' 
+        ' picOppH2
+        ' 
+        picOppH2.Location = New Point(713, 396)
+        picOppH2.Name = "picOppH2"
+        picOppH2.Size = New Size(30, 30)
+        picOppH2.TabIndex = 161
+        picOppH2.TabStop = False
+        ' 
+        ' picOppH1
+        ' 
+        picOppH1.Location = New Point(677, 396)
+        picOppH1.Name = "picOppH1"
+        picOppH1.Size = New Size(30, 30)
+        picOppH1.TabIndex = 160
+        picOppH1.TabStop = False
+        ' 
+        ' picOppF3
+        ' 
+        picOppF3.Location = New Point(749, 324)
+        picOppF3.Name = "picOppF3"
+        picOppF3.Size = New Size(30, 30)
+        picOppF3.TabIndex = 159
+        picOppF3.TabStop = False
+        ' 
+        ' picOppF4
+        ' 
+        picOppF4.Location = New Point(785, 324)
+        picOppF4.Name = "picOppF4"
+        picOppF4.Size = New Size(30, 30)
+        picOppF4.TabIndex = 158
+        picOppF4.TabStop = False
+        ' 
+        ' picOppF5
+        ' 
+        picOppF5.Location = New Point(821, 324)
+        picOppF5.Name = "picOppF5"
+        picOppF5.Size = New Size(30, 30)
+        picOppF5.TabIndex = 157
+        picOppF5.TabStop = False
+        ' 
+        ' picOppF6
+        ' 
+        picOppF6.Location = New Point(857, 324)
+        picOppF6.Name = "picOppF6"
+        picOppF6.Size = New Size(30, 30)
+        picOppF6.TabIndex = 156
+        picOppF6.TabStop = False
+        ' 
+        ' picOppF7
+        ' 
+        picOppF7.Location = New Point(893, 324)
+        picOppF7.Name = "picOppF7"
+        picOppF7.Size = New Size(30, 30)
+        picOppF7.TabIndex = 155
+        picOppF7.TabStop = False
+        ' 
+        ' picOppF8
+        ' 
+        picOppF8.Location = New Point(929, 324)
+        picOppF8.Name = "picOppF8"
+        picOppF8.Size = New Size(30, 30)
+        picOppF8.TabIndex = 154
+        picOppF8.TabStop = False
+        ' 
+        ' picOppF9
+        ' 
+        picOppF9.Location = New Point(965, 324)
+        picOppF9.Name = "picOppF9"
+        picOppF9.Size = New Size(30, 30)
+        picOppF9.TabIndex = 153
+        picOppF9.TabStop = False
+        ' 
+        ' picOppF10
+        ' 
+        picOppF10.Location = New Point(1001, 324)
+        picOppF10.Name = "picOppF10"
+        picOppF10.Size = New Size(30, 30)
+        picOppF10.TabIndex = 152
+        picOppF10.TabStop = False
+        ' 
+        ' picOppF2
+        ' 
+        picOppF2.Location = New Point(713, 324)
+        picOppF2.Name = "picOppF2"
+        picOppF2.Size = New Size(30, 30)
+        picOppF2.TabIndex = 151
+        picOppF2.TabStop = False
+        ' 
+        ' picOppF1
+        ' 
+        picOppF1.Location = New Point(677, 324)
+        picOppF1.Name = "picOppF1"
+        picOppF1.Size = New Size(30, 30)
+        picOppF1.TabIndex = 150
+        picOppF1.TabStop = False
         ' 
         ' picOppE3
         ' 
@@ -2029,56 +2029,56 @@ Partial Class frmGame
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1156, 669)
-        Controls.Add(PictureBox101)
-        Controls.Add(PictureBox102)
-        Controls.Add(PictureBox103)
-        Controls.Add(PictureBox104)
-        Controls.Add(PictureBox105)
-        Controls.Add(PictureBox106)
-        Controls.Add(PictureBox107)
-        Controls.Add(PictureBox108)
-        Controls.Add(PictureBox109)
-        Controls.Add(PictureBox110)
-        Controls.Add(PictureBox111)
-        Controls.Add(PictureBox112)
-        Controls.Add(PictureBox113)
-        Controls.Add(PictureBox114)
-        Controls.Add(PictureBox115)
-        Controls.Add(PictureBox116)
-        Controls.Add(PictureBox117)
-        Controls.Add(PictureBox118)
-        Controls.Add(PictureBox119)
-        Controls.Add(PictureBox120)
-        Controls.Add(PictureBox121)
-        Controls.Add(PictureBox122)
-        Controls.Add(PictureBox123)
-        Controls.Add(PictureBox124)
-        Controls.Add(PictureBox125)
-        Controls.Add(PictureBox126)
-        Controls.Add(PictureBox127)
-        Controls.Add(PictureBox128)
-        Controls.Add(PictureBox129)
-        Controls.Add(PictureBox130)
-        Controls.Add(PictureBox131)
-        Controls.Add(PictureBox132)
-        Controls.Add(PictureBox133)
-        Controls.Add(PictureBox134)
-        Controls.Add(PictureBox135)
-        Controls.Add(PictureBox136)
-        Controls.Add(PictureBox137)
-        Controls.Add(PictureBox138)
-        Controls.Add(PictureBox139)
-        Controls.Add(PictureBox140)
-        Controls.Add(PictureBox141)
-        Controls.Add(PictureBox142)
-        Controls.Add(PictureBox143)
-        Controls.Add(PictureBox144)
-        Controls.Add(PictureBox145)
-        Controls.Add(PictureBox146)
-        Controls.Add(PictureBox147)
-        Controls.Add(PictureBox148)
-        Controls.Add(PictureBox149)
-        Controls.Add(PictureBox150)
+        Controls.Add(picOppJ3)
+        Controls.Add(picOppJ4)
+        Controls.Add(picOppJ5)
+        Controls.Add(picOppJ6)
+        Controls.Add(picOppJ7)
+        Controls.Add(picOppJ8)
+        Controls.Add(picOppJ9)
+        Controls.Add(picOppJ10)
+        Controls.Add(picOppJ2)
+        Controls.Add(picOppJ1)
+        Controls.Add(picOppG3)
+        Controls.Add(picOppG4)
+        Controls.Add(picOppG5)
+        Controls.Add(picOppG6)
+        Controls.Add(picOppG7)
+        Controls.Add(picOppG8)
+        Controls.Add(picOppG9)
+        Controls.Add(picOppG10)
+        Controls.Add(picOppG2)
+        Controls.Add(picOppG1)
+        Controls.Add(picOppI3)
+        Controls.Add(picOppI4)
+        Controls.Add(picOppI5)
+        Controls.Add(picOppI6)
+        Controls.Add(picOppI7)
+        Controls.Add(picOppI8)
+        Controls.Add(picOppI9)
+        Controls.Add(picOppI10)
+        Controls.Add(picOppI2)
+        Controls.Add(picOppI1)
+        Controls.Add(picOppH3)
+        Controls.Add(picOppH4)
+        Controls.Add(picOppH5)
+        Controls.Add(picOppH6)
+        Controls.Add(picOppH7)
+        Controls.Add(picOppH8)
+        Controls.Add(picOppH9)
+        Controls.Add(picOppH10)
+        Controls.Add(picOppH2)
+        Controls.Add(picOppH1)
+        Controls.Add(picOppF3)
+        Controls.Add(picOppF4)
+        Controls.Add(picOppF5)
+        Controls.Add(picOppF6)
+        Controls.Add(picOppF7)
+        Controls.Add(picOppF8)
+        Controls.Add(picOppF9)
+        Controls.Add(picOppF10)
+        Controls.Add(picOppF2)
+        Controls.Add(picOppF1)
         Controls.Add(picOppE3)
         Controls.Add(picOppE4)
         Controls.Add(picOppE5)
@@ -2331,56 +2331,56 @@ Partial Class frmGame
         CType(picPlayerF10, ComponentModel.ISupportInitialize).EndInit()
         CType(picPlayerF2, ComponentModel.ISupportInitialize).EndInit()
         CType(picPlayerF1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox101, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox102, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox103, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox104, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox105, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox106, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox107, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox108, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox109, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox110, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox111, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox112, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox113, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox114, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox115, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox116, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox117, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox118, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox119, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox120, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox121, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox122, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox123, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox124, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox125, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox126, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox127, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox128, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox129, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox130, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox131, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox132, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox133, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox134, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox135, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox136, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox137, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox138, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox139, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox140, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox141, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox142, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox143, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox144, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox145, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox146, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox147, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox148, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox149, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox150, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ4, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ5, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ6, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ7, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ8, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ9, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ10, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ2, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppJ1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG4, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG5, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG6, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG7, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG8, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG9, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG10, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG2, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppG1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI4, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI5, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI6, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI7, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI8, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI9, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI10, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI2, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppI1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH4, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH5, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH6, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH7, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH8, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH9, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH10, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH2, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppH1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF4, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF5, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF6, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF7, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF8, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF9, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF10, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF2, ComponentModel.ISupportInitialize).EndInit()
+        CType(picOppF1, ComponentModel.ISupportInitialize).EndInit()
         CType(picOppE3, ComponentModel.ISupportInitialize).EndInit()
         CType(picOppE4, ComponentModel.ISupportInitialize).EndInit()
         CType(picOppE5, ComponentModel.ISupportInitialize).EndInit()
@@ -2534,56 +2534,56 @@ Partial Class frmGame
     Friend WithEvents picPlayerF10 As PictureBox
     Friend WithEvents picPlayerF2 As PictureBox
     Friend WithEvents picPlayerF1 As PictureBox
-    Friend WithEvents PictureBox101 As PictureBox
-    Friend WithEvents PictureBox102 As PictureBox
-    Friend WithEvents PictureBox103 As PictureBox
-    Friend WithEvents PictureBox104 As PictureBox
-    Friend WithEvents PictureBox105 As PictureBox
-    Friend WithEvents PictureBox106 As PictureBox
-    Friend WithEvents PictureBox107 As PictureBox
-    Friend WithEvents PictureBox108 As PictureBox
-    Friend WithEvents PictureBox109 As PictureBox
-    Friend WithEvents PictureBox110 As PictureBox
-    Friend WithEvents PictureBox111 As PictureBox
-    Friend WithEvents PictureBox112 As PictureBox
-    Friend WithEvents PictureBox113 As PictureBox
-    Friend WithEvents PictureBox114 As PictureBox
-    Friend WithEvents PictureBox115 As PictureBox
-    Friend WithEvents PictureBox116 As PictureBox
-    Friend WithEvents PictureBox117 As PictureBox
-    Friend WithEvents PictureBox118 As PictureBox
-    Friend WithEvents PictureBox119 As PictureBox
-    Friend WithEvents PictureBox120 As PictureBox
-    Friend WithEvents PictureBox121 As PictureBox
-    Friend WithEvents PictureBox122 As PictureBox
-    Friend WithEvents PictureBox123 As PictureBox
-    Friend WithEvents PictureBox124 As PictureBox
-    Friend WithEvents PictureBox125 As PictureBox
-    Friend WithEvents PictureBox126 As PictureBox
-    Friend WithEvents PictureBox127 As PictureBox
-    Friend WithEvents PictureBox128 As PictureBox
-    Friend WithEvents PictureBox129 As PictureBox
-    Friend WithEvents PictureBox130 As PictureBox
-    Friend WithEvents PictureBox131 As PictureBox
-    Friend WithEvents PictureBox132 As PictureBox
-    Friend WithEvents PictureBox133 As PictureBox
-    Friend WithEvents PictureBox134 As PictureBox
-    Friend WithEvents PictureBox135 As PictureBox
-    Friend WithEvents PictureBox136 As PictureBox
-    Friend WithEvents PictureBox137 As PictureBox
-    Friend WithEvents PictureBox138 As PictureBox
-    Friend WithEvents PictureBox139 As PictureBox
-    Friend WithEvents PictureBox140 As PictureBox
-    Friend WithEvents PictureBox141 As PictureBox
-    Friend WithEvents PictureBox142 As PictureBox
-    Friend WithEvents PictureBox143 As PictureBox
-    Friend WithEvents PictureBox144 As PictureBox
-    Friend WithEvents PictureBox145 As PictureBox
-    Friend WithEvents PictureBox146 As PictureBox
-    Friend WithEvents PictureBox147 As PictureBox
-    Friend WithEvents PictureBox148 As PictureBox
-    Friend WithEvents PictureBox149 As PictureBox
-    Friend WithEvents PictureBox150 As PictureBox
+    Friend WithEvents picOppJ3 As PictureBox
+    Friend WithEvents picOppJ4 As PictureBox
+    Friend WithEvents picOppJ5 As PictureBox
+    Friend WithEvents picOppJ6 As PictureBox
+    Friend WithEvents picOppJ7 As PictureBox
+    Friend WithEvents picOppJ8 As PictureBox
+    Friend WithEvents picOppJ9 As PictureBox
+    Friend WithEvents picOppJ10 As PictureBox
+    Friend WithEvents picOppJ2 As PictureBox
+    Friend WithEvents picOppJ1 As PictureBox
+    Friend WithEvents picOppG3 As PictureBox
+    Friend WithEvents picOppG4 As PictureBox
+    Friend WithEvents picOppG5 As PictureBox
+    Friend WithEvents picOppG6 As PictureBox
+    Friend WithEvents picOppG7 As PictureBox
+    Friend WithEvents picOppG8 As PictureBox
+    Friend WithEvents picOppG9 As PictureBox
+    Friend WithEvents picOppG10 As PictureBox
+    Friend WithEvents picOppG2 As PictureBox
+    Friend WithEvents picOppG1 As PictureBox
+    Friend WithEvents picOppI3 As PictureBox
+    Friend WithEvents picOppI4 As PictureBox
+    Friend WithEvents picOppI5 As PictureBox
+    Friend WithEvents picOppI6 As PictureBox
+    Friend WithEvents picOppI7 As PictureBox
+    Friend WithEvents picOppI8 As PictureBox
+    Friend WithEvents picOppI9 As PictureBox
+    Friend WithEvents picOppI10 As PictureBox
+    Friend WithEvents picOppI2 As PictureBox
+    Friend WithEvents picOppI1 As PictureBox
+    Friend WithEvents picOppH3 As PictureBox
+    Friend WithEvents picOppH4 As PictureBox
+    Friend WithEvents picOppH5 As PictureBox
+    Friend WithEvents picOppH6 As PictureBox
+    Friend WithEvents picOppH7 As PictureBox
+    Friend WithEvents picOppH8 As PictureBox
+    Friend WithEvents picOppH9 As PictureBox
+    Friend WithEvents picOppH10 As PictureBox
+    Friend WithEvents picOppH2 As PictureBox
+    Friend WithEvents picOppH1 As PictureBox
+    Friend WithEvents picOppF3 As PictureBox
+    Friend WithEvents picOppF4 As PictureBox
+    Friend WithEvents picOppF5 As PictureBox
+    Friend WithEvents picOppF6 As PictureBox
+    Friend WithEvents picOppF7 As PictureBox
+    Friend WithEvents picOppF8 As PictureBox
+    Friend WithEvents picOppF9 As PictureBox
+    Friend WithEvents picOppF10 As PictureBox
+    Friend WithEvents picOppF2 As PictureBox
+    Friend WithEvents picOppF1 As PictureBox
     Friend WithEvents picOppE3 As PictureBox
     Friend WithEvents picOppE4 As PictureBox
     Friend WithEvents picOppE5 As PictureBox
