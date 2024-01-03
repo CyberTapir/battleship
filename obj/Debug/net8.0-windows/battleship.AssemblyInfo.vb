@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("battleship"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f194931fe04328e5622b30f6027e79ea584fa6"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("battleship"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("battleship"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

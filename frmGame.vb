@@ -3,12 +3,13 @@
     ''' <summary>
     ''' playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)
     ''' </summary>
-    Dim playerBoardArray(,) As PictureBox
+    Dim playerBoardArray(10, 10) As PictureBox
+
 
     ''' <summary>
     ''' opponentBoardArray is a control array of pictureboxes. This handles the player view of the opponents board (hits and misses)
     ''' </summary>
-    Dim opponentBoardArray(,) As PictureBox
+    Dim opponentBoardArray(10, 10) As PictureBox
 
     ''' <summary>
     ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
@@ -19,7 +20,6 @@
 
         ''' Create the control array to access items by coordinate
         initialiseControlArray()
-
 
     End Sub
 
@@ -235,6 +235,7 @@
         clearPictureBoxes()
     End Sub
 
+
     ''' <summary>
     ''' Clear each of the picture boxes by using two for loops.
     ''' This is run to reset the board once the player returns to the starting form in preparation for a potential second game
@@ -242,8 +243,8 @@
     Private Sub clearPictureBoxes()
         For I = 1 To 10
             For j = 1 To 10
-                playerBoardArray(I, j) = Nothing
-                opponentBoardArray(I, j) = Nothing
+                playerBoardArray(I, j).BackColor = Nothing
+                opponentBoardArray(I, j).BackColor = Nothing
             Next j
         Next i
     End Sub
@@ -254,6 +255,18 @@
 
 
 
-        Return
+        Return 0
     End Function
+
+    ''' <summary>
+    ''' On click of Opponent grid, launch an attack and change the colour appropriately
+    ''' </summary>
+    ''' <param name="sender">The clicked PictureBox as PictureBox</param>
+    ''' <param name="e"></param>
+    Private Sub picOpp_Click(sender As Object, e As EventArgs) Handles picOppA1.Click, picOppA2.Click, picOppA3.Click, picOppA4.Click, picOppA5.Click, picOppA6.Click, picOppA7.Click, picOppA8.Click, picOppA9.Click, picOppA10.Click, picOppB1.Click, picOppB2.Click, picOppB3.Click, picOppB4.Click, picOppB5.Click, picOppB6.Click, picOppB7.Click, picOppB8.Click, picOppB9.Click, picOppB10.Click, picOppC1.Click, picOppC2.Click, picOppC3.Click, picOppC4.Click, picOppC5.Click, picOppC6.Click, picOppC7.Click, picOppC8.Click, picOppC9.Click, picOppC10.Click, picOppD1.Click, picOppD2.Click, picOppD3.Click, picOppD4.Click, picOppD5.Click, picOppD6.Click, picOppD7.Click, picOppD8.Click, picOppD9.Click, picOppD10.Click, picOppE1.Click, picOppE2.Click, picOppE3.Click, picOppE4.Click, picOppE5.Click, picOppE6.Click, picOppE7.Click, picOppE8.Click, picOppE9.Click, picOppE10.Click, picOppF1.Click, picOppF2.Click, picOppF3.Click, picOppF4.Click, picOppF5.Click, picOppF6.Click, picOppF7.Click, picOppF8.Click, picOppF9.Click, picOppF10.Click, picOppG1.Click, picOppG2.Click, picOppG3.Click, picOppG4.Click, picOppG5.Click, picOppG6.Click, picOppG7.Click, picOppG8.Click, picOppG9.Click, picOppG10.Click, picOppH1.Click, picOppH2.Click, picOppH3.Click, picOppH4.Click, picOppH5.Click, picOppH6.Click, picOppH7.Click, picOppH8.Click, picOppH9.Click, picOppH10.Click, picOppI1.Click, picOppI2.Click, picOppI3.Click, picOppI4.Click, picOppI5.Click, picOppI6.Click, picOppI7.Click, picOppI8.Click, picOppI9.Click, picOppI10.Click, picOppJ1.Click, picOppJ2.Click, picOppJ3.Click, picOppJ4.Click, picOppJ5.Click, picOppJ6.Click, picOppJ7.Click, picOppJ8.Click, picOppJ9.Click, picOppJ10.Click
+        ''' When opponent box is clicked, turn red
+        MsgBox(sender.name)
+        sender.backColor = Color.Red
+
+    End Sub
 End Class
