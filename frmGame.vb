@@ -1,10 +1,16 @@
-﻿Public Class frmGame
+﻿Imports System.Windows.Forms.VisualStyles
+
+Public Class frmGame
 
     ''' <summary>
     ''' playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)
     ''' </summary>
     Dim playerBoardArray(10, 10) As PictureBox
 
+    ''' <summary>
+    ''' playerBoard will store important information such as hits, misses and ships for the player
+    ''' </summary>
+    Dim playerBoard(10, 10) As Integer
 
     ''' <summary>
     ''' opponentBoardArray is a control array of pictureboxes. This handles the player view of the opponents board (hits and misses)
@@ -12,14 +18,23 @@
     Dim opponentBoardArray(10, 10) As PictureBox
 
     ''' <summary>
+    ''' opponentBoard will store important information such as hits, misses and ships for the computer or second player
+    ''' </summary>
+    Dim opponentBoard(10, 10) As Integer
+
+    ''' <summary>
     ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
+
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ''' Create the control array to access items by coordinate
         initialiseControlArray()
+
+        ''' Set the locations of the ships on the grid.
+        setShips()
 
     End Sub
 
@@ -231,6 +246,40 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Before the game starts, set the ship locations on the board.
+    ''' </summary>
+    Private Sub setShips()
+        ''' Set the board to clear
+        For i = 1 To 10
+            For j = 1 To 10
+                playerBoard(i, j) = 0
+            Next j
+        Next i
+
+        ' 0 empty, 1 ship, 2 hit, 3 miss
+
+        playerBoard(1, 1) = 1
+        playerBoard(1, 2) = 1
+        playerBoard(1, 3) = 1
+        playerBoard(1, 4) = 1
+        playerBoard(1, 5) = 1
+
+        opponentBoard(3, 1) = 1
+        opponentBoard(3, 2) = 1
+        opponentBoard(3, 3) = 1
+        opponentBoard(3, 4) = 1
+        opponentBoard(3, 5) = 1
+
+        For i = 1 To 10
+            For j = 1 To 10
+                If playerBoard(i, j) = 1 Then
+                    playerBoardArray(i, j).BackColor = Color.Gray
+                End If
+            Next j
+        Next i
+    End Sub
+
     Private Sub reset()
         clearPictureBoxes()
     End Sub
@@ -246,13 +295,10 @@
                 playerBoardArray(I, j).BackColor = Nothing
                 opponentBoardArray(I, j).BackColor = Nothing
             Next j
-        Next i
+        Next I
     End Sub
 
     Private Function getPlayerMove()
-
-
-
 
 
         Return 0
@@ -265,8 +311,71 @@
     ''' <param name="e"></param>
     Private Sub picOpp_Click(sender As Object, e As EventArgs) Handles picOppA1.Click, picOppA2.Click, picOppA3.Click, picOppA4.Click, picOppA5.Click, picOppA6.Click, picOppA7.Click, picOppA8.Click, picOppA9.Click, picOppA10.Click, picOppB1.Click, picOppB2.Click, picOppB3.Click, picOppB4.Click, picOppB5.Click, picOppB6.Click, picOppB7.Click, picOppB8.Click, picOppB9.Click, picOppB10.Click, picOppC1.Click, picOppC2.Click, picOppC3.Click, picOppC4.Click, picOppC5.Click, picOppC6.Click, picOppC7.Click, picOppC8.Click, picOppC9.Click, picOppC10.Click, picOppD1.Click, picOppD2.Click, picOppD3.Click, picOppD4.Click, picOppD5.Click, picOppD6.Click, picOppD7.Click, picOppD8.Click, picOppD9.Click, picOppD10.Click, picOppE1.Click, picOppE2.Click, picOppE3.Click, picOppE4.Click, picOppE5.Click, picOppE6.Click, picOppE7.Click, picOppE8.Click, picOppE9.Click, picOppE10.Click, picOppF1.Click, picOppF2.Click, picOppF3.Click, picOppF4.Click, picOppF5.Click, picOppF6.Click, picOppF7.Click, picOppF8.Click, picOppF9.Click, picOppF10.Click, picOppG1.Click, picOppG2.Click, picOppG3.Click, picOppG4.Click, picOppG5.Click, picOppG6.Click, picOppG7.Click, picOppG8.Click, picOppG9.Click, picOppG10.Click, picOppH1.Click, picOppH2.Click, picOppH3.Click, picOppH4.Click, picOppH5.Click, picOppH6.Click, picOppH7.Click, picOppH8.Click, picOppH9.Click, picOppH10.Click, picOppI1.Click, picOppI2.Click, picOppI3.Click, picOppI4.Click, picOppI5.Click, picOppI6.Click, picOppI7.Click, picOppI8.Click, picOppI9.Click, picOppI10.Click, picOppJ1.Click, picOppJ2.Click, picOppJ3.Click, picOppJ4.Click, picOppJ5.Click, picOppJ6.Click, picOppJ7.Click, picOppJ8.Click, picOppJ9.Click, picOppJ10.Click
         ''' When opponent box is clicked, turn red
-        MsgBox(sender.name)
+        'MsgBox(sender.name)
         sender.backColor = Color.Red
 
+        If playerBoard(getXCoords(sender), getYCoords(sender)) = 1 Then
+            sender.backcolor = Color.Red
+        Else
+            sender.backcolor = Color.Green
+        End If
+
     End Sub
+
+    ''' <summary>
+    ''' getCoords takes in a sender picturebox name (such as picOppA3) and return the appropriate number value for the letter
+    ''' </summary>
+    ''' <param name="str">Sender as type string</param>
+    ''' <returns>X Coordinate as type integer</returns>
+    Private Function getXCoords(str As String) As Integer
+        Dim result As Integer
+        Select Case str
+            Case str(7) = "A"
+                result = 1
+            Case str(7) = "B"
+                result = 2
+            Case str(7) = "C"
+                result = 3
+            Case str(7) = "D"
+                result = 4
+            Case str(7) = "E"
+                result = 5
+            Case str(7) = "F"
+                result = 6
+            Case str(7) = "G"
+                result = 7
+            Case str(7) = "H"
+                result = 8
+            Case str(7) = "I"
+                result = 9
+            Case str(7) = "J"
+                result = 10
+        End Select
+        Return result
+    End Function
+
+    'Private Function getYCoords(str As String) As Integer
+    '    Return CInt(str(8))
+    'End Function
+
+    Function getYCoords(inputString As String) As Integer
+        ' Check if the input string has at least 9 characters
+        If inputString.Length < 9 Then
+            Throw New ArgumentException("Input string must have at least 9 characters.")
+        End If
+
+        ' Extract characters from positions 8 and 9
+        Dim digitStr As String = inputString.Substring(7, 2)
+
+        ' Parse the extracted string to an integer
+        Dim yCoords As Integer
+        If Integer.TryParse(digitStr, yCoords) Then
+            Return yCoords
+        Else
+            Throw New ArgumentException("Invalid digits at positions 8 and 9.")
+        End If
+    End Function
+
+
+
 End Class
