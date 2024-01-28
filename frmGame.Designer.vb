@@ -2430,7 +2430,7 @@ Partial Class frmGame
         Controls.Add(picPlayerA2)
         Controls.Add(picPlayerA1)
         Name = "frmGame"
-        Text = "f"
+        Text = "Battleship - In Game"
         CType(picPlayerA1, ComponentModel.ISupportInitialize).EndInit()
         CType(picPlayerA2, ComponentModel.ISupportInitialize).EndInit()
         CType(picPlayerA10, ComponentModel.ISupportInitialize).EndInit()

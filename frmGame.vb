@@ -23,6 +23,16 @@ Public Class frmGame
     Dim opponentBoard(10, 10) As Integer
 
     ''' <summary>
+    ''' PlayerShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
+    ''' </summary>
+    Dim playerShips As Integer
+
+    ''' <summary>
+    ''' OpponentShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
+    ''' </summary>
+    Dim opponentShips As Integer
+
+    ''' <summary>
     ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
     ''' </summary>
     ''' <param name="sender"></param>
@@ -250,10 +260,11 @@ Public Class frmGame
     ''' Before the game starts, set the ship locations on the board.
     ''' </summary>
     Private Sub setShips()
-        ''' Set the board to clear
+        ' Set the board to clear
         For i = 1 To 10
             For j = 1 To 10
                 playerBoard(i, j) = 0
+                opponentBoard(i, j) = 0
             Next j
         Next i
 
@@ -278,6 +289,10 @@ Public Class frmGame
                 End If
             Next j
         Next i
+
+        playerShips = 5
+        opponentShips = 5
+
     End Sub
 
     Private Sub reset()
@@ -298,10 +313,22 @@ Public Class frmGame
         Next I
     End Sub
 
-    Private Function getPlayerMove()
-
-
-        Return 0
+    Private Function isGameOver()
+        Dim result As Integer
+        If playerShips = 0 Then
+            MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            reset()
+            frmStart.Show()
+            Me.Close()
+        ElseIf opponentShips = 0 Then
+            MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            reset()
+            frmStart.Show()
+            Me.Close()
+        Else
+            result = 0
+        End If
+        Return result
     End Function
 
     ''' <summary>
@@ -310,14 +337,32 @@ Public Class frmGame
     ''' <param name="sender">The clicked PictureBox as PictureBox</param>
     ''' <param name="e"></param>
     Private Sub picOpp_Click(sender As Object, e As EventArgs) Handles picOppA1.Click, picOppA2.Click, picOppA3.Click, picOppA4.Click, picOppA5.Click, picOppA6.Click, picOppA7.Click, picOppA8.Click, picOppA9.Click, picOppA10.Click, picOppB1.Click, picOppB2.Click, picOppB3.Click, picOppB4.Click, picOppB5.Click, picOppB6.Click, picOppB7.Click, picOppB8.Click, picOppB9.Click, picOppB10.Click, picOppC1.Click, picOppC2.Click, picOppC3.Click, picOppC4.Click, picOppC5.Click, picOppC6.Click, picOppC7.Click, picOppC8.Click, picOppC9.Click, picOppC10.Click, picOppD1.Click, picOppD2.Click, picOppD3.Click, picOppD4.Click, picOppD5.Click, picOppD6.Click, picOppD7.Click, picOppD8.Click, picOppD9.Click, picOppD10.Click, picOppE1.Click, picOppE2.Click, picOppE3.Click, picOppE4.Click, picOppE5.Click, picOppE6.Click, picOppE7.Click, picOppE8.Click, picOppE9.Click, picOppE10.Click, picOppF1.Click, picOppF2.Click, picOppF3.Click, picOppF4.Click, picOppF5.Click, picOppF6.Click, picOppF7.Click, picOppF8.Click, picOppF9.Click, picOppF10.Click, picOppG1.Click, picOppG2.Click, picOppG3.Click, picOppG4.Click, picOppG5.Click, picOppG6.Click, picOppG7.Click, picOppG8.Click, picOppG9.Click, picOppG10.Click, picOppH1.Click, picOppH2.Click, picOppH3.Click, picOppH4.Click, picOppH5.Click, picOppH6.Click, picOppH7.Click, picOppH8.Click, picOppH9.Click, picOppH10.Click, picOppI1.Click, picOppI2.Click, picOppI3.Click, picOppI4.Click, picOppI5.Click, picOppI6.Click, picOppI7.Click, picOppI8.Click, picOppI9.Click, picOppI10.Click, picOppJ1.Click, picOppJ2.Click, picOppJ3.Click, picOppJ4.Click, picOppJ5.Click, picOppJ6.Click, picOppJ7.Click, picOppJ8.Click, picOppJ9.Click, picOppJ10.Click
-        ''' When opponent box is clicked, turn red
-        'MsgBox(sender.name)
-        sender.backColor = Color.Red
+        Dim clickedPictureBox As PictureBox = DirectCast(sender, PictureBox)
 
-        If playerBoard(getXCoords(sender), getYCoords(sender)) = 1 Then
-            sender.backcolor = Color.Red
+        ' Get the coordinates from the PictureBox name
+        Dim xCoord As Integer = getXCoords(clickedPictureBox.Name)
+        Dim yCoord As Integer = getYCoords(clickedPictureBox.Name)
+        'MsgBox(xCoord & yCoord)
+        ' Check if the square has already been guessed
+        If playerBoard(xCoord, yCoord) = 2 Or playerBoard(xCoord, yCoord) = 3 Then
+            MessageBox.Show("You have already guessed that square.", "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        ' Update the playerBoard and change the backcolor accordingly
+        If playerBoard(yCoord, xCoord) = 1 Then
+            ' Hit a ship
+            playerBoard(yCoord, xCoord) = 2
+            clickedPictureBox.BackColor = Color.Red
+            opponentShips = opponentShips - 1
         Else
-            sender.backcolor = Color.Green
+            ' Missed the ship
+            playerBoard(yCoord, xCoord) = 3
+            clickedPictureBox.BackColor = Color.Blue
+        End If
+
+        If isGameOver() = 0 Then
+            easyComputerMove()
         End If
 
     End Sub
@@ -329,53 +374,92 @@ Public Class frmGame
     ''' <returns>X Coordinate as type integer</returns>
     Private Function getXCoords(str As String) As Integer
         Dim result As Integer
-        Select Case str
-            Case str(7) = "A"
+        Select Case str(6)
+            Case "A"
                 result = 1
-            Case str(7) = "B"
+            Case "B"
                 result = 2
-            Case str(7) = "C"
+            Case "C"
                 result = 3
-            Case str(7) = "D"
+            Case "D"
                 result = 4
-            Case str(7) = "E"
+            Case "E"
                 result = 5
-            Case str(7) = "F"
+            Case "F"
                 result = 6
-            Case str(7) = "G"
+            Case "G"
                 result = 7
-            Case str(7) = "H"
+            Case "H"
                 result = 8
-            Case str(7) = "I"
+            Case "I"
                 result = 9
-            Case str(7) = "J"
+            Case "J"
                 result = 10
         End Select
         Return result
     End Function
-
-    'Private Function getYCoords(str As String) As Integer
-    '    Return CInt(str(8))
-    'End Function
-
-    Function getYCoords(inputString As String) As Integer
-        ' Check if the input string has at least 9 characters
-        If inputString.Length < 9 Then
-            Throw New ArgumentException("Input string must have at least 9 characters.")
+    Private Function getYCoords(str As String) As Integer
+        ' Check if the input string has at least 8 characters
+        If str.Length < 8 Then
+            Throw New ArgumentException("Input string must have at least 8 characters.")
         End If
 
-        ' Extract characters from positions 8 and 9
-        Dim digitStr As String = inputString.Substring(7, 2)
+        ' Extract the characters from position 8 to the end
+        Dim digitStr As String = str.Substring(7)
 
         ' Parse the extracted string to an integer
         Dim yCoords As Integer
         If Integer.TryParse(digitStr, yCoords) Then
             Return yCoords
         Else
-            Throw New ArgumentException("Invalid digits at positions 8 and 9.")
+            Throw New ArgumentException("Invalid digits at positions 8 and beyond.")
         End If
     End Function
 
+    ''' <summary>
+    ''' In the easiest computer mode, the computer guesses random squares.
+    ''' </summary>
+    Private Sub easyComputerMove()
 
+        Dim randXCoord As Integer
+        Dim randYCoord As Integer
+        Dim done As Boolean
+
+        randXCoord = getRandomNum(10)
+        randYCoord = getRandomNum(10)
+
+        While Not done
+            ' Update the playerBoard and change the backcolor accordingly
+            If opponentBoard(randYCoord, randXCoord) = 1 Then
+                ' Hit a ship
+                opponentBoard(randYCoord, randXCoord) = 2
+                playerBoardArray(randXCoord, randYCoord).BackColor = Color.Red
+                playerShips = playerShips - 1
+                done = True
+            ElseIf opponentBoard(randYCoord, randXCoord) = 0 Then
+                ' Missed the ship
+                playerBoard(randYCoord, randXCoord) = 3
+                playerBoardArray(randXCoord, randYCoord).BackColor = Color.Blue
+                done = True
+            Else
+                'already guessed get new guess
+                randXCoord = getRandomNum(10)
+                randYCoord = getRandomNum(10)
+            End If
+        End While
+    End Sub
+
+    ''' <summary>
+    ''' This subroutine generates a random integer given an upper bound
+    ''' </summary>
+    ''' <param name="upper">The upper value of the range (1 to upper)</param>
+    ''' <returns>Returns a random value between 1 and Upper inclusive</returns>
+    Private Function getRandomNum(upper As Integer) As Integer
+        Dim val As Integer
+
+        val = Int(Rnd() * upper) + 1
+
+        Return val
+    End Function
 
 End Class
