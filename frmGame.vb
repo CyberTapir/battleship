@@ -259,8 +259,8 @@ Public Class frmGame
     ''' <summary>
     ''' Before the game starts, set the ship locations on the board.
     ''' </summary>
+
     Private Sub setShips()
-        ' Set the board to clear
         For i = 1 To 10
             For j = 1 To 10
                 playerBoard(i, j) = 0
@@ -268,20 +268,11 @@ Public Class frmGame
             Next j
         Next i
 
-        ' 0 empty, 1 ship, 2 hit, 3 miss
+        ' Place ships randomly for player and opponent
+        placeShips(playerBoard)
+        placeShips(opponentBoard)
 
-        playerBoard(1, 1) = 1
-        playerBoard(1, 2) = 1
-        playerBoard(1, 3) = 1
-        playerBoard(1, 4) = 1
-        playerBoard(1, 5) = 1
-
-        opponentBoard(3, 1) = 1
-        opponentBoard(3, 2) = 1
-        opponentBoard(3, 3) = 1
-        opponentBoard(3, 4) = 1
-        opponentBoard(3, 5) = 1
-
+        ' Display player ships on the board
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = 1 Then
@@ -290,10 +281,54 @@ Public Class frmGame
             Next j
         Next i
 
-        playerShips = 5
-        opponentShips = 5
-
+        playerShips = 17
+        opponentShips = 17
     End Sub
+
+    Private Sub placeShips(ByRef board(,) As Integer)
+        Dim shipLengths() As Integer = {5, 4, 3, 3, 2}
+        Dim random As New Random()
+
+        For Each shipLength In shipLengths
+            Dim placed As Boolean = False
+            Do Until placed
+                Dim x As Integer = random.Next(1, 11)
+                Dim y As Integer = random.Next(1, 11)
+                Dim orientation As Integer = random.Next(0, 2)
+
+                If CanPlaceShip(board, x, y, shipLength, orientation) Then
+                    For k As Integer = 0 To shipLength - 1
+                        If orientation = 0 Then
+                            board(x + k, y) = 1
+                        Else
+                            board(x, y + k) = 1
+                        End If
+                    Next
+                    placed = True
+                End If
+            Loop
+        Next
+    End Sub
+
+    Private Function CanPlaceShip(ByRef board(,) As Integer, ByVal x As Integer, ByVal y As Integer, ByVal length As Integer, ByVal orientation As Integer) As Boolean
+        If orientation = 0 AndAlso x + length - 1 <= 10 Then
+            For i As Integer = x To x + length - 1
+                If board(i, y) <> 0 Then
+                    Return False
+                End If
+            Next
+            Return True
+        ElseIf orientation = 1 AndAlso y + length - 1 <= 10 Then
+            For j As Integer = y To y + length - 1
+                If board(x, j) <> 0 Then
+                    Return False
+                End If
+            Next
+            Return True
+        End If
+        Return False
+    End Function
+
 
     Private Sub reset()
         clearPictureBoxes()
