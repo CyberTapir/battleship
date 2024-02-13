@@ -259,8 +259,9 @@ Public Class frmGame
     ''' <summary>
     ''' Before the game starts, set the ship locations on the board.
     ''' </summary>
-
     Private Sub setShips()
+
+        ''' Clear the Board of all hits, misses and ships there may be remaining
         For i = 1 To 10
             For j = 1 To 10
                 playerBoard(i, j) = 0
@@ -268,11 +269,11 @@ Public Class frmGame
             Next j
         Next i
 
-        ' Place ships randomly for player and opponent
+        ''' Place ships randomly for player and opponent
         placeShips(playerBoard)
         placeShips(opponentBoard)
 
-        ' Display player ships on the board
+        ''' Display player ships on the board
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = 1 Then
@@ -281,22 +282,34 @@ Public Class frmGame
             Next j
         Next i
 
+        ''' Set the value of how many ships each player needs to sink
         playerShips = 17
         opponentShips = 17
     End Sub
 
+    ''' <summary>
+    ''' Place the ships on the board in a random manner
+    ''' </summary>
+    ''' <param name="board">The board for the ships to be placed on</param>
     Private Sub placeShips(ByRef board(,) As Integer)
+
+        ''' Initialise the lengths of the ships
         Dim shipLengths() As Integer = {5, 4, 3, 3, 2}
+
+        ''' Create a random integer
         Dim random As New Random()
 
         For Each shipLength In shipLengths
             Dim placed As Boolean = False
             Do Until placed
-                Dim x As Integer = random.Next(1, 11)
-                Dim y As Integer = random.Next(1, 11)
-                Dim orientation As Integer = random.Next(0, 2)
+                ''' Generate random X and Y value for the ship to start at, and an orientation
+                Dim x As Integer = getRandomNum(11)
+                Dim y As Integer = getRandomNum(11)
+                Dim orientation As Integer = getRandomNum(3) - 1
 
+                ''' Check if the ship can be placed
                 If CanPlaceShip(board, x, y, shipLength, orientation) Then
+                    ''' If yes, then place the ships on the board
                     For k As Integer = 0 To shipLength - 1
                         If orientation = 0 Then
                             board(x + k, y) = 1
@@ -310,23 +323,35 @@ Public Class frmGame
         Next
     End Sub
 
+    ''' <summary>
+    ''' Verify the ships do not overlap or fall off the board
+    ''' </summary>
+    ''' <param name="board">The board to check</param>
+    ''' <param name="x">Initial X value</param>
+    ''' <param name="y">Initial Y value</param>
+    ''' <param name="length">Length of the ship to be placed</param>
+    ''' <param name="orientation">Orientation of the ship to be placed</param>
+    ''' <returns>True/False. True if can be placed, false if not</returns>
     Private Function CanPlaceShip(ByRef board(,) As Integer, ByVal x As Integer, ByVal y As Integer, ByVal length As Integer, ByVal orientation As Integer) As Boolean
+        ''' Check if ship can safely be placed
         If orientation = 0 AndAlso x + length - 1 <= 10 Then
             For i As Integer = x To x + length - 1
                 If board(i, y) <> 0 Then
                     Return False
                 End If
-            Next
+            Next i
             Return True
+            ''' Check if ship can safely be placed
         ElseIf orientation = 1 AndAlso y + length - 1 <= 10 Then
             For j As Integer = y To y + length - 1
                 If board(x, j) <> 0 Then
                     Return False
                 End If
-            Next
+            Next j
             Return True
+        Else
+            Return False
         End If
-        Return False
     End Function
 
 
@@ -340,6 +365,7 @@ Public Class frmGame
     ''' This is run to reset the board once the player returns to the starting form in preparation for a potential second game
     ''' </summary>
     Private Sub clearPictureBoxes()
+        ''' Loop through and clear each box
         For I = 1 To 10
             For j = 1 To 10
                 playerBoardArray(I, j).BackColor = Nothing
@@ -348,19 +374,27 @@ Public Class frmGame
         Next I
     End Sub
 
+    ''' <summary>
+    ''' Function to verify if the game is won/lost
+    ''' </summary>
+    ''' <returns>True/False depending on whether the game is won</returns>
     Private Function isGameOver()
         Dim result As Integer
+
+        ''' If the player has no ships remaining, the computer wins
         If playerShips = 0 Then
             MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             reset()
             frmStart.Show()
             Me.Close()
+            ''' If the computer has no ships remaining, the player wins
         ElseIf opponentShips = 0 Then
             MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             reset()
             frmStart.Show()
             Me.Close()
         Else
+            ''' The game is not won yet
             result = 0
         End If
         Return result
@@ -433,6 +467,12 @@ Public Class frmGame
         End Select
         Return result
     End Function
+
+    ''' <summary>
+    ''' Gets the y value from a sender string
+    ''' </summary>
+    ''' <param name="str">Sender name, eg picPlayerA6</param>
+    ''' <returns>Integer column number</returns>
     Private Function getYCoords(str As String) As Integer
         ' Check if the input string has at least 8 characters
         If str.Length < 8 Then
@@ -460,24 +500,25 @@ Public Class frmGame
         Dim randYCoord As Integer
         Dim done As Boolean
 
+        ''' Generate random x and y values
         randXCoord = getRandomNum(10)
         randYCoord = getRandomNum(10)
 
         While Not done
-            ' Update the playerBoard and change the backcolor accordingly
+            ''' Update the playerBoard and change the backcolor accordingly
             If opponentBoard(randYCoord, randXCoord) = 1 Then
-                ' Hit a ship
+                ''' Hit a ship
                 opponentBoard(randYCoord, randXCoord) = 2
                 playerBoardArray(randXCoord, randYCoord).BackColor = Color.Red
                 playerShips = playerShips - 1
                 done = True
             ElseIf opponentBoard(randYCoord, randXCoord) = 0 Then
-                ' Missed the ship
+                ''' Missed the ship
                 playerBoard(randYCoord, randXCoord) = 3
                 playerBoardArray(randXCoord, randYCoord).BackColor = Color.Blue
                 done = True
             Else
-                'already guessed get new guess
+                ''' already guessed get new guess
                 randXCoord = getRandomNum(10)
                 randYCoord = getRandomNum(10)
             End If
@@ -492,6 +533,7 @@ Public Class frmGame
     Private Function getRandomNum(upper As Integer) As Integer
         Dim val As Integer
 
+        ''' Generate a random number from 1 to upper limit
         val = Int(Rnd() * upper) + 1
 
         Return val
