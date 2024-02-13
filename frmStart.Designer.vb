@@ -22,110 +22,118 @@ Partial Class frmStart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         lblPlaceholder = New Label()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        RadioButton3 = New RadioButton()
-        RadioButton4 = New RadioButton()
+        rdoComputerEasy = New RadioButton()
+        rdoComputerHard = New RadioButton()
+        rdoComputerImpossible = New RadioButton()
         btnRules = New Button()
         btnStart = New Button()
         grpGamemodeSelect = New GroupBox()
+        txtPlayerName = New TextBox()
+        ToolTip1 = New ToolTip(components)
         grpGamemodeSelect.SuspendLayout()
         SuspendLayout()
         ' 
         ' lblPlaceholder
         ' 
         lblPlaceholder.AutoSize = True
-        lblPlaceholder.Location = New Point(339, 80)
+        lblPlaceholder.Location = New Point(190, 62)
         lblPlaceholder.Name = "lblPlaceholder"
         lblPlaceholder.Size = New Size(99, 15)
         lblPlaceholder.TabIndex = 0
         lblPlaceholder.Text = "Logo Placeholder"
         ' 
-        ' RadioButton1
+        ' rdoComputerEasy
         ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Location = New Point(6, 22)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(97, 19)
-        RadioButton1.TabIndex = 1
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "RadioButton1"
-        RadioButton1.UseVisualStyleBackColor = True
+        rdoComputerEasy.AutoSize = True
+        rdoComputerEasy.Location = New Point(6, 22)
+        rdoComputerEasy.Name = "rdoComputerEasy"
+        rdoComputerEasy.Size = New Size(139, 19)
+        rdoComputerEasy.TabIndex = 1
+        rdoComputerEasy.TabStop = True
+        rdoComputerEasy.Text = "Easy Computer Mode"
+        rdoComputerEasy.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton2
+        ' rdoComputerHard
         ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Location = New Point(6, 47)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(97, 19)
-        RadioButton2.TabIndex = 2
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "RadioButton2"
-        RadioButton2.UseVisualStyleBackColor = True
+        rdoComputerHard.AutoSize = True
+        rdoComputerHard.Location = New Point(6, 47)
+        rdoComputerHard.Name = "rdoComputerHard"
+        rdoComputerHard.Size = New Size(142, 19)
+        rdoComputerHard.TabIndex = 2
+        rdoComputerHard.TabStop = True
+        rdoComputerHard.Text = "Hard Computer Mode"
+        rdoComputerHard.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton3
+        ' rdoComputerImpossible
         ' 
-        RadioButton3.AutoSize = True
-        RadioButton3.Location = New Point(6, 72)
-        RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(97, 19)
-        RadioButton3.TabIndex = 3
-        RadioButton3.TabStop = True
-        RadioButton3.Text = "RadioButton3"
-        RadioButton3.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton4
-        ' 
-        RadioButton4.AutoSize = True
-        RadioButton4.Location = New Point(6, 97)
-        RadioButton4.Name = "RadioButton4"
-        RadioButton4.Size = New Size(97, 19)
-        RadioButton4.TabIndex = 4
-        RadioButton4.TabStop = True
-        RadioButton4.Text = "RadioButton4"
-        RadioButton4.UseVisualStyleBackColor = True
+        rdoComputerImpossible.AutoSize = True
+        rdoComputerImpossible.Location = New Point(6, 72)
+        rdoComputerImpossible.Name = "rdoComputerImpossible"
+        rdoComputerImpossible.Size = New Size(173, 19)
+        rdoComputerImpossible.TabIndex = 3
+        rdoComputerImpossible.TabStop = True
+        rdoComputerImpossible.Text = "Impossible Computer Mode"
+        rdoComputerImpossible.UseVisualStyleBackColor = True
         ' 
         ' btnRules
         ' 
-        btnRules.Location = New Point(287, 277)
+        btnRules.Cursor = Cursors.Help
+        btnRules.Location = New Point(182, 267)
         btnRules.Name = "btnRules"
         btnRules.Size = New Size(90, 23)
         btnRules.TabIndex = 5
         btnRules.Text = "Rules of Play"
+        ToolTip1.SetToolTip(btnRules, "Click on this button to learn how to play Battleship.")
         btnRules.UseVisualStyleBackColor = True
         ' 
         ' btnStart
         ' 
-        btnStart.Location = New Point(287, 306)
+        btnStart.Cursor = Cursors.Default
+        btnStart.Location = New Point(182, 296)
         btnStart.Name = "btnStart"
         btnStart.Size = New Size(90, 23)
         btnStart.TabIndex = 6
         btnStart.Text = "Play!"
+        ToolTip1.SetToolTip(btnStart, "Click here to start the game!")
         btnStart.UseVisualStyleBackColor = True
         ' 
         ' grpGamemodeSelect
         ' 
-        grpGamemodeSelect.Controls.Add(RadioButton1)
-        grpGamemodeSelect.Controls.Add(RadioButton2)
-        grpGamemodeSelect.Controls.Add(RadioButton3)
-        grpGamemodeSelect.Controls.Add(RadioButton4)
-        grpGamemodeSelect.Location = New Point(274, 145)
+        grpGamemodeSelect.Controls.Add(rdoComputerEasy)
+        grpGamemodeSelect.Controls.Add(rdoComputerHard)
+        grpGamemodeSelect.Controls.Add(rdoComputerImpossible)
+        grpGamemodeSelect.Cursor = Cursors.Default
+        grpGamemodeSelect.Location = New Point(140, 108)
         grpGamemodeSelect.Name = "grpGamemodeSelect"
-        grpGamemodeSelect.Size = New Size(127, 126)
+        grpGamemodeSelect.Size = New Size(188, 106)
         grpGamemodeSelect.TabIndex = 7
         grpGamemodeSelect.TabStop = False
         grpGamemodeSelect.Text = "Select Game Mode"
+        ' 
+        ' txtPlayerName
+        ' 
+        txtPlayerName.Cursor = Cursors.IBeam
+        txtPlayerName.Location = New Point(172, 238)
+        txtPlayerName.MaxLength = 15
+        txtPlayerName.Name = "txtPlayerName"
+        txtPlayerName.PlaceholderText = "Name"
+        txtPlayerName.Size = New Size(100, 23)
+        txtPlayerName.TabIndex = 8
+        ToolTip1.SetToolTip(txtPlayerName, "Enter your name in this text field to start the game. Your name will be used to store high scores" & vbCrLf)
         ' 
         ' frmStart
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(450, 357)
+        Controls.Add(txtPlayerName)
         Controls.Add(grpGamemodeSelect)
         Controls.Add(btnStart)
         Controls.Add(btnRules)
         Controls.Add(lblPlaceholder)
+        Cursor = Cursors.AppStarting
         Name = "frmStart"
         Text = "Start Battleship"
         grpGamemodeSelect.ResumeLayout(False)
@@ -135,12 +143,13 @@ Partial Class frmStart
     End Sub
 
     Friend WithEvents lblPlaceholder As Label
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents rdoComputerEasy As RadioButton
+    Friend WithEvents rdoComputerHard As RadioButton
+    Friend WithEvents rdoComputerImpossible As RadioButton
     Friend WithEvents btnRules As Button
     Friend WithEvents btnStart As Button
     Friend WithEvents grpGamemodeSelect As GroupBox
+    Friend WithEvents txtPlayerName As TextBox
+    Friend WithEvents ToolTip1 As ToolTip
 
 End Class

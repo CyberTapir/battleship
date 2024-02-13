@@ -1,4 +1,6 @@
-﻿Imports System.Windows.Forms.VisualStyles
+﻿Imports System.IO.Compression
+Imports System.Security.Policy
+Imports System.Windows.Forms.VisualStyles
 
 Public Class frmGame
 
@@ -37,7 +39,6 @@ Public Class frmGame
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ''' Create the control array to access items by coordinate
@@ -303,8 +304,8 @@ Public Class frmGame
             Dim placed As Boolean = False
             Do Until placed
                 ''' Generate random X and Y value for the ship to start at, and an orientation
-                Dim x As Integer = getRandomNum(11)
-                Dim y As Integer = getRandomNum(11)
+                Dim x As Integer = getRandomNum(10)
+                Dim y As Integer = getRandomNum(10)
                 Dim orientation As Integer = getRandomNum(3) - 1
 
                 ''' Check if the ship can be placed
@@ -431,9 +432,18 @@ Public Class frmGame
         End If
 
         If isGameOver() = 0 Then
-            easyComputerMove()
+            doComputerMove()
         End If
 
+    End Sub
+
+    Private Sub doComputerMove()
+        If compMode = 0 Then
+            easyComputerMove()
+
+        ElseIf compMode = 2 Then
+            impossibleComputerMove()
+        End If
     End Sub
 
     ''' <summary>
@@ -476,6 +486,7 @@ Public Class frmGame
     Private Function getYCoords(str As String) As Integer
         ' Check if the input string has at least 8 characters
         If str.Length < 8 Then
+            ''' In case of error
             Throw New ArgumentException("Input string must have at least 8 characters.")
         End If
 
@@ -487,6 +498,7 @@ Public Class frmGame
         If Integer.TryParse(digitStr, yCoords) Then
             Return yCoords
         Else
+            ''' In case of error
             Throw New ArgumentException("Invalid digits at positions 8 and beyond.")
         End If
     End Function
@@ -498,32 +510,54 @@ Public Class frmGame
 
         Dim randXCoord As Integer
         Dim randYCoord As Integer
-        Dim done As Boolean
 
         ''' Generate random x and y values
         randXCoord = getRandomNum(10)
         randYCoord = getRandomNum(10)
 
+        doComputerMove(randXCoord, randYCoord)
+    End Sub
+
+    Private Sub doComputerMove(XCoord As Integer, YCoord As Integer)
+        Dim done As Boolean
         While Not done
             ''' Update the playerBoard and change the backcolor accordingly
-            If opponentBoard(randYCoord, randXCoord) = 1 Then
+            If opponentBoard(YCoord, XCoord) = 1 Then
                 ''' Hit a ship
-                opponentBoard(randYCoord, randXCoord) = 2
-                playerBoardArray(randXCoord, randYCoord).BackColor = Color.Red
+                opponentBoard(YCoord, XCoord) = 2
+                playerBoardArray(XCoord, YCoord).BackColor = Color.Red
                 playerShips = playerShips - 1
                 done = True
-            ElseIf opponentBoard(randYCoord, randXCoord) = 0 Then
+            ElseIf opponentBoard(YCoord, XCoord) = 0 Then
                 ''' Missed the ship
-                playerBoard(randYCoord, randXCoord) = 3
-                playerBoardArray(randXCoord, randYCoord).BackColor = Color.Blue
+                playerBoard(YCoord, XCoord) = 3
+                playerBoardArray(XCoord, YCoord).BackColor = Color.Blue
                 done = True
             Else
-                ''' already guessed get new guess
-                randXCoord = getRandomNum(10)
-                randYCoord = getRandomNum(10)
+                doComputerMove()
             End If
         End While
     End Sub
+
+    Private Sub impossibleComputerMove()
+
+        Dim XCoord As Integer
+        Dim YCoord As Integer
+
+        For i = 10 To 1 Step -1
+            For j = 10 To 1 Step -1
+                If playerBoard(i, j) = 1 Then
+                    XCoord = i
+                    YCoord = j
+                End If
+            Next j
+        Next i
+
+        doComputerMove(XCoord, YCoord)
+
+    End Sub
+
+
 
     ''' <summary>
     ''' This subroutine generates a random integer given an upper bound
