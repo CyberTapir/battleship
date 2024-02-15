@@ -1,5 +1,6 @@
 ﻿Imports System.IO.Compression
 Imports System.Security.Policy
+Imports System.Threading
 Imports System.Windows.Forms.VisualStyles
 
 Public Class frmGame
@@ -40,6 +41,8 @@ Public Class frmGame
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Randomize()
 
         ''' Create the control array to access items by coordinate
         initialiseControlArray()
@@ -414,33 +417,32 @@ Public Class frmGame
         Dim yCoord As Integer = getYCoords(clickedPictureBox.Name)
         'MsgBox(xCoord & yCoord)
         ' Check if the square has already been guessed
-        If playerBoard(xCoord, yCoord) = 2 Or playerBoard(xCoord, yCoord) = 3 Then
-            MessageBox.Show("You have already guessed that square.", "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Return
-        End If
+
 
         ' Update the playerBoard and change the backcolor accordingly
-        If playerBoard(yCoord, xCoord) = 1 Then
+        If opponentBoard(yCoord, xCoord) = 1 Then
             ' Hit a ship
-            playerBoard(yCoord, xCoord) = 2
+            opponentBoard(yCoord, xCoord) = 2
             clickedPictureBox.BackColor = Color.Red
             opponentShips = opponentShips - 1
+
+        ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
+            MessageBox.Show("You have already guessed that square." & playerBoard(xCoord, yCoord), "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             ' Missed the ship
-            playerBoard(yCoord, xCoord) = 3
+            opponentBoard(yCoord, xCoord) = 3
             clickedPictureBox.BackColor = Color.Blue
         End If
 
         If isGameOver() = 0 Then
-            doComputerMove()
+            getComputerLevel()
         End If
 
     End Sub
 
-    Private Sub doComputerMove()
+    Private Sub getComputerLevel()
         If compMode = 0 Then
             easyComputerMove()
-
         ElseIf compMode = 2 Then
             impossibleComputerMove()
         End If
@@ -507,34 +509,47 @@ Public Class frmGame
     ''' In the easiest computer mode, the computer guesses random squares.
     ''' </summary>
     Private Sub easyComputerMove()
-
         Dim randXCoord As Integer
         Dim randYCoord As Integer
+        Dim done As Boolean = False
 
-        ''' Generate random x and y values
-        randXCoord = getRandomNum(10)
-        randYCoord = getRandomNum(10)
+        ' Loop until a valid move is made
+        While Not done
+            ' Generate random x and y values
+            randXCoord = getRandomNum(10)
+            randYCoord = getRandomNum(10)
 
-        doComputerMove(randXCoord, randYCoord)
+            ' Check if the move is valid
+            If opponentBoard(randYCoord, randXCoord) = 1 Or opponentBoard(randYCoord, randXCoord) = 0 Then
+                ' Make the move
+                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                done = True
+            End If
+        End While
     End Sub
 
-    Private Sub doComputerMove(XCoord As Integer, YCoord As Integer)
+
+    Private Function GetPlayerBoardArray() As PictureBox(,)
+        Return playerBoardArray
+    End Function
+
+    Private Sub doComputerMove(XCoord As Integer, YCoord As Integer, playerBoardArray As PictureBox(,))
         Dim done As Boolean
         While Not done
             ''' Update the playerBoard and change the backcolor accordingly
-            If opponentBoard(YCoord, XCoord) = 1 Then
+            If playerBoard(YCoord, XCoord) = 1 Then
                 ''' Hit a ship
-                opponentBoard(YCoord, XCoord) = 2
-                playerBoardArray(XCoord, YCoord).BackColor = Color.Red
+                playerBoard(YCoord, XCoord) = 2
+                playerBoardArray(YCoord, XCoord).BackColor = Color.Red
                 playerShips = playerShips - 1
                 done = True
-            ElseIf opponentBoard(YCoord, XCoord) = 0 Then
+            ElseIf playerBoard(YCoord, XCoord) = 0 Then
                 ''' Missed the ship
                 playerBoard(YCoord, XCoord) = 3
-                playerBoardArray(XCoord, YCoord).BackColor = Color.Blue
+                playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
                 done = True
             Else
-                doComputerMove()
+                getComputerLevel()
             End If
         End While
     End Sub
@@ -543,18 +558,25 @@ Public Class frmGame
 
         Dim XCoord As Integer
         Dim YCoord As Integer
+        Dim done As Integer
 
-        For i = 10 To 1 Step -1
-            For j = 10 To 1 Step -1
-                If playerBoard(i, j) = 1 Then
-                    XCoord = i
-                    YCoord = j
-                End If
-            Next j
-        Next i
+        While Not done
 
-        doComputerMove(XCoord, YCoord)
+            For i = 10 To 1 Step -1
+                For j = 10 To 1 Step -1
+                    If playerBoard(i, j) = 1 Then
+                        XCoord = i
+                        YCoord = j
+                    End If
+                Next j
+            Next i
 
+            If opponentBoard(YCoord, XCoord) = 1 Or opponentBoard(YCoord, XCoord) = 0 Then
+                ' Make the move
+                doComputerMove(XCoord, YCoord, GetPlayerBoardArray())
+                done = True
+            End If
+        End While
     End Sub
 
 
