@@ -1,9 +1,4 @@
-﻿Imports System.IO.Compression
-Imports System.Security.Policy
-Imports System.Threading
-Imports System.Windows.Forms.VisualStyles
-
-Public Class frmGame
+﻿Public Class frmGame
 
     ''' <summary>
     ''' playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)
@@ -34,6 +29,21 @@ Public Class frmGame
     ''' OpponentShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
     ''' </summary>
     Dim opponentShips As Integer
+
+
+    Public Structure Ship
+        Public name As String
+        Public coordinates As List(Of Tuple(Of Integer, Integer))
+    End Structure
+
+
+
+
+
+
+
+
+
 
     ''' <summary>
     ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
@@ -265,6 +275,9 @@ Public Class frmGame
     ''' </summary>
     Private Sub setShips()
 
+
+
+
         ''' Clear the Board of all hits, misses and ships there may be remaining
         For i = 1 To 10
             For j = 1 To 10
@@ -277,6 +290,13 @@ Public Class frmGame
         placeShips(playerBoard)
         placeShips(opponentBoard)
 
+        Dim playerShips As New List(Of Ship) = {
+        New Ship With {.name = "Carrier", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(1, 1), Tuple.Create(1, 2), Tuple.Create(1, 3), Tuple.Create(1, 4), Tuple.Create(1, 5)}},
+            New Ship With {.name = "Battleship", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(3, 1), Tuple.Create(3, 2), Tuple.Create(3, 3), Tuple.Create(3, 4)}},
+            New Ship With {.name = "Cruiser", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(5, 1), Tuple.Create(5, 2), Tuple.Create(5, 3)}},
+            New Ship With {.name = "Submarine", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(7, 1), Tuple.Create(7, 2), Tuple.Create(7, 3)}},
+            New Ship With {.name = "Destroyer", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(9, 1), Tuple.Create(9, 2)}}
+            }
         ''' Display player ships on the board
         For i = 1 To 10
             For j = 1 To 10
@@ -387,13 +407,13 @@ Public Class frmGame
 
         ''' If the player has no ships remaining, the computer wins
         If playerShips = 0 Then
-            MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             reset()
             frmStart.Show()
             Me.Close()
             ''' If the computer has no ships remaining, the player wins
         ElseIf opponentShips = 0 Then
-            MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             reset()
             frmStart.Show()
             Me.Close()
@@ -534,24 +554,19 @@ Public Class frmGame
     End Function
 
     Private Sub doComputerMove(XCoord As Integer, YCoord As Integer, playerBoardArray As PictureBox(,))
-        Dim done As Boolean
-        While Not done
-            ''' Update the playerBoard and change the backcolor accordingly
-            If playerBoard(YCoord, XCoord) = 1 Then
-                ''' Hit a ship
-                playerBoard(YCoord, XCoord) = 2
-                playerBoardArray(YCoord, XCoord).BackColor = Color.Red
-                playerShips = playerShips - 1
-                done = True
-            ElseIf playerBoard(YCoord, XCoord) = 0 Then
-                ''' Missed the ship
-                playerBoard(YCoord, XCoord) = 3
-                playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
-                done = True
-            Else
-                getComputerLevel()
-            End If
-        End While
+        ''' Update the playerBoard and change the backcolor accordingly
+        If playerBoard(YCoord, XCoord) = 1 Then
+            ''' Hit a ship
+            playerBoard(YCoord, XCoord) = 2
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Red
+            playerShips = playerShips - 1
+        ElseIf playerBoard(YCoord, XCoord) = 0 Then
+            ''' Missed the ship
+            playerBoard(YCoord, XCoord) = 3
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
+        Else
+            getComputerLevel()
+        End If
     End Sub
 
     Private Sub impossibleComputerMove()
