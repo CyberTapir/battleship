@@ -2228,6 +2228,7 @@ Partial Class frmGame
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.GradientInactiveCaption
         ClientSize = New Size(1156, 669)
         Controls.Add(picOppJ3)
         Controls.Add(picOppJ4)
@@ -2429,6 +2430,9 @@ Partial Class frmGame
         Controls.Add(picPlayerA10)
         Controls.Add(picPlayerA2)
         Controls.Add(picPlayerA1)
+        Cursor = Cursors.Cross
+        FormBorderStyle = FormBorderStyle.Fixed3D
+        MaximizeBox = False
         Name = "frmGame"
         Text = "Battleship - In Game"
         CType(picPlayerA1, ComponentModel.ISupportInitialize).EndInit()

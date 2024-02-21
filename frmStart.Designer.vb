@@ -38,18 +38,20 @@ Partial Class frmStart
         ' lblPlaceholder
         ' 
         lblPlaceholder.AutoSize = True
-        lblPlaceholder.Location = New Point(190, 62)
+        lblPlaceholder.Location = New Point(244, 87)
+        lblPlaceholder.Margin = New Padding(4, 0, 4, 0)
         lblPlaceholder.Name = "lblPlaceholder"
-        lblPlaceholder.Size = New Size(99, 15)
+        lblPlaceholder.Size = New Size(130, 21)
         lblPlaceholder.TabIndex = 0
         lblPlaceholder.Text = "Logo Placeholder"
         ' 
         ' rdoComputerEasy
         ' 
         rdoComputerEasy.AutoSize = True
-        rdoComputerEasy.Location = New Point(6, 22)
+        rdoComputerEasy.Location = New Point(8, 31)
+        rdoComputerEasy.Margin = New Padding(4, 4, 4, 4)
         rdoComputerEasy.Name = "rdoComputerEasy"
-        rdoComputerEasy.Size = New Size(139, 19)
+        rdoComputerEasy.Size = New Size(177, 25)
         rdoComputerEasy.TabIndex = 1
         rdoComputerEasy.TabStop = True
         rdoComputerEasy.Text = "Easy Computer Mode"
@@ -58,9 +60,10 @@ Partial Class frmStart
         ' rdoComputerHard
         ' 
         rdoComputerHard.AutoSize = True
-        rdoComputerHard.Location = New Point(6, 47)
+        rdoComputerHard.Location = New Point(8, 66)
+        rdoComputerHard.Margin = New Padding(4, 4, 4, 4)
         rdoComputerHard.Name = "rdoComputerHard"
-        rdoComputerHard.Size = New Size(142, 19)
+        rdoComputerHard.Size = New Size(180, 25)
         rdoComputerHard.TabIndex = 2
         rdoComputerHard.TabStop = True
         rdoComputerHard.Text = "Hard Computer Mode"
@@ -69,9 +72,10 @@ Partial Class frmStart
         ' rdoComputerImpossible
         ' 
         rdoComputerImpossible.AutoSize = True
-        rdoComputerImpossible.Location = New Point(6, 72)
+        rdoComputerImpossible.Location = New Point(8, 101)
+        rdoComputerImpossible.Margin = New Padding(4, 4, 4, 4)
         rdoComputerImpossible.Name = "rdoComputerImpossible"
-        rdoComputerImpossible.Size = New Size(173, 19)
+        rdoComputerImpossible.Size = New Size(221, 25)
         rdoComputerImpossible.TabIndex = 3
         rdoComputerImpossible.TabStop = True
         rdoComputerImpossible.Text = "Impossible Computer Mode"
@@ -80,9 +84,10 @@ Partial Class frmStart
         ' btnRules
         ' 
         btnRules.Cursor = Cursors.Help
-        btnRules.Location = New Point(182, 267)
+        btnRules.Location = New Point(234, 374)
+        btnRules.Margin = New Padding(4, 4, 4, 4)
         btnRules.Name = "btnRules"
-        btnRules.Size = New Size(90, 23)
+        btnRules.Size = New Size(116, 32)
         btnRules.TabIndex = 5
         btnRules.Text = "Rules of Play"
         ToolTip1.SetToolTip(btnRules, "Click on this button to learn how to play Battleship.")
@@ -90,10 +95,10 @@ Partial Class frmStart
         ' 
         ' btnStart
         ' 
-        btnStart.Cursor = Cursors.Default
-        btnStart.Location = New Point(182, 296)
+        btnStart.Location = New Point(234, 414)
+        btnStart.Margin = New Padding(4, 4, 4, 4)
         btnStart.Name = "btnStart"
-        btnStart.Size = New Size(90, 23)
+        btnStart.Size = New Size(116, 32)
         btnStart.TabIndex = 6
         btnStart.Text = "Play!"
         ToolTip1.SetToolTip(btnStart, "Click here to start the game!")
@@ -104,10 +109,11 @@ Partial Class frmStart
         grpGamemodeSelect.Controls.Add(rdoComputerEasy)
         grpGamemodeSelect.Controls.Add(rdoComputerHard)
         grpGamemodeSelect.Controls.Add(rdoComputerImpossible)
-        grpGamemodeSelect.Cursor = Cursors.Default
-        grpGamemodeSelect.Location = New Point(140, 108)
+        grpGamemodeSelect.Location = New Point(180, 151)
+        grpGamemodeSelect.Margin = New Padding(4, 4, 4, 4)
         grpGamemodeSelect.Name = "grpGamemodeSelect"
-        grpGamemodeSelect.Size = New Size(188, 106)
+        grpGamemodeSelect.Padding = New Padding(4, 4, 4, 4)
+        grpGamemodeSelect.Size = New Size(242, 148)
         grpGamemodeSelect.TabIndex = 7
         grpGamemodeSelect.TabStop = False
         grpGamemodeSelect.Text = "Select Game Mode"
@@ -115,25 +121,30 @@ Partial Class frmStart
         ' txtPlayerName
         ' 
         txtPlayerName.Cursor = Cursors.IBeam
-        txtPlayerName.Location = New Point(172, 238)
+        txtPlayerName.Location = New Point(221, 333)
+        txtPlayerName.Margin = New Padding(4, 4, 4, 4)
         txtPlayerName.MaxLength = 15
         txtPlayerName.Name = "txtPlayerName"
         txtPlayerName.PlaceholderText = "Name"
-        txtPlayerName.Size = New Size(100, 23)
+        txtPlayerName.Size = New Size(127, 29)
         txtPlayerName.TabIndex = 8
         ToolTip1.SetToolTip(txtPlayerName, "Enter your name in this text field to start the game. Your name will be used to store high scores" & vbCrLf)
         ' 
         ' frmStart
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(450, 357)
+        BackColor = SystemColors.ActiveCaption
+        ClientSize = New Size(579, 500)
         Controls.Add(txtPlayerName)
         Controls.Add(grpGamemodeSelect)
         Controls.Add(btnStart)
         Controls.Add(btnRules)
         Controls.Add(lblPlaceholder)
         Cursor = Cursors.AppStarting
+        Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        FormBorderStyle = FormBorderStyle.Fixed3D
+        Margin = New Padding(4, 4, 4, 4)
         Name = "frmStart"
         Text = "Start Battleship"
         grpGamemodeSelect.ResumeLayout(False)

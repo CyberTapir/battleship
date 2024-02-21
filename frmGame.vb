@@ -443,6 +443,8 @@ Public Class frmGame
     Private Sub getComputerLevel()
         If compMode = 0 Then
             easyComputerMove()
+        ElseIf compMode = 1 Then
+            hardComputerMove()
         ElseIf compMode = 2 Then
             impossibleComputerMove()
         End If
@@ -520,7 +522,7 @@ Public Class frmGame
             randYCoord = getRandomNum(10)
 
             ' Check if the move is valid
-            If opponentBoard(randYCoord, randXCoord) = 1 Or opponentBoard(randYCoord, randXCoord) = 0 Then
+            If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
                 ' Make the move
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
                 done = True
@@ -534,24 +536,17 @@ Public Class frmGame
     End Function
 
     Private Sub doComputerMove(XCoord As Integer, YCoord As Integer, playerBoardArray As PictureBox(,))
-        Dim done As Boolean
-        While Not done
-            ''' Update the playerBoard and change the backcolor accordingly
-            If playerBoard(YCoord, XCoord) = 1 Then
-                ''' Hit a ship
-                playerBoard(YCoord, XCoord) = 2
-                playerBoardArray(YCoord, XCoord).BackColor = Color.Red
-                playerShips = playerShips - 1
-                done = True
-            ElseIf playerBoard(YCoord, XCoord) = 0 Then
-                ''' Missed the ship
-                playerBoard(YCoord, XCoord) = 3
-                playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
-                done = True
-            Else
-                getComputerLevel()
-            End If
-        End While
+        ''' Update the playerBoard and change the backcolor accordingly
+        If playerBoard(YCoord, XCoord) = 1 Then
+            ''' Hit a ship
+            playerBoard(YCoord, XCoord) = 2
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Red
+            playerShips = playerShips - 1
+        ElseIf playerBoard(YCoord, XCoord) = 0 Then
+            ''' Missed the ship
+            playerBoard(YCoord, XCoord) = 3
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
+        End If
     End Sub
 
     Private Sub impossibleComputerMove()
@@ -571,7 +566,7 @@ Public Class frmGame
                 Next j
             Next i
 
-            If opponentBoard(YCoord, XCoord) = 1 Or opponentBoard(YCoord, XCoord) = 0 Then
+            If playerBoard(YCoord, XCoord) = 1 Or playerBoard(YCoord, XCoord) = 0 Then
                 ' Make the move
                 doComputerMove(XCoord, YCoord, GetPlayerBoardArray())
                 done = True
@@ -594,5 +589,97 @@ Public Class frmGame
 
         Return val
     End Function
+
+
+    Private Sub hardComputerMove()
+        Dim XCoord As Integer
+        Dim YCoord As Integer
+        Dim done As Integer = 0
+
+        While done = 0
+            ' Loop until a valid move is made or all tiles are guessed
+            ' Generate random x and y values
+            XCoord = getRandomNum(10)
+            YCoord = getRandomNum(10)
+
+            ' Check if the move is valid
+            If opponentBoard(YCoord, XCoord) = 0 Or opponentBoard(YCoord, XCoord) = 1 Then
+                ' Make the move
+                doComputerMove(XCoord, YCoord, opponentBoardArray)
+
+                ' Check if there is a hit
+                If opponentBoard(YCoord, XCoord) = 2 Then
+                    ' Determine ship orientation and sink it
+                    sinkShip(XCoord, YCoord)
+                End If
+            End If
+
+            ' Check if all tiles have been guessed
+            done = 1
+            For y = 1 To 10
+                For x = 1 To 10
+                    If opponentBoard(y, x) = 0 Or opponentBoard(y, x) = 1 Then
+                        done = 0
+                        Exit For
+                    End If
+                Next x
+            Next y
+        End While
+    End Sub
+
+    Private Sub sinkShip(XCoord As Integer, YCoord As Integer)
+        ' Check all directions to find ship orientation
+        Dim isHorizontal As Boolean = isShipHorizontal(XCoord, YCoord)
+
+        ' Sink the ship based on orientation
+        If isHorizontal Then
+            sinkHorizontalShip(XCoord, YCoord)
+        Else
+            sinkVerticalShip(XCoord, YCoord)
+        End If
+    End Sub
+
+    Private Function isShipHorizontal(XCoord As Integer, YCoord As Integer) As Boolean
+        ' Check if there are hits to the left and right of the current hit
+        If (XCoord > 1 And opponentBoard(YCoord, XCoord - 1) = 2) Or
+       (XCoord < 10 And opponentBoard(YCoord, XCoord + 1) = 2) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+
+    Private Sub sinkHorizontalShip(XCoord As Integer, YCoord As Integer)
+        ' Move left until miss or edge of board
+        Dim x = XCoord - 1
+        While x >= 1 And opponentBoard(YCoord, x) = 2
+            doComputerMove(x, YCoord, opponentBoardArray)
+            x -= 1
+        End While
+
+        ' Move right until miss or edge of board
+        x = XCoord + 1
+        While x <= 10 And opponentBoard(YCoord, x) = 2
+            doComputerMove(x, YCoord, opponentBoardArray)
+            x += 1
+        End While
+    End Sub
+
+    Private Sub sinkVerticalShip(XCoord As Integer, YCoord As Integer)
+        ' Move up until miss or edge of board
+        Dim y = YCoord - 1
+        While y >= 1 And opponentBoard(y, XCoord) = 2
+            doComputerMove(XCoord, y, opponentBoardArray)
+            y -= 1
+        End While
+
+        ' Move down until miss or edge of board
+        y = YCoord + 1
+        While y <= 10 And opponentBoard(y, XCoord) = 2
+            doComputerMove(XCoord, y, opponentBoardArray)
+            y += 1
+        End While
+    End Sub
 
 End Class
