@@ -1,4 +1,6 @@
-﻿Public Class frmGame
+﻿Imports System.Diagnostics.Metrics
+
+Public Class frmGame
 
     ''' <summary>
     ''' playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)
@@ -31,18 +33,9 @@
     Dim opponentShips As Integer
 
 
-    Public Structure Ship
-        Public name As String
-        Public coordinates As List(Of Tuple(Of Integer, Integer))
-    End Structure
+    Dim playerShipLocations() As String
 
-
-
-
-
-
-
-
+    Dim impossibleMoveCounter As Integer = 1
 
 
     ''' <summary>
@@ -275,10 +268,7 @@
     ''' </summary>
     Private Sub setShips()
 
-
-
-
-        ''' Clear the Board of all hits, misses and ships there may be remaining
+        ' Clear the Board of all hits, misses, and ships
         For i = 1 To 10
             For j = 1 To 10
                 playerBoard(i, j) = 0
@@ -286,18 +276,11 @@
             Next j
         Next i
 
-        ''' Place ships randomly for player and opponent
+        ' Place ships randomly for player and opponent
         placeShips(playerBoard)
         placeShips(opponentBoard)
 
-        Dim playerShips As New List(Of Ship) = {
-        New Ship With {.name = "Carrier", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(1, 1), Tuple.Create(1, 2), Tuple.Create(1, 3), Tuple.Create(1, 4), Tuple.Create(1, 5)}},
-            New Ship With {.name = "Battleship", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(3, 1), Tuple.Create(3, 2), Tuple.Create(3, 3), Tuple.Create(3, 4)}},
-            New Ship With {.name = "Cruiser", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(5, 1), Tuple.Create(5, 2), Tuple.Create(5, 3)}},
-            New Ship With {.name = "Submarine", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(7, 1), Tuple.Create(7, 2), Tuple.Create(7, 3)}},
-            New Ship With {.name = "Destroyer", .coordinates = New List(Of Tuple(Of Integer, Integer)) From {Tuple.Create(9, 1), Tuple.Create(9, 2)}}
-            }
-        ''' Display player ships on the board
+        ' Display player ships on the board and store their locations
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = 1 Then
@@ -306,7 +289,7 @@
             Next j
         Next i
 
-        ''' Set the value of how many ships each player needs to sink
+        ' Set the value of how many ships each player needs to sink
         playerShips = 17
         opponentShips = 17
     End Sub
@@ -317,35 +300,36 @@
     ''' <param name="board">The board for the ships to be placed on</param>
     Private Sub placeShips(ByRef board(,) As Integer)
 
-        ''' Initialise the lengths of the ships
+        ' Initialise the lengths of the ships
         Dim shipLengths() As Integer = {5, 4, 3, 3, 2}
 
-        ''' Create a random integer
+        ' Create a random number generator
         Dim random As New Random()
 
         For Each shipLength In shipLengths
             Dim placed As Boolean = False
             Do Until placed
-                ''' Generate random X and Y value for the ship to start at, and an orientation
-                Dim x As Integer = getRandomNum(10)
-                Dim y As Integer = getRandomNum(10)
-                Dim orientation As Integer = getRandomNum(3) - 1
+                ' Generate random X and Y value for the ship to start at, and an orientation
+                Dim x As Integer = random.Next(10)
+                Dim y As Integer = random.Next(10)
+                Dim orientation As Integer = random.Next(2) ' 0 for horizontal, 1 for vertical
 
-                ''' Check if the ship can be placed
+                ' Check if the ship can be placed
                 If CanPlaceShip(board, x, y, shipLength, orientation) Then
-                    ''' If yes, then place the ships on the board
+                    ' If yes, then place the ships on the board
                     For k As Integer = 0 To shipLength - 1
                         If orientation = 0 Then
                             board(x + k, y) = 1
                         Else
                             board(x, y + k) = 1
                         End If
-                    Next
+                    Next k
                     placed = True
                 End If
             Loop
-        Next
+        Next shipLength
     End Sub
+
 
     ''' <summary>
     ''' Verify the ships do not overlap or fall off the board
@@ -460,15 +444,7 @@
 
     End Sub
 
-    Private Sub getComputerLevel()
-        If compMode = 0 Then
-            easyComputerMove()
-        ElseIf compMode = 1 Then
-            hardComputerMove()
-        ElseIf compMode = 2 Then
-            impossibleComputerMove()
-        End If
-    End Sub
+
 
     ''' <summary>
     ''' getCoords takes in a sender picturebox name (such as picOppA3) and return the appropriate number value for the letter
@@ -527,6 +503,17 @@
         End If
     End Function
 
+
+    Private Sub getComputerLevel()
+        If compMode = 0 Then
+            easyComputerMove()
+        ElseIf compMode = 1 Then
+            hardComputerMove()
+        ElseIf compMode = 2 Then
+            impossibleComputerMove()
+        End If
+    End Sub
+
     ''' <summary>
     ''' In the easiest computer mode, the computer guesses random squares.
     ''' </summary>
@@ -570,29 +557,33 @@
     End Sub
 
     Private Sub impossibleComputerMove()
+        Dim x As Integer
+        Dim y As Integer
+        Dim coords() As String
 
-        Dim XCoord As Integer
-        Dim YCoord As Integer
-        Dim done As Integer
+        ' Ensure playerShipLocations is initialized properly
+        ' Assuming it's a 2D array of strings
+        ' Dim playerShipLocations(,) As String
 
-        While Not done
+        If impossibleMoveCounter <= 17 Then
+            Dim shipIndex As Integer
+            Dim positionIndex As Integer
 
-            For i = 10 To 1 Step -1
-                For j = 10 To 1 Step -1
-                    If playerBoard(i, j) = 1 Then
-                        XCoord = i
-                        YCoord = j
-                    End If
-                Next j
-            Next i
 
-            If playerBoard(YCoord, XCoord) = 1 Or playerBoard(YCoord, XCoord) = 0 Then
-                ' Make the move
-                doComputerMove(XCoord, YCoord, GetPlayerBoardArray())
-                done = True
-            End If
-        End While
+            ' Get coordinates from playerShipLocations
+            MsgBox(playerShipLocations(impossibleMoveCounter))
+            coords = playerShipLocations(impossibleMoveCounter).Split(",")
+            x = Integer.Parse(coords(0))
+            y = Integer.Parse(coords(1))
+
+            ' Perform computer move
+            doComputerMove(x, y, GetPlayerBoardArray())
+
+            ' Increment counter
+            impossibleMoveCounter += 1
+        End If
     End Sub
+
 
 
 
@@ -612,93 +603,22 @@
 
 
     Private Sub hardComputerMove()
-        Dim XCoord As Integer
-        Dim YCoord As Integer
-        Dim done As Integer = 0
+        Dim randXCoord As Integer
+        Dim randYCoord As Integer
+        Dim done As Boolean = False
 
-        While done = 0
-            ' Loop until a valid move is made or all tiles are guessed
+        ' Loop until a valid move is made
+        While Not done
             ' Generate random x and y values
-            XCoord = getRandomNum(10)
-            YCoord = getRandomNum(10)
+            randXCoord = getRandomNum(10)
+            randYCoord = getRandomNum(10)
 
             ' Check if the move is valid
-            If opponentBoard(YCoord, XCoord) = 0 Or opponentBoard(YCoord, XCoord) = 1 Then
+            If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
                 ' Make the move
-                doComputerMove(XCoord, YCoord, opponentBoardArray)
-
-                ' Check if there is a hit
-                If opponentBoard(YCoord, XCoord) = 2 Then
-                    ' Determine ship orientation and sink it
-                    sinkShip(XCoord, YCoord)
-                End If
+                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                done = True
             End If
-
-            ' Check if all tiles have been guessed
-            done = 1
-            For y = 1 To 10
-                For x = 1 To 10
-                    If opponentBoard(y, x) = 0 Or opponentBoard(y, x) = 1 Then
-                        done = 0
-                        Exit For
-                    End If
-                Next x
-            Next y
-        End While
-    End Sub
-
-    Private Sub sinkShip(XCoord As Integer, YCoord As Integer)
-        ' Check all directions to find ship orientation
-        Dim isHorizontal As Boolean = isShipHorizontal(XCoord, YCoord)
-
-        ' Sink the ship based on orientation
-        If isHorizontal Then
-            sinkHorizontalShip(XCoord, YCoord)
-        Else
-            sinkVerticalShip(XCoord, YCoord)
-        End If
-    End Sub
-
-    Private Function isShipHorizontal(XCoord As Integer, YCoord As Integer) As Boolean
-        ' Check if there are hits to the left and right of the current hit
-        If (XCoord > 1 And opponentBoard(YCoord, XCoord - 1) = 2) Or
-       (XCoord < 10 And opponentBoard(YCoord, XCoord + 1) = 2) Then
-            Return True
-        Else
-            Return False
-        End If
-    End Function
-
-
-    Private Sub sinkHorizontalShip(XCoord As Integer, YCoord As Integer)
-        ' Move left until miss or edge of board
-        Dim x = XCoord - 1
-        While x >= 1 And opponentBoard(YCoord, x) = 2
-            doComputerMove(x, YCoord, opponentBoardArray)
-            x -= 1
-        End While
-
-        ' Move right until miss or edge of board
-        x = XCoord + 1
-        While x <= 10 And opponentBoard(YCoord, x) = 2
-            doComputerMove(x, YCoord, opponentBoardArray)
-            x += 1
-        End While
-    End Sub
-
-    Private Sub sinkVerticalShip(XCoord As Integer, YCoord As Integer)
-        ' Move up until miss or edge of board
-        Dim y = YCoord - 1
-        While y >= 1 And opponentBoard(y, XCoord) = 2
-            doComputerMove(XCoord, y, opponentBoardArray)
-            y -= 1
-        End While
-
-        ' Move down until miss or edge of board
-        y = YCoord + 1
-        While y <= 10 And opponentBoard(y, XCoord) = 2
-            doComputerMove(XCoord, y, opponentBoardArray)
-            y += 1
         End While
     End Sub
 
