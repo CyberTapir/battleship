@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|C:\\Users\\callu\\source\\repos\\battleship\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|C:\\Users\\callu\\source\\repos\\battleship\\modglobal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:modglobal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|C:\\Users\\callu\\source\\repos\\battleship\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|C:\\Users\\callu\\source\\repos\\battleship\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|C:\\Users\\callu\\source\\repos\\battleship\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -30,8 +38,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmGameEnd.vb",
+              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\frmGameEnd.vb",
+              "RelativeDocumentMoniker": "frmGameEnd.vb",
+              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGameEnd.vb",
+              "RelativeToolTip": "frmGameEnd.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-10T22:49:30.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmGameEnd.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\frmGameEnd.vb",
+              "RelativeDocumentMoniker": "frmGameEnd.vb",
+              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGameEnd.vb [Design]",
+              "RelativeToolTip": "frmGameEnd.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-10T22:35:58.464Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,26 +73,27 @@
               "RelativeDocumentMoniker": "frmGame.vb",
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGame.vb",
               "RelativeToolTip": "frmGame.vb",
-              "ViewState": "AQIAADUAAAAAAAAAAAAqwAwBAAAaAAAA",
+              "ViewState": "AQIAAJ4BAAAAAAAAAADgv70BAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-02-17T23:56:04.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "modGlobal.vb",
               "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\modGlobal.vb",
               "RelativeDocumentMoniker": "modGlobal.vb",
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\modGlobal.vb",
               "RelativeToolTip": "modGlobal.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-02-17T23:56:04.246Z"
+              "WhenOpened": "2024-02-17T23:56:04.246Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmStart.vb",
               "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\frmStart.vb",
               "RelativeDocumentMoniker": "frmStart.vb",
@@ -71,18 +105,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmGame.vb",
+              "DocumentIndex": 1,
+              "Title": "frmGame.vb [Design]",
               "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\frmGame.vb",
               "RelativeDocumentMoniker": "frmGame.vb",
-              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGame.vb",
-              "RelativeToolTip": "frmGame.vb",
+              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGame.vb [Design]",
+              "RelativeToolTip": "frmGame.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-02-17T23:56:04.331Z"
+              "WhenOpened": "2024-02-17T23:56:04.331Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmStart.vb",
               "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\frmStart.vb",
               "RelativeDocumentMoniker": "frmStart.vb",

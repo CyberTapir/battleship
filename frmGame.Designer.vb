@@ -222,6 +222,11 @@ Partial Class frmGame
         picOppA10 = New PictureBox()
         picOppA2 = New PictureBox()
         picOppA1 = New PictureBox()
+        Label1 = New Label()
+        lblPlayerProgress = New Label()
+        lblPlayerBoard = New Label()
+        lblOpponentBoard = New Label()
+        prgPlayerProgress = New ProgressBar()
         CType(picPlayerA1, ComponentModel.ISupportInitialize).BeginInit()
         CType(picPlayerA2, ComponentModel.ISupportInitialize).BeginInit()
         CType(picPlayerA10, ComponentModel.ISupportInitialize).BeginInit()
@@ -2224,12 +2229,62 @@ Partial Class frmGame
         picOppA1.TabIndex = 100
         picOppA1.TabStop = False
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(548, 157)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(41, 15)
+        Label1.TabIndex = 200
+        Label1.Text = "Label1"
+        ' 
+        ' lblPlayerProgress
+        ' 
+        lblPlayerProgress.AutoSize = True
+        lblPlayerProgress.Location = New Point(548, 295)
+        lblPlayerProgress.Name = "lblPlayerProgress"
+        lblPlayerProgress.Size = New Size(41, 15)
+        lblPlayerProgress.TabIndex = 201
+        lblPlayerProgress.Text = "Label2"
+        ' 
+        ' lblPlayerBoard
+        ' 
+        lblPlayerBoard.AutoSize = True
+        lblPlayerBoard.Font = New Font("Segoe UI", 20F)
+        lblPlayerBoard.Location = New Point(224, 76)
+        lblPlayerBoard.Name = "lblPlayerBoard"
+        lblPlayerBoard.Size = New Size(147, 37)
+        lblPlayerBoard.TabIndex = 202
+        lblPlayerBoard.Text = "Your Board"
+        ' 
+        ' lblOpponentBoard
+        ' 
+        lblOpponentBoard.AutoSize = True
+        lblOpponentBoard.Font = New Font("Segoe UI", 20F)
+        lblOpponentBoard.Location = New Point(749, 76)
+        lblOpponentBoard.Name = "lblOpponentBoard"
+        lblOpponentBoard.Size = New Size(215, 37)
+        lblOpponentBoard.TabIndex = 203
+        lblOpponentBoard.Text = "Opponent Board"
+        ' 
+        ' prgPlayerProgress
+        ' 
+        prgPlayerProgress.Location = New Point(520, 313)
+        prgPlayerProgress.Name = "prgPlayerProgress"
+        prgPlayerProgress.Size = New Size(100, 23)
+        prgPlayerProgress.TabIndex = 204
+        ' 
         ' frmGame
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientInactiveCaption
         ClientSize = New Size(1156, 669)
+        Controls.Add(prgPlayerProgress)
+        Controls.Add(lblOpponentBoard)
+        Controls.Add(lblPlayerBoard)
+        Controls.Add(lblPlayerProgress)
+        Controls.Add(Label1)
         Controls.Add(picOppJ3)
         Controls.Add(picOppJ4)
         Controls.Add(picOppJ5)
@@ -2636,6 +2691,7 @@ Partial Class frmGame
         CType(picOppA2, ComponentModel.ISupportInitialize).EndInit()
         CType(picOppA1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents picPlayerA1 As PictureBox
@@ -2838,4 +2894,9 @@ Partial Class frmGame
     Friend WithEvents picOppA10 As PictureBox
     Friend WithEvents picOppA2 As PictureBox
     Friend WithEvents picOppA1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPlayerProgress As Label
+    Friend WithEvents lblPlayerBoard As Label
+    Friend WithEvents lblOpponentBoard As Label
+    Friend WithEvents prgPlayerProgress As ProgressBar
 End Class

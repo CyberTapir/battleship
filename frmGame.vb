@@ -53,6 +53,8 @@ Public Class frmGame
         ''' Set the locations of the ships on the grid.
         setShips()
 
+        playerScore = 150
+
     End Sub
 
 
@@ -392,14 +394,16 @@ Public Class frmGame
         ''' If the player has no ships remaining, the computer wins
         If playerShips = 0 Then
             MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            playerScore = playerScore - 50
             reset()
-            frmStart.Show()
+            frmGameEnd.Show()
             Me.Close()
             ''' If the computer has no ships remaining, the player wins
         ElseIf opponentShips = 0 Then
             MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            playerScore = playerScore + 100
             reset()
-            frmStart.Show()
+            frmGameEnd.Show()
             Me.Close()
         Else
             ''' The game is not won yet
@@ -429,6 +433,8 @@ Public Class frmGame
             opponentBoard(yCoord, xCoord) = 2
             clickedPictureBox.BackColor = Color.Red
             opponentShips = opponentShips - 1
+            playerScore = playerScore + 20
+            prgPlayerProgress.Value = (((opponentShips / 17) * 100) * -1) + 100
 
         ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
             MessageBox.Show("You have already guessed that square." & playerBoard(xCoord, yCoord), "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -436,6 +442,7 @@ Public Class frmGame
             ' Missed the ship
             opponentBoard(yCoord, xCoord) = 3
             clickedPictureBox.BackColor = Color.Blue
+            playerScore = playerScore - 1
         End If
 
         If isGameOver() = 0 Then
