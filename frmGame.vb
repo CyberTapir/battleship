@@ -312,8 +312,8 @@ Public Class frmGame
             Dim placed As Boolean = False
             Do Until placed
                 ' Generate random X and Y value for the ship to start at, and an orientation
-                Dim x As Integer = random.Next(10)
-                Dim y As Integer = random.Next(10)
+                Dim x As Integer = getRandomNum(10)
+                Dim y As Integer = getRandomNum(10)
                 Dim orientation As Integer = random.Next(2) ' 0 for horizontal, 1 for vertical
 
                 ' Check if the ship can be placed
@@ -515,9 +515,9 @@ Public Class frmGame
         If compMode = 0 Then
             easyComputerMove()
         ElseIf compMode = 1 Then
-            hardComputerMove()
+            ' hardComputerMove()
         ElseIf compMode = 2 Then
-            impossibleComputerMove()
+            'impossibleComputerMove()
         End If
     End Sub
 
@@ -561,35 +561,36 @@ Public Class frmGame
             playerBoard(YCoord, XCoord) = 3
             playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
         End If
+        isGameOver()
     End Sub
 
-    Private Sub impossibleComputerMove()
-        Dim x As Integer
-        Dim y As Integer
-        Dim coords() As String
+    'Private Sub impossibleComputerMove()
+    '    Dim x As Integer
+    '    Dim y As Integer
+    '    Dim coords() As String
 
-        ' Ensure playerShipLocations is initialized properly
-        ' Assuming it's a 2D array of strings
-        ' Dim playerShipLocations(,) As String
+    '    ' Ensure playerShipLocations is initialized properly
+    '    ' Assuming it's a 2D array of strings
+    '    ' Dim playerShipLocations(,) As String
 
-        If impossibleMoveCounter <= 17 Then
-            Dim shipIndex As Integer
-            Dim positionIndex As Integer
+    '    If impossibleMoveCounter <= 17 Then
+    '        Dim shipIndex As Integer
+    '        Dim positionIndex As Integer
 
 
-            ' Get coordinates from playerShipLocations
-            MsgBox(playerShipLocations(impossibleMoveCounter))
-            coords = playerShipLocations(impossibleMoveCounter).Split(",")
-            x = Integer.Parse(coords(0))
-            y = Integer.Parse(coords(1))
+    '        ' Get coordinates from playerShipLocations
+    '        MsgBox(playerShipLocations(impossibleMoveCounter))
+    '        coords = playerShipLocations(impossibleMoveCounter).Split(",")
+    '        x = Integer.Parse(coords(0))
+    '        y = Integer.Parse(coords(1))
 
-            ' Perform computer move
-            doComputerMove(x, y, GetPlayerBoardArray())
+    '        ' Perform computer move
+    '        doComputerMove(x, y, GetPlayerBoardArray())
 
-            ' Increment counter
-            impossibleMoveCounter += 1
-        End If
-    End Sub
+    '        ' Increment counter
+    '        impossibleMoveCounter += 1
+    '    End If
+    'End Sub
 
 
 
@@ -609,24 +610,35 @@ Public Class frmGame
     End Function
 
 
-    Private Sub hardComputerMove()
-        Dim randXCoord As Integer
-        Dim randYCoord As Integer
-        Dim done As Boolean = False
+    'Private Sub hardComputerMove()
+    '    Dim randXCoord As Integer
+    '    Dim randYCoord As Integer
+    '    Dim done As Boolean = False
 
-        ' Loop until a valid move is made
-        While Not done
-            ' Generate random x and y values
-            randXCoord = getRandomNum(10)
-            randYCoord = getRandomNum(10)
+    '    ' Loop until a valid move is made
+    '    While Not done
+    '        ' Generate random x and y values
+    '        randXCoord = getRandomNum(10)
+    '        randYCoord = getRandomNum(10)
 
-            ' Check if the move is valid
-            If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
-                ' Make the move
-                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
-                done = True
-            End If
-        End While
-    End Sub
+    '        ' Check if the move is valid
+    '        If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
+    '            ' Make the move
+    '            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+    '            done = True
+    '        End If
+    '    End While
+    'End Sub
+
+
+
+
+
+
+
+
+
+
+
 
 End Class
