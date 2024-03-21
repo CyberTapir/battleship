@@ -3,18 +3,9 @@
 Public Class frmGameEnd
 
     Dim nextInt As Integer = 1
+    Dim arrHighScores() As recHighScore
 
     Private Sub frmGameEnd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        readHighScores()
-        printHighScores()
-        arrHighScores(nextInt).name = playerName
-        arrHighScores(nextInt).score = playerScore
-        nextInt = nextInt + 1
-        BubbleSort()
-        printHighScores()
-
-
         lblScore.Text = "Score: " & playerScore
     End Sub
     Public Structure recHighScore
@@ -22,7 +13,7 @@ Public Class frmGameEnd
         Public score As Integer
     End Structure
 
-    Dim arrHighScores() As recHighScore
+
 
     Private Sub BubbleSort()
         Dim Last As Integer
@@ -51,16 +42,16 @@ Public Class frmGameEnd
     End Sub
     Private Sub readHighScores()
         Dim temp As String = ""
-        Dim temp2() As String
+        Dim temp2 As Integer = 0
 
-        FileSystem.FileOpen(1, "hs.txt", OpenMode.Input)
+        FileSystem.FileOpen(1, "./hs.txt", OpenMode.Input)
 
 
         While Not EOF(1)
             FileSystem.Input(1, temp)
-            temp2 = temp.Split("|")
-            arrHighScores(nextInt).name = temp2(0)
-            arrHighScores(nextInt).score = CInt(temp2(1))
+            arrHighScores(nextInt).name = temp
+            FileSystem.Input(1, temp2)
+            arrHighScores(nextInt).score = temp2
             nextInt = nextInt + 1
         End While
 
@@ -74,7 +65,8 @@ Public Class frmGameEnd
     End Sub
     Private Sub writeScore()
         FileSystem.FileOpen(1, "hs.txt", OpenMode.Append)
-        FileSystem.WriteLine(1, playerName & "|" & playerScore)
+        FileSystem.WriteLine(1, playerName)
+        FileSystem.WriteLine(1, playerScore)
         FileSystem.FileClose(1)
     End Sub
 
