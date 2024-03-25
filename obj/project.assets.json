@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\callu\\.nuget\\packages\\": {}
+    "C:\\Users\\callumbennett\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj",
+      "projectUniqueName": "C:\\Users\\callumbennett\\Source\\Repos\\CyberTapir\\battleship\\battleship.vbproj",
       "projectName": "battleship",
-      "projectPath": "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj",
-      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\callu\\source\\repos\\battleship\\obj\\",
+      "projectPath": "C:\\Users\\callumbennett\\Source\\Repos\\CyberTapir\\battleship\\battleship.vbproj",
+      "packagesPath": "C:\\Users\\callumbennett\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\callumbennett\\Source\\Repos\\CyberTapir\\battleship\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\callumbennett\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
