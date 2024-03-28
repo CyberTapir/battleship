@@ -222,7 +222,6 @@ Partial Class frmGame
         picOppA10 = New PictureBox()
         picOppA2 = New PictureBox()
         picOppA1 = New PictureBox()
-        Label1 = New Label()
         lblPlayerProgress = New Label()
         lblPlayerBoard = New Label()
         lblOpponentBoard = New Label()
@@ -432,1828 +431,2021 @@ Partial Class frmGame
         ' picPlayerA1
         ' 
         picPlayerA1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA1.Location = New Point(116, 142)
+        picPlayerA1.Location = New Point(215, 303)
+        picPlayerA1.Margin = New Padding(6, 6, 6, 6)
         picPlayerA1.Name = "picPlayerA1"
-        picPlayerA1.Size = New Size(30, 30)
+        picPlayerA1.Size = New Size(54, 54)
         picPlayerA1.TabIndex = 0
         picPlayerA1.TabStop = False
         ' 
         ' picPlayerA2
         ' 
         picPlayerA2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA2.Location = New Point(152, 142)
+        picPlayerA2.Location = New Point(282, 303)
+        picPlayerA2.Margin = New Padding(6, 6, 6, 6)
         picPlayerA2.Name = "picPlayerA2"
-        picPlayerA2.Size = New Size(30, 30)
+        picPlayerA2.Size = New Size(54, 54)
         picPlayerA2.TabIndex = 1
         picPlayerA2.TabStop = False
         ' 
         ' picPlayerA10
         ' 
         picPlayerA10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA10.Location = New Point(440, 142)
+        picPlayerA10.Location = New Point(817, 303)
+        picPlayerA10.Margin = New Padding(6, 6, 6, 6)
         picPlayerA10.Name = "picPlayerA10"
-        picPlayerA10.Size = New Size(30, 30)
+        picPlayerA10.Size = New Size(54, 54)
         picPlayerA10.TabIndex = 2
         picPlayerA10.TabStop = False
         ' 
         ' picPlayerA9
         ' 
         picPlayerA9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA9.Location = New Point(404, 142)
+        picPlayerA9.Location = New Point(750, 303)
+        picPlayerA9.Margin = New Padding(6, 6, 6, 6)
         picPlayerA9.Name = "picPlayerA9"
-        picPlayerA9.Size = New Size(30, 30)
+        picPlayerA9.Size = New Size(54, 54)
         picPlayerA9.TabIndex = 3
         picPlayerA9.TabStop = False
         ' 
         ' picPlayerA8
         ' 
         picPlayerA8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA8.Location = New Point(368, 142)
+        picPlayerA8.Location = New Point(683, 303)
+        picPlayerA8.Margin = New Padding(6, 6, 6, 6)
         picPlayerA8.Name = "picPlayerA8"
-        picPlayerA8.Size = New Size(30, 30)
+        picPlayerA8.Size = New Size(54, 54)
         picPlayerA8.TabIndex = 4
         picPlayerA8.TabStop = False
         ' 
         ' picPlayerA7
         ' 
         picPlayerA7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA7.Location = New Point(332, 142)
+        picPlayerA7.Location = New Point(617, 303)
+        picPlayerA7.Margin = New Padding(6, 6, 6, 6)
         picPlayerA7.Name = "picPlayerA7"
-        picPlayerA7.Size = New Size(30, 30)
+        picPlayerA7.Size = New Size(54, 54)
         picPlayerA7.TabIndex = 5
         picPlayerA7.TabStop = False
         ' 
         ' picPlayerA6
         ' 
         picPlayerA6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA6.Location = New Point(296, 142)
+        picPlayerA6.Location = New Point(550, 303)
+        picPlayerA6.Margin = New Padding(6, 6, 6, 6)
         picPlayerA6.Name = "picPlayerA6"
-        picPlayerA6.Size = New Size(30, 30)
+        picPlayerA6.Size = New Size(54, 54)
         picPlayerA6.TabIndex = 6
         picPlayerA6.TabStop = False
         ' 
         ' picPlayerA5
         ' 
         picPlayerA5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA5.Location = New Point(260, 142)
+        picPlayerA5.Location = New Point(483, 303)
+        picPlayerA5.Margin = New Padding(6, 6, 6, 6)
         picPlayerA5.Name = "picPlayerA5"
-        picPlayerA5.Size = New Size(30, 30)
+        picPlayerA5.Size = New Size(54, 54)
         picPlayerA5.TabIndex = 7
         picPlayerA5.TabStop = False
         ' 
         ' picPlayerA4
         ' 
         picPlayerA4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA4.Location = New Point(224, 142)
+        picPlayerA4.Location = New Point(416, 303)
+        picPlayerA4.Margin = New Padding(6, 6, 6, 6)
         picPlayerA4.Name = "picPlayerA4"
-        picPlayerA4.Size = New Size(30, 30)
+        picPlayerA4.Size = New Size(54, 54)
         picPlayerA4.TabIndex = 8
         picPlayerA4.TabStop = False
         ' 
         ' picPlayerA3
         ' 
         picPlayerA3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerA3.Location = New Point(188, 142)
+        picPlayerA3.Location = New Point(349, 303)
+        picPlayerA3.Margin = New Padding(6, 6, 6, 6)
         picPlayerA3.Name = "picPlayerA3"
-        picPlayerA3.Size = New Size(30, 30)
+        picPlayerA3.Size = New Size(54, 54)
         picPlayerA3.TabIndex = 9
         picPlayerA3.TabStop = False
         ' 
         ' picPlayerC3
         ' 
         picPlayerC3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC3.Location = New Point(188, 214)
+        picPlayerC3.Location = New Point(349, 457)
+        picPlayerC3.Margin = New Padding(6, 6, 6, 6)
         picPlayerC3.Name = "picPlayerC3"
-        picPlayerC3.Size = New Size(30, 30)
+        picPlayerC3.Size = New Size(54, 54)
         picPlayerC3.TabIndex = 19
         picPlayerC3.TabStop = False
         ' 
         ' picPlayerC4
         ' 
         picPlayerC4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC4.Location = New Point(224, 214)
+        picPlayerC4.Location = New Point(416, 457)
+        picPlayerC4.Margin = New Padding(6, 6, 6, 6)
         picPlayerC4.Name = "picPlayerC4"
-        picPlayerC4.Size = New Size(30, 30)
+        picPlayerC4.Size = New Size(54, 54)
         picPlayerC4.TabIndex = 18
         picPlayerC4.TabStop = False
         ' 
         ' picPlayerC5
         ' 
         picPlayerC5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC5.Location = New Point(260, 214)
+        picPlayerC5.Location = New Point(483, 457)
+        picPlayerC5.Margin = New Padding(6, 6, 6, 6)
         picPlayerC5.Name = "picPlayerC5"
-        picPlayerC5.Size = New Size(30, 30)
+        picPlayerC5.Size = New Size(54, 54)
         picPlayerC5.TabIndex = 17
         picPlayerC5.TabStop = False
         ' 
         ' picPlayerC6
         ' 
         picPlayerC6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC6.Location = New Point(296, 214)
+        picPlayerC6.Location = New Point(550, 457)
+        picPlayerC6.Margin = New Padding(6, 6, 6, 6)
         picPlayerC6.Name = "picPlayerC6"
-        picPlayerC6.Size = New Size(30, 30)
+        picPlayerC6.Size = New Size(54, 54)
         picPlayerC6.TabIndex = 16
         picPlayerC6.TabStop = False
         ' 
         ' picPlayerC7
         ' 
         picPlayerC7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC7.Location = New Point(332, 214)
+        picPlayerC7.Location = New Point(617, 457)
+        picPlayerC7.Margin = New Padding(6, 6, 6, 6)
         picPlayerC7.Name = "picPlayerC7"
-        picPlayerC7.Size = New Size(30, 30)
+        picPlayerC7.Size = New Size(54, 54)
         picPlayerC7.TabIndex = 15
         picPlayerC7.TabStop = False
         ' 
         ' picPlayerC8
         ' 
         picPlayerC8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC8.Location = New Point(368, 214)
+        picPlayerC8.Location = New Point(683, 457)
+        picPlayerC8.Margin = New Padding(6, 6, 6, 6)
         picPlayerC8.Name = "picPlayerC8"
-        picPlayerC8.Size = New Size(30, 30)
+        picPlayerC8.Size = New Size(54, 54)
         picPlayerC8.TabIndex = 14
         picPlayerC8.TabStop = False
         ' 
         ' picPlayerC9
         ' 
         picPlayerC9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC9.Location = New Point(404, 214)
+        picPlayerC9.Location = New Point(750, 457)
+        picPlayerC9.Margin = New Padding(6, 6, 6, 6)
         picPlayerC9.Name = "picPlayerC9"
-        picPlayerC9.Size = New Size(30, 30)
+        picPlayerC9.Size = New Size(54, 54)
         picPlayerC9.TabIndex = 13
         picPlayerC9.TabStop = False
         ' 
         ' picPlayerC10
         ' 
         picPlayerC10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC10.Location = New Point(440, 214)
+        picPlayerC10.Location = New Point(817, 457)
+        picPlayerC10.Margin = New Padding(6, 6, 6, 6)
         picPlayerC10.Name = "picPlayerC10"
-        picPlayerC10.Size = New Size(30, 30)
+        picPlayerC10.Size = New Size(54, 54)
         picPlayerC10.TabIndex = 12
         picPlayerC10.TabStop = False
         ' 
         ' picPlayerC2
         ' 
         picPlayerC2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC2.Location = New Point(152, 214)
+        picPlayerC2.Location = New Point(282, 457)
+        picPlayerC2.Margin = New Padding(6, 6, 6, 6)
         picPlayerC2.Name = "picPlayerC2"
-        picPlayerC2.Size = New Size(30, 30)
+        picPlayerC2.Size = New Size(54, 54)
         picPlayerC2.TabIndex = 11
         picPlayerC2.TabStop = False
         ' 
         ' picPlayerC1
         ' 
         picPlayerC1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerC1.Location = New Point(116, 214)
+        picPlayerC1.Location = New Point(215, 457)
+        picPlayerC1.Margin = New Padding(6, 6, 6, 6)
         picPlayerC1.Name = "picPlayerC1"
-        picPlayerC1.Size = New Size(30, 30)
+        picPlayerC1.Size = New Size(54, 54)
         picPlayerC1.TabIndex = 10
         picPlayerC1.TabStop = False
         ' 
         ' picPlayerD3
         ' 
         picPlayerD3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD3.Location = New Point(188, 250)
+        picPlayerD3.Location = New Point(349, 533)
+        picPlayerD3.Margin = New Padding(6, 6, 6, 6)
         picPlayerD3.Name = "picPlayerD3"
-        picPlayerD3.Size = New Size(30, 30)
+        picPlayerD3.Size = New Size(54, 54)
         picPlayerD3.TabIndex = 29
         picPlayerD3.TabStop = False
         ' 
         ' picPlayerD4
         ' 
         picPlayerD4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD4.Location = New Point(224, 250)
+        picPlayerD4.Location = New Point(416, 533)
+        picPlayerD4.Margin = New Padding(6, 6, 6, 6)
         picPlayerD4.Name = "picPlayerD4"
-        picPlayerD4.Size = New Size(30, 30)
+        picPlayerD4.Size = New Size(54, 54)
         picPlayerD4.TabIndex = 28
         picPlayerD4.TabStop = False
         ' 
         ' picPlayerD5
         ' 
         picPlayerD5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD5.Location = New Point(260, 250)
+        picPlayerD5.Location = New Point(483, 533)
+        picPlayerD5.Margin = New Padding(6, 6, 6, 6)
         picPlayerD5.Name = "picPlayerD5"
-        picPlayerD5.Size = New Size(30, 30)
+        picPlayerD5.Size = New Size(54, 54)
         picPlayerD5.TabIndex = 27
         picPlayerD5.TabStop = False
         ' 
         ' picPlayerD6
         ' 
         picPlayerD6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD6.Location = New Point(296, 250)
+        picPlayerD6.Location = New Point(550, 533)
+        picPlayerD6.Margin = New Padding(6, 6, 6, 6)
         picPlayerD6.Name = "picPlayerD6"
-        picPlayerD6.Size = New Size(30, 30)
+        picPlayerD6.Size = New Size(54, 54)
         picPlayerD6.TabIndex = 26
         picPlayerD6.TabStop = False
         ' 
         ' picPlayerD7
         ' 
         picPlayerD7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD7.Location = New Point(332, 250)
+        picPlayerD7.Location = New Point(617, 533)
+        picPlayerD7.Margin = New Padding(6, 6, 6, 6)
         picPlayerD7.Name = "picPlayerD7"
-        picPlayerD7.Size = New Size(30, 30)
+        picPlayerD7.Size = New Size(54, 54)
         picPlayerD7.TabIndex = 25
         picPlayerD7.TabStop = False
         ' 
         ' picPlayerD8
         ' 
         picPlayerD8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD8.Location = New Point(368, 250)
+        picPlayerD8.Location = New Point(683, 533)
+        picPlayerD8.Margin = New Padding(6, 6, 6, 6)
         picPlayerD8.Name = "picPlayerD8"
-        picPlayerD8.Size = New Size(30, 30)
+        picPlayerD8.Size = New Size(54, 54)
         picPlayerD8.TabIndex = 24
         picPlayerD8.TabStop = False
         ' 
         ' picPlayerD9
         ' 
         picPlayerD9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD9.Location = New Point(404, 250)
+        picPlayerD9.Location = New Point(750, 533)
+        picPlayerD9.Margin = New Padding(6, 6, 6, 6)
         picPlayerD9.Name = "picPlayerD9"
-        picPlayerD9.Size = New Size(30, 30)
+        picPlayerD9.Size = New Size(54, 54)
         picPlayerD9.TabIndex = 23
         picPlayerD9.TabStop = False
         ' 
         ' picPlayerD10
         ' 
         picPlayerD10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD10.Location = New Point(440, 250)
+        picPlayerD10.Location = New Point(817, 533)
+        picPlayerD10.Margin = New Padding(6, 6, 6, 6)
         picPlayerD10.Name = "picPlayerD10"
-        picPlayerD10.Size = New Size(30, 30)
+        picPlayerD10.Size = New Size(54, 54)
         picPlayerD10.TabIndex = 22
         picPlayerD10.TabStop = False
         ' 
         ' picPlayerD2
         ' 
         picPlayerD2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD2.Location = New Point(152, 250)
+        picPlayerD2.Location = New Point(282, 533)
+        picPlayerD2.Margin = New Padding(6, 6, 6, 6)
         picPlayerD2.Name = "picPlayerD2"
-        picPlayerD2.Size = New Size(30, 30)
+        picPlayerD2.Size = New Size(54, 54)
         picPlayerD2.TabIndex = 21
         picPlayerD2.TabStop = False
         ' 
         ' picPlayerD1
         ' 
         picPlayerD1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerD1.Location = New Point(116, 250)
+        picPlayerD1.Location = New Point(215, 533)
+        picPlayerD1.Margin = New Padding(6, 6, 6, 6)
         picPlayerD1.Name = "picPlayerD1"
-        picPlayerD1.Size = New Size(30, 30)
+        picPlayerD1.Size = New Size(54, 54)
         picPlayerD1.TabIndex = 20
         picPlayerD1.TabStop = False
         ' 
         ' picPlayerB3
         ' 
         picPlayerB3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB3.Location = New Point(188, 178)
+        picPlayerB3.Location = New Point(349, 380)
+        picPlayerB3.Margin = New Padding(6, 6, 6, 6)
         picPlayerB3.Name = "picPlayerB3"
-        picPlayerB3.Size = New Size(30, 30)
+        picPlayerB3.Size = New Size(54, 54)
         picPlayerB3.TabIndex = 39
         picPlayerB3.TabStop = False
         ' 
         ' picPlayerB4
         ' 
         picPlayerB4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB4.Location = New Point(224, 178)
+        picPlayerB4.Location = New Point(416, 380)
+        picPlayerB4.Margin = New Padding(6, 6, 6, 6)
         picPlayerB4.Name = "picPlayerB4"
-        picPlayerB4.Size = New Size(30, 30)
+        picPlayerB4.Size = New Size(54, 54)
         picPlayerB4.TabIndex = 38
         picPlayerB4.TabStop = False
         ' 
         ' picPlayerB5
         ' 
         picPlayerB5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB5.Location = New Point(260, 178)
+        picPlayerB5.Location = New Point(483, 380)
+        picPlayerB5.Margin = New Padding(6, 6, 6, 6)
         picPlayerB5.Name = "picPlayerB5"
-        picPlayerB5.Size = New Size(30, 30)
+        picPlayerB5.Size = New Size(54, 54)
         picPlayerB5.TabIndex = 37
         picPlayerB5.TabStop = False
         ' 
         ' picPlayerB6
         ' 
         picPlayerB6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB6.Location = New Point(296, 178)
+        picPlayerB6.Location = New Point(550, 380)
+        picPlayerB6.Margin = New Padding(6, 6, 6, 6)
         picPlayerB6.Name = "picPlayerB6"
-        picPlayerB6.Size = New Size(30, 30)
+        picPlayerB6.Size = New Size(54, 54)
         picPlayerB6.TabIndex = 36
         picPlayerB6.TabStop = False
         ' 
         ' picPlayerB7
         ' 
         picPlayerB7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB7.Location = New Point(332, 178)
+        picPlayerB7.Location = New Point(617, 380)
+        picPlayerB7.Margin = New Padding(6, 6, 6, 6)
         picPlayerB7.Name = "picPlayerB7"
-        picPlayerB7.Size = New Size(30, 30)
+        picPlayerB7.Size = New Size(54, 54)
         picPlayerB7.TabIndex = 35
         picPlayerB7.TabStop = False
         ' 
         ' picPlayerB8
         ' 
         picPlayerB8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB8.Location = New Point(368, 178)
+        picPlayerB8.Location = New Point(683, 380)
+        picPlayerB8.Margin = New Padding(6, 6, 6, 6)
         picPlayerB8.Name = "picPlayerB8"
-        picPlayerB8.Size = New Size(30, 30)
+        picPlayerB8.Size = New Size(54, 54)
         picPlayerB8.TabIndex = 34
         picPlayerB8.TabStop = False
         ' 
         ' picPlayerB9
         ' 
         picPlayerB9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB9.Location = New Point(404, 178)
+        picPlayerB9.Location = New Point(750, 380)
+        picPlayerB9.Margin = New Padding(6, 6, 6, 6)
         picPlayerB9.Name = "picPlayerB9"
-        picPlayerB9.Size = New Size(30, 30)
+        picPlayerB9.Size = New Size(54, 54)
         picPlayerB9.TabIndex = 33
         picPlayerB9.TabStop = False
         ' 
         ' picPlayerB10
         ' 
         picPlayerB10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB10.Location = New Point(440, 178)
+        picPlayerB10.Location = New Point(817, 380)
+        picPlayerB10.Margin = New Padding(6, 6, 6, 6)
         picPlayerB10.Name = "picPlayerB10"
-        picPlayerB10.Size = New Size(30, 30)
+        picPlayerB10.Size = New Size(54, 54)
         picPlayerB10.TabIndex = 32
         picPlayerB10.TabStop = False
         ' 
         ' picPlayerB2
         ' 
         picPlayerB2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB2.Location = New Point(152, 178)
+        picPlayerB2.Location = New Point(282, 380)
+        picPlayerB2.Margin = New Padding(6, 6, 6, 6)
         picPlayerB2.Name = "picPlayerB2"
-        picPlayerB2.Size = New Size(30, 30)
+        picPlayerB2.Size = New Size(54, 54)
         picPlayerB2.TabIndex = 31
         picPlayerB2.TabStop = False
         ' 
         ' picPlayerB1
         ' 
         picPlayerB1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerB1.Location = New Point(116, 178)
+        picPlayerB1.Location = New Point(215, 380)
+        picPlayerB1.Margin = New Padding(6, 6, 6, 6)
         picPlayerB1.Name = "picPlayerB1"
-        picPlayerB1.Size = New Size(30, 30)
+        picPlayerB1.Size = New Size(54, 54)
         picPlayerB1.TabIndex = 30
         picPlayerB1.TabStop = False
         ' 
         ' picPlayerE3
         ' 
         picPlayerE3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE3.Location = New Point(188, 286)
+        picPlayerE3.Location = New Point(349, 610)
+        picPlayerE3.Margin = New Padding(6, 6, 6, 6)
         picPlayerE3.Name = "picPlayerE3"
-        picPlayerE3.Size = New Size(30, 30)
+        picPlayerE3.Size = New Size(54, 54)
         picPlayerE3.TabIndex = 49
         picPlayerE3.TabStop = False
         ' 
         ' picPlayerE4
         ' 
         picPlayerE4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE4.Location = New Point(224, 286)
+        picPlayerE4.Location = New Point(416, 610)
+        picPlayerE4.Margin = New Padding(6, 6, 6, 6)
         picPlayerE4.Name = "picPlayerE4"
-        picPlayerE4.Size = New Size(30, 30)
+        picPlayerE4.Size = New Size(54, 54)
         picPlayerE4.TabIndex = 48
         picPlayerE4.TabStop = False
         ' 
         ' picPlayerE5
         ' 
         picPlayerE5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE5.Location = New Point(260, 286)
+        picPlayerE5.Location = New Point(483, 610)
+        picPlayerE5.Margin = New Padding(6, 6, 6, 6)
         picPlayerE5.Name = "picPlayerE5"
-        picPlayerE5.Size = New Size(30, 30)
+        picPlayerE5.Size = New Size(54, 54)
         picPlayerE5.TabIndex = 47
         picPlayerE5.TabStop = False
         ' 
         ' picPlayerE6
         ' 
         picPlayerE6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE6.Location = New Point(296, 286)
+        picPlayerE6.Location = New Point(550, 610)
+        picPlayerE6.Margin = New Padding(6, 6, 6, 6)
         picPlayerE6.Name = "picPlayerE6"
-        picPlayerE6.Size = New Size(30, 30)
+        picPlayerE6.Size = New Size(54, 54)
         picPlayerE6.TabIndex = 46
         picPlayerE6.TabStop = False
         ' 
         ' picPlayerE7
         ' 
         picPlayerE7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE7.Location = New Point(332, 286)
+        picPlayerE7.Location = New Point(617, 610)
+        picPlayerE7.Margin = New Padding(6, 6, 6, 6)
         picPlayerE7.Name = "picPlayerE7"
-        picPlayerE7.Size = New Size(30, 30)
+        picPlayerE7.Size = New Size(54, 54)
         picPlayerE7.TabIndex = 45
         picPlayerE7.TabStop = False
         ' 
         ' picPlayerE8
         ' 
         picPlayerE8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE8.Location = New Point(368, 286)
+        picPlayerE8.Location = New Point(683, 610)
+        picPlayerE8.Margin = New Padding(6, 6, 6, 6)
         picPlayerE8.Name = "picPlayerE8"
-        picPlayerE8.Size = New Size(30, 30)
+        picPlayerE8.Size = New Size(54, 54)
         picPlayerE8.TabIndex = 44
         picPlayerE8.TabStop = False
         ' 
         ' picPlayerE9
         ' 
         picPlayerE9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE9.Location = New Point(404, 286)
+        picPlayerE9.Location = New Point(750, 610)
+        picPlayerE9.Margin = New Padding(6, 6, 6, 6)
         picPlayerE9.Name = "picPlayerE9"
-        picPlayerE9.Size = New Size(30, 30)
+        picPlayerE9.Size = New Size(54, 54)
         picPlayerE9.TabIndex = 43
         picPlayerE9.TabStop = False
         ' 
         ' picPlayerE10
         ' 
         picPlayerE10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE10.Location = New Point(440, 286)
+        picPlayerE10.Location = New Point(817, 610)
+        picPlayerE10.Margin = New Padding(6, 6, 6, 6)
         picPlayerE10.Name = "picPlayerE10"
-        picPlayerE10.Size = New Size(30, 30)
+        picPlayerE10.Size = New Size(54, 54)
         picPlayerE10.TabIndex = 42
         picPlayerE10.TabStop = False
         ' 
         ' picPlayerE2
         ' 
         picPlayerE2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE2.Location = New Point(152, 286)
+        picPlayerE2.Location = New Point(282, 610)
+        picPlayerE2.Margin = New Padding(6, 6, 6, 6)
         picPlayerE2.Name = "picPlayerE2"
-        picPlayerE2.Size = New Size(30, 30)
+        picPlayerE2.Size = New Size(54, 54)
         picPlayerE2.TabIndex = 41
         picPlayerE2.TabStop = False
         ' 
         ' picPlayerE1
         ' 
         picPlayerE1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerE1.Location = New Point(116, 286)
+        picPlayerE1.Location = New Point(215, 610)
+        picPlayerE1.Margin = New Padding(6, 6, 6, 6)
         picPlayerE1.Name = "picPlayerE1"
-        picPlayerE1.Size = New Size(30, 30)
+        picPlayerE1.Size = New Size(54, 54)
         picPlayerE1.TabIndex = 40
         picPlayerE1.TabStop = False
         ' 
         ' picPlayerJ3
         ' 
         picPlayerJ3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ3.Location = New Point(188, 468)
+        picPlayerJ3.Location = New Point(349, 998)
+        picPlayerJ3.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ3.Name = "picPlayerJ3"
-        picPlayerJ3.Size = New Size(30, 30)
+        picPlayerJ3.Size = New Size(54, 54)
         picPlayerJ3.TabIndex = 99
         picPlayerJ3.TabStop = False
         ' 
         ' picPlayerJ4
         ' 
         picPlayerJ4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ4.Location = New Point(224, 468)
+        picPlayerJ4.Location = New Point(416, 998)
+        picPlayerJ4.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ4.Name = "picPlayerJ4"
-        picPlayerJ4.Size = New Size(30, 30)
+        picPlayerJ4.Size = New Size(54, 54)
         picPlayerJ4.TabIndex = 98
         picPlayerJ4.TabStop = False
         ' 
         ' picPlayerJ5
         ' 
         picPlayerJ5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ5.Location = New Point(260, 468)
+        picPlayerJ5.Location = New Point(483, 998)
+        picPlayerJ5.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ5.Name = "picPlayerJ5"
-        picPlayerJ5.Size = New Size(30, 30)
+        picPlayerJ5.Size = New Size(54, 54)
         picPlayerJ5.TabIndex = 97
         picPlayerJ5.TabStop = False
         ' 
         ' picPlayerJ6
         ' 
         picPlayerJ6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ6.Location = New Point(296, 468)
+        picPlayerJ6.Location = New Point(550, 998)
+        picPlayerJ6.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ6.Name = "picPlayerJ6"
-        picPlayerJ6.Size = New Size(30, 30)
+        picPlayerJ6.Size = New Size(54, 54)
         picPlayerJ6.TabIndex = 96
         picPlayerJ6.TabStop = False
         ' 
         ' picPlayerJ7
         ' 
         picPlayerJ7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ7.Location = New Point(332, 468)
+        picPlayerJ7.Location = New Point(617, 998)
+        picPlayerJ7.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ7.Name = "picPlayerJ7"
-        picPlayerJ7.Size = New Size(30, 30)
+        picPlayerJ7.Size = New Size(54, 54)
         picPlayerJ7.TabIndex = 95
         picPlayerJ7.TabStop = False
         ' 
         ' picPlayerJ8
         ' 
         picPlayerJ8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ8.Location = New Point(368, 468)
+        picPlayerJ8.Location = New Point(683, 998)
+        picPlayerJ8.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ8.Name = "picPlayerJ8"
-        picPlayerJ8.Size = New Size(30, 30)
+        picPlayerJ8.Size = New Size(54, 54)
         picPlayerJ8.TabIndex = 94
         picPlayerJ8.TabStop = False
         ' 
         ' picPlayerJ9
         ' 
         picPlayerJ9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ9.Location = New Point(404, 468)
+        picPlayerJ9.Location = New Point(750, 998)
+        picPlayerJ9.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ9.Name = "picPlayerJ9"
-        picPlayerJ9.Size = New Size(30, 30)
+        picPlayerJ9.Size = New Size(54, 54)
         picPlayerJ9.TabIndex = 93
         picPlayerJ9.TabStop = False
         ' 
         ' picPlayerJ10
         ' 
         picPlayerJ10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ10.Location = New Point(440, 468)
+        picPlayerJ10.Location = New Point(817, 998)
+        picPlayerJ10.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ10.Name = "picPlayerJ10"
-        picPlayerJ10.Size = New Size(30, 30)
+        picPlayerJ10.Size = New Size(54, 54)
         picPlayerJ10.TabIndex = 92
         picPlayerJ10.TabStop = False
         ' 
         ' picPlayerJ2
         ' 
         picPlayerJ2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ2.Location = New Point(152, 468)
+        picPlayerJ2.Location = New Point(282, 998)
+        picPlayerJ2.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ2.Name = "picPlayerJ2"
-        picPlayerJ2.Size = New Size(30, 30)
+        picPlayerJ2.Size = New Size(54, 54)
         picPlayerJ2.TabIndex = 91
         picPlayerJ2.TabStop = False
         ' 
         ' picPlayerJ1
         ' 
         picPlayerJ1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerJ1.Location = New Point(116, 468)
+        picPlayerJ1.Location = New Point(215, 998)
+        picPlayerJ1.Margin = New Padding(6, 6, 6, 6)
         picPlayerJ1.Name = "picPlayerJ1"
-        picPlayerJ1.Size = New Size(30, 30)
+        picPlayerJ1.Size = New Size(54, 54)
         picPlayerJ1.TabIndex = 90
         picPlayerJ1.TabStop = False
         ' 
         ' picPlayerG3
         ' 
         picPlayerG3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG3.Location = New Point(188, 360)
+        picPlayerG3.Location = New Point(349, 768)
+        picPlayerG3.Margin = New Padding(6, 6, 6, 6)
         picPlayerG3.Name = "picPlayerG3"
-        picPlayerG3.Size = New Size(30, 30)
+        picPlayerG3.Size = New Size(54, 54)
         picPlayerG3.TabIndex = 89
         picPlayerG3.TabStop = False
         ' 
         ' picPlayerG4
         ' 
         picPlayerG4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG4.Location = New Point(224, 360)
+        picPlayerG4.Location = New Point(416, 768)
+        picPlayerG4.Margin = New Padding(6, 6, 6, 6)
         picPlayerG4.Name = "picPlayerG4"
-        picPlayerG4.Size = New Size(30, 30)
+        picPlayerG4.Size = New Size(54, 54)
         picPlayerG4.TabIndex = 88
         picPlayerG4.TabStop = False
         ' 
         ' picPlayerG5
         ' 
         picPlayerG5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG5.Location = New Point(260, 360)
+        picPlayerG5.Location = New Point(483, 768)
+        picPlayerG5.Margin = New Padding(6, 6, 6, 6)
         picPlayerG5.Name = "picPlayerG5"
-        picPlayerG5.Size = New Size(30, 30)
+        picPlayerG5.Size = New Size(54, 54)
         picPlayerG5.TabIndex = 87
         picPlayerG5.TabStop = False
         ' 
         ' picPlayerG6
         ' 
         picPlayerG6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG6.Location = New Point(296, 360)
+        picPlayerG6.Location = New Point(550, 768)
+        picPlayerG6.Margin = New Padding(6, 6, 6, 6)
         picPlayerG6.Name = "picPlayerG6"
-        picPlayerG6.Size = New Size(30, 30)
+        picPlayerG6.Size = New Size(54, 54)
         picPlayerG6.TabIndex = 86
         picPlayerG6.TabStop = False
         ' 
         ' picPlayerG7
         ' 
         picPlayerG7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG7.Location = New Point(332, 360)
+        picPlayerG7.Location = New Point(617, 768)
+        picPlayerG7.Margin = New Padding(6, 6, 6, 6)
         picPlayerG7.Name = "picPlayerG7"
-        picPlayerG7.Size = New Size(30, 30)
+        picPlayerG7.Size = New Size(54, 54)
         picPlayerG7.TabIndex = 85
         picPlayerG7.TabStop = False
         ' 
         ' picPlayerG8
         ' 
         picPlayerG8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG8.Location = New Point(368, 360)
+        picPlayerG8.Location = New Point(683, 768)
+        picPlayerG8.Margin = New Padding(6, 6, 6, 6)
         picPlayerG8.Name = "picPlayerG8"
-        picPlayerG8.Size = New Size(30, 30)
+        picPlayerG8.Size = New Size(54, 54)
         picPlayerG8.TabIndex = 84
         picPlayerG8.TabStop = False
         ' 
         ' picPlayerG9
         ' 
         picPlayerG9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG9.Location = New Point(404, 360)
+        picPlayerG9.Location = New Point(750, 768)
+        picPlayerG9.Margin = New Padding(6, 6, 6, 6)
         picPlayerG9.Name = "picPlayerG9"
-        picPlayerG9.Size = New Size(30, 30)
+        picPlayerG9.Size = New Size(54, 54)
         picPlayerG9.TabIndex = 83
         picPlayerG9.TabStop = False
         ' 
         ' picPlayerG10
         ' 
         picPlayerG10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG10.Location = New Point(440, 360)
+        picPlayerG10.Location = New Point(817, 768)
+        picPlayerG10.Margin = New Padding(6, 6, 6, 6)
         picPlayerG10.Name = "picPlayerG10"
-        picPlayerG10.Size = New Size(30, 30)
+        picPlayerG10.Size = New Size(54, 54)
         picPlayerG10.TabIndex = 82
         picPlayerG10.TabStop = False
         ' 
         ' picPlayerG2
         ' 
         picPlayerG2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG2.Location = New Point(152, 360)
+        picPlayerG2.Location = New Point(282, 768)
+        picPlayerG2.Margin = New Padding(6, 6, 6, 6)
         picPlayerG2.Name = "picPlayerG2"
-        picPlayerG2.Size = New Size(30, 30)
+        picPlayerG2.Size = New Size(54, 54)
         picPlayerG2.TabIndex = 81
         picPlayerG2.TabStop = False
         ' 
         ' picPlayerG1
         ' 
         picPlayerG1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerG1.Location = New Point(116, 360)
+        picPlayerG1.Location = New Point(215, 768)
+        picPlayerG1.Margin = New Padding(6, 6, 6, 6)
         picPlayerG1.Name = "picPlayerG1"
-        picPlayerG1.Size = New Size(30, 30)
+        picPlayerG1.Size = New Size(54, 54)
         picPlayerG1.TabIndex = 80
         picPlayerG1.TabStop = False
         ' 
         ' picPlayerI3
         ' 
         picPlayerI3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI3.Location = New Point(188, 432)
+        picPlayerI3.Location = New Point(349, 922)
+        picPlayerI3.Margin = New Padding(6, 6, 6, 6)
         picPlayerI3.Name = "picPlayerI3"
-        picPlayerI3.Size = New Size(30, 30)
+        picPlayerI3.Size = New Size(54, 54)
         picPlayerI3.TabIndex = 79
         picPlayerI3.TabStop = False
         ' 
         ' picPlayerI4
         ' 
         picPlayerI4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI4.Location = New Point(224, 432)
+        picPlayerI4.Location = New Point(416, 922)
+        picPlayerI4.Margin = New Padding(6, 6, 6, 6)
         picPlayerI4.Name = "picPlayerI4"
-        picPlayerI4.Size = New Size(30, 30)
+        picPlayerI4.Size = New Size(54, 54)
         picPlayerI4.TabIndex = 78
         picPlayerI4.TabStop = False
         ' 
         ' picPlayerI5
         ' 
         picPlayerI5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI5.Location = New Point(260, 432)
+        picPlayerI5.Location = New Point(483, 922)
+        picPlayerI5.Margin = New Padding(6, 6, 6, 6)
         picPlayerI5.Name = "picPlayerI5"
-        picPlayerI5.Size = New Size(30, 30)
+        picPlayerI5.Size = New Size(54, 54)
         picPlayerI5.TabIndex = 77
         picPlayerI5.TabStop = False
         ' 
         ' picPlayerI6
         ' 
         picPlayerI6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI6.Location = New Point(296, 432)
+        picPlayerI6.Location = New Point(550, 922)
+        picPlayerI6.Margin = New Padding(6, 6, 6, 6)
         picPlayerI6.Name = "picPlayerI6"
-        picPlayerI6.Size = New Size(30, 30)
+        picPlayerI6.Size = New Size(54, 54)
         picPlayerI6.TabIndex = 76
         picPlayerI6.TabStop = False
         ' 
         ' picPlayerI7
         ' 
         picPlayerI7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI7.Location = New Point(332, 432)
+        picPlayerI7.Location = New Point(617, 922)
+        picPlayerI7.Margin = New Padding(6, 6, 6, 6)
         picPlayerI7.Name = "picPlayerI7"
-        picPlayerI7.Size = New Size(30, 30)
+        picPlayerI7.Size = New Size(54, 54)
         picPlayerI7.TabIndex = 75
         picPlayerI7.TabStop = False
         ' 
         ' picPlayerI8
         ' 
         picPlayerI8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI8.Location = New Point(368, 432)
+        picPlayerI8.Location = New Point(683, 922)
+        picPlayerI8.Margin = New Padding(6, 6, 6, 6)
         picPlayerI8.Name = "picPlayerI8"
-        picPlayerI8.Size = New Size(30, 30)
+        picPlayerI8.Size = New Size(54, 54)
         picPlayerI8.TabIndex = 74
         picPlayerI8.TabStop = False
         ' 
         ' picPlayerI9
         ' 
         picPlayerI9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI9.Location = New Point(404, 432)
+        picPlayerI9.Location = New Point(750, 922)
+        picPlayerI9.Margin = New Padding(6, 6, 6, 6)
         picPlayerI9.Name = "picPlayerI9"
-        picPlayerI9.Size = New Size(30, 30)
+        picPlayerI9.Size = New Size(54, 54)
         picPlayerI9.TabIndex = 73
         picPlayerI9.TabStop = False
         ' 
         ' picPlayerI10
         ' 
         picPlayerI10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI10.Location = New Point(440, 432)
+        picPlayerI10.Location = New Point(817, 922)
+        picPlayerI10.Margin = New Padding(6, 6, 6, 6)
         picPlayerI10.Name = "picPlayerI10"
-        picPlayerI10.Size = New Size(30, 30)
+        picPlayerI10.Size = New Size(54, 54)
         picPlayerI10.TabIndex = 72
         picPlayerI10.TabStop = False
         ' 
         ' picPlayerI2
         ' 
         picPlayerI2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI2.Location = New Point(152, 432)
+        picPlayerI2.Location = New Point(282, 922)
+        picPlayerI2.Margin = New Padding(6, 6, 6, 6)
         picPlayerI2.Name = "picPlayerI2"
-        picPlayerI2.Size = New Size(30, 30)
+        picPlayerI2.Size = New Size(54, 54)
         picPlayerI2.TabIndex = 71
         picPlayerI2.TabStop = False
         ' 
         ' picPlayerI1
         ' 
         picPlayerI1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerI1.Location = New Point(116, 432)
+        picPlayerI1.Location = New Point(215, 922)
+        picPlayerI1.Margin = New Padding(6, 6, 6, 6)
         picPlayerI1.Name = "picPlayerI1"
-        picPlayerI1.Size = New Size(30, 30)
+        picPlayerI1.Size = New Size(54, 54)
         picPlayerI1.TabIndex = 70
         picPlayerI1.TabStop = False
         ' 
         ' picPlayerH3
         ' 
         picPlayerH3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH3.Location = New Point(188, 396)
+        picPlayerH3.Location = New Point(349, 845)
+        picPlayerH3.Margin = New Padding(6, 6, 6, 6)
         picPlayerH3.Name = "picPlayerH3"
-        picPlayerH3.Size = New Size(30, 30)
+        picPlayerH3.Size = New Size(54, 54)
         picPlayerH3.TabIndex = 69
         picPlayerH3.TabStop = False
         ' 
         ' picPlayerH4
         ' 
         picPlayerH4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH4.Location = New Point(224, 396)
+        picPlayerH4.Location = New Point(416, 845)
+        picPlayerH4.Margin = New Padding(6, 6, 6, 6)
         picPlayerH4.Name = "picPlayerH4"
-        picPlayerH4.Size = New Size(30, 30)
+        picPlayerH4.Size = New Size(54, 54)
         picPlayerH4.TabIndex = 68
         picPlayerH4.TabStop = False
         ' 
         ' picPlayerH5
         ' 
         picPlayerH5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH5.Location = New Point(260, 396)
+        picPlayerH5.Location = New Point(483, 845)
+        picPlayerH5.Margin = New Padding(6, 6, 6, 6)
         picPlayerH5.Name = "picPlayerH5"
-        picPlayerH5.Size = New Size(30, 30)
+        picPlayerH5.Size = New Size(54, 54)
         picPlayerH5.TabIndex = 67
         picPlayerH5.TabStop = False
         ' 
         ' picPlayerH6
         ' 
         picPlayerH6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH6.Location = New Point(296, 396)
+        picPlayerH6.Location = New Point(550, 845)
+        picPlayerH6.Margin = New Padding(6, 6, 6, 6)
         picPlayerH6.Name = "picPlayerH6"
-        picPlayerH6.Size = New Size(30, 30)
+        picPlayerH6.Size = New Size(54, 54)
         picPlayerH6.TabIndex = 66
         picPlayerH6.TabStop = False
         ' 
         ' picPlayerH7
         ' 
         picPlayerH7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH7.Location = New Point(332, 396)
+        picPlayerH7.Location = New Point(617, 845)
+        picPlayerH7.Margin = New Padding(6, 6, 6, 6)
         picPlayerH7.Name = "picPlayerH7"
-        picPlayerH7.Size = New Size(30, 30)
+        picPlayerH7.Size = New Size(54, 54)
         picPlayerH7.TabIndex = 65
         picPlayerH7.TabStop = False
         ' 
         ' picPlayerH8
         ' 
         picPlayerH8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH8.Location = New Point(368, 396)
+        picPlayerH8.Location = New Point(683, 845)
+        picPlayerH8.Margin = New Padding(6, 6, 6, 6)
         picPlayerH8.Name = "picPlayerH8"
-        picPlayerH8.Size = New Size(30, 30)
+        picPlayerH8.Size = New Size(54, 54)
         picPlayerH8.TabIndex = 64
         picPlayerH8.TabStop = False
         ' 
         ' picPlayerH9
         ' 
         picPlayerH9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH9.Location = New Point(404, 396)
+        picPlayerH9.Location = New Point(750, 845)
+        picPlayerH9.Margin = New Padding(6, 6, 6, 6)
         picPlayerH9.Name = "picPlayerH9"
-        picPlayerH9.Size = New Size(30, 30)
+        picPlayerH9.Size = New Size(54, 54)
         picPlayerH9.TabIndex = 63
         picPlayerH9.TabStop = False
         ' 
         ' picPlayerH10
         ' 
         picPlayerH10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH10.Location = New Point(440, 396)
+        picPlayerH10.Location = New Point(817, 845)
+        picPlayerH10.Margin = New Padding(6, 6, 6, 6)
         picPlayerH10.Name = "picPlayerH10"
-        picPlayerH10.Size = New Size(30, 30)
+        picPlayerH10.Size = New Size(54, 54)
         picPlayerH10.TabIndex = 62
         picPlayerH10.TabStop = False
         ' 
         ' picPlayerH2
         ' 
         picPlayerH2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH2.Location = New Point(152, 396)
+        picPlayerH2.Location = New Point(282, 845)
+        picPlayerH2.Margin = New Padding(6, 6, 6, 6)
         picPlayerH2.Name = "picPlayerH2"
-        picPlayerH2.Size = New Size(30, 30)
+        picPlayerH2.Size = New Size(54, 54)
         picPlayerH2.TabIndex = 61
         picPlayerH2.TabStop = False
         ' 
         ' picPlayerH1
         ' 
         picPlayerH1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerH1.Location = New Point(116, 396)
+        picPlayerH1.Location = New Point(215, 845)
+        picPlayerH1.Margin = New Padding(6, 6, 6, 6)
         picPlayerH1.Name = "picPlayerH1"
-        picPlayerH1.Size = New Size(30, 30)
+        picPlayerH1.Size = New Size(54, 54)
         picPlayerH1.TabIndex = 60
         picPlayerH1.TabStop = False
         ' 
         ' picPlayerF3
         ' 
         picPlayerF3.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF3.Location = New Point(188, 324)
+        picPlayerF3.Location = New Point(349, 691)
+        picPlayerF3.Margin = New Padding(6, 6, 6, 6)
         picPlayerF3.Name = "picPlayerF3"
-        picPlayerF3.Size = New Size(30, 30)
+        picPlayerF3.Size = New Size(54, 54)
         picPlayerF3.TabIndex = 59
         picPlayerF3.TabStop = False
         ' 
         ' picPlayerF4
         ' 
         picPlayerF4.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF4.Location = New Point(224, 324)
+        picPlayerF4.Location = New Point(416, 691)
+        picPlayerF4.Margin = New Padding(6, 6, 6, 6)
         picPlayerF4.Name = "picPlayerF4"
-        picPlayerF4.Size = New Size(30, 30)
+        picPlayerF4.Size = New Size(54, 54)
         picPlayerF4.TabIndex = 58
         picPlayerF4.TabStop = False
         ' 
         ' picPlayerF5
         ' 
         picPlayerF5.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF5.Location = New Point(260, 324)
+        picPlayerF5.Location = New Point(483, 691)
+        picPlayerF5.Margin = New Padding(6, 6, 6, 6)
         picPlayerF5.Name = "picPlayerF5"
-        picPlayerF5.Size = New Size(30, 30)
+        picPlayerF5.Size = New Size(54, 54)
         picPlayerF5.TabIndex = 57
         picPlayerF5.TabStop = False
         ' 
         ' picPlayerF6
         ' 
         picPlayerF6.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF6.Location = New Point(296, 324)
+        picPlayerF6.Location = New Point(550, 691)
+        picPlayerF6.Margin = New Padding(6, 6, 6, 6)
         picPlayerF6.Name = "picPlayerF6"
-        picPlayerF6.Size = New Size(30, 30)
+        picPlayerF6.Size = New Size(54, 54)
         picPlayerF6.TabIndex = 56
         picPlayerF6.TabStop = False
         ' 
         ' picPlayerF7
         ' 
         picPlayerF7.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF7.Location = New Point(332, 324)
+        picPlayerF7.Location = New Point(617, 691)
+        picPlayerF7.Margin = New Padding(6, 6, 6, 6)
         picPlayerF7.Name = "picPlayerF7"
-        picPlayerF7.Size = New Size(30, 30)
+        picPlayerF7.Size = New Size(54, 54)
         picPlayerF7.TabIndex = 55
         picPlayerF7.TabStop = False
         ' 
         ' picPlayerF8
         ' 
         picPlayerF8.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF8.Location = New Point(368, 324)
+        picPlayerF8.Location = New Point(683, 691)
+        picPlayerF8.Margin = New Padding(6, 6, 6, 6)
         picPlayerF8.Name = "picPlayerF8"
-        picPlayerF8.Size = New Size(30, 30)
+        picPlayerF8.Size = New Size(54, 54)
         picPlayerF8.TabIndex = 54
         picPlayerF8.TabStop = False
         ' 
         ' picPlayerF9
         ' 
         picPlayerF9.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF9.Location = New Point(404, 324)
+        picPlayerF9.Location = New Point(750, 691)
+        picPlayerF9.Margin = New Padding(6, 6, 6, 6)
         picPlayerF9.Name = "picPlayerF9"
-        picPlayerF9.Size = New Size(30, 30)
+        picPlayerF9.Size = New Size(54, 54)
         picPlayerF9.TabIndex = 53
         picPlayerF9.TabStop = False
         ' 
         ' picPlayerF10
         ' 
         picPlayerF10.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF10.Location = New Point(440, 324)
+        picPlayerF10.Location = New Point(817, 691)
+        picPlayerF10.Margin = New Padding(6, 6, 6, 6)
         picPlayerF10.Name = "picPlayerF10"
-        picPlayerF10.Size = New Size(30, 30)
+        picPlayerF10.Size = New Size(54, 54)
         picPlayerF10.TabIndex = 52
         picPlayerF10.TabStop = False
         ' 
         ' picPlayerF2
         ' 
         picPlayerF2.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF2.Location = New Point(152, 324)
+        picPlayerF2.Location = New Point(282, 691)
+        picPlayerF2.Margin = New Padding(6, 6, 6, 6)
         picPlayerF2.Name = "picPlayerF2"
-        picPlayerF2.Size = New Size(30, 30)
+        picPlayerF2.Size = New Size(54, 54)
         picPlayerF2.TabIndex = 51
         picPlayerF2.TabStop = False
         ' 
         ' picPlayerF1
         ' 
         picPlayerF1.BorderStyle = BorderStyle.FixedSingle
-        picPlayerF1.Location = New Point(116, 324)
+        picPlayerF1.Location = New Point(215, 691)
+        picPlayerF1.Margin = New Padding(6, 6, 6, 6)
         picPlayerF1.Name = "picPlayerF1"
-        picPlayerF1.Size = New Size(30, 30)
+        picPlayerF1.Size = New Size(54, 54)
         picPlayerF1.TabIndex = 50
         picPlayerF1.TabStop = False
         ' 
         ' picOppJ3
         ' 
         picOppJ3.BorderStyle = BorderStyle.FixedSingle
-        picOppJ3.Location = New Point(749, 468)
+        picOppJ3.Location = New Point(1391, 998)
+        picOppJ3.Margin = New Padding(6, 6, 6, 6)
         picOppJ3.Name = "picOppJ3"
-        picOppJ3.Size = New Size(30, 30)
+        picOppJ3.Size = New Size(54, 54)
         picOppJ3.TabIndex = 199
         picOppJ3.TabStop = False
         ' 
         ' picOppJ4
         ' 
         picOppJ4.BorderStyle = BorderStyle.FixedSingle
-        picOppJ4.Location = New Point(785, 468)
+        picOppJ4.Location = New Point(1458, 998)
+        picOppJ4.Margin = New Padding(6, 6, 6, 6)
         picOppJ4.Name = "picOppJ4"
-        picOppJ4.Size = New Size(30, 30)
+        picOppJ4.Size = New Size(54, 54)
         picOppJ4.TabIndex = 198
         picOppJ4.TabStop = False
         ' 
         ' picOppJ5
         ' 
         picOppJ5.BorderStyle = BorderStyle.FixedSingle
-        picOppJ5.Location = New Point(821, 468)
+        picOppJ5.Location = New Point(1525, 998)
+        picOppJ5.Margin = New Padding(6, 6, 6, 6)
         picOppJ5.Name = "picOppJ5"
-        picOppJ5.Size = New Size(30, 30)
+        picOppJ5.Size = New Size(54, 54)
         picOppJ5.TabIndex = 197
         picOppJ5.TabStop = False
         ' 
         ' picOppJ6
         ' 
         picOppJ6.BorderStyle = BorderStyle.FixedSingle
-        picOppJ6.Location = New Point(857, 468)
+        picOppJ6.Location = New Point(1592, 998)
+        picOppJ6.Margin = New Padding(6, 6, 6, 6)
         picOppJ6.Name = "picOppJ6"
-        picOppJ6.Size = New Size(30, 30)
+        picOppJ6.Size = New Size(54, 54)
         picOppJ6.TabIndex = 196
         picOppJ6.TabStop = False
         ' 
         ' picOppJ7
         ' 
         picOppJ7.BorderStyle = BorderStyle.FixedSingle
-        picOppJ7.Location = New Point(893, 468)
+        picOppJ7.Location = New Point(1658, 998)
+        picOppJ7.Margin = New Padding(6, 6, 6, 6)
         picOppJ7.Name = "picOppJ7"
-        picOppJ7.Size = New Size(30, 30)
+        picOppJ7.Size = New Size(54, 54)
         picOppJ7.TabIndex = 195
         picOppJ7.TabStop = False
         ' 
         ' picOppJ8
         ' 
         picOppJ8.BorderStyle = BorderStyle.FixedSingle
-        picOppJ8.Location = New Point(929, 468)
+        picOppJ8.Location = New Point(1725, 998)
+        picOppJ8.Margin = New Padding(6, 6, 6, 6)
         picOppJ8.Name = "picOppJ8"
-        picOppJ8.Size = New Size(30, 30)
+        picOppJ8.Size = New Size(54, 54)
         picOppJ8.TabIndex = 194
         picOppJ8.TabStop = False
         ' 
         ' picOppJ9
         ' 
         picOppJ9.BorderStyle = BorderStyle.FixedSingle
-        picOppJ9.Location = New Point(965, 468)
+        picOppJ9.Location = New Point(1792, 998)
+        picOppJ9.Margin = New Padding(6, 6, 6, 6)
         picOppJ9.Name = "picOppJ9"
-        picOppJ9.Size = New Size(30, 30)
+        picOppJ9.Size = New Size(54, 54)
         picOppJ9.TabIndex = 193
         picOppJ9.TabStop = False
         ' 
         ' picOppJ10
         ' 
         picOppJ10.BorderStyle = BorderStyle.FixedSingle
-        picOppJ10.Location = New Point(1001, 468)
+        picOppJ10.Location = New Point(1859, 998)
+        picOppJ10.Margin = New Padding(6, 6, 6, 6)
         picOppJ10.Name = "picOppJ10"
-        picOppJ10.Size = New Size(30, 30)
+        picOppJ10.Size = New Size(54, 54)
         picOppJ10.TabIndex = 192
         picOppJ10.TabStop = False
         ' 
         ' picOppJ2
         ' 
         picOppJ2.BorderStyle = BorderStyle.FixedSingle
-        picOppJ2.Location = New Point(713, 468)
+        picOppJ2.Location = New Point(1324, 998)
+        picOppJ2.Margin = New Padding(6, 6, 6, 6)
         picOppJ2.Name = "picOppJ2"
-        picOppJ2.Size = New Size(30, 30)
+        picOppJ2.Size = New Size(54, 54)
         picOppJ2.TabIndex = 191
         picOppJ2.TabStop = False
         ' 
         ' picOppJ1
         ' 
         picOppJ1.BorderStyle = BorderStyle.FixedSingle
-        picOppJ1.Location = New Point(677, 468)
+        picOppJ1.Location = New Point(1257, 998)
+        picOppJ1.Margin = New Padding(6, 6, 6, 6)
         picOppJ1.Name = "picOppJ1"
-        picOppJ1.Size = New Size(30, 30)
+        picOppJ1.Size = New Size(54, 54)
         picOppJ1.TabIndex = 190
         picOppJ1.TabStop = False
         ' 
         ' picOppG3
         ' 
         picOppG3.BorderStyle = BorderStyle.FixedSingle
-        picOppG3.Location = New Point(749, 360)
+        picOppG3.Location = New Point(1391, 768)
+        picOppG3.Margin = New Padding(6, 6, 6, 6)
         picOppG3.Name = "picOppG3"
-        picOppG3.Size = New Size(30, 30)
+        picOppG3.Size = New Size(54, 54)
         picOppG3.TabIndex = 189
         picOppG3.TabStop = False
         ' 
         ' picOppG4
         ' 
         picOppG4.BorderStyle = BorderStyle.FixedSingle
-        picOppG4.Location = New Point(785, 360)
+        picOppG4.Location = New Point(1458, 768)
+        picOppG4.Margin = New Padding(6, 6, 6, 6)
         picOppG4.Name = "picOppG4"
-        picOppG4.Size = New Size(30, 30)
+        picOppG4.Size = New Size(54, 54)
         picOppG4.TabIndex = 188
         picOppG4.TabStop = False
         ' 
         ' picOppG5
         ' 
         picOppG5.BorderStyle = BorderStyle.FixedSingle
-        picOppG5.Location = New Point(821, 360)
+        picOppG5.Location = New Point(1525, 768)
+        picOppG5.Margin = New Padding(6, 6, 6, 6)
         picOppG5.Name = "picOppG5"
-        picOppG5.Size = New Size(30, 30)
+        picOppG5.Size = New Size(54, 54)
         picOppG5.TabIndex = 187
         picOppG5.TabStop = False
         ' 
         ' picOppG6
         ' 
         picOppG6.BorderStyle = BorderStyle.FixedSingle
-        picOppG6.Location = New Point(857, 360)
+        picOppG6.Location = New Point(1592, 768)
+        picOppG6.Margin = New Padding(6, 6, 6, 6)
         picOppG6.Name = "picOppG6"
-        picOppG6.Size = New Size(30, 30)
+        picOppG6.Size = New Size(54, 54)
         picOppG6.TabIndex = 186
         picOppG6.TabStop = False
         ' 
         ' picOppG7
         ' 
         picOppG7.BorderStyle = BorderStyle.FixedSingle
-        picOppG7.Location = New Point(893, 360)
+        picOppG7.Location = New Point(1658, 768)
+        picOppG7.Margin = New Padding(6, 6, 6, 6)
         picOppG7.Name = "picOppG7"
-        picOppG7.Size = New Size(30, 30)
+        picOppG7.Size = New Size(54, 54)
         picOppG7.TabIndex = 185
         picOppG7.TabStop = False
         ' 
         ' picOppG8
         ' 
         picOppG8.BorderStyle = BorderStyle.FixedSingle
-        picOppG8.Location = New Point(929, 360)
+        picOppG8.Location = New Point(1725, 768)
+        picOppG8.Margin = New Padding(6, 6, 6, 6)
         picOppG8.Name = "picOppG8"
-        picOppG8.Size = New Size(30, 30)
+        picOppG8.Size = New Size(54, 54)
         picOppG8.TabIndex = 184
         picOppG8.TabStop = False
         ' 
         ' picOppG9
         ' 
         picOppG9.BorderStyle = BorderStyle.FixedSingle
-        picOppG9.Location = New Point(965, 360)
+        picOppG9.Location = New Point(1792, 768)
+        picOppG9.Margin = New Padding(6, 6, 6, 6)
         picOppG9.Name = "picOppG9"
-        picOppG9.Size = New Size(30, 30)
+        picOppG9.Size = New Size(54, 54)
         picOppG9.TabIndex = 183
         picOppG9.TabStop = False
         ' 
         ' picOppG10
         ' 
         picOppG10.BorderStyle = BorderStyle.FixedSingle
-        picOppG10.Location = New Point(1001, 360)
+        picOppG10.Location = New Point(1859, 768)
+        picOppG10.Margin = New Padding(6, 6, 6, 6)
         picOppG10.Name = "picOppG10"
-        picOppG10.Size = New Size(30, 30)
+        picOppG10.Size = New Size(54, 54)
         picOppG10.TabIndex = 182
         picOppG10.TabStop = False
         ' 
         ' picOppG2
         ' 
         picOppG2.BorderStyle = BorderStyle.FixedSingle
-        picOppG2.Location = New Point(713, 360)
+        picOppG2.Location = New Point(1324, 768)
+        picOppG2.Margin = New Padding(6, 6, 6, 6)
         picOppG2.Name = "picOppG2"
-        picOppG2.Size = New Size(30, 30)
+        picOppG2.Size = New Size(54, 54)
         picOppG2.TabIndex = 181
         picOppG2.TabStop = False
         ' 
         ' picOppG1
         ' 
         picOppG1.BorderStyle = BorderStyle.FixedSingle
-        picOppG1.Location = New Point(677, 360)
+        picOppG1.Location = New Point(1257, 768)
+        picOppG1.Margin = New Padding(6, 6, 6, 6)
         picOppG1.Name = "picOppG1"
-        picOppG1.Size = New Size(30, 30)
+        picOppG1.Size = New Size(54, 54)
         picOppG1.TabIndex = 180
         picOppG1.TabStop = False
         ' 
         ' picOppI3
         ' 
         picOppI3.BorderStyle = BorderStyle.FixedSingle
-        picOppI3.Location = New Point(749, 432)
+        picOppI3.Location = New Point(1391, 922)
+        picOppI3.Margin = New Padding(6, 6, 6, 6)
         picOppI3.Name = "picOppI3"
-        picOppI3.Size = New Size(30, 30)
+        picOppI3.Size = New Size(54, 54)
         picOppI3.TabIndex = 179
         picOppI3.TabStop = False
         ' 
         ' picOppI4
         ' 
         picOppI4.BorderStyle = BorderStyle.FixedSingle
-        picOppI4.Location = New Point(785, 432)
+        picOppI4.Location = New Point(1458, 922)
+        picOppI4.Margin = New Padding(6, 6, 6, 6)
         picOppI4.Name = "picOppI4"
-        picOppI4.Size = New Size(30, 30)
+        picOppI4.Size = New Size(54, 54)
         picOppI4.TabIndex = 178
         picOppI4.TabStop = False
         ' 
         ' picOppI5
         ' 
         picOppI5.BorderStyle = BorderStyle.FixedSingle
-        picOppI5.Location = New Point(821, 432)
+        picOppI5.Location = New Point(1525, 922)
+        picOppI5.Margin = New Padding(6, 6, 6, 6)
         picOppI5.Name = "picOppI5"
-        picOppI5.Size = New Size(30, 30)
+        picOppI5.Size = New Size(54, 54)
         picOppI5.TabIndex = 177
         picOppI5.TabStop = False
         ' 
         ' picOppI6
         ' 
         picOppI6.BorderStyle = BorderStyle.FixedSingle
-        picOppI6.Location = New Point(857, 432)
+        picOppI6.Location = New Point(1592, 922)
+        picOppI6.Margin = New Padding(6, 6, 6, 6)
         picOppI6.Name = "picOppI6"
-        picOppI6.Size = New Size(30, 30)
+        picOppI6.Size = New Size(54, 54)
         picOppI6.TabIndex = 176
         picOppI6.TabStop = False
         ' 
         ' picOppI7
         ' 
         picOppI7.BorderStyle = BorderStyle.FixedSingle
-        picOppI7.Location = New Point(893, 432)
+        picOppI7.Location = New Point(1658, 922)
+        picOppI7.Margin = New Padding(6, 6, 6, 6)
         picOppI7.Name = "picOppI7"
-        picOppI7.Size = New Size(30, 30)
+        picOppI7.Size = New Size(54, 54)
         picOppI7.TabIndex = 175
         picOppI7.TabStop = False
         ' 
         ' picOppI8
         ' 
         picOppI8.BorderStyle = BorderStyle.FixedSingle
-        picOppI8.Location = New Point(929, 432)
+        picOppI8.Location = New Point(1725, 922)
+        picOppI8.Margin = New Padding(6, 6, 6, 6)
         picOppI8.Name = "picOppI8"
-        picOppI8.Size = New Size(30, 30)
+        picOppI8.Size = New Size(54, 54)
         picOppI8.TabIndex = 174
         picOppI8.TabStop = False
         ' 
         ' picOppI9
         ' 
         picOppI9.BorderStyle = BorderStyle.FixedSingle
-        picOppI9.Location = New Point(965, 432)
+        picOppI9.Location = New Point(1792, 922)
+        picOppI9.Margin = New Padding(6, 6, 6, 6)
         picOppI9.Name = "picOppI9"
-        picOppI9.Size = New Size(30, 30)
+        picOppI9.Size = New Size(54, 54)
         picOppI9.TabIndex = 173
         picOppI9.TabStop = False
         ' 
         ' picOppI10
         ' 
         picOppI10.BorderStyle = BorderStyle.FixedSingle
-        picOppI10.Location = New Point(1001, 432)
+        picOppI10.Location = New Point(1859, 922)
+        picOppI10.Margin = New Padding(6, 6, 6, 6)
         picOppI10.Name = "picOppI10"
-        picOppI10.Size = New Size(30, 30)
+        picOppI10.Size = New Size(54, 54)
         picOppI10.TabIndex = 172
         picOppI10.TabStop = False
         ' 
         ' picOppI2
         ' 
         picOppI2.BorderStyle = BorderStyle.FixedSingle
-        picOppI2.Location = New Point(713, 432)
+        picOppI2.Location = New Point(1324, 922)
+        picOppI2.Margin = New Padding(6, 6, 6, 6)
         picOppI2.Name = "picOppI2"
-        picOppI2.Size = New Size(30, 30)
+        picOppI2.Size = New Size(54, 54)
         picOppI2.TabIndex = 171
         picOppI2.TabStop = False
         ' 
         ' picOppI1
         ' 
         picOppI1.BorderStyle = BorderStyle.FixedSingle
-        picOppI1.Location = New Point(677, 432)
+        picOppI1.Location = New Point(1257, 922)
+        picOppI1.Margin = New Padding(6, 6, 6, 6)
         picOppI1.Name = "picOppI1"
-        picOppI1.Size = New Size(30, 30)
+        picOppI1.Size = New Size(54, 54)
         picOppI1.TabIndex = 170
         picOppI1.TabStop = False
         ' 
         ' picOppH3
         ' 
         picOppH3.BorderStyle = BorderStyle.FixedSingle
-        picOppH3.Location = New Point(749, 396)
+        picOppH3.Location = New Point(1391, 845)
+        picOppH3.Margin = New Padding(6, 6, 6, 6)
         picOppH3.Name = "picOppH3"
-        picOppH3.Size = New Size(30, 30)
+        picOppH3.Size = New Size(54, 54)
         picOppH3.TabIndex = 169
         picOppH3.TabStop = False
         ' 
         ' picOppH4
         ' 
         picOppH4.BorderStyle = BorderStyle.FixedSingle
-        picOppH4.Location = New Point(785, 396)
+        picOppH4.Location = New Point(1458, 845)
+        picOppH4.Margin = New Padding(6, 6, 6, 6)
         picOppH4.Name = "picOppH4"
-        picOppH4.Size = New Size(30, 30)
+        picOppH4.Size = New Size(54, 54)
         picOppH4.TabIndex = 168
         picOppH4.TabStop = False
         ' 
         ' picOppH5
         ' 
         picOppH5.BorderStyle = BorderStyle.FixedSingle
-        picOppH5.Location = New Point(821, 396)
+        picOppH5.Location = New Point(1525, 845)
+        picOppH5.Margin = New Padding(6, 6, 6, 6)
         picOppH5.Name = "picOppH5"
-        picOppH5.Size = New Size(30, 30)
+        picOppH5.Size = New Size(54, 54)
         picOppH5.TabIndex = 167
         picOppH5.TabStop = False
         ' 
         ' picOppH6
         ' 
         picOppH6.BorderStyle = BorderStyle.FixedSingle
-        picOppH6.Location = New Point(857, 396)
+        picOppH6.Location = New Point(1592, 845)
+        picOppH6.Margin = New Padding(6, 6, 6, 6)
         picOppH6.Name = "picOppH6"
-        picOppH6.Size = New Size(30, 30)
+        picOppH6.Size = New Size(54, 54)
         picOppH6.TabIndex = 166
         picOppH6.TabStop = False
         ' 
         ' picOppH7
         ' 
         picOppH7.BorderStyle = BorderStyle.FixedSingle
-        picOppH7.Location = New Point(893, 396)
+        picOppH7.Location = New Point(1658, 845)
+        picOppH7.Margin = New Padding(6, 6, 6, 6)
         picOppH7.Name = "picOppH7"
-        picOppH7.Size = New Size(30, 30)
+        picOppH7.Size = New Size(54, 54)
         picOppH7.TabIndex = 165
         picOppH7.TabStop = False
         ' 
         ' picOppH8
         ' 
         picOppH8.BorderStyle = BorderStyle.FixedSingle
-        picOppH8.Location = New Point(929, 396)
+        picOppH8.Location = New Point(1725, 845)
+        picOppH8.Margin = New Padding(6, 6, 6, 6)
         picOppH8.Name = "picOppH8"
-        picOppH8.Size = New Size(30, 30)
+        picOppH8.Size = New Size(54, 54)
         picOppH8.TabIndex = 164
         picOppH8.TabStop = False
         ' 
         ' picOppH9
         ' 
         picOppH9.BorderStyle = BorderStyle.FixedSingle
-        picOppH9.Location = New Point(965, 396)
+        picOppH9.Location = New Point(1792, 845)
+        picOppH9.Margin = New Padding(6, 6, 6, 6)
         picOppH9.Name = "picOppH9"
-        picOppH9.Size = New Size(30, 30)
+        picOppH9.Size = New Size(54, 54)
         picOppH9.TabIndex = 163
         picOppH9.TabStop = False
         ' 
         ' picOppH10
         ' 
         picOppH10.BorderStyle = BorderStyle.FixedSingle
-        picOppH10.Location = New Point(1001, 396)
+        picOppH10.Location = New Point(1859, 845)
+        picOppH10.Margin = New Padding(6, 6, 6, 6)
         picOppH10.Name = "picOppH10"
-        picOppH10.Size = New Size(30, 30)
+        picOppH10.Size = New Size(54, 54)
         picOppH10.TabIndex = 162
         picOppH10.TabStop = False
         ' 
         ' picOppH2
         ' 
         picOppH2.BorderStyle = BorderStyle.FixedSingle
-        picOppH2.Location = New Point(713, 396)
+        picOppH2.Location = New Point(1324, 845)
+        picOppH2.Margin = New Padding(6, 6, 6, 6)
         picOppH2.Name = "picOppH2"
-        picOppH2.Size = New Size(30, 30)
+        picOppH2.Size = New Size(54, 54)
         picOppH2.TabIndex = 161
         picOppH2.TabStop = False
         ' 
         ' picOppH1
         ' 
         picOppH1.BorderStyle = BorderStyle.FixedSingle
-        picOppH1.Location = New Point(677, 396)
+        picOppH1.Location = New Point(1257, 845)
+        picOppH1.Margin = New Padding(6, 6, 6, 6)
         picOppH1.Name = "picOppH1"
-        picOppH1.Size = New Size(30, 30)
+        picOppH1.Size = New Size(54, 54)
         picOppH1.TabIndex = 160
         picOppH1.TabStop = False
         ' 
         ' picOppF3
         ' 
         picOppF3.BorderStyle = BorderStyle.FixedSingle
-        picOppF3.Location = New Point(749, 324)
+        picOppF3.Location = New Point(1391, 691)
+        picOppF3.Margin = New Padding(6, 6, 6, 6)
         picOppF3.Name = "picOppF3"
-        picOppF3.Size = New Size(30, 30)
+        picOppF3.Size = New Size(54, 54)
         picOppF3.TabIndex = 159
         picOppF3.TabStop = False
         ' 
         ' picOppF4
         ' 
         picOppF4.BorderStyle = BorderStyle.FixedSingle
-        picOppF4.Location = New Point(785, 324)
+        picOppF4.Location = New Point(1458, 691)
+        picOppF4.Margin = New Padding(6, 6, 6, 6)
         picOppF4.Name = "picOppF4"
-        picOppF4.Size = New Size(30, 30)
+        picOppF4.Size = New Size(54, 54)
         picOppF4.TabIndex = 158
         picOppF4.TabStop = False
         ' 
         ' picOppF5
         ' 
         picOppF5.BorderStyle = BorderStyle.FixedSingle
-        picOppF5.Location = New Point(821, 324)
+        picOppF5.Location = New Point(1525, 691)
+        picOppF5.Margin = New Padding(6, 6, 6, 6)
         picOppF5.Name = "picOppF5"
-        picOppF5.Size = New Size(30, 30)
+        picOppF5.Size = New Size(54, 54)
         picOppF5.TabIndex = 157
         picOppF5.TabStop = False
         ' 
         ' picOppF6
         ' 
         picOppF6.BorderStyle = BorderStyle.FixedSingle
-        picOppF6.Location = New Point(857, 324)
+        picOppF6.Location = New Point(1592, 691)
+        picOppF6.Margin = New Padding(6, 6, 6, 6)
         picOppF6.Name = "picOppF6"
-        picOppF6.Size = New Size(30, 30)
+        picOppF6.Size = New Size(54, 54)
         picOppF6.TabIndex = 156
         picOppF6.TabStop = False
         ' 
         ' picOppF7
         ' 
         picOppF7.BorderStyle = BorderStyle.FixedSingle
-        picOppF7.Location = New Point(893, 324)
+        picOppF7.Location = New Point(1658, 691)
+        picOppF7.Margin = New Padding(6, 6, 6, 6)
         picOppF7.Name = "picOppF7"
-        picOppF7.Size = New Size(30, 30)
+        picOppF7.Size = New Size(54, 54)
         picOppF7.TabIndex = 155
         picOppF7.TabStop = False
         ' 
         ' picOppF8
         ' 
         picOppF8.BorderStyle = BorderStyle.FixedSingle
-        picOppF8.Location = New Point(929, 324)
+        picOppF8.Location = New Point(1725, 691)
+        picOppF8.Margin = New Padding(6, 6, 6, 6)
         picOppF8.Name = "picOppF8"
-        picOppF8.Size = New Size(30, 30)
+        picOppF8.Size = New Size(54, 54)
         picOppF8.TabIndex = 154
         picOppF8.TabStop = False
         ' 
         ' picOppF9
         ' 
         picOppF9.BorderStyle = BorderStyle.FixedSingle
-        picOppF9.Location = New Point(965, 324)
+        picOppF9.Location = New Point(1792, 691)
+        picOppF9.Margin = New Padding(6, 6, 6, 6)
         picOppF9.Name = "picOppF9"
-        picOppF9.Size = New Size(30, 30)
+        picOppF9.Size = New Size(54, 54)
         picOppF9.TabIndex = 153
         picOppF9.TabStop = False
         ' 
         ' picOppF10
         ' 
         picOppF10.BorderStyle = BorderStyle.FixedSingle
-        picOppF10.Location = New Point(1001, 324)
+        picOppF10.Location = New Point(1859, 691)
+        picOppF10.Margin = New Padding(6, 6, 6, 6)
         picOppF10.Name = "picOppF10"
-        picOppF10.Size = New Size(30, 30)
+        picOppF10.Size = New Size(54, 54)
         picOppF10.TabIndex = 152
         picOppF10.TabStop = False
         ' 
         ' picOppF2
         ' 
         picOppF2.BorderStyle = BorderStyle.FixedSingle
-        picOppF2.Location = New Point(713, 324)
+        picOppF2.Location = New Point(1324, 691)
+        picOppF2.Margin = New Padding(6, 6, 6, 6)
         picOppF2.Name = "picOppF2"
-        picOppF2.Size = New Size(30, 30)
+        picOppF2.Size = New Size(54, 54)
         picOppF2.TabIndex = 151
         picOppF2.TabStop = False
         ' 
         ' picOppF1
         ' 
         picOppF1.BorderStyle = BorderStyle.FixedSingle
-        picOppF1.Location = New Point(677, 324)
+        picOppF1.Location = New Point(1257, 691)
+        picOppF1.Margin = New Padding(6, 6, 6, 6)
         picOppF1.Name = "picOppF1"
-        picOppF1.Size = New Size(30, 30)
+        picOppF1.Size = New Size(54, 54)
         picOppF1.TabIndex = 150
         picOppF1.TabStop = False
         ' 
         ' picOppE3
         ' 
         picOppE3.BorderStyle = BorderStyle.FixedSingle
-        picOppE3.Location = New Point(749, 286)
+        picOppE3.Location = New Point(1391, 610)
+        picOppE3.Margin = New Padding(6, 6, 6, 6)
         picOppE3.Name = "picOppE3"
-        picOppE3.Size = New Size(30, 30)
+        picOppE3.Size = New Size(54, 54)
         picOppE3.TabIndex = 149
         picOppE3.TabStop = False
         ' 
         ' picOppE4
         ' 
         picOppE4.BorderStyle = BorderStyle.FixedSingle
-        picOppE4.Location = New Point(785, 286)
+        picOppE4.Location = New Point(1458, 610)
+        picOppE4.Margin = New Padding(6, 6, 6, 6)
         picOppE4.Name = "picOppE4"
-        picOppE4.Size = New Size(30, 30)
+        picOppE4.Size = New Size(54, 54)
         picOppE4.TabIndex = 148
         picOppE4.TabStop = False
         ' 
         ' picOppE5
         ' 
         picOppE5.BorderStyle = BorderStyle.FixedSingle
-        picOppE5.Location = New Point(821, 286)
+        picOppE5.Location = New Point(1525, 610)
+        picOppE5.Margin = New Padding(6, 6, 6, 6)
         picOppE5.Name = "picOppE5"
-        picOppE5.Size = New Size(30, 30)
+        picOppE5.Size = New Size(54, 54)
         picOppE5.TabIndex = 147
         picOppE5.TabStop = False
         ' 
         ' picOppE6
         ' 
         picOppE6.BorderStyle = BorderStyle.FixedSingle
-        picOppE6.Location = New Point(857, 286)
+        picOppE6.Location = New Point(1592, 610)
+        picOppE6.Margin = New Padding(6, 6, 6, 6)
         picOppE6.Name = "picOppE6"
-        picOppE6.Size = New Size(30, 30)
+        picOppE6.Size = New Size(54, 54)
         picOppE6.TabIndex = 146
         picOppE6.TabStop = False
         ' 
         ' picOppE7
         ' 
         picOppE7.BorderStyle = BorderStyle.FixedSingle
-        picOppE7.Location = New Point(893, 286)
+        picOppE7.Location = New Point(1658, 610)
+        picOppE7.Margin = New Padding(6, 6, 6, 6)
         picOppE7.Name = "picOppE7"
-        picOppE7.Size = New Size(30, 30)
+        picOppE7.Size = New Size(54, 54)
         picOppE7.TabIndex = 145
         picOppE7.TabStop = False
         ' 
         ' picOppE8
         ' 
         picOppE8.BorderStyle = BorderStyle.FixedSingle
-        picOppE8.Location = New Point(929, 286)
+        picOppE8.Location = New Point(1725, 610)
+        picOppE8.Margin = New Padding(6, 6, 6, 6)
         picOppE8.Name = "picOppE8"
-        picOppE8.Size = New Size(30, 30)
+        picOppE8.Size = New Size(54, 54)
         picOppE8.TabIndex = 144
         picOppE8.TabStop = False
         ' 
         ' picOppE9
         ' 
         picOppE9.BorderStyle = BorderStyle.FixedSingle
-        picOppE9.Location = New Point(965, 286)
+        picOppE9.Location = New Point(1792, 610)
+        picOppE9.Margin = New Padding(6, 6, 6, 6)
         picOppE9.Name = "picOppE9"
-        picOppE9.Size = New Size(30, 30)
+        picOppE9.Size = New Size(54, 54)
         picOppE9.TabIndex = 143
         picOppE9.TabStop = False
         ' 
         ' picOppE10
         ' 
         picOppE10.BorderStyle = BorderStyle.FixedSingle
-        picOppE10.Location = New Point(1001, 286)
+        picOppE10.Location = New Point(1859, 610)
+        picOppE10.Margin = New Padding(6, 6, 6, 6)
         picOppE10.Name = "picOppE10"
-        picOppE10.Size = New Size(30, 30)
+        picOppE10.Size = New Size(54, 54)
         picOppE10.TabIndex = 142
         picOppE10.TabStop = False
         ' 
         ' picOppE2
         ' 
         picOppE2.BorderStyle = BorderStyle.FixedSingle
-        picOppE2.Location = New Point(713, 286)
+        picOppE2.Location = New Point(1324, 610)
+        picOppE2.Margin = New Padding(6, 6, 6, 6)
         picOppE2.Name = "picOppE2"
-        picOppE2.Size = New Size(30, 30)
+        picOppE2.Size = New Size(54, 54)
         picOppE2.TabIndex = 141
         picOppE2.TabStop = False
         ' 
         ' picOppE1
         ' 
         picOppE1.BorderStyle = BorderStyle.FixedSingle
-        picOppE1.Location = New Point(677, 286)
+        picOppE1.Location = New Point(1257, 610)
+        picOppE1.Margin = New Padding(6, 6, 6, 6)
         picOppE1.Name = "picOppE1"
-        picOppE1.Size = New Size(30, 30)
+        picOppE1.Size = New Size(54, 54)
         picOppE1.TabIndex = 140
         picOppE1.TabStop = False
         ' 
         ' picOppB3
         ' 
         picOppB3.BorderStyle = BorderStyle.FixedSingle
-        picOppB3.Location = New Point(749, 178)
+        picOppB3.Location = New Point(1391, 380)
+        picOppB3.Margin = New Padding(6, 6, 6, 6)
         picOppB3.Name = "picOppB3"
-        picOppB3.Size = New Size(30, 30)
+        picOppB3.Size = New Size(54, 54)
         picOppB3.TabIndex = 139
         picOppB3.TabStop = False
         ' 
         ' picOppB4
         ' 
         picOppB4.BorderStyle = BorderStyle.FixedSingle
-        picOppB4.Location = New Point(785, 178)
+        picOppB4.Location = New Point(1458, 380)
+        picOppB4.Margin = New Padding(6, 6, 6, 6)
         picOppB4.Name = "picOppB4"
-        picOppB4.Size = New Size(30, 30)
+        picOppB4.Size = New Size(54, 54)
         picOppB4.TabIndex = 138
         picOppB4.TabStop = False
         ' 
         ' picOppB5
         ' 
         picOppB5.BorderStyle = BorderStyle.FixedSingle
-        picOppB5.Location = New Point(821, 178)
+        picOppB5.Location = New Point(1525, 380)
+        picOppB5.Margin = New Padding(6, 6, 6, 6)
         picOppB5.Name = "picOppB5"
-        picOppB5.Size = New Size(30, 30)
+        picOppB5.Size = New Size(54, 54)
         picOppB5.TabIndex = 137
         picOppB5.TabStop = False
         ' 
         ' picOppB6
         ' 
         picOppB6.BorderStyle = BorderStyle.FixedSingle
-        picOppB6.Location = New Point(857, 178)
+        picOppB6.Location = New Point(1592, 380)
+        picOppB6.Margin = New Padding(6, 6, 6, 6)
         picOppB6.Name = "picOppB6"
-        picOppB6.Size = New Size(30, 30)
+        picOppB6.Size = New Size(54, 54)
         picOppB6.TabIndex = 136
         picOppB6.TabStop = False
         ' 
         ' picOppB7
         ' 
         picOppB7.BorderStyle = BorderStyle.FixedSingle
-        picOppB7.Location = New Point(893, 178)
+        picOppB7.Location = New Point(1658, 380)
+        picOppB7.Margin = New Padding(6, 6, 6, 6)
         picOppB7.Name = "picOppB7"
-        picOppB7.Size = New Size(30, 30)
+        picOppB7.Size = New Size(54, 54)
         picOppB7.TabIndex = 135
         picOppB7.TabStop = False
         ' 
         ' picOppB8
         ' 
         picOppB8.BorderStyle = BorderStyle.FixedSingle
-        picOppB8.Location = New Point(929, 178)
+        picOppB8.Location = New Point(1725, 380)
+        picOppB8.Margin = New Padding(6, 6, 6, 6)
         picOppB8.Name = "picOppB8"
-        picOppB8.Size = New Size(30, 30)
+        picOppB8.Size = New Size(54, 54)
         picOppB8.TabIndex = 134
         picOppB8.TabStop = False
         ' 
         ' picOppB9
         ' 
         picOppB9.BorderStyle = BorderStyle.FixedSingle
-        picOppB9.Location = New Point(965, 178)
+        picOppB9.Location = New Point(1792, 380)
+        picOppB9.Margin = New Padding(6, 6, 6, 6)
         picOppB9.Name = "picOppB9"
-        picOppB9.Size = New Size(30, 30)
+        picOppB9.Size = New Size(54, 54)
         picOppB9.TabIndex = 133
         picOppB9.TabStop = False
         ' 
         ' picOppB10
         ' 
         picOppB10.BorderStyle = BorderStyle.FixedSingle
-        picOppB10.Location = New Point(1001, 178)
+        picOppB10.Location = New Point(1859, 380)
+        picOppB10.Margin = New Padding(6, 6, 6, 6)
         picOppB10.Name = "picOppB10"
-        picOppB10.Size = New Size(30, 30)
+        picOppB10.Size = New Size(54, 54)
         picOppB10.TabIndex = 132
         picOppB10.TabStop = False
         ' 
         ' picOppB2
         ' 
         picOppB2.BorderStyle = BorderStyle.FixedSingle
-        picOppB2.Location = New Point(713, 178)
+        picOppB2.Location = New Point(1324, 380)
+        picOppB2.Margin = New Padding(6, 6, 6, 6)
         picOppB2.Name = "picOppB2"
-        picOppB2.Size = New Size(30, 30)
+        picOppB2.Size = New Size(54, 54)
         picOppB2.TabIndex = 131
         picOppB2.TabStop = False
         ' 
         ' picOppB1
         ' 
         picOppB1.BorderStyle = BorderStyle.FixedSingle
-        picOppB1.Location = New Point(677, 178)
+        picOppB1.Location = New Point(1257, 380)
+        picOppB1.Margin = New Padding(6, 6, 6, 6)
         picOppB1.Name = "picOppB1"
-        picOppB1.Size = New Size(30, 30)
+        picOppB1.Size = New Size(54, 54)
         picOppB1.TabIndex = 130
         picOppB1.TabStop = False
         ' 
         ' picOppD3
         ' 
         picOppD3.BorderStyle = BorderStyle.FixedSingle
-        picOppD3.Location = New Point(749, 250)
+        picOppD3.Location = New Point(1391, 533)
+        picOppD3.Margin = New Padding(6, 6, 6, 6)
         picOppD3.Name = "picOppD3"
-        picOppD3.Size = New Size(30, 30)
+        picOppD3.Size = New Size(54, 54)
         picOppD3.TabIndex = 129
         picOppD3.TabStop = False
         ' 
         ' picOppD4
         ' 
         picOppD4.BorderStyle = BorderStyle.FixedSingle
-        picOppD4.Location = New Point(785, 250)
+        picOppD4.Location = New Point(1458, 533)
+        picOppD4.Margin = New Padding(6, 6, 6, 6)
         picOppD4.Name = "picOppD4"
-        picOppD4.Size = New Size(30, 30)
+        picOppD4.Size = New Size(54, 54)
         picOppD4.TabIndex = 128
         picOppD4.TabStop = False
         ' 
         ' picOppD5
         ' 
         picOppD5.BorderStyle = BorderStyle.FixedSingle
-        picOppD5.Location = New Point(821, 250)
+        picOppD5.Location = New Point(1525, 533)
+        picOppD5.Margin = New Padding(6, 6, 6, 6)
         picOppD5.Name = "picOppD5"
-        picOppD5.Size = New Size(30, 30)
+        picOppD5.Size = New Size(54, 54)
         picOppD5.TabIndex = 127
         picOppD5.TabStop = False
         ' 
         ' picOppD6
         ' 
         picOppD6.BorderStyle = BorderStyle.FixedSingle
-        picOppD6.Location = New Point(857, 250)
+        picOppD6.Location = New Point(1592, 533)
+        picOppD6.Margin = New Padding(6, 6, 6, 6)
         picOppD6.Name = "picOppD6"
-        picOppD6.Size = New Size(30, 30)
+        picOppD6.Size = New Size(54, 54)
         picOppD6.TabIndex = 126
         picOppD6.TabStop = False
         ' 
         ' picOppD7
         ' 
         picOppD7.BorderStyle = BorderStyle.FixedSingle
-        picOppD7.Location = New Point(893, 250)
+        picOppD7.Location = New Point(1658, 533)
+        picOppD7.Margin = New Padding(6, 6, 6, 6)
         picOppD7.Name = "picOppD7"
-        picOppD7.Size = New Size(30, 30)
+        picOppD7.Size = New Size(54, 54)
         picOppD7.TabIndex = 125
         picOppD7.TabStop = False
         ' 
         ' picOppD8
         ' 
         picOppD8.BorderStyle = BorderStyle.FixedSingle
-        picOppD8.Location = New Point(929, 250)
+        picOppD8.Location = New Point(1725, 533)
+        picOppD8.Margin = New Padding(6, 6, 6, 6)
         picOppD8.Name = "picOppD8"
-        picOppD8.Size = New Size(30, 30)
+        picOppD8.Size = New Size(54, 54)
         picOppD8.TabIndex = 124
         picOppD8.TabStop = False
         ' 
         ' picOppD9
         ' 
         picOppD9.BorderStyle = BorderStyle.FixedSingle
-        picOppD9.Location = New Point(965, 250)
+        picOppD9.Location = New Point(1792, 533)
+        picOppD9.Margin = New Padding(6, 6, 6, 6)
         picOppD9.Name = "picOppD9"
-        picOppD9.Size = New Size(30, 30)
+        picOppD9.Size = New Size(54, 54)
         picOppD9.TabIndex = 123
         picOppD9.TabStop = False
         ' 
         ' picOppD10
         ' 
         picOppD10.BorderStyle = BorderStyle.FixedSingle
-        picOppD10.Location = New Point(1001, 250)
+        picOppD10.Location = New Point(1859, 533)
+        picOppD10.Margin = New Padding(6, 6, 6, 6)
         picOppD10.Name = "picOppD10"
-        picOppD10.Size = New Size(30, 30)
+        picOppD10.Size = New Size(54, 54)
         picOppD10.TabIndex = 122
         picOppD10.TabStop = False
         ' 
         ' picOppD2
         ' 
         picOppD2.BorderStyle = BorderStyle.FixedSingle
-        picOppD2.Location = New Point(713, 250)
+        picOppD2.Location = New Point(1324, 533)
+        picOppD2.Margin = New Padding(6, 6, 6, 6)
         picOppD2.Name = "picOppD2"
-        picOppD2.Size = New Size(30, 30)
+        picOppD2.Size = New Size(54, 54)
         picOppD2.TabIndex = 121
         picOppD2.TabStop = False
         ' 
         ' picOppD1
         ' 
         picOppD1.BorderStyle = BorderStyle.FixedSingle
-        picOppD1.Location = New Point(677, 250)
+        picOppD1.Location = New Point(1257, 533)
+        picOppD1.Margin = New Padding(6, 6, 6, 6)
         picOppD1.Name = "picOppD1"
-        picOppD1.Size = New Size(30, 30)
+        picOppD1.Size = New Size(54, 54)
         picOppD1.TabIndex = 120
         picOppD1.TabStop = False
         ' 
         ' picOppC3
         ' 
         picOppC3.BorderStyle = BorderStyle.FixedSingle
-        picOppC3.Location = New Point(749, 214)
+        picOppC3.Location = New Point(1391, 457)
+        picOppC3.Margin = New Padding(6, 6, 6, 6)
         picOppC3.Name = "picOppC3"
-        picOppC3.Size = New Size(30, 30)
+        picOppC3.Size = New Size(54, 54)
         picOppC3.TabIndex = 119
         picOppC3.TabStop = False
         ' 
         ' picOppC4
         ' 
         picOppC4.BorderStyle = BorderStyle.FixedSingle
-        picOppC4.Location = New Point(785, 214)
+        picOppC4.Location = New Point(1458, 457)
+        picOppC4.Margin = New Padding(6, 6, 6, 6)
         picOppC4.Name = "picOppC4"
-        picOppC4.Size = New Size(30, 30)
+        picOppC4.Size = New Size(54, 54)
         picOppC4.TabIndex = 118
         picOppC4.TabStop = False
         ' 
         ' picOppC5
         ' 
         picOppC5.BorderStyle = BorderStyle.FixedSingle
-        picOppC5.Location = New Point(821, 214)
+        picOppC5.Location = New Point(1525, 457)
+        picOppC5.Margin = New Padding(6, 6, 6, 6)
         picOppC5.Name = "picOppC5"
-        picOppC5.Size = New Size(30, 30)
+        picOppC5.Size = New Size(54, 54)
         picOppC5.TabIndex = 117
         picOppC5.TabStop = False
         ' 
         ' picOppC6
         ' 
         picOppC6.BorderStyle = BorderStyle.FixedSingle
-        picOppC6.Location = New Point(857, 214)
+        picOppC6.Location = New Point(1592, 457)
+        picOppC6.Margin = New Padding(6, 6, 6, 6)
         picOppC6.Name = "picOppC6"
-        picOppC6.Size = New Size(30, 30)
+        picOppC6.Size = New Size(54, 54)
         picOppC6.TabIndex = 116
         picOppC6.TabStop = False
         ' 
         ' picOppC7
         ' 
         picOppC7.BorderStyle = BorderStyle.FixedSingle
-        picOppC7.Location = New Point(893, 214)
+        picOppC7.Location = New Point(1658, 457)
+        picOppC7.Margin = New Padding(6, 6, 6, 6)
         picOppC7.Name = "picOppC7"
-        picOppC7.Size = New Size(30, 30)
+        picOppC7.Size = New Size(54, 54)
         picOppC7.TabIndex = 115
         picOppC7.TabStop = False
         ' 
         ' picOppC8
         ' 
         picOppC8.BorderStyle = BorderStyle.FixedSingle
-        picOppC8.Location = New Point(929, 214)
+        picOppC8.Location = New Point(1725, 457)
+        picOppC8.Margin = New Padding(6, 6, 6, 6)
         picOppC8.Name = "picOppC8"
-        picOppC8.Size = New Size(30, 30)
+        picOppC8.Size = New Size(54, 54)
         picOppC8.TabIndex = 114
         picOppC8.TabStop = False
         ' 
         ' picOppC9
         ' 
         picOppC9.BorderStyle = BorderStyle.FixedSingle
-        picOppC9.Location = New Point(965, 214)
+        picOppC9.Location = New Point(1792, 457)
+        picOppC9.Margin = New Padding(6, 6, 6, 6)
         picOppC9.Name = "picOppC9"
-        picOppC9.Size = New Size(30, 30)
+        picOppC9.Size = New Size(54, 54)
         picOppC9.TabIndex = 113
         picOppC9.TabStop = False
         ' 
         ' picOppC10
         ' 
         picOppC10.BorderStyle = BorderStyle.FixedSingle
-        picOppC10.Location = New Point(1001, 214)
+        picOppC10.Location = New Point(1859, 457)
+        picOppC10.Margin = New Padding(6, 6, 6, 6)
         picOppC10.Name = "picOppC10"
-        picOppC10.Size = New Size(30, 30)
+        picOppC10.Size = New Size(54, 54)
         picOppC10.TabIndex = 112
         picOppC10.TabStop = False
         ' 
         ' picOppC2
         ' 
         picOppC2.BorderStyle = BorderStyle.FixedSingle
-        picOppC2.Location = New Point(713, 214)
+        picOppC2.Location = New Point(1324, 457)
+        picOppC2.Margin = New Padding(6, 6, 6, 6)
         picOppC2.Name = "picOppC2"
-        picOppC2.Size = New Size(30, 30)
+        picOppC2.Size = New Size(54, 54)
         picOppC2.TabIndex = 111
         picOppC2.TabStop = False
         ' 
         ' picOppC1
         ' 
         picOppC1.BorderStyle = BorderStyle.FixedSingle
-        picOppC1.Location = New Point(677, 214)
+        picOppC1.Location = New Point(1257, 457)
+        picOppC1.Margin = New Padding(6, 6, 6, 6)
         picOppC1.Name = "picOppC1"
-        picOppC1.Size = New Size(30, 30)
+        picOppC1.Size = New Size(54, 54)
         picOppC1.TabIndex = 110
         picOppC1.TabStop = False
         ' 
         ' picOppA3
         ' 
         picOppA3.BorderStyle = BorderStyle.FixedSingle
-        picOppA3.Location = New Point(749, 142)
+        picOppA3.Location = New Point(1391, 303)
+        picOppA3.Margin = New Padding(6, 6, 6, 6)
         picOppA3.Name = "picOppA3"
-        picOppA3.Size = New Size(30, 30)
+        picOppA3.Size = New Size(54, 54)
         picOppA3.TabIndex = 109
         picOppA3.TabStop = False
         ' 
         ' picOppA4
         ' 
         picOppA4.BorderStyle = BorderStyle.FixedSingle
-        picOppA4.Location = New Point(785, 142)
+        picOppA4.Location = New Point(1458, 303)
+        picOppA4.Margin = New Padding(6, 6, 6, 6)
         picOppA4.Name = "picOppA4"
-        picOppA4.Size = New Size(30, 30)
+        picOppA4.Size = New Size(54, 54)
         picOppA4.TabIndex = 108
         picOppA4.TabStop = False
         ' 
         ' picOppA5
         ' 
         picOppA5.BorderStyle = BorderStyle.FixedSingle
-        picOppA5.Location = New Point(821, 142)
+        picOppA5.Location = New Point(1525, 303)
+        picOppA5.Margin = New Padding(6, 6, 6, 6)
         picOppA5.Name = "picOppA5"
-        picOppA5.Size = New Size(30, 30)
+        picOppA5.Size = New Size(54, 54)
         picOppA5.TabIndex = 107
         picOppA5.TabStop = False
         ' 
         ' picOppA6
         ' 
         picOppA6.BorderStyle = BorderStyle.FixedSingle
-        picOppA6.Location = New Point(857, 142)
+        picOppA6.Location = New Point(1592, 303)
+        picOppA6.Margin = New Padding(6, 6, 6, 6)
         picOppA6.Name = "picOppA6"
-        picOppA6.Size = New Size(30, 30)
+        picOppA6.Size = New Size(54, 54)
         picOppA6.TabIndex = 106
         picOppA6.TabStop = False
         ' 
         ' picOppA7
         ' 
         picOppA7.BorderStyle = BorderStyle.FixedSingle
-        picOppA7.Location = New Point(893, 142)
+        picOppA7.Location = New Point(1658, 303)
+        picOppA7.Margin = New Padding(6, 6, 6, 6)
         picOppA7.Name = "picOppA7"
-        picOppA7.Size = New Size(30, 30)
+        picOppA7.Size = New Size(54, 54)
         picOppA7.TabIndex = 105
         picOppA7.TabStop = False
         ' 
         ' picOppA8
         ' 
         picOppA8.BorderStyle = BorderStyle.FixedSingle
-        picOppA8.Location = New Point(929, 142)
+        picOppA8.Location = New Point(1725, 303)
+        picOppA8.Margin = New Padding(6, 6, 6, 6)
         picOppA8.Name = "picOppA8"
-        picOppA8.Size = New Size(30, 30)
+        picOppA8.Size = New Size(54, 54)
         picOppA8.TabIndex = 104
         picOppA8.TabStop = False
         ' 
         ' picOppA9
         ' 
         picOppA9.BorderStyle = BorderStyle.FixedSingle
-        picOppA9.Location = New Point(965, 142)
+        picOppA9.Location = New Point(1792, 303)
+        picOppA9.Margin = New Padding(6, 6, 6, 6)
         picOppA9.Name = "picOppA9"
-        picOppA9.Size = New Size(30, 30)
+        picOppA9.Size = New Size(54, 54)
         picOppA9.TabIndex = 103
         picOppA9.TabStop = False
         ' 
         ' picOppA10
         ' 
         picOppA10.BorderStyle = BorderStyle.FixedSingle
-        picOppA10.Location = New Point(1001, 142)
+        picOppA10.Location = New Point(1859, 303)
+        picOppA10.Margin = New Padding(6, 6, 6, 6)
         picOppA10.Name = "picOppA10"
-        picOppA10.Size = New Size(30, 30)
+        picOppA10.Size = New Size(54, 54)
         picOppA10.TabIndex = 102
         picOppA10.TabStop = False
         ' 
         ' picOppA2
         ' 
         picOppA2.BorderStyle = BorderStyle.FixedSingle
-        picOppA2.Location = New Point(713, 142)
+        picOppA2.Location = New Point(1324, 303)
+        picOppA2.Margin = New Padding(6, 6, 6, 6)
         picOppA2.Name = "picOppA2"
-        picOppA2.Size = New Size(30, 30)
+        picOppA2.Size = New Size(54, 54)
         picOppA2.TabIndex = 101
         picOppA2.TabStop = False
         ' 
         ' picOppA1
         ' 
         picOppA1.BorderStyle = BorderStyle.FixedSingle
-        picOppA1.Location = New Point(677, 142)
+        picOppA1.Location = New Point(1257, 303)
+        picOppA1.Margin = New Padding(6, 6, 6, 6)
         picOppA1.Name = "picOppA1"
-        picOppA1.Size = New Size(30, 30)
+        picOppA1.Size = New Size(54, 54)
         picOppA1.TabIndex = 100
         picOppA1.TabStop = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(548, 157)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(41, 15)
-        Label1.TabIndex = 200
-        Label1.Text = "Label1"
         ' 
         ' lblPlayerProgress
         ' 
         lblPlayerProgress.AutoSize = True
-        lblPlayerProgress.Location = New Point(548, 295)
+        lblPlayerProgress.Location = New Point(966, 630)
+        lblPlayerProgress.Margin = New Padding(6, 0, 6, 0)
         lblPlayerProgress.Name = "lblPlayerProgress"
-        lblPlayerProgress.Size = New Size(41, 15)
+        lblPlayerProgress.Size = New Size(182, 32)
         lblPlayerProgress.TabIndex = 201
-        lblPlayerProgress.Text = "Label2"
+        lblPlayerProgress.Text = "Progress to Win"
         ' 
         ' lblPlayerBoard
         ' 
         lblPlayerBoard.AutoSize = True
         lblPlayerBoard.Font = New Font("Segoe UI", 20F)
-        lblPlayerBoard.Location = New Point(224, 76)
+        lblPlayerBoard.Location = New Point(416, 162)
+        lblPlayerBoard.Margin = New Padding(6, 0, 6, 0)
         lblPlayerBoard.Name = "lblPlayerBoard"
-        lblPlayerBoard.Size = New Size(147, 37)
+        lblPlayerBoard.Size = New Size(293, 72)
         lblPlayerBoard.TabIndex = 202
         lblPlayerBoard.Text = "Your Board"
         ' 
@@ -2261,30 +2453,31 @@ Partial Class frmGame
         ' 
         lblOpponentBoard.AutoSize = True
         lblOpponentBoard.Font = New Font("Segoe UI", 20F)
-        lblOpponentBoard.Location = New Point(749, 76)
+        lblOpponentBoard.Location = New Point(1379, 173)
+        lblOpponentBoard.Margin = New Padding(6, 0, 6, 0)
         lblOpponentBoard.Name = "lblOpponentBoard"
-        lblOpponentBoard.Size = New Size(215, 37)
+        lblOpponentBoard.Size = New Size(431, 72)
         lblOpponentBoard.TabIndex = 203
         lblOpponentBoard.Text = "Opponent Board"
         ' 
         ' prgPlayerProgress
         ' 
-        prgPlayerProgress.Location = New Point(520, 313)
+        prgPlayerProgress.Location = New Point(966, 668)
+        prgPlayerProgress.Margin = New Padding(6, 6, 6, 6)
         prgPlayerProgress.Name = "prgPlayerProgress"
-        prgPlayerProgress.Size = New Size(100, 23)
+        prgPlayerProgress.Size = New Size(186, 49)
         prgPlayerProgress.TabIndex = 204
         ' 
         ' frmGame
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientInactiveCaption
-        ClientSize = New Size(1156, 669)
+        ClientSize = New Size(2147, 1427)
         Controls.Add(prgPlayerProgress)
         Controls.Add(lblOpponentBoard)
         Controls.Add(lblPlayerBoard)
         Controls.Add(lblPlayerProgress)
-        Controls.Add(Label1)
         Controls.Add(picOppJ3)
         Controls.Add(picOppJ4)
         Controls.Add(picOppJ5)
@@ -2487,6 +2680,7 @@ Partial Class frmGame
         Controls.Add(picPlayerA1)
         Cursor = Cursors.Cross
         FormBorderStyle = FormBorderStyle.Fixed3D
+        Margin = New Padding(6, 6, 6, 6)
         MaximizeBox = False
         Name = "frmGame"
         Text = "Battleship - In Game"
@@ -2894,7 +3088,6 @@ Partial Class frmGame
     Friend WithEvents picOppA10 As PictureBox
     Friend WithEvents picOppA2 As PictureBox
     Friend WithEvents picOppA1 As PictureBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents lblPlayerProgress As Label
     Friend WithEvents lblPlayerBoard As Label
     Friend WithEvents lblOpponentBoard As Label

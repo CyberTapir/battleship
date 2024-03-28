@@ -62,6 +62,8 @@ Public Class frmGame
     ''' Create two two-dimentional control arrays, one per board
     ''' </summary>
     Private Sub initialiseControlArray()
+
+        ''' Player Board Array
         playerBoardArray(1, 1) = picPlayerA1
         playerBoardArray(1, 2) = picPlayerA2
         playerBoardArray(1, 3) = picPlayerA3
@@ -162,6 +164,8 @@ Public Class frmGame
         playerBoardArray(10, 8) = picPlayerJ8
         playerBoardArray(10, 9) = picPlayerJ9
         playerBoardArray(10, 10) = picPlayerJ10
+
+        ''' Opponent Board Array
         opponentBoardArray(1, 1) = picOppA1
         opponentBoardArray(1, 2) = picOppA2
         opponentBoardArray(1, 3) = picOppA3
@@ -270,7 +274,7 @@ Public Class frmGame
     ''' </summary>
     Private Sub setShips()
 
-        ' Clear the Board of all hits, misses, and ships
+        ''' Clear the Board of all hits, misses, and ships
         For i = 1 To 10
             For j = 1 To 10
                 playerBoard(i, j) = 0
@@ -278,11 +282,11 @@ Public Class frmGame
             Next j
         Next i
 
-        ' Place ships randomly for player and opponent
+        ''' Place ships randomly for player and opponent
         placeShips(playerBoard)
         placeShips(opponentBoard)
 
-        ' Display player ships on the board and store their locations
+        ''' Display player ships on the board and store their locations
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = 1 Then
@@ -291,7 +295,7 @@ Public Class frmGame
             Next j
         Next i
 
-        ' Set the value of how many ships each player needs to sink
+        ''' Set the value of how many ships each player needs to sink
         playerShips = 17
         opponentShips = 17
     End Sub
@@ -302,23 +306,23 @@ Public Class frmGame
     ''' <param name="board">The board for the ships to be placed on</param>
     Private Sub placeShips(ByRef board(,) As Integer)
 
-        ' Initialise the lengths of the ships
+        ''' Initialise the lengths of the ships
         Dim shipLengths() As Integer = {5, 4, 3, 3, 2}
 
-        ' Create a random number generator
+        ''' Create a random number generator
         Dim random As New Random()
 
         For Each shipLength In shipLengths
             Dim placed As Boolean = False
             Do Until placed
-                ' Generate random X and Y value for the ship to start at, and an orientation
+                ''' Generate random X and Y value for the ship to start at, and an orientation
                 Dim x As Integer = getRandomNum(10)
                 Dim y As Integer = getRandomNum(10)
-                Dim orientation As Integer = random.Next(2) ' 0 for horizontal, 1 for vertical
+                Dim orientation As Integer = random.Next(2) ''' 0 for horizontal, 1 for vertical
 
-                ' Check if the ship can be placed
+                ''' Check if the ship can be placed
                 If CanPlaceShip(board, x, y, shipLength, orientation) Then
-                    ' If yes, then place the ships on the board
+                    ''' If yes, then place the ships on the board
                     For k As Integer = 0 To shipLength - 1
                         If orientation = 0 Then
                             board(x + k, y) = 1
@@ -364,7 +368,9 @@ Public Class frmGame
         End If
     End Function
 
-
+    ''' <summary>
+    ''' Reset the board for a new game
+    ''' </summary>
     Private Sub reset()
         clearPictureBoxes()
     End Sub
@@ -420,16 +426,16 @@ Public Class frmGame
     Private Sub picOpp_Click(sender As Object, e As EventArgs) Handles picOppA1.Click, picOppA2.Click, picOppA3.Click, picOppA4.Click, picOppA5.Click, picOppA6.Click, picOppA7.Click, picOppA8.Click, picOppA9.Click, picOppA10.Click, picOppB1.Click, picOppB2.Click, picOppB3.Click, picOppB4.Click, picOppB5.Click, picOppB6.Click, picOppB7.Click, picOppB8.Click, picOppB9.Click, picOppB10.Click, picOppC1.Click, picOppC2.Click, picOppC3.Click, picOppC4.Click, picOppC5.Click, picOppC6.Click, picOppC7.Click, picOppC8.Click, picOppC9.Click, picOppC10.Click, picOppD1.Click, picOppD2.Click, picOppD3.Click, picOppD4.Click, picOppD5.Click, picOppD6.Click, picOppD7.Click, picOppD8.Click, picOppD9.Click, picOppD10.Click, picOppE1.Click, picOppE2.Click, picOppE3.Click, picOppE4.Click, picOppE5.Click, picOppE6.Click, picOppE7.Click, picOppE8.Click, picOppE9.Click, picOppE10.Click, picOppF1.Click, picOppF2.Click, picOppF3.Click, picOppF4.Click, picOppF5.Click, picOppF6.Click, picOppF7.Click, picOppF8.Click, picOppF9.Click, picOppF10.Click, picOppG1.Click, picOppG2.Click, picOppG3.Click, picOppG4.Click, picOppG5.Click, picOppG6.Click, picOppG7.Click, picOppG8.Click, picOppG9.Click, picOppG10.Click, picOppH1.Click, picOppH2.Click, picOppH3.Click, picOppH4.Click, picOppH5.Click, picOppH6.Click, picOppH7.Click, picOppH8.Click, picOppH9.Click, picOppH10.Click, picOppI1.Click, picOppI2.Click, picOppI3.Click, picOppI4.Click, picOppI5.Click, picOppI6.Click, picOppI7.Click, picOppI8.Click, picOppI9.Click, picOppI10.Click, picOppJ1.Click, picOppJ2.Click, picOppJ3.Click, picOppJ4.Click, picOppJ5.Click, picOppJ6.Click, picOppJ7.Click, picOppJ8.Click, picOppJ9.Click, picOppJ10.Click
         Dim clickedPictureBox As PictureBox = DirectCast(sender, PictureBox)
 
-        ' Get the coordinates from the PictureBox name
+        ''' Get the coordinates from the PictureBox name
         Dim xCoord As Integer = getXCoords(clickedPictureBox.Name)
         Dim yCoord As Integer = getYCoords(clickedPictureBox.Name)
         'MsgBox(xCoord & yCoord)
-        ' Check if the square has already been guessed
+        ''' Check if the square has already been guessed
 
 
-        ' Update the playerBoard and change the backcolor accordingly
+        ''' Update the playerBoard and change the backcolor accordingly
         If opponentBoard(yCoord, xCoord) = 1 Then
-            ' Hit a ship
+            ''' Hit a ship
             opponentBoard(yCoord, xCoord) = 2
             clickedPictureBox.BackColor = Color.Red
             opponentShips = opponentShips - 1
@@ -439,7 +445,7 @@ Public Class frmGame
         ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
             MessageBox.Show("You have already guessed that square." & playerBoard(xCoord, yCoord), "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            ' Missed the ship
+            ''' Missed the ship
             opponentBoard(yCoord, xCoord) = 3
             clickedPictureBox.BackColor = Color.Blue
             playerScore = playerScore - 1
@@ -491,16 +497,16 @@ Public Class frmGame
     ''' <param name="str">Sender name, eg picPlayerA6</param>
     ''' <returns>Integer column number</returns>
     Private Function getYCoords(str As String) As Integer
-        ' Check if the input string has at least 8 characters
+        ''' Check if the input string has at least 8 characters
         If str.Length < 8 Then
             ''' In case of error
             Throw New ArgumentException("Input string must have at least 8 characters.")
         End If
 
-        ' Extract the characters from position 8 to the end
+        ''' Extract the characters from position 8 to the end
         Dim digitStr As String = str.Substring(7)
 
-        ' Parse the extracted string to an integer
+        ''' Parse the extracted string to an integer
         Dim yCoords As Integer
         If Integer.TryParse(digitStr, yCoords) Then
             Return yCoords
@@ -510,12 +516,14 @@ Public Class frmGame
         End If
     End Function
 
-
+    ''' <summary>
+    ''' Get the set computerlevel and return the correct subroutine.
+    ''' </summary>
     Private Sub getComputerLevel()
         If compMode = 0 Then
             easyComputerMove()
         ElseIf compMode = 1 Then
-            ' hardComputerMove()
+            ''' hardComputerMove()
         ElseIf compMode = 2 Then
             'impossibleComputerMove()
         End If
@@ -529,26 +537,35 @@ Public Class frmGame
         Dim randYCoord As Integer
         Dim done As Boolean = False
 
-        ' Loop until a valid move is made
+        ''' Loop until a valid move is made
         While Not done
-            ' Generate random x and y values
+            ''' Generate random x and y values
             randXCoord = getRandomNum(10)
             randYCoord = getRandomNum(10)
 
-            ' Check if the move is valid
+            ''' Check if the move is valid
             If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
-                ' Make the move
+                ''' Make the move
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
                 done = True
             End If
         End While
     End Sub
 
-
+    ''' <summary>
+    ''' Return the playerBoardArray
+    ''' </summary>
+    ''' <returns>Returns the playerBoardArray</returns>
     Private Function GetPlayerBoardArray() As PictureBox(,)
         Return playerBoardArray
     End Function
 
+    ''' <summary>
+    ''' Do the computer move on the displayed board
+    ''' </summary>
+    ''' <param name="XCoord">Input X Coordinate</param>
+    ''' <param name="YCoord">Input Y Coordinate</param>
+    ''' <param name="playerBoardArray">Input the grid to update</param>
     Private Sub doComputerMove(XCoord As Integer, YCoord As Integer, playerBoardArray As PictureBox(,))
         ''' Update the playerBoard and change the backcolor accordingly
         If playerBoard(YCoord, XCoord) = 1 Then
@@ -564,42 +581,11 @@ Public Class frmGame
         isGameOver()
     End Sub
 
-    'Private Sub impossibleComputerMove()
-    '    Dim x As Integer
-    '    Dim y As Integer
-    '    Dim coords() As String
-
-    '    ' Ensure playerShipLocations is initialized properly
-    '    ' Assuming it's a 2D array of strings
-    '    ' Dim playerShipLocations(,) As String
-
-    '    If impossibleMoveCounter <= 17 Then
-    '        Dim shipIndex As Integer
-    '        Dim positionIndex As Integer
-
-
-    '        ' Get coordinates from playerShipLocations
-    '        MsgBox(playerShipLocations(impossibleMoveCounter))
-    '        coords = playerShipLocations(impossibleMoveCounter).Split(",")
-    '        x = Integer.Parse(coords(0))
-    '        y = Integer.Parse(coords(1))
-
-    '        ' Perform computer move
-    '        doComputerMove(x, y, GetPlayerBoardArray())
-
-    '        ' Increment counter
-    '        impossibleMoveCounter += 1
-    '    End If
-    'End Sub
-
-
-
-
     ''' <summary>
-    ''' This subroutine generates a random integer given an upper bound
+    ''' Generate a random number based on an upper bound
     ''' </summary>
-    ''' <param name="upper">The upper value of the range (1 to upper)</param>
-    ''' <returns>Returns a random value between 1 and Upper inclusive</returns>
+    ''' <param name="upper">upper bound</param>
+    ''' <returns>random number</returns>
     Private Function getRandomNum(upper As Integer) As Integer
         Dim val As Integer
 
@@ -611,34 +597,52 @@ Public Class frmGame
 
 
     'Private Sub hardComputerMove()
-    '    Dim randXCoord As Integer
-    '    Dim randYCoord As Integer
-    '    Dim done As Boolean = False
+    '''    Dim randXCoord As Integer
+    '''    Dim randYCoord As Integer
+    '''    Dim done As Boolean = False
 
-    '    ' Loop until a valid move is made
-    '    While Not done
-    '        ' Generate random x and y values
-    '        randXCoord = getRandomNum(10)
-    '        randYCoord = getRandomNum(10)
+    '''    ''' Loop until a valid move is made
+    '''    While Not done
+    '''        ''' Generate random x and y values
+    '''        randXCoord = getRandomNum(10)
+    '''        randYCoord = getRandomNum(10)
 
-    '        ' Check if the move is valid
-    '        If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
-    '            ' Make the move
-    '            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
-    '            done = True
-    '        End If
-    '    End While
+    '''        ''' Check if the move is valid
+    '''        If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
+    '''            ''' Make the move
+    '''            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+    '''            done = True
+    '''        End If
+    '''    End While
     'End Sub
 
+    'Private Sub impossibleComputerMove()
+    '''    Dim x As Integer
+    '''    Dim y As Integer
+    '''    Dim coords() As String
+
+    '''    ''' Ensure playerShipLocations is initialized properly
+    '''    ''' Assuming it's a 2D array of strings
+    '''    ''' Dim playerShipLocations(,) As String
+
+    '''    If impossibleMoveCounter <= 17 Then
+    '''        Dim shipIndex As Integer
+    '''        Dim positionIndex As Integer
 
 
+    '''        ''' Get coordinates from playerShipLocations
+    '''        MsgBox(playerShipLocations(impossibleMoveCounter))
+    '''        coords = playerShipLocations(impossibleMoveCounter).Split(",")
+    '''        x = Integer.Parse(coords(0))
+    '''        y = Integer.Parse(coords(1))
 
+    '''        ''' Perform computer move
+    '''        doComputerMove(x, y, GetPlayerBoardArray())
 
-
-
-
-
-
+    '''        ''' Increment counter
+    '''        impossibleMoveCounter += 1
+    '''    End If
+    'End Sub
 
 
 End Class
