@@ -1,4 +1,7 @@
 ﻿Imports System.Diagnostics.Metrics
+Imports System.Runtime.InteropServices
+Imports System.Threading
+Imports Microsoft.VisualBasic.Devices
 
 Public Class frmGame
 
@@ -44,6 +47,8 @@ Public Class frmGame
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        lblWhosTurnIsIt.Text = playerName & "'s Turn"
 
         Randomize()
 
@@ -406,7 +411,7 @@ Public Class frmGame
             Me.Close()
             ''' If the computer has no ships remaining, the player wins
         ElseIf opponentShips = 0 Then
-            MessageBox.Show("Congradulations Player, You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            MessageBox.Show("Congradulations " & playerName & ", You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             playerScore = playerScore + 100
             reset()
             frmGameEnd.Show()
@@ -437,21 +442,42 @@ Public Class frmGame
         If opponentBoard(yCoord, xCoord) = 1 Then
             ''' Hit a ship
             opponentBoard(yCoord, xCoord) = 2
+
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+            delay(500)
             clickedPictureBox.BackColor = Color.Red
             opponentShips = opponentShips - 1
             playerScore = playerScore + 20
             prgPlayerProgress.Value = (((opponentShips / 17) * 100) * -1) + 100
 
         ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
-            MessageBox.Show("You have already guessed that square." & playerBoard(xCoord, yCoord), "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
+            MessageBox.Show("You have already guessed that square.", "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf opponentBoard(yCoord, xCoord) = 0 Then
             ''' Missed the ship
             opponentBoard(yCoord, xCoord) = 3
+
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+            delay(500)
+            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+            delay(500)
+
             clickedPictureBox.BackColor = Color.Blue
             playerScore = playerScore - 1
         End If
 
+
         If isGameOver() = 0 Then
+
             getComputerLevel()
         End If
 
@@ -533,6 +559,11 @@ Public Class frmGame
     ''' In the easiest computer mode, the computer guesses random squares.
     ''' </summary>
     Private Sub easyComputerMove()
+
+
+
+        ''' Generate random x and y values
+
         Dim randXCoord As Integer
         Dim randYCoord As Integer
         Dim done As Boolean = False
@@ -567,18 +598,46 @@ Public Class frmGame
     ''' <param name="YCoord">Input Y Coordinate</param>
     ''' <param name="playerBoardArray">Input the grid to update</param>
     Private Sub doComputerMove(XCoord As Integer, YCoord As Integer, playerBoardArray As PictureBox(,))
+
+        delay(500)
+
+        lblWhosTurnIsIt.Text = "Computer's Turn"
+        Cursor.Current = Cursors.No
+
+        delay(1000)
+
         ''' Update the playerBoard and change the backcolor accordingly
         If playerBoard(YCoord, XCoord) = 1 Then
             ''' Hit a ship
             playerBoard(YCoord, XCoord) = 2
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.LightBlue
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.LightBlue
+            delay(500)
             playerBoardArray(YCoord, XCoord).BackColor = Color.Red
             playerShips = playerShips - 1
         ElseIf playerBoard(YCoord, XCoord) = 0 Then
             ''' Missed the ship
             playerBoard(YCoord, XCoord) = 3
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.LightBlue
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
+            delay(500)
+            playerBoardArray(YCoord, XCoord).BackColor = Color.LightBlue
+            delay(500)
             playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
         End If
         isGameOver()
+
+        delay(1000)
+        lblWhosTurnIsIt.Text = playerName & "'s Turn"
+        Cursor.Current = Cursors.Cross
     End Sub
 
     ''' <summary>
@@ -644,5 +703,12 @@ Public Class frmGame
     '''    End If
     'End Sub
 
-
+    Private Sub delay(ByVal interval As Integer)
+        Dim sw As New Stopwatch
+        sw.Start()
+        Do While sw.ElapsedMilliseconds < interval
+            Application.DoEvents()
+        Loop
+        sw.Stop()
+    End Sub
 End Class
