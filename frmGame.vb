@@ -40,6 +40,8 @@ Public Class frmGame
 
     Dim impossibleMoveCounter As Integer = 1
 
+    Dim canMakeMove As Boolean = True
+
 
     ''' <summary>
     ''' 5, 4, 3, 3, 2
@@ -501,48 +503,50 @@ Public Class frmGame
 
 
         ''' Update the playerBoard and change the backcolor accordingly
-        If opponentBoard(yCoord, xCoord) = 1 Then
-            ''' Hit a ship
-            opponentBoard(yCoord, xCoord) = 2
+        ''' 
+        If canMakeMove Then
+            If opponentBoard(yCoord, xCoord) = 1 Then
+                ''' Hit a ship
+                opponentBoard(yCoord, xCoord) = 2
 
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
-            delay(500)
-            clickedPictureBox.BackColor = Color.Red
-            opponentShips = opponentShips - 1
-            playerScore = playerScore + 20
-            prgPlayerProgress.Value = (((opponentShips / 17) * 100) * -1) + 100
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+                delay(500)
+                clickedPictureBox.BackColor = Color.Red
+                opponentShips = opponentShips - 1
+                playerScore = playerScore + 20
+                prgPlayerProgress.Value = (((opponentShips / 17) * 100) * -1) + 100
 
-        ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
-            MessageBox.Show("You have already guessed that square.", "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        ElseIf opponentBoard(yCoord, xCoord) = 0 Then
-            ''' Missed the ship
-            opponentBoard(yCoord, xCoord) = 3
+            ElseIf opponentBoard(yCoord, xCoord) = 2 Or opponentBoard(yCoord, xCoord) = 3 Then
+                MessageBox.Show("You have already guessed that square.", "Duplicate Guess", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf opponentBoard(yCoord, xCoord) = 0 Then
+                ''' Missed the ship
+                opponentBoard(yCoord, xCoord) = 3
 
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
-            delay(500)
-            opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
-            delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
+                delay(500)
+                opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
+                delay(500)
 
-            clickedPictureBox.BackColor = Color.Blue
-            playerScore = playerScore - 1
+                clickedPictureBox.BackColor = Color.Blue
+                playerScore = playerScore - 1
+            End If
+
+
+            If isGameOver() = 0 Then
+                loopShipsIfSunk(0)
+                getComputerLevel()
+            End If
         End If
-
-
-        If isGameOver() = 0 Then
-
-            getComputerLevel()
-        End If
-
     End Sub
 
 
@@ -665,6 +669,7 @@ Public Class frmGame
 
         lblWhosTurnIsIt.Text = "Computer's Turn"
         Cursor.Current = Cursors.No
+        canMakeMove = False
 
         delay(1000)
 
@@ -696,13 +701,14 @@ Public Class frmGame
             playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
         End If
 
-        checkIfPlayerShipSunk()
+        loopShipsIfSunk(1)
 
         isGameOver()
 
         delay(1000)
         lblWhosTurnIsIt.Text = playerName & "'s Turn"
         Cursor.Current = Cursors.Cross
+        canMakeMove = True
     End Sub
 
     ''' <summary>
@@ -719,55 +725,6 @@ Public Class frmGame
         Return val
     End Function
 
-
-    'Private Sub hardComputerMove()
-    '''    Dim randXCoord As Integer
-    '''    Dim randYCoord As Integer
-    '''    Dim done As Boolean = False
-
-    '''    ''' Loop until a valid move is made
-    '''    While Not done
-    '''        ''' Generate random x and y values
-    '''        randXCoord = getRandomNum(10)
-    '''        randYCoord = getRandomNum(10)
-
-    '''        ''' Check if the move is valid
-    '''        If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
-    '''            ''' Make the move
-    '''            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
-    '''            done = True
-    '''        End If
-    '''    End While
-    'End Sub
-
-    'Private Sub impossibleComputerMove()
-    '''    Dim x As Integer
-    '''    Dim y As Integer
-    '''    Dim coords() As String
-
-    '''    ''' Ensure playerShipLocations is initialized properly
-    '''    ''' Assuming it's a 2D array of strings
-    '''    ''' Dim playerShipLocations(,) As String
-
-    '''    If impossibleMoveCounter <= 17 Then
-    '''        Dim shipIndex As Integer
-    '''        Dim positionIndex As Integer
-
-
-    '''        ''' Get coordinates from playerShipLocations
-    '''        MsgBox(playerShipLocations(impossibleMoveCounter))
-    '''        coords = playerShipLocations(impossibleMoveCounter).Split(",")
-    '''        x = Integer.Parse(coords(0))
-    '''        y = Integer.Parse(coords(1))
-
-    '''        ''' Perform computer move
-    '''        doComputerMove(x, y, GetPlayerBoardArray())
-
-    '''        ''' Increment counter
-    '''        impossibleMoveCounter += 1
-    '''    End If
-    'End Sub
-
     Private Sub delay(ByVal interval As Integer)
         Dim sw As New Stopwatch
         sw.Start()
@@ -777,133 +734,54 @@ Public Class frmGame
         sw.Stop()
     End Sub
 
-    Private Sub checkIfPlayerShipSunk()
-        Dim flag As Boolean = False
+    ''' <summary>
+    ''' Call checkShipSunk for each ship based on the player,
+    ''' </summary>
+    ''' <param name="player">the player to check for. Computer or Player.</param>
+    Private Sub loopShipsIfSunk(player As Integer)
+        If player = 1 Then
+            checkShipSunk(carrier, playerBoard, 1)
+            checkShipSunk(battleship, playerBoard, 1)
+            checkShipSunk(submarine, playerBoard, 1)
+            checkShipSunk(cruiser, playerBoard, 1)
+            checkShipSunk(destroyer, playerBoard, 1)
+        Else
+            checkShipSunk(carrier, opponentBoard, 0)
+            checkShipSunk(battleship, opponentBoard, 0)
+            checkShipSunk(submarine, opponentBoard, 0)
+            checkShipSunk(cruiser, opponentBoard, 0)
+            checkShipSunk(destroyer, opponentBoard, 0)
+        End If
+
+    End Sub
+
+    Private Sub checkShipSunk(ship As ship, board(,) As Integer, player As Integer)
+        Dim Theflag As Boolean = False
         Dim count As Integer = 0
-        ''' carrier
-        If carrier.sunk = False And flag = False Then
-            If carrier.orient = 0 Then
+        If ship.sunk = False And Theflag = False Then
+            If ship.orient = 0 Then
                 For i = 0 To 4
-                    If playerBoard(carrier.x + i, carrier.y) = 2 Then
+                    If board(ship.x + i, ship.y) = 2 Then
                         count = count + 1
                     Else
-                        flag = True
+                        Theflag = True
                     End If
                 Next i
-            ElseIf carrier.orient = 1 Then
+            ElseIf ship.orient = 1 Then
                 For i = 0 To 4
-                    If playerBoard(carrier.x, carrier.y + i) = 2 Then
+                    If board(ship.x, ship.y + i) = 2 Then
                         count = count + 1
                     Else
-                        flag = True
+                        Theflag = True
                     End If
                 Next i
             End If
-            If count = 5 And flag = False Then
-                MsgBox("The computer has sunk your Carrier!", MessageBoxIcon.Asterisk)
-                carrier.sunk = True
-            End If
-        End If
-        flag = False
-        count = 0
-        ''' battleship
-        If battleship.sunk = False And flag = False Then
-            If battleship.orient = 0 Then
-                For i = 0 To 3
-                    If playerBoard(battleship.x + i, battleship.y) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            ElseIf battleship.orient = 1 Then
-                For i = 0 To 3
-                    If playerBoard(battleship.x, battleship.y + i) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            End If
-            If count = 4 And flag = False Then
-                MsgBox("The computer has sunk your Battleship!", MessageBoxIcon.Asterisk)
-                battleship.sunk = True
-            End If
-        End If
-        count = 0
-        flag = False
-        ''' cruiser
-        If cruiser.sunk = False And flag = False Then
-            If cruiser.orient = 0 Then
-                For i = 0 To 2
-                    If playerBoard(cruiser.x + i, cruiser.y) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            ElseIf battleship.orient = 1 Then
-                For i = 0 To 2
-                    If playerBoard(cruiser.x, cruiser.y + i) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            End If
-            If count = 3 And flag = False Then
-                MsgBox("The computer has sunk your Cruiser!", MessageBoxIcon.Asterisk)
-                cruiser.sunk = True
-            End If
-        End If
-        count = 0
-        flag = False
-        ''' submarine
-        If submarine.sunk = False And flag = False Then
-            If submarine.orient = 0 Then
-                For i = 0 To 2
-                    If playerBoard(submarine.x + i, submarine.y) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            ElseIf submarine.orient = 1 Then
-                For i = 0 To 2
-                    If playerBoard(submarine.x, submarine.y + i) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            End If
-            If count = 3 And flag = False Then
-                MsgBox("The computer has sunk your Submarine!", MessageBoxIcon.Asterisk)
-            End If
-        End If
-        count = 0
-        flag = False
-        ''' destroyer
-        If destroyer.sunk = False And flag = False Then
-            If destroyer.orient = 0 Then
-                For i = 0 To 2
-                    If playerBoard(destroyer.x + i, destroyer.y) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            ElseIf destroyer.orient = 1 Then
-                For i = 0 To 2
-                    If playerBoard(destroyer.x, destroyer.y + i) = 2 Then
-                        count = count + 1
-                    Else
-                        flag = True
-                    End If
-                Next i
-            End If
-            If count = 2 And flag = False Then
-                MsgBox("The computer has sunk your Destroyer!", MessageBoxIcon.Asterisk)
+            If count = ship.length And Theflag = False And player = 0 Then
+                MsgBox("You have sunk a ship!", MessageBoxIcon.Asterisk)
+                ship.sunk = True
+            ElseIf count = ship.length And Theflag = False And player = 1 Then
+                MsgBox("The computer has sunk your ship!", MessageBoxIcon.Asterisk)
+                ship.sunk = True
             End If
         End If
     End Sub
