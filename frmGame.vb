@@ -42,11 +42,36 @@ Public Class frmGame
 
 
     ''' <summary>
+    ''' 5, 4, 3, 3, 2
+    ''' </summary>
+    Public Structure ship
+        Dim length As Integer
+        Dim x As Integer
+        Dim y As Integer
+        Dim orient As Integer
+        Dim sunk As Boolean
+    End Structure
+
+    Dim cruiser As ship
+    Dim carrier As ship
+    Dim battleship As ship
+    Dim destroyer As ship
+    Dim submarine As ship
+
+
+    ''' <summary>
     ''' This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        carrier.length = 5
+        battleship.length = 4
+        cruiser.length = 3
+        submarine.length = 3
+        destroyer.length = 2
 
         lblWhosTurnIsIt.Text = playerName & "'s Turn"
 
@@ -314,6 +339,8 @@ Public Class frmGame
         ''' Initialise the lengths of the ships
         Dim shipLengths() As Integer = {5, 4, 3, 3, 2}
 
+        Dim counter As Integer = 5
+
         ''' Create a random number generator
         Dim random As New Random()
 
@@ -330,17 +357,52 @@ Public Class frmGame
                     ''' If yes, then place the ships on the board
                     For k As Integer = 0 To shipLength - 1
                         If orientation = 0 Then
+                            saveCoords(orientation, x, y, counter)
                             board(x + k, y) = 1
                         Else
+                            saveCoords(orientation, x, y, counter)
                             board(x, y + k) = 1
                         End If
                     Next k
                     placed = True
                 End If
             Loop
+            counter = counter - 1
         Next shipLength
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="orientation"></param>
+    ''' <param name="x"></param>
+    ''' <param name="y"></param>
+    ''' <param name="counter"></param>
+    Private Sub saveCoords(orientation As Integer, x As Integer, y As Integer, counter As Integer)
+        Select Case counter
+            Case 5
+                carrier.x = x
+                carrier.y = y
+                carrier.orient = orientation
+            Case 4
+                battleship.x = x
+                battleship.y = y
+                battleship.orient = orientation
+            Case 3
+                cruiser.x = x
+                cruiser.y = y
+                cruiser.orient = orientation
+            Case 2
+                submarine.x = x
+                submarine.y = y
+                submarine.orient = orientation
+            Case 1
+                destroyer.x = x
+                destroyer.y = y
+                destroyer.orient = orientation
+        End Select
+
+    End Sub
 
     ''' <summary>
     ''' Verify the ships do not overlap or fall off the board
@@ -633,6 +695,9 @@ Public Class frmGame
             delay(500)
             playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
         End If
+
+        checkIfPlayerShipSunk()
+
         isGameOver()
 
         delay(1000)
@@ -711,4 +776,136 @@ Public Class frmGame
         Loop
         sw.Stop()
     End Sub
+
+    Private Sub checkIfPlayerShipSunk()
+        Dim flag As Boolean = False
+        Dim count As Integer = 0
+        ''' carrier
+        If carrier.sunk = False And flag = False Then
+            If carrier.orient = 0 Then
+                For i = 0 To 4
+                    If playerBoard(carrier.x + i, carrier.y) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            ElseIf carrier.orient = 1 Then
+                For i = 0 To 4
+                    If playerBoard(carrier.x, carrier.y + i) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            End If
+            If count = 5 And flag = False Then
+                MsgBox("The computer has sunk your Carrier!", MessageBoxIcon.Asterisk)
+                carrier.sunk = True
+            End If
+        End If
+        flag = False
+        count = 0
+        ''' battleship
+        If battleship.sunk = False And flag = False Then
+            If battleship.orient = 0 Then
+                For i = 0 To 3
+                    If playerBoard(battleship.x + i, battleship.y) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            ElseIf battleship.orient = 1 Then
+                For i = 0 To 3
+                    If playerBoard(battleship.x, battleship.y + i) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            End If
+            If count = 4 And flag = False Then
+                MsgBox("The computer has sunk your Battleship!", MessageBoxIcon.Asterisk)
+                battleship.sunk = True
+            End If
+        End If
+        count = 0
+        flag = False
+        ''' cruiser
+        If cruiser.sunk = False And flag = False Then
+            If cruiser.orient = 0 Then
+                For i = 0 To 2
+                    If playerBoard(cruiser.x + i, cruiser.y) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            ElseIf battleship.orient = 1 Then
+                For i = 0 To 2
+                    If playerBoard(cruiser.x, cruiser.y + i) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            End If
+            If count = 3 And flag = False Then
+                MsgBox("The computer has sunk your Cruiser!", MessageBoxIcon.Asterisk)
+                cruiser.sunk = True
+            End If
+        End If
+        count = 0
+        flag = False
+        ''' submarine
+        If submarine.sunk = False And flag = False Then
+            If submarine.orient = 0 Then
+                For i = 0 To 2
+                    If playerBoard(submarine.x + i, submarine.y) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            ElseIf submarine.orient = 1 Then
+                For i = 0 To 2
+                    If playerBoard(submarine.x, submarine.y + i) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            End If
+            If count = 3 And flag = False Then
+                MsgBox("The computer has sunk your Submarine!", MessageBoxIcon.Asterisk)
+            End If
+        End If
+        count = 0
+        flag = False
+        ''' destroyer
+        If destroyer.sunk = False And flag = False Then
+            If destroyer.orient = 0 Then
+                For i = 0 To 2
+                    If playerBoard(destroyer.x + i, destroyer.y) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            ElseIf destroyer.orient = 1 Then
+                For i = 0 To 2
+                    If playerBoard(destroyer.x, destroyer.y + i) = 2 Then
+                        count = count + 1
+                    Else
+                        flag = True
+                    End If
+                Next i
+            End If
+            If count = 2 And flag = False Then
+                MsgBox("The computer has sunk your Destroyer!", MessageBoxIcon.Asterisk)
+            End If
+        End If
+    End Sub
+
 End Class
