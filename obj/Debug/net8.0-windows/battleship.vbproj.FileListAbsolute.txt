@@ -38,3 +38,5 @@ C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.frmGa
 C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\obj\Debug\net8.0-windows\battleship.frmGameEnd.resources
 C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\obj\Debug\net8.0-windows\battleship.Resources.resources
 C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.Resources.resources
+C:\Users\callu\source\repos\battleship\bin\Debug\net8.0-windows\battleship.xml
+C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.xml

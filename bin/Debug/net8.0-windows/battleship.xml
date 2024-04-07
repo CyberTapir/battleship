@@ -1,0 +1,189 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+battleship
+</name>
+</assembly>
+<members>
+<member name="T:battleship.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:battleship.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:battleship.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:battleship.frmGame.playerBoardArray">
+ <summary>
+ playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)
+ </summary>
+</member>
+<member name="F:battleship.frmGame.playerBoard">
+ <summary>
+ playerBoard will store important information such as hits, misses and ships for the player
+ </summary>
+</member>
+<member name="F:battleship.frmGame.opponentBoardArray">
+ <summary>
+ opponentBoardArray is a control array of pictureboxes. This handles the player view of the opponents board (hits and misses)
+ </summary>
+</member>
+<member name="F:battleship.frmGame.opponentBoard">
+ <summary>
+ opponentBoard will store important information such as hits, misses and ships for the computer or second player
+ </summary>
+</member>
+<member name="F:battleship.frmGame.playerShips">
+ <summary>
+ PlayerShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
+ </summary>
+</member>
+<member name="F:battleship.frmGame.opponentShips">
+ <summary>
+ OpponentShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
+ </summary>
+</member>
+<member name="T:battleship.frmGame.ship">
+ <summary>
+ 5, 4, 3, 3, 2
+ </summary>
+</member>
+<member name="M:battleship.frmGame.frmGame_Load(System.Object,System.EventArgs)">
+ <summary>
+ This subroutine is run once when the form is first loaded. This is best for setting up control structures before the game starts.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:battleship.frmGame.initialiseControlArray">
+ <summary>
+ Create two two-dimentional control arrays, one per board
+ </summary>
+</member>
+<member name="M:battleship.frmGame.setShips">
+ <summary>
+ Before the game starts, set the ship locations on the board.
+ </summary>
+</member>
+<member name="M:battleship.frmGame.placeShips(System.Int32[0:,0:]@)">
+ <summary>
+ Place the ships on the board in a random manner
+ </summary>
+ <param name="board">The board for the ships to be placed on</param>
+</member>
+<member name="M:battleship.frmGame.CanPlaceShip(System.Int32[0:,0:]@,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Verify the ships do not overlap or fall off the board
+ </summary>
+ <param name="board">The board to check</param>
+ <param name="x">Initial X value</param>
+ <param name="y">Initial Y value</param>
+ <param name="length">Length of the ship to be placed</param>
+ <param name="orientation">Orientation of the ship to be placed</param>
+ <returns>True/False. True if can be placed, false if not</returns>
+</member>
+<member name="M:battleship.frmGame.reset">
+ <summary>
+ Reset the board for a new game
+ </summary>
+</member>
+<member name="M:battleship.frmGame.clearPictureBoxes">
+ <summary>
+ Clear each of the picture boxes by using two for loops.
+ This is run to reset the board once the player returns to the starting form in preparation for a potential second game
+ </summary>
+</member>
+<member name="M:battleship.frmGame.isGameOver">
+ <summary>
+ Function to verify if the game is won/lost
+ </summary>
+ <returns>True/False depending on whether the game is won</returns>
+</member>
+<member name="M:battleship.frmGame.picOpp_Click(System.Object,System.EventArgs)">
+ <summary>
+ On click of Opponent grid, launch an attack and change the colour appropriately
+ </summary>
+ <param name="sender">The clicked PictureBox as PictureBox</param>
+ <param name="e"></param>
+</member>
+<member name="M:battleship.frmGame.getXCoords(System.String)">
+ <summary>
+ getCoords takes in a sender picturebox name (such as picOppA3) and return the appropriate number value for the letter
+ </summary>
+ <param name="str">Sender as type string</param>
+ <returns>X Coordinate as type integer</returns>
+</member>
+<member name="M:battleship.frmGame.getYCoords(System.String)">
+ <summary>
+ Gets the y value from a sender string
+ </summary>
+ <param name="str">Sender name, eg picPlayerA6</param>
+ <returns>Integer column number</returns>
+</member>
+<member name="M:battleship.frmGame.getComputerLevel">
+ <summary>
+ Get the set computerlevel and return the correct subroutine.
+ </summary>
+</member>
+<member name="M:battleship.frmGame.easyComputerMove">
+ <summary>
+ In the easiest computer mode, the computer guesses random squares.
+ </summary>
+</member>
+<member name="M:battleship.frmGame.GetPlayerBoardArray">
+ <summary>
+ Return the playerBoardArray
+ </summary>
+ <returns>Returns the playerBoardArray</returns>
+</member>
+<member name="M:battleship.frmGame.doComputerMove(System.Int32,System.Int32,System.Windows.Forms.PictureBox[0:,0:])">
+ <summary>
+ Do the computer move on the displayed board
+ </summary>
+ <param name="XCoord">Input X Coordinate</param>
+ <param name="YCoord">Input Y Coordinate</param>
+ <param name="playerBoardArray">Input the grid to update</param>
+</member>
+<member name="M:battleship.frmGame.getRandomNum(System.Int32)">
+ <summary>
+ Generate a random number based on an upper bound
+ </summary>
+ <param name="upper">upper bound</param>
+ <returns>random number</returns>
+</member>
+<member name="M:battleship.frmGame.delay(System.Int32)">
+ <summary>
+ Delay action taken so computer move is not instant, and for flashing the guessed coordinate
+ </summary>
+ <param name="interval">How long the delay is in ms as type integer</param>
+</member>
+<member name="M:battleship.frmGame.checkForSunkShips">
+ <summary>
+ Check for sunk ships based on record of ship lengths. Update whether it is sunk accordingly
+ </summary>
+</member>
+<member name="M:battleship.frmStart.btnStart_Click(System.Object,System.EventArgs)">
+ <summary>
+ When btnStart is clicked, start game
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:battleship.frmStart.verifyName(System.String)">
+ <summary>
+ Verify the length of the name is acceptable
+ </summary>
+ <param name="name">input name as string</param>
+ <returns>Output boolean if true</returns>
+</member>
+</members>
+</doc>
