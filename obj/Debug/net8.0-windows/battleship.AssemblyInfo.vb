@@ -13,10 +13,11 @@ Option Explicit On
 
 Imports System
 Imports System.Reflection
-<Assembly: System.Reflection.AssemblyCompanyAttribute("battleship"),  _
+<Assembly: System.Reflection.AssemblyCompanyAttribute("CyberTapir Media Group"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
+ Assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright 2024 CyberTapir"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83b34e8e6403792dd99843f3beb3f373ea3e835b"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b40dab94e1edba4d74ac28aec835c9ccc0c5cd5"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("battleship"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("battleship"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

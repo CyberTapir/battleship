@@ -760,21 +760,27 @@ Public Class frmGame
         Dim count As Integer = 0
         If ship.sunk = False And Theflag = False Then
             If ship.orient = 0 Then
-                For i = 0 To 4
-                    If board(ship.x + i, ship.y) = 2 Then
-                        count = count + 1
-                    Else
-                        Theflag = True
-                    End If
-                Next i
+                Try
+                    For i = 0 To 4
+                        If board(ship.x + i, ship.y) = 2 Then
+                            count = count + 1
+                        Else
+                            Theflag = True
+                        End If
+                    Next i
+                Catch ex As Exception
+                End Try
             ElseIf ship.orient = 1 Then
-                For i = 0 To 4
-                    If board(ship.x, ship.y + i) = 2 Then
-                        count = count + 1
-                    Else
-                        Theflag = True
-                    End If
-                Next i
+                Try
+                    For i = 0 To 4
+                        If board(ship.x, ship.y + i) = 2 Then
+                            count = count + 1
+                        Else
+                            Theflag = True
+                        End If
+                    Next i
+                Catch ex As exception
+                End Try
             End If
             If count = ship.length And Theflag = False And player = 0 Then
                 MsgBox("You have sunk a ship!", MessageBoxIcon.Asterisk)
