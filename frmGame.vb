@@ -54,7 +54,6 @@ Public Class frmGame
     Dim opponentSubmarine As ship
     Dim opponentDestroyer As ship
 
-
     ''' <summary>
     ''' 5, 4, 3, 3, 2
     ''' </summary>
@@ -338,7 +337,7 @@ Public Class frmGame
         placeShips(playerBoard)
         placeShips(opponentBoard)
 
-        ''' Display player ships on the board and store their locations
+        ''' Display player ships on the board
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = 4 Or playerBoard(i, j) = 5 Or playerBoard(i, j) = 6 Or playerBoard(i, j) = 7 Or playerBoard(i, j) = 8 Then
@@ -621,7 +620,9 @@ Public Class frmGame
         ElseIf compMode = 1 Then
             ''' hardComputerMove()
         ElseIf compMode = 2 Then
-            'impossibleComputerMove()
+            hardComputerMove()
+        ElseIf compMode = 3 Then
+            impossibleComputerMove()
         End If
     End Sub
 
@@ -629,8 +630,6 @@ Public Class frmGame
     ''' In the easiest computer mode, the computer guesses random squares.
     ''' </summary>
     Private Sub easyComputerMove()
-
-
 
         ''' Generate random x and y values
 
@@ -650,6 +649,62 @@ Public Class frmGame
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
                 done = True
             End If
+        End While
+    End Sub
+
+    Private Sub hardComputerMove()
+
+        Dim target As Integer
+        Dim done As Boolean = False
+
+        Select Case impossibleMoveCounter
+            Case 1 To 5
+                target = 4
+            Case 6 To 9
+                target = 5
+            Case 10 To 12
+                target = 6
+            Case 13 To 15
+                target = 7
+            Case 16 To 17
+                target = 8
+        End Select
+        For i = 1 To 10
+            For j = 1 To 10
+                If playerBoard(i, j) = target And Not done Then
+                    doComputerMove(j, i, GetPlayerBoardArray())
+                    done = True
+                End If
+            Next j
+        Next i
+    End Sub
+
+    Private Sub impossibleComputerMove()
+
+        Dim target As Integer
+        Dim done As Boolean = False
+
+        Select Case impossibleMoveCounter
+            Case 1 To 5
+                target = 4
+            Case 6 To 9
+                target = 5
+            Case 10 To 12
+                target = 6
+            Case 13 To 15
+                target = 7
+            Case 16 To 17
+                target = 8
+        End Select
+        While Not done
+            For i = 1 To 10
+                For j = 1 To 10
+                    If playerBoard(i, j) = target Then
+                        doComputerMove(j, i, GetPlayerBoardArray())
+                        done = True
+                    End If
+                Next j
+            Next i
         End While
     End Sub
 
@@ -717,9 +772,8 @@ Public Class frmGame
             playerBoardArray(YCoord, XCoord).BackColor = Color.Red
             playerShips = playerShips - 1
             checkForSunkShips()
+            isGameOver()
         End If
-
-        isGameOver()
 
         delay(1000)
         lblWhosTurnIsIt.Text = playerName & "'s Turn"
@@ -787,7 +841,7 @@ Public Class frmGame
         ElseIf playerSubmarine.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your submarine!", MessageBoxIcon.Asterisk)
             playerSubmarine.sunk = True
-        ElseIf playerDestroyer.sunk = 0 And playerSubmarine.sunk = False Then
+        ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
         End If

@@ -40,3 +40,5 @@ C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\obj\Debug\net8.0-windo
 C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.Resources.resources
 C:\Users\callu\source\repos\battleship\bin\Debug\net8.0-windows\battleship.xml
 C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.xml
+C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\bin\Debug\net8.0-windows\battleship.xml
+C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\obj\Debug\net8.0-windows\battleship.xml
