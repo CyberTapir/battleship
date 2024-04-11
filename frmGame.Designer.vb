@@ -22,6 +22,7 @@ Partial Class frmGame
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGame))
         picPlayerA1 = New PictureBox()
         picPlayerA2 = New PictureBox()
         picPlayerA10 = New PictureBox()
@@ -225,7 +226,7 @@ Partial Class frmGame
         lblPlayerProgress = New Label()
         lblPlayerBoard = New Label()
         lblOpponentBoard = New Label()
-        prgPlayerProgress = New ProgressBar()
+        prgOpponentProgress = New ProgressBar()
         lblWhosTurnIsIt = New Label()
         lbl1O = New Label()
         lbl2O = New Label()
@@ -267,7 +268,7 @@ Partial Class frmGame
         Label8 = New Label()
         Label9 = New Label()
         Label10 = New Label()
-        ProgressBar1 = New ProgressBar()
+        prgPlayerProgress = New ProgressBar()
         lblProgress = New Label()
         CType(picPlayerA1, ComponentModel.ISupportInitialize).BeginInit()
         CType(picPlayerA2, ComponentModel.ISupportInitialize).BeginInit()
@@ -1374,7 +1375,7 @@ Partial Class frmGame
         ' picOppJ3
         ' 
         picOppJ3.BorderStyle = BorderStyle.FixedSingle
-        picOppJ3.Location = New Point(749, 468)
+        picOppJ3.Location = New Point(612, 471)
         picOppJ3.Name = "picOppJ3"
         picOppJ3.Size = New Size(24, 24)
         picOppJ3.TabIndex = 199
@@ -1383,7 +1384,7 @@ Partial Class frmGame
         ' picOppJ4
         ' 
         picOppJ4.BorderStyle = BorderStyle.FixedSingle
-        picOppJ4.Location = New Point(785, 468)
+        picOppJ4.Location = New Point(648, 471)
         picOppJ4.Name = "picOppJ4"
         picOppJ4.Size = New Size(24, 24)
         picOppJ4.TabIndex = 198
@@ -1392,7 +1393,7 @@ Partial Class frmGame
         ' picOppJ5
         ' 
         picOppJ5.BorderStyle = BorderStyle.FixedSingle
-        picOppJ5.Location = New Point(821, 468)
+        picOppJ5.Location = New Point(684, 471)
         picOppJ5.Name = "picOppJ5"
         picOppJ5.Size = New Size(24, 24)
         picOppJ5.TabIndex = 197
@@ -1401,7 +1402,7 @@ Partial Class frmGame
         ' picOppJ6
         ' 
         picOppJ6.BorderStyle = BorderStyle.FixedSingle
-        picOppJ6.Location = New Point(857, 468)
+        picOppJ6.Location = New Point(720, 471)
         picOppJ6.Name = "picOppJ6"
         picOppJ6.Size = New Size(24, 24)
         picOppJ6.TabIndex = 196
@@ -1410,7 +1411,7 @@ Partial Class frmGame
         ' picOppJ7
         ' 
         picOppJ7.BorderStyle = BorderStyle.FixedSingle
-        picOppJ7.Location = New Point(893, 468)
+        picOppJ7.Location = New Point(756, 471)
         picOppJ7.Name = "picOppJ7"
         picOppJ7.Size = New Size(24, 24)
         picOppJ7.TabIndex = 195
@@ -1419,7 +1420,7 @@ Partial Class frmGame
         ' picOppJ8
         ' 
         picOppJ8.BorderStyle = BorderStyle.FixedSingle
-        picOppJ8.Location = New Point(929, 468)
+        picOppJ8.Location = New Point(792, 471)
         picOppJ8.Name = "picOppJ8"
         picOppJ8.Size = New Size(24, 24)
         picOppJ8.TabIndex = 194
@@ -1428,7 +1429,7 @@ Partial Class frmGame
         ' picOppJ9
         ' 
         picOppJ9.BorderStyle = BorderStyle.FixedSingle
-        picOppJ9.Location = New Point(965, 468)
+        picOppJ9.Location = New Point(828, 471)
         picOppJ9.Name = "picOppJ9"
         picOppJ9.Size = New Size(24, 24)
         picOppJ9.TabIndex = 193
@@ -1437,7 +1438,7 @@ Partial Class frmGame
         ' picOppJ10
         ' 
         picOppJ10.BorderStyle = BorderStyle.FixedSingle
-        picOppJ10.Location = New Point(1001, 468)
+        picOppJ10.Location = New Point(864, 471)
         picOppJ10.Name = "picOppJ10"
         picOppJ10.Size = New Size(24, 24)
         picOppJ10.TabIndex = 192
@@ -1446,7 +1447,7 @@ Partial Class frmGame
         ' picOppJ2
         ' 
         picOppJ2.BorderStyle = BorderStyle.FixedSingle
-        picOppJ2.Location = New Point(713, 468)
+        picOppJ2.Location = New Point(576, 471)
         picOppJ2.Name = "picOppJ2"
         picOppJ2.Size = New Size(24, 24)
         picOppJ2.TabIndex = 191
@@ -1455,7 +1456,7 @@ Partial Class frmGame
         ' picOppJ1
         ' 
         picOppJ1.BorderStyle = BorderStyle.FixedSingle
-        picOppJ1.Location = New Point(677, 468)
+        picOppJ1.Location = New Point(540, 471)
         picOppJ1.Name = "picOppJ1"
         picOppJ1.Size = New Size(24, 24)
         picOppJ1.TabIndex = 190
@@ -1464,7 +1465,7 @@ Partial Class frmGame
         ' picOppG3
         ' 
         picOppG3.BorderStyle = BorderStyle.FixedSingle
-        picOppG3.Location = New Point(749, 360)
+        picOppG3.Location = New Point(612, 363)
         picOppG3.Name = "picOppG3"
         picOppG3.Size = New Size(24, 24)
         picOppG3.TabIndex = 189
@@ -1473,7 +1474,7 @@ Partial Class frmGame
         ' picOppG4
         ' 
         picOppG4.BorderStyle = BorderStyle.FixedSingle
-        picOppG4.Location = New Point(785, 360)
+        picOppG4.Location = New Point(648, 363)
         picOppG4.Name = "picOppG4"
         picOppG4.Size = New Size(24, 24)
         picOppG4.TabIndex = 188
@@ -1482,7 +1483,7 @@ Partial Class frmGame
         ' picOppG5
         ' 
         picOppG5.BorderStyle = BorderStyle.FixedSingle
-        picOppG5.Location = New Point(821, 360)
+        picOppG5.Location = New Point(684, 363)
         picOppG5.Name = "picOppG5"
         picOppG5.Size = New Size(24, 24)
         picOppG5.TabIndex = 187
@@ -1491,7 +1492,7 @@ Partial Class frmGame
         ' picOppG6
         ' 
         picOppG6.BorderStyle = BorderStyle.FixedSingle
-        picOppG6.Location = New Point(857, 360)
+        picOppG6.Location = New Point(720, 363)
         picOppG6.Name = "picOppG6"
         picOppG6.Size = New Size(24, 24)
         picOppG6.TabIndex = 186
@@ -1500,7 +1501,7 @@ Partial Class frmGame
         ' picOppG7
         ' 
         picOppG7.BorderStyle = BorderStyle.FixedSingle
-        picOppG7.Location = New Point(893, 360)
+        picOppG7.Location = New Point(756, 363)
         picOppG7.Name = "picOppG7"
         picOppG7.Size = New Size(24, 24)
         picOppG7.TabIndex = 185
@@ -1509,7 +1510,7 @@ Partial Class frmGame
         ' picOppG8
         ' 
         picOppG8.BorderStyle = BorderStyle.FixedSingle
-        picOppG8.Location = New Point(929, 360)
+        picOppG8.Location = New Point(792, 363)
         picOppG8.Name = "picOppG8"
         picOppG8.Size = New Size(24, 24)
         picOppG8.TabIndex = 184
@@ -1518,7 +1519,7 @@ Partial Class frmGame
         ' picOppG9
         ' 
         picOppG9.BorderStyle = BorderStyle.FixedSingle
-        picOppG9.Location = New Point(965, 360)
+        picOppG9.Location = New Point(828, 363)
         picOppG9.Name = "picOppG9"
         picOppG9.Size = New Size(24, 24)
         picOppG9.TabIndex = 183
@@ -1527,7 +1528,7 @@ Partial Class frmGame
         ' picOppG10
         ' 
         picOppG10.BorderStyle = BorderStyle.FixedSingle
-        picOppG10.Location = New Point(1001, 360)
+        picOppG10.Location = New Point(864, 363)
         picOppG10.Name = "picOppG10"
         picOppG10.Size = New Size(24, 24)
         picOppG10.TabIndex = 182
@@ -1536,7 +1537,7 @@ Partial Class frmGame
         ' picOppG2
         ' 
         picOppG2.BorderStyle = BorderStyle.FixedSingle
-        picOppG2.Location = New Point(713, 360)
+        picOppG2.Location = New Point(576, 363)
         picOppG2.Name = "picOppG2"
         picOppG2.Size = New Size(24, 24)
         picOppG2.TabIndex = 181
@@ -1545,7 +1546,7 @@ Partial Class frmGame
         ' picOppG1
         ' 
         picOppG1.BorderStyle = BorderStyle.FixedSingle
-        picOppG1.Location = New Point(677, 360)
+        picOppG1.Location = New Point(540, 363)
         picOppG1.Name = "picOppG1"
         picOppG1.Size = New Size(24, 24)
         picOppG1.TabIndex = 180
@@ -1554,7 +1555,7 @@ Partial Class frmGame
         ' picOppI3
         ' 
         picOppI3.BorderStyle = BorderStyle.FixedSingle
-        picOppI3.Location = New Point(749, 432)
+        picOppI3.Location = New Point(612, 435)
         picOppI3.Name = "picOppI3"
         picOppI3.Size = New Size(24, 24)
         picOppI3.TabIndex = 179
@@ -1563,7 +1564,7 @@ Partial Class frmGame
         ' picOppI4
         ' 
         picOppI4.BorderStyle = BorderStyle.FixedSingle
-        picOppI4.Location = New Point(785, 432)
+        picOppI4.Location = New Point(648, 435)
         picOppI4.Name = "picOppI4"
         picOppI4.Size = New Size(24, 24)
         picOppI4.TabIndex = 178
@@ -1572,7 +1573,7 @@ Partial Class frmGame
         ' picOppI5
         ' 
         picOppI5.BorderStyle = BorderStyle.FixedSingle
-        picOppI5.Location = New Point(821, 432)
+        picOppI5.Location = New Point(684, 435)
         picOppI5.Name = "picOppI5"
         picOppI5.Size = New Size(24, 24)
         picOppI5.TabIndex = 177
@@ -1581,7 +1582,7 @@ Partial Class frmGame
         ' picOppI6
         ' 
         picOppI6.BorderStyle = BorderStyle.FixedSingle
-        picOppI6.Location = New Point(857, 432)
+        picOppI6.Location = New Point(720, 435)
         picOppI6.Name = "picOppI6"
         picOppI6.Size = New Size(24, 24)
         picOppI6.TabIndex = 176
@@ -1590,7 +1591,7 @@ Partial Class frmGame
         ' picOppI7
         ' 
         picOppI7.BorderStyle = BorderStyle.FixedSingle
-        picOppI7.Location = New Point(893, 432)
+        picOppI7.Location = New Point(756, 435)
         picOppI7.Name = "picOppI7"
         picOppI7.Size = New Size(24, 24)
         picOppI7.TabIndex = 175
@@ -1599,7 +1600,7 @@ Partial Class frmGame
         ' picOppI8
         ' 
         picOppI8.BorderStyle = BorderStyle.FixedSingle
-        picOppI8.Location = New Point(929, 432)
+        picOppI8.Location = New Point(792, 435)
         picOppI8.Name = "picOppI8"
         picOppI8.Size = New Size(24, 24)
         picOppI8.TabIndex = 174
@@ -1608,7 +1609,7 @@ Partial Class frmGame
         ' picOppI9
         ' 
         picOppI9.BorderStyle = BorderStyle.FixedSingle
-        picOppI9.Location = New Point(965, 432)
+        picOppI9.Location = New Point(828, 435)
         picOppI9.Name = "picOppI9"
         picOppI9.Size = New Size(24, 24)
         picOppI9.TabIndex = 173
@@ -1617,7 +1618,7 @@ Partial Class frmGame
         ' picOppI10
         ' 
         picOppI10.BorderStyle = BorderStyle.FixedSingle
-        picOppI10.Location = New Point(1001, 432)
+        picOppI10.Location = New Point(864, 435)
         picOppI10.Name = "picOppI10"
         picOppI10.Size = New Size(24, 24)
         picOppI10.TabIndex = 172
@@ -1626,7 +1627,7 @@ Partial Class frmGame
         ' picOppI2
         ' 
         picOppI2.BorderStyle = BorderStyle.FixedSingle
-        picOppI2.Location = New Point(713, 432)
+        picOppI2.Location = New Point(576, 435)
         picOppI2.Name = "picOppI2"
         picOppI2.Size = New Size(24, 24)
         picOppI2.TabIndex = 171
@@ -1635,7 +1636,7 @@ Partial Class frmGame
         ' picOppI1
         ' 
         picOppI1.BorderStyle = BorderStyle.FixedSingle
-        picOppI1.Location = New Point(677, 432)
+        picOppI1.Location = New Point(540, 435)
         picOppI1.Name = "picOppI1"
         picOppI1.Size = New Size(24, 24)
         picOppI1.TabIndex = 170
@@ -1644,7 +1645,7 @@ Partial Class frmGame
         ' picOppH3
         ' 
         picOppH3.BorderStyle = BorderStyle.FixedSingle
-        picOppH3.Location = New Point(749, 396)
+        picOppH3.Location = New Point(612, 399)
         picOppH3.Name = "picOppH3"
         picOppH3.Size = New Size(24, 24)
         picOppH3.TabIndex = 169
@@ -1653,7 +1654,7 @@ Partial Class frmGame
         ' picOppH4
         ' 
         picOppH4.BorderStyle = BorderStyle.FixedSingle
-        picOppH4.Location = New Point(785, 396)
+        picOppH4.Location = New Point(648, 399)
         picOppH4.Name = "picOppH4"
         picOppH4.Size = New Size(24, 24)
         picOppH4.TabIndex = 168
@@ -1662,7 +1663,7 @@ Partial Class frmGame
         ' picOppH5
         ' 
         picOppH5.BorderStyle = BorderStyle.FixedSingle
-        picOppH5.Location = New Point(821, 396)
+        picOppH5.Location = New Point(684, 399)
         picOppH5.Name = "picOppH5"
         picOppH5.Size = New Size(24, 24)
         picOppH5.TabIndex = 167
@@ -1671,7 +1672,7 @@ Partial Class frmGame
         ' picOppH6
         ' 
         picOppH6.BorderStyle = BorderStyle.FixedSingle
-        picOppH6.Location = New Point(857, 396)
+        picOppH6.Location = New Point(720, 399)
         picOppH6.Name = "picOppH6"
         picOppH6.Size = New Size(24, 24)
         picOppH6.TabIndex = 166
@@ -1680,7 +1681,7 @@ Partial Class frmGame
         ' picOppH7
         ' 
         picOppH7.BorderStyle = BorderStyle.FixedSingle
-        picOppH7.Location = New Point(893, 396)
+        picOppH7.Location = New Point(756, 399)
         picOppH7.Name = "picOppH7"
         picOppH7.Size = New Size(24, 24)
         picOppH7.TabIndex = 165
@@ -1689,7 +1690,7 @@ Partial Class frmGame
         ' picOppH8
         ' 
         picOppH8.BorderStyle = BorderStyle.FixedSingle
-        picOppH8.Location = New Point(929, 396)
+        picOppH8.Location = New Point(792, 399)
         picOppH8.Name = "picOppH8"
         picOppH8.Size = New Size(24, 24)
         picOppH8.TabIndex = 164
@@ -1698,7 +1699,7 @@ Partial Class frmGame
         ' picOppH9
         ' 
         picOppH9.BorderStyle = BorderStyle.FixedSingle
-        picOppH9.Location = New Point(965, 396)
+        picOppH9.Location = New Point(828, 399)
         picOppH9.Name = "picOppH9"
         picOppH9.Size = New Size(24, 24)
         picOppH9.TabIndex = 163
@@ -1707,7 +1708,7 @@ Partial Class frmGame
         ' picOppH10
         ' 
         picOppH10.BorderStyle = BorderStyle.FixedSingle
-        picOppH10.Location = New Point(1001, 396)
+        picOppH10.Location = New Point(864, 399)
         picOppH10.Name = "picOppH10"
         picOppH10.Size = New Size(24, 24)
         picOppH10.TabIndex = 162
@@ -1716,7 +1717,7 @@ Partial Class frmGame
         ' picOppH2
         ' 
         picOppH2.BorderStyle = BorderStyle.FixedSingle
-        picOppH2.Location = New Point(713, 396)
+        picOppH2.Location = New Point(576, 399)
         picOppH2.Name = "picOppH2"
         picOppH2.Size = New Size(24, 24)
         picOppH2.TabIndex = 161
@@ -1725,7 +1726,7 @@ Partial Class frmGame
         ' picOppH1
         ' 
         picOppH1.BorderStyle = BorderStyle.FixedSingle
-        picOppH1.Location = New Point(677, 396)
+        picOppH1.Location = New Point(540, 399)
         picOppH1.Name = "picOppH1"
         picOppH1.Size = New Size(24, 24)
         picOppH1.TabIndex = 160
@@ -1734,7 +1735,7 @@ Partial Class frmGame
         ' picOppF3
         ' 
         picOppF3.BorderStyle = BorderStyle.FixedSingle
-        picOppF3.Location = New Point(749, 324)
+        picOppF3.Location = New Point(612, 327)
         picOppF3.Name = "picOppF3"
         picOppF3.Size = New Size(24, 24)
         picOppF3.TabIndex = 159
@@ -1743,7 +1744,7 @@ Partial Class frmGame
         ' picOppF4
         ' 
         picOppF4.BorderStyle = BorderStyle.FixedSingle
-        picOppF4.Location = New Point(785, 324)
+        picOppF4.Location = New Point(648, 327)
         picOppF4.Name = "picOppF4"
         picOppF4.Size = New Size(24, 24)
         picOppF4.TabIndex = 158
@@ -1752,7 +1753,7 @@ Partial Class frmGame
         ' picOppF5
         ' 
         picOppF5.BorderStyle = BorderStyle.FixedSingle
-        picOppF5.Location = New Point(821, 324)
+        picOppF5.Location = New Point(684, 327)
         picOppF5.Name = "picOppF5"
         picOppF5.Size = New Size(24, 24)
         picOppF5.TabIndex = 157
@@ -1761,7 +1762,7 @@ Partial Class frmGame
         ' picOppF6
         ' 
         picOppF6.BorderStyle = BorderStyle.FixedSingle
-        picOppF6.Location = New Point(857, 324)
+        picOppF6.Location = New Point(720, 327)
         picOppF6.Name = "picOppF6"
         picOppF6.Size = New Size(24, 24)
         picOppF6.TabIndex = 156
@@ -1770,7 +1771,7 @@ Partial Class frmGame
         ' picOppF7
         ' 
         picOppF7.BorderStyle = BorderStyle.FixedSingle
-        picOppF7.Location = New Point(893, 324)
+        picOppF7.Location = New Point(756, 327)
         picOppF7.Name = "picOppF7"
         picOppF7.Size = New Size(24, 24)
         picOppF7.TabIndex = 155
@@ -1779,7 +1780,7 @@ Partial Class frmGame
         ' picOppF8
         ' 
         picOppF8.BorderStyle = BorderStyle.FixedSingle
-        picOppF8.Location = New Point(929, 324)
+        picOppF8.Location = New Point(792, 327)
         picOppF8.Name = "picOppF8"
         picOppF8.Size = New Size(24, 24)
         picOppF8.TabIndex = 154
@@ -1788,7 +1789,7 @@ Partial Class frmGame
         ' picOppF9
         ' 
         picOppF9.BorderStyle = BorderStyle.FixedSingle
-        picOppF9.Location = New Point(965, 324)
+        picOppF9.Location = New Point(828, 327)
         picOppF9.Name = "picOppF9"
         picOppF9.Size = New Size(24, 24)
         picOppF9.TabIndex = 153
@@ -1797,7 +1798,7 @@ Partial Class frmGame
         ' picOppF10
         ' 
         picOppF10.BorderStyle = BorderStyle.FixedSingle
-        picOppF10.Location = New Point(1001, 324)
+        picOppF10.Location = New Point(864, 327)
         picOppF10.Name = "picOppF10"
         picOppF10.Size = New Size(24, 24)
         picOppF10.TabIndex = 152
@@ -1806,7 +1807,7 @@ Partial Class frmGame
         ' picOppF2
         ' 
         picOppF2.BorderStyle = BorderStyle.FixedSingle
-        picOppF2.Location = New Point(713, 324)
+        picOppF2.Location = New Point(576, 327)
         picOppF2.Name = "picOppF2"
         picOppF2.Size = New Size(24, 24)
         picOppF2.TabIndex = 151
@@ -1815,7 +1816,7 @@ Partial Class frmGame
         ' picOppF1
         ' 
         picOppF1.BorderStyle = BorderStyle.FixedSingle
-        picOppF1.Location = New Point(677, 324)
+        picOppF1.Location = New Point(540, 327)
         picOppF1.Name = "picOppF1"
         picOppF1.Size = New Size(24, 24)
         picOppF1.TabIndex = 150
@@ -1824,7 +1825,7 @@ Partial Class frmGame
         ' picOppE3
         ' 
         picOppE3.BorderStyle = BorderStyle.FixedSingle
-        picOppE3.Location = New Point(749, 286)
+        picOppE3.Location = New Point(612, 289)
         picOppE3.Name = "picOppE3"
         picOppE3.Size = New Size(24, 24)
         picOppE3.TabIndex = 149
@@ -1833,7 +1834,7 @@ Partial Class frmGame
         ' picOppE4
         ' 
         picOppE4.BorderStyle = BorderStyle.FixedSingle
-        picOppE4.Location = New Point(785, 286)
+        picOppE4.Location = New Point(648, 289)
         picOppE4.Name = "picOppE4"
         picOppE4.Size = New Size(24, 24)
         picOppE4.TabIndex = 148
@@ -1842,7 +1843,7 @@ Partial Class frmGame
         ' picOppE5
         ' 
         picOppE5.BorderStyle = BorderStyle.FixedSingle
-        picOppE5.Location = New Point(821, 286)
+        picOppE5.Location = New Point(684, 289)
         picOppE5.Name = "picOppE5"
         picOppE5.Size = New Size(24, 24)
         picOppE5.TabIndex = 147
@@ -1851,7 +1852,7 @@ Partial Class frmGame
         ' picOppE6
         ' 
         picOppE6.BorderStyle = BorderStyle.FixedSingle
-        picOppE6.Location = New Point(857, 286)
+        picOppE6.Location = New Point(720, 289)
         picOppE6.Name = "picOppE6"
         picOppE6.Size = New Size(24, 24)
         picOppE6.TabIndex = 146
@@ -1860,7 +1861,7 @@ Partial Class frmGame
         ' picOppE7
         ' 
         picOppE7.BorderStyle = BorderStyle.FixedSingle
-        picOppE7.Location = New Point(893, 286)
+        picOppE7.Location = New Point(756, 289)
         picOppE7.Name = "picOppE7"
         picOppE7.Size = New Size(24, 24)
         picOppE7.TabIndex = 145
@@ -1869,7 +1870,7 @@ Partial Class frmGame
         ' picOppE8
         ' 
         picOppE8.BorderStyle = BorderStyle.FixedSingle
-        picOppE8.Location = New Point(929, 286)
+        picOppE8.Location = New Point(792, 289)
         picOppE8.Name = "picOppE8"
         picOppE8.Size = New Size(24, 24)
         picOppE8.TabIndex = 144
@@ -1878,7 +1879,7 @@ Partial Class frmGame
         ' picOppE9
         ' 
         picOppE9.BorderStyle = BorderStyle.FixedSingle
-        picOppE9.Location = New Point(965, 286)
+        picOppE9.Location = New Point(828, 289)
         picOppE9.Name = "picOppE9"
         picOppE9.Size = New Size(24, 24)
         picOppE9.TabIndex = 143
@@ -1887,7 +1888,7 @@ Partial Class frmGame
         ' picOppE10
         ' 
         picOppE10.BorderStyle = BorderStyle.FixedSingle
-        picOppE10.Location = New Point(1001, 286)
+        picOppE10.Location = New Point(864, 289)
         picOppE10.Name = "picOppE10"
         picOppE10.Size = New Size(24, 24)
         picOppE10.TabIndex = 142
@@ -1896,7 +1897,7 @@ Partial Class frmGame
         ' picOppE2
         ' 
         picOppE2.BorderStyle = BorderStyle.FixedSingle
-        picOppE2.Location = New Point(713, 286)
+        picOppE2.Location = New Point(576, 289)
         picOppE2.Name = "picOppE2"
         picOppE2.Size = New Size(24, 24)
         picOppE2.TabIndex = 141
@@ -1905,7 +1906,7 @@ Partial Class frmGame
         ' picOppE1
         ' 
         picOppE1.BorderStyle = BorderStyle.FixedSingle
-        picOppE1.Location = New Point(677, 286)
+        picOppE1.Location = New Point(540, 289)
         picOppE1.Name = "picOppE1"
         picOppE1.Size = New Size(24, 24)
         picOppE1.TabIndex = 140
@@ -1914,7 +1915,7 @@ Partial Class frmGame
         ' picOppB3
         ' 
         picOppB3.BorderStyle = BorderStyle.FixedSingle
-        picOppB3.Location = New Point(749, 178)
+        picOppB3.Location = New Point(612, 181)
         picOppB3.Name = "picOppB3"
         picOppB3.Size = New Size(24, 24)
         picOppB3.TabIndex = 139
@@ -1923,7 +1924,7 @@ Partial Class frmGame
         ' picOppB4
         ' 
         picOppB4.BorderStyle = BorderStyle.FixedSingle
-        picOppB4.Location = New Point(785, 178)
+        picOppB4.Location = New Point(648, 181)
         picOppB4.Name = "picOppB4"
         picOppB4.Size = New Size(24, 24)
         picOppB4.TabIndex = 138
@@ -1932,7 +1933,7 @@ Partial Class frmGame
         ' picOppB5
         ' 
         picOppB5.BorderStyle = BorderStyle.FixedSingle
-        picOppB5.Location = New Point(821, 178)
+        picOppB5.Location = New Point(684, 181)
         picOppB5.Name = "picOppB5"
         picOppB5.Size = New Size(24, 24)
         picOppB5.TabIndex = 137
@@ -1941,7 +1942,7 @@ Partial Class frmGame
         ' picOppB6
         ' 
         picOppB6.BorderStyle = BorderStyle.FixedSingle
-        picOppB6.Location = New Point(857, 178)
+        picOppB6.Location = New Point(720, 181)
         picOppB6.Name = "picOppB6"
         picOppB6.Size = New Size(24, 24)
         picOppB6.TabIndex = 136
@@ -1950,7 +1951,7 @@ Partial Class frmGame
         ' picOppB7
         ' 
         picOppB7.BorderStyle = BorderStyle.FixedSingle
-        picOppB7.Location = New Point(893, 178)
+        picOppB7.Location = New Point(756, 181)
         picOppB7.Name = "picOppB7"
         picOppB7.Size = New Size(24, 24)
         picOppB7.TabIndex = 135
@@ -1959,7 +1960,7 @@ Partial Class frmGame
         ' picOppB8
         ' 
         picOppB8.BorderStyle = BorderStyle.FixedSingle
-        picOppB8.Location = New Point(929, 178)
+        picOppB8.Location = New Point(792, 181)
         picOppB8.Name = "picOppB8"
         picOppB8.Size = New Size(24, 24)
         picOppB8.TabIndex = 134
@@ -1968,7 +1969,7 @@ Partial Class frmGame
         ' picOppB9
         ' 
         picOppB9.BorderStyle = BorderStyle.FixedSingle
-        picOppB9.Location = New Point(965, 178)
+        picOppB9.Location = New Point(828, 181)
         picOppB9.Name = "picOppB9"
         picOppB9.Size = New Size(24, 24)
         picOppB9.TabIndex = 133
@@ -1977,7 +1978,7 @@ Partial Class frmGame
         ' picOppB10
         ' 
         picOppB10.BorderStyle = BorderStyle.FixedSingle
-        picOppB10.Location = New Point(1001, 178)
+        picOppB10.Location = New Point(864, 181)
         picOppB10.Name = "picOppB10"
         picOppB10.Size = New Size(24, 24)
         picOppB10.TabIndex = 132
@@ -1986,7 +1987,7 @@ Partial Class frmGame
         ' picOppB2
         ' 
         picOppB2.BorderStyle = BorderStyle.FixedSingle
-        picOppB2.Location = New Point(713, 178)
+        picOppB2.Location = New Point(576, 181)
         picOppB2.Name = "picOppB2"
         picOppB2.Size = New Size(24, 24)
         picOppB2.TabIndex = 131
@@ -1995,7 +1996,7 @@ Partial Class frmGame
         ' picOppB1
         ' 
         picOppB1.BorderStyle = BorderStyle.FixedSingle
-        picOppB1.Location = New Point(677, 178)
+        picOppB1.Location = New Point(540, 181)
         picOppB1.Name = "picOppB1"
         picOppB1.Size = New Size(24, 24)
         picOppB1.TabIndex = 130
@@ -2004,7 +2005,7 @@ Partial Class frmGame
         ' picOppD3
         ' 
         picOppD3.BorderStyle = BorderStyle.FixedSingle
-        picOppD3.Location = New Point(749, 250)
+        picOppD3.Location = New Point(612, 253)
         picOppD3.Name = "picOppD3"
         picOppD3.Size = New Size(24, 24)
         picOppD3.TabIndex = 129
@@ -2013,7 +2014,7 @@ Partial Class frmGame
         ' picOppD4
         ' 
         picOppD4.BorderStyle = BorderStyle.FixedSingle
-        picOppD4.Location = New Point(785, 250)
+        picOppD4.Location = New Point(648, 253)
         picOppD4.Name = "picOppD4"
         picOppD4.Size = New Size(24, 24)
         picOppD4.TabIndex = 128
@@ -2022,7 +2023,7 @@ Partial Class frmGame
         ' picOppD5
         ' 
         picOppD5.BorderStyle = BorderStyle.FixedSingle
-        picOppD5.Location = New Point(821, 250)
+        picOppD5.Location = New Point(684, 253)
         picOppD5.Name = "picOppD5"
         picOppD5.Size = New Size(24, 24)
         picOppD5.TabIndex = 127
@@ -2031,7 +2032,7 @@ Partial Class frmGame
         ' picOppD6
         ' 
         picOppD6.BorderStyle = BorderStyle.FixedSingle
-        picOppD6.Location = New Point(857, 250)
+        picOppD6.Location = New Point(720, 253)
         picOppD6.Name = "picOppD6"
         picOppD6.Size = New Size(24, 24)
         picOppD6.TabIndex = 126
@@ -2040,7 +2041,7 @@ Partial Class frmGame
         ' picOppD7
         ' 
         picOppD7.BorderStyle = BorderStyle.FixedSingle
-        picOppD7.Location = New Point(893, 250)
+        picOppD7.Location = New Point(756, 253)
         picOppD7.Name = "picOppD7"
         picOppD7.Size = New Size(24, 24)
         picOppD7.TabIndex = 125
@@ -2049,7 +2050,7 @@ Partial Class frmGame
         ' picOppD8
         ' 
         picOppD8.BorderStyle = BorderStyle.FixedSingle
-        picOppD8.Location = New Point(929, 250)
+        picOppD8.Location = New Point(792, 253)
         picOppD8.Name = "picOppD8"
         picOppD8.Size = New Size(24, 24)
         picOppD8.TabIndex = 124
@@ -2058,7 +2059,7 @@ Partial Class frmGame
         ' picOppD9
         ' 
         picOppD9.BorderStyle = BorderStyle.FixedSingle
-        picOppD9.Location = New Point(965, 250)
+        picOppD9.Location = New Point(828, 253)
         picOppD9.Name = "picOppD9"
         picOppD9.Size = New Size(24, 24)
         picOppD9.TabIndex = 123
@@ -2067,7 +2068,7 @@ Partial Class frmGame
         ' picOppD10
         ' 
         picOppD10.BorderStyle = BorderStyle.FixedSingle
-        picOppD10.Location = New Point(1001, 250)
+        picOppD10.Location = New Point(864, 253)
         picOppD10.Name = "picOppD10"
         picOppD10.Size = New Size(24, 24)
         picOppD10.TabIndex = 122
@@ -2076,7 +2077,7 @@ Partial Class frmGame
         ' picOppD2
         ' 
         picOppD2.BorderStyle = BorderStyle.FixedSingle
-        picOppD2.Location = New Point(713, 250)
+        picOppD2.Location = New Point(576, 253)
         picOppD2.Name = "picOppD2"
         picOppD2.Size = New Size(24, 24)
         picOppD2.TabIndex = 121
@@ -2085,7 +2086,7 @@ Partial Class frmGame
         ' picOppD1
         ' 
         picOppD1.BorderStyle = BorderStyle.FixedSingle
-        picOppD1.Location = New Point(677, 250)
+        picOppD1.Location = New Point(540, 253)
         picOppD1.Name = "picOppD1"
         picOppD1.Size = New Size(24, 24)
         picOppD1.TabIndex = 120
@@ -2094,7 +2095,7 @@ Partial Class frmGame
         ' picOppC3
         ' 
         picOppC3.BorderStyle = BorderStyle.FixedSingle
-        picOppC3.Location = New Point(749, 214)
+        picOppC3.Location = New Point(612, 217)
         picOppC3.Name = "picOppC3"
         picOppC3.Size = New Size(24, 24)
         picOppC3.TabIndex = 119
@@ -2103,7 +2104,7 @@ Partial Class frmGame
         ' picOppC4
         ' 
         picOppC4.BorderStyle = BorderStyle.FixedSingle
-        picOppC4.Location = New Point(785, 214)
+        picOppC4.Location = New Point(648, 217)
         picOppC4.Name = "picOppC4"
         picOppC4.Size = New Size(24, 24)
         picOppC4.TabIndex = 118
@@ -2112,7 +2113,7 @@ Partial Class frmGame
         ' picOppC5
         ' 
         picOppC5.BorderStyle = BorderStyle.FixedSingle
-        picOppC5.Location = New Point(821, 214)
+        picOppC5.Location = New Point(684, 217)
         picOppC5.Name = "picOppC5"
         picOppC5.Size = New Size(24, 24)
         picOppC5.TabIndex = 117
@@ -2121,7 +2122,7 @@ Partial Class frmGame
         ' picOppC6
         ' 
         picOppC6.BorderStyle = BorderStyle.FixedSingle
-        picOppC6.Location = New Point(857, 214)
+        picOppC6.Location = New Point(720, 217)
         picOppC6.Name = "picOppC6"
         picOppC6.Size = New Size(24, 24)
         picOppC6.TabIndex = 116
@@ -2130,7 +2131,7 @@ Partial Class frmGame
         ' picOppC7
         ' 
         picOppC7.BorderStyle = BorderStyle.FixedSingle
-        picOppC7.Location = New Point(893, 214)
+        picOppC7.Location = New Point(756, 217)
         picOppC7.Name = "picOppC7"
         picOppC7.Size = New Size(24, 24)
         picOppC7.TabIndex = 115
@@ -2139,7 +2140,7 @@ Partial Class frmGame
         ' picOppC8
         ' 
         picOppC8.BorderStyle = BorderStyle.FixedSingle
-        picOppC8.Location = New Point(929, 214)
+        picOppC8.Location = New Point(792, 217)
         picOppC8.Name = "picOppC8"
         picOppC8.Size = New Size(24, 24)
         picOppC8.TabIndex = 114
@@ -2148,7 +2149,7 @@ Partial Class frmGame
         ' picOppC9
         ' 
         picOppC9.BorderStyle = BorderStyle.FixedSingle
-        picOppC9.Location = New Point(965, 214)
+        picOppC9.Location = New Point(828, 217)
         picOppC9.Name = "picOppC9"
         picOppC9.Size = New Size(24, 24)
         picOppC9.TabIndex = 113
@@ -2157,7 +2158,7 @@ Partial Class frmGame
         ' picOppC10
         ' 
         picOppC10.BorderStyle = BorderStyle.FixedSingle
-        picOppC10.Location = New Point(1001, 214)
+        picOppC10.Location = New Point(864, 217)
         picOppC10.Name = "picOppC10"
         picOppC10.Size = New Size(24, 24)
         picOppC10.TabIndex = 112
@@ -2166,7 +2167,7 @@ Partial Class frmGame
         ' picOppC2
         ' 
         picOppC2.BorderStyle = BorderStyle.FixedSingle
-        picOppC2.Location = New Point(713, 214)
+        picOppC2.Location = New Point(576, 217)
         picOppC2.Name = "picOppC2"
         picOppC2.Size = New Size(24, 24)
         picOppC2.TabIndex = 111
@@ -2175,7 +2176,7 @@ Partial Class frmGame
         ' picOppC1
         ' 
         picOppC1.BorderStyle = BorderStyle.FixedSingle
-        picOppC1.Location = New Point(677, 214)
+        picOppC1.Location = New Point(540, 217)
         picOppC1.Name = "picOppC1"
         picOppC1.Size = New Size(24, 24)
         picOppC1.TabIndex = 110
@@ -2184,7 +2185,7 @@ Partial Class frmGame
         ' picOppA3
         ' 
         picOppA3.BorderStyle = BorderStyle.FixedSingle
-        picOppA3.Location = New Point(749, 142)
+        picOppA3.Location = New Point(612, 145)
         picOppA3.Name = "picOppA3"
         picOppA3.Size = New Size(24, 24)
         picOppA3.TabIndex = 109
@@ -2193,7 +2194,7 @@ Partial Class frmGame
         ' picOppA4
         ' 
         picOppA4.BorderStyle = BorderStyle.FixedSingle
-        picOppA4.Location = New Point(785, 142)
+        picOppA4.Location = New Point(648, 145)
         picOppA4.Name = "picOppA4"
         picOppA4.Size = New Size(24, 24)
         picOppA4.TabIndex = 108
@@ -2202,7 +2203,7 @@ Partial Class frmGame
         ' picOppA5
         ' 
         picOppA5.BorderStyle = BorderStyle.FixedSingle
-        picOppA5.Location = New Point(821, 142)
+        picOppA5.Location = New Point(684, 145)
         picOppA5.Name = "picOppA5"
         picOppA5.Size = New Size(24, 24)
         picOppA5.TabIndex = 107
@@ -2211,7 +2212,7 @@ Partial Class frmGame
         ' picOppA6
         ' 
         picOppA6.BorderStyle = BorderStyle.FixedSingle
-        picOppA6.Location = New Point(857, 142)
+        picOppA6.Location = New Point(720, 145)
         picOppA6.Name = "picOppA6"
         picOppA6.Size = New Size(24, 24)
         picOppA6.TabIndex = 106
@@ -2220,7 +2221,7 @@ Partial Class frmGame
         ' picOppA7
         ' 
         picOppA7.BorderStyle = BorderStyle.FixedSingle
-        picOppA7.Location = New Point(893, 142)
+        picOppA7.Location = New Point(756, 145)
         picOppA7.Name = "picOppA7"
         picOppA7.Size = New Size(24, 24)
         picOppA7.TabIndex = 105
@@ -2229,7 +2230,7 @@ Partial Class frmGame
         ' picOppA8
         ' 
         picOppA8.BorderStyle = BorderStyle.FixedSingle
-        picOppA8.Location = New Point(929, 142)
+        picOppA8.Location = New Point(792, 145)
         picOppA8.Name = "picOppA8"
         picOppA8.Size = New Size(24, 24)
         picOppA8.TabIndex = 104
@@ -2238,7 +2239,7 @@ Partial Class frmGame
         ' picOppA9
         ' 
         picOppA9.BorderStyle = BorderStyle.FixedSingle
-        picOppA9.Location = New Point(965, 142)
+        picOppA9.Location = New Point(828, 145)
         picOppA9.Name = "picOppA9"
         picOppA9.Size = New Size(24, 24)
         picOppA9.TabIndex = 103
@@ -2247,7 +2248,7 @@ Partial Class frmGame
         ' picOppA10
         ' 
         picOppA10.BorderStyle = BorderStyle.FixedSingle
-        picOppA10.Location = New Point(1001, 142)
+        picOppA10.Location = New Point(864, 145)
         picOppA10.Name = "picOppA10"
         picOppA10.Size = New Size(24, 24)
         picOppA10.TabIndex = 102
@@ -2256,7 +2257,7 @@ Partial Class frmGame
         ' picOppA2
         ' 
         picOppA2.BorderStyle = BorderStyle.FixedSingle
-        picOppA2.Location = New Point(713, 142)
+        picOppA2.Location = New Point(576, 145)
         picOppA2.Name = "picOppA2"
         picOppA2.Size = New Size(24, 24)
         picOppA2.TabIndex = 101
@@ -2265,7 +2266,7 @@ Partial Class frmGame
         ' picOppA1
         ' 
         picOppA1.BorderStyle = BorderStyle.FixedSingle
-        picOppA1.Location = New Point(677, 142)
+        picOppA1.Location = New Point(540, 145)
         picOppA1.Name = "picOppA1"
         picOppA1.Size = New Size(24, 24)
         picOppA1.TabIndex = 100
@@ -2294,25 +2295,25 @@ Partial Class frmGame
         ' 
         lblOpponentBoard.AutoSize = True
         lblOpponentBoard.Font = New Font("Segoe UI", 20F)
-        lblOpponentBoard.Location = New Point(743, 81)
+        lblOpponentBoard.Location = New Point(606, 84)
         lblOpponentBoard.Name = "lblOpponentBoard"
         lblOpponentBoard.Size = New Size(215, 37)
         lblOpponentBoard.TabIndex = 203
         lblOpponentBoard.Text = "Opponent Board"
         ' 
-        ' prgPlayerProgress
+        ' prgOpponentProgress
         ' 
-        prgPlayerProgress.Location = New Point(364, 523)
-        prgPlayerProgress.Name = "prgPlayerProgress"
-        prgPlayerProgress.Size = New Size(100, 23)
-        prgPlayerProgress.TabIndex = 204
+        prgOpponentProgress.Location = New Point(364, 523)
+        prgOpponentProgress.Name = "prgOpponentProgress"
+        prgOpponentProgress.Size = New Size(100, 23)
+        prgOpponentProgress.TabIndex = 204
         ' 
         ' lblWhosTurnIsIt
         ' 
         lblWhosTurnIsIt.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblWhosTurnIsIt.AutoSize = True
         lblWhosTurnIsIt.Font = New Font("Segoe UI", 39F)
-        lblWhosTurnIsIt.Location = New Point(409, 19)
+        lblWhosTurnIsIt.Location = New Point(321, 14)
         lblWhosTurnIsIt.Name = "lblWhosTurnIsIt"
         lblWhosTurnIsIt.Size = New Size(319, 70)
         lblWhosTurnIsIt.TabIndex = 205
@@ -2322,7 +2323,7 @@ Partial Class frmGame
         ' lbl1O
         ' 
         lbl1O.AutoSize = True
-        lbl1O.Location = New Point(682, 124)
+        lbl1O.Location = New Point(545, 127)
         lbl1O.Margin = New Padding(2, 0, 2, 0)
         lbl1O.Name = "lbl1O"
         lbl1O.Size = New Size(13, 15)
@@ -2332,7 +2333,7 @@ Partial Class frmGame
         ' lbl2O
         ' 
         lbl2O.AutoSize = True
-        lbl2O.Location = New Point(719, 124)
+        lbl2O.Location = New Point(582, 127)
         lbl2O.Margin = New Padding(2, 0, 2, 0)
         lbl2O.Name = "lbl2O"
         lbl2O.Size = New Size(13, 15)
@@ -2342,7 +2343,7 @@ Partial Class frmGame
         ' lbl3O
         ' 
         lbl3O.AutoSize = True
-        lbl3O.Location = New Point(755, 124)
+        lbl3O.Location = New Point(618, 127)
         lbl3O.Margin = New Padding(2, 0, 2, 0)
         lbl3O.Name = "lbl3O"
         lbl3O.Size = New Size(13, 15)
@@ -2352,7 +2353,7 @@ Partial Class frmGame
         ' lbl4O
         ' 
         lbl4O.AutoSize = True
-        lbl4O.Location = New Point(791, 124)
+        lbl4O.Location = New Point(654, 127)
         lbl4O.Margin = New Padding(2, 0, 2, 0)
         lbl4O.Name = "lbl4O"
         lbl4O.Size = New Size(13, 15)
@@ -2362,7 +2363,7 @@ Partial Class frmGame
         ' lbl5O
         ' 
         lbl5O.AutoSize = True
-        lbl5O.Location = New Point(827, 124)
+        lbl5O.Location = New Point(690, 127)
         lbl5O.Margin = New Padding(2, 0, 2, 0)
         lbl5O.Name = "lbl5O"
         lbl5O.Size = New Size(13, 15)
@@ -2372,7 +2373,7 @@ Partial Class frmGame
         ' lbl6O
         ' 
         lbl6O.AutoSize = True
-        lbl6O.Location = New Point(862, 124)
+        lbl6O.Location = New Point(725, 127)
         lbl6O.Margin = New Padding(2, 0, 2, 0)
         lbl6O.Name = "lbl6O"
         lbl6O.Size = New Size(13, 15)
@@ -2382,7 +2383,7 @@ Partial Class frmGame
         ' lbl7O
         ' 
         lbl7O.AutoSize = True
-        lbl7O.Location = New Point(898, 124)
+        lbl7O.Location = New Point(761, 127)
         lbl7O.Margin = New Padding(2, 0, 2, 0)
         lbl7O.Name = "lbl7O"
         lbl7O.Size = New Size(13, 15)
@@ -2392,7 +2393,7 @@ Partial Class frmGame
         ' lbl8O
         ' 
         lbl8O.AutoSize = True
-        lbl8O.Location = New Point(934, 124)
+        lbl8O.Location = New Point(797, 127)
         lbl8O.Margin = New Padding(2, 0, 2, 0)
         lbl8O.Name = "lbl8O"
         lbl8O.Size = New Size(13, 15)
@@ -2402,7 +2403,7 @@ Partial Class frmGame
         ' lbl9O
         ' 
         lbl9O.AutoSize = True
-        lbl9O.Location = New Point(970, 124)
+        lbl9O.Location = New Point(833, 127)
         lbl9O.Margin = New Padding(2, 0, 2, 0)
         lbl9O.Name = "lbl9O"
         lbl9O.Size = New Size(13, 15)
@@ -2412,7 +2413,7 @@ Partial Class frmGame
         ' lbl10O
         ' 
         lbl10O.AutoSize = True
-        lbl10O.Location = New Point(1003, 124)
+        lbl10O.Location = New Point(866, 127)
         lbl10O.Margin = New Padding(2, 0, 2, 0)
         lbl10O.Name = "lbl10O"
         lbl10O.Size = New Size(19, 15)
@@ -2622,7 +2623,7 @@ Partial Class frmGame
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(662, 471)
+        Label1.Location = New Point(525, 474)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(11, 15)
@@ -2632,7 +2633,7 @@ Partial Class frmGame
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(662, 436)
+        Label2.Location = New Point(525, 439)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(10, 15)
@@ -2642,7 +2643,7 @@ Partial Class frmGame
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(659, 399)
+        Label3.Location = New Point(522, 402)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(16, 15)
@@ -2652,7 +2653,7 @@ Partial Class frmGame
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(659, 364)
+        Label4.Location = New Point(522, 367)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(15, 15)
@@ -2662,7 +2663,7 @@ Partial Class frmGame
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(660, 328)
+        Label5.Location = New Point(523, 331)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(13, 15)
@@ -2672,7 +2673,7 @@ Partial Class frmGame
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(660, 290)
+        Label6.Location = New Point(523, 293)
         Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(13, 15)
@@ -2682,7 +2683,7 @@ Partial Class frmGame
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(659, 253)
+        Label7.Location = New Point(522, 256)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(15, 15)
@@ -2692,7 +2693,7 @@ Partial Class frmGame
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(659, 217)
+        Label8.Location = New Point(522, 220)
         Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(15, 15)
@@ -2702,7 +2703,7 @@ Partial Class frmGame
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(659, 181)
+        Label9.Location = New Point(522, 184)
         Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(14, 15)
@@ -2712,24 +2713,24 @@ Partial Class frmGame
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Location = New Point(660, 146)
+        Label10.Location = New Point(523, 149)
         Label10.Margin = New Padding(2, 0, 2, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(15, 15)
         Label10.TabIndex = 236
         Label10.Text = "A"
         ' 
-        ' ProgressBar1
+        ' prgPlayerProgress
         ' 
-        ProgressBar1.Location = New Point(677, 523)
-        ProgressBar1.Name = "ProgressBar1"
-        ProgressBar1.Size = New Size(100, 23)
-        ProgressBar1.TabIndex = 246
+        prgPlayerProgress.Location = New Point(540, 526)
+        prgPlayerProgress.Name = "prgPlayerProgress"
+        prgPlayerProgress.Size = New Size(100, 23)
+        prgPlayerProgress.TabIndex = 246
         ' 
         ' lblProgress
         ' 
         lblProgress.AutoSize = True
-        lblProgress.Location = New Point(677, 505)
+        lblProgress.Location = New Point(540, 508)
         lblProgress.Name = "lblProgress"
         lblProgress.Size = New Size(90, 15)
         lblProgress.TabIndex = 247
@@ -2740,9 +2741,11 @@ Partial Class frmGame
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightBlue
-        ClientSize = New Size(1105, 575)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Zoom
+        ClientSize = New Size(975, 649)
         Controls.Add(lblProgress)
-        Controls.Add(ProgressBar1)
+        Controls.Add(prgPlayerProgress)
         Controls.Add(Label1)
         Controls.Add(Label2)
         Controls.Add(Label3)
@@ -2784,7 +2787,7 @@ Partial Class frmGame
         Controls.Add(lbl2O)
         Controls.Add(lbl1O)
         Controls.Add(lblWhosTurnIsIt)
-        Controls.Add(prgPlayerProgress)
+        Controls.Add(prgOpponentProgress)
         Controls.Add(lblOpponentBoard)
         Controls.Add(lblPlayerBoard)
         Controls.Add(lblPlayerProgress)
@@ -3399,7 +3402,7 @@ Partial Class frmGame
     Friend WithEvents lblPlayerProgress As Label
     Friend WithEvents lblPlayerBoard As Label
     Friend WithEvents lblOpponentBoard As Label
-    Friend WithEvents prgPlayerProgress As ProgressBar
+    Friend WithEvents prgOpponentProgress As ProgressBar
     Friend WithEvents lblWhosTurnIsIt As Label
     Friend WithEvents lbl1O As Label
     Friend WithEvents lbl2O As Label
@@ -3441,6 +3444,6 @@ Partial Class frmGame
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents prgPlayerProgress As ProgressBar
     Friend WithEvents lblProgress As Label
 End Class

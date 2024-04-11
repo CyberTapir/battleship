@@ -70,4 +70,12 @@ Public Class frmGameEnd
         FileSystem.FileClose(1)
     End Sub
 
+    Private Sub btnPlayAgain_Click(sender As Object, e As EventArgs) Handles btnPlayAgain.Click
+        frmGame.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
 End Class

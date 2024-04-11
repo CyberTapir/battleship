@@ -40,6 +40,10 @@ Public Class frmGame
 
     Dim impossibleMoveCounter As Integer = 1
 
+    Dim lastMediumMove As Integer = 0
+    Dim lastMediumMoveX As Integer
+    Dim lastMediumMoveY As Integer
+
     Dim canMakeMove As Boolean = True
 
     Dim playerCarrier As ship
@@ -68,44 +72,8 @@ Public Class frmGame
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub frmGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-        playerCarrier.length = 5
-        playerCarrier.sunk = False
-        playerBattleship.length = 4
-        playerBattleship.sunk = False
-        playerCruiser.length = 3
-        playerCruiser.sunk = False
-        playerSubmarine.length = 3
-        playerSubmarine.sunk = False
-        playerDestroyer.length = 2
-        playerDestroyer.sunk = False
-
-        opponentCarrier.length = 5
-        opponentCarrier.sunk = False
-        opponentBattleship.length = 4
-        opponentBattleship.sunk = False
-        opponentCruiser.length = 3
-        opponentCruiser.sunk = False
-        opponentSubmarine.length = 3
-        opponentSubmarine.sunk = False
-        opponentDestroyer.length = 2
-        opponentDestroyer.sunk = False
-
-        ''' Set the player name
-
-        lblWhosTurnIsIt.Text = playerName & "'s Turn"
-
         Randomize()
-
-        ''' Create the control array to access items by coordinate
-        initialiseControlArray()
-
-        ''' Set the locations of the ships on the grid.
-        setShips()
-
-        playerScore = 150
-
+        reset()
     End Sub
 
 
@@ -428,7 +396,30 @@ Public Class frmGame
     ''' Reset the board for a new game
     ''' </summary>
     Private Sub reset()
+        initialiseControlArray()
         clearPictureBoxes()
+        playerCarrier.length = 5
+        playerCarrier.sunk = False
+        playerBattleship.length = 4
+        playerBattleship.sunk = False
+        playerCruiser.length = 3
+        playerCruiser.sunk = False
+        playerSubmarine.length = 3
+        playerSubmarine.sunk = False
+        playerDestroyer.length = 2
+        playerDestroyer.sunk = False
+        opponentCarrier.length = 5
+        opponentCarrier.sunk = False
+        opponentBattleship.length = 4
+        opponentBattleship.sunk = False
+        opponentCruiser.length = 3
+        opponentCruiser.sunk = False
+        opponentSubmarine.length = 3
+        opponentSubmarine.sunk = False
+        opponentDestroyer.length = 2
+        opponentDestroyer.sunk = False
+        setShips()
+        playerScore = 150
     End Sub
 
 
@@ -552,8 +543,6 @@ Public Class frmGame
         End If
     End Sub
 
-
-
     ''' <summary>
     ''' getCoords takes in a sender picturebox name (such as picOppA3) and return the appropriate number value for the letter
     ''' </summary>
@@ -618,7 +607,7 @@ Public Class frmGame
         If compMode = 0 Then
             easyComputerMove()
         ElseIf compMode = 1 Then
-            ''' hardComputerMove()
+            mediumComputerMove()
         ElseIf compMode = 2 Then
             hardComputerMove()
         ElseIf compMode = 3 Then
@@ -644,9 +633,51 @@ Public Class frmGame
             randYCoord = getRandomNum(10)
 
             ''' Check if the move is valid
-            If playerBoard(randYCoord, randXCoord) = 1 Or playerBoard(randYCoord, randXCoord) = 0 Then
+            If playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 0 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8 Then
                 ''' Make the move
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                done = True
+            End If
+        End While
+    End Sub
+
+    Private Sub mediumComputerMove()
+        Dim randXCoord As Integer
+        Dim randYCoord As Integer
+        Dim done As Boolean = False
+
+        If lastMediumMove = 1 Then
+            If lastMediumMoveX + 1 <= 10 Then
+                randXCoord = lastMediumMoveX + 1
+                randYCoord = lastMediumMoveY
+            ElseIf lastMediumMoveY + 1 <= 10 Then
+                randXCoord = lastMediumMoveX
+                randYCoord = lastMediumMoveY + 1
+            ElseIf lastMediumMoveX - 1 >= 1 Then
+                randXCoord = lastMediumMoveX - 1
+                randYCoord = lastMediumMoveY
+            ElseIf lastMediumMoveY - 1 >= 1 Then
+                randXCoord = lastMediumMoveX
+                randYCoord = lastMediumMoveY - 1
+            End If
+        ElseIf lastMediumMove = 0 Then
+            randXCoord = getRandomNum(10)
+            randYCoord = getRandomNum(10)
+        End If
+
+        While Not done
+
+
+            If playerBoard(randYCoord, randXCoord) = 0 Then
+                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                lastMediumMoveX = randXCoord
+                lastMediumMoveY = randYCoord
+                done = True
+            ElseIf playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8 Then
+                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                lastMediumMoveX = randXCoord
+                lastMediumMoveY = randYCoord
+                lastMediumMove = 1
                 done = True
             End If
         End While
@@ -815,35 +846,50 @@ Public Class frmGame
     Private Sub checkForSunkShips()
         If opponentCarrier.length = 0 And opponentCarrier.sunk = False Then
             MsgBox("You have sunk the computer's carrier!", MessageBoxIcon.Asterisk)
+            prgPlayerProgress.Value = prgPlayerProgress.Value + 20
             opponentCarrier.sunk = True
         ElseIf opponentBattleship.length = 0 And opponentBattleship.sunk = False Then
             MsgBox("You have sunk the computer's battleship!", MessageBoxIcon.Asterisk)
             opponentBattleship.sunk = True
+            prgPlayerProgress.Value = prgPlayerProgress.Value + 20
         ElseIf opponentCruiser.length = 0 And opponentCruiser.sunk = False Then
             MsgBox("You have sunk the computer's cruiser!", MessageBoxIcon.Asterisk)
             opponentCruiser.sunk = True
+            prgPlayerProgress.Value = prgPlayerProgress.Value + 20
         ElseIf opponentSubmarine.length = 0 And opponentSubmarine.sunk = False Then
             MsgBox("You have sunk the computer's submarine!", MessageBoxIcon.Asterisk)
             opponentSubmarine.sunk = True
+            prgPlayerProgress.Value = prgPlayerProgress.Value + 20
         ElseIf opponentDestroyer.length = 0 And opponentDestroyer.sunk = False Then
             MsgBox("You have sunk the computer's destroyer!", MessageBoxIcon.Asterisk)
             opponentDestroyer.sunk = True
+            prgPlayerProgress.Value = prgPlayerProgress.Value + 20
         End If
         If playerCarrier.length = 0 And playerCarrier.sunk = False Then
             MsgBox("The computer has sunk your carrier!", MessageBoxIcon.Asterisk)
             playerCarrier.sunk = True
+            prgOpponentProgress.Value = prgOpponentProgress.Value + 20
+            lastMediumMove = 0
         ElseIf playerBattleship.length = 0 And playerBattleship.sunk = False Then
             MsgBox("The computer has sunk your battleship!", MessageBoxIcon.Asterisk)
             playerBattleship.sunk = True
+            prgOpponentProgress.Value = prgOpponentProgress.Value + 20
+            lastMediumMove = 0
         ElseIf playerCruiser.length = 0 And playerCruiser.sunk = False Then
             MsgBox("The computer has sunk your cruiser!", MessageBoxIcon.Asterisk)
             playerCruiser.sunk = True
+            prgOpponentProgress.Value = prgOpponentProgress.Value + 20
+            lastMediumMove = 0
         ElseIf playerSubmarine.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your submarine!", MessageBoxIcon.Asterisk)
             playerSubmarine.sunk = True
+            prgOpponentProgress.Value = prgOpponentProgress.Value + 20
+            lastMediumMove = 0
         ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
+            prgOpponentProgress.Value = prgOpponentProgress.Value + 20
+            lastMediumMove = 0
         End If
     End Sub
 

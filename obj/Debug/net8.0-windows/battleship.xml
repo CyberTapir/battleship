@@ -22,6 +22,11 @@ battleship
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:battleship.My.Resources.Resources.HMAS_Warramunga__FFH_152__underway_in_the_Savu_Sea_on_11_December_2021__211211_N_NO250_1004_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="F:battleship.frmGame.playerBoardArray">
  <summary>
  playerBoardArray is a control array of pictureboxes. They handle the player view of the board (ships, hits and misses made by opponent)

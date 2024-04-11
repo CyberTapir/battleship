@@ -59,5 +59,16 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property HMAS_Warramunga__FFH_152__underway_in_the_Savu_Sea_on_11_December_2021__211211_N_NO250_1004_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("HMAS_Warramunga_(FFH_152)_underway_in_the_Savu_Sea_on_11_December_2021_(211211-N-"& _ 
+                        "NO250-1004)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
