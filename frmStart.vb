@@ -21,7 +21,7 @@
             ElseIf rdoComputerMedium.Checked Then
                 compMode = 1
                 flag = True
-            ElseIf rdoComputerImpossible.Checked Then
+            ElseIf rdoComputerUnfair.Checked Then
                 compMode = 3
                 flag = True
             End If

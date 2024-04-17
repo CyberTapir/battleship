@@ -30,7 +30,7 @@ Partial Class frmStart
         ToolTip1 = New ToolTip(components)
         rdoComputerEasy = New RadioButton()
         grpComputerLevel = New GroupBox()
-        rdoComputerImpossible = New RadioButton()
+        rdoComputerUnfair = New RadioButton()
         rdoComputerHard = New RadioButton()
         rdoComputerMedium = New RadioButton()
         grpComputerLevel.SuspendLayout()
@@ -84,27 +84,27 @@ Partial Class frmStart
         ' 
         ' grpComputerLevel
         ' 
-        grpComputerLevel.Controls.Add(rdoComputerImpossible)
+        grpComputerLevel.Controls.Add(rdoComputerUnfair)
         grpComputerLevel.Controls.Add(rdoComputerHard)
         grpComputerLevel.Controls.Add(rdoComputerMedium)
         grpComputerLevel.Controls.Add(rdoComputerEasy)
         grpComputerLevel.Location = New Point(26, 56)
         grpComputerLevel.Name = "grpComputerLevel"
-        grpComputerLevel.Size = New Size(198, 80)
+        grpComputerLevel.Size = New Size(169, 80)
         grpComputerLevel.TabIndex = 10
         grpComputerLevel.TabStop = False
         grpComputerLevel.Text = "ComputerLevel"
         ' 
-        ' rdoComputerImpossible
+        ' rdoComputerUnfair
         ' 
-        rdoComputerImpossible.AutoSize = True
-        rdoComputerImpossible.Location = New Point(79, 51)
-        rdoComputerImpossible.Name = "rdoComputerImpossible"
-        rdoComputerImpossible.Size = New Size(103, 25)
-        rdoComputerImpossible.TabIndex = 12
-        rdoComputerImpossible.TabStop = True
-        rdoComputerImpossible.Text = "Impossible"
-        rdoComputerImpossible.UseVisualStyleBackColor = True
+        rdoComputerUnfair.AutoSize = True
+        rdoComputerUnfair.Location = New Point(79, 51)
+        rdoComputerUnfair.Name = "rdoComputerUnfair"
+        rdoComputerUnfair.Size = New Size(71, 25)
+        rdoComputerUnfair.TabIndex = 12
+        rdoComputerUnfair.TabStop = True
+        rdoComputerUnfair.Text = "Unfair"
+        rdoComputerUnfair.UseVisualStyleBackColor = True
         ' 
         ' rdoComputerHard
         ' 
@@ -161,7 +161,7 @@ Partial Class frmStart
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents rdoComputerEasy As RadioButton
     Friend WithEvents grpComputerLevel As GroupBox
-    Friend WithEvents rdoComputerImpossible As RadioButton
+    Friend WithEvents rdoComputerUnfair As RadioButton
     Friend WithEvents rdoComputerHard As RadioButton
     Friend WithEvents rdoComputerMedium As RadioButton
 
