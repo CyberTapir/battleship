@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "frmGame.vb",
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmGame.vb",
               "RelativeToolTip": "frmGame.vb",
-              "ViewState": "AQIAAI4CAAAAAAAAAAAqwLMCAABJAAAA",
+              "ViewState": "AQIAAC0CAAAAAAAAAAAiwDcCAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-02-17T23:56:04.329Z",
               "EditorCaption": ""
@@ -74,7 +74,8 @@
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\frmStart.vb [Design]",
               "RelativeToolTip": "frmStart.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-02-17T23:56:04.334Z"
+              "WhenOpened": "2024-02-17T23:56:04.334Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -86,7 +87,8 @@
               "RelativeToolTip": "frmStart.vb",
               "ViewState": "AQIAAAEAAAD8MzMzM7MmwBoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-02-17T23:56:04.326Z"
+              "WhenOpened": "2024-02-17T23:56:04.326Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

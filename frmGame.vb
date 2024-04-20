@@ -671,72 +671,236 @@ Public Class frmGame
     Private Sub mediumComputerMove()
         Dim randXCoord As Integer
         Dim randYCoord As Integer
-
         Dim done As Boolean = False
 
-        If lastMediumMove = 1 Then
-            ' hit. loop around until miss or out of bounds
-
-
-            If mediumSinkProgress.up = False Then
-                If (mediumSinkProgress.y - mediumCounter) < 1 Then
-                    'stop
-                    mediumSinkProgress.up = True
-                Else
-
-                    randYCoord = mediumSinkProgress.y - 1
-                End If
-
-                If playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then
-                    ' go again, not there
-                    While Not done And mediumSinkProgress.y - Counter(Of 
-
-                    End While
-
-                End If
-
-
-
-
-
-
-            End If
-
-
-
-        End If
-
-
-
-
-
-
-
-
-
-
-
-
         While Not done
-            If playerBoard(randYCoord, randXCoord) = 0 Then
-                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
-                lastMediumMoveX = randXCoord
-                lastMediumMoveY = randYCoord
-                done = True
-            ElseIf playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8 Then
-                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
-                lastMediumDirection = 0
-                lastMediumMove = 1
-                lastMediumMoveX = randXCoord
-                lastMediumMoveY = randYCoord
-                done = True
-            Else
-                ' Change direction if the square is already hit
-
+            If lastMediumMove = 1 Then ' If last move was a hit
+                If mediumSinkProgress.up = False Then ' If not already moving up
+                    If mediumSinkProgress.y - mediumCounter >= 1 Then ' If within bounds
+                        randYCoord = mediumSinkProgress.y - 1
+                        If playerBoard(randYCoord, mediumSinkProgress.x) >= 4 And playerBoard(randYCoord, mediumSinkProgress.x) <= 8 Then
+                            done = True ' Hit found, exit loop
+                        ElseIf playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then ' If already hit
+                            mediumCounter = mediumCounter + 1
+                        Else ' If miss or out of bounds
+                            mediumSinkProgress.up = True ' Change direction
+                            mediumCounter = 1
+                        End If
+                    Else ' If out of bounds
+                        mediumSinkProgress.up = True ' Change direction
+                        mediumCounter = 1
+                    End If
+                End If
+                If mediumSinkProgress.down = False Then ' If not already moving down
+                    If mediumSinkProgress.y + mediumCounter <= 10 Then ' If within bounds
+                        randYCoord = mediumSinkProgress.y + 1
+                        If playerBoard(randYCoord, mediumSinkProgress.x) >= 4 AndAlso playerBoard(randYCoord, mediumSinkProgress.x) <= 8 Then
+                            done = True ' Hit found, exit loop
+                        ElseIf playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then ' If already hit
+                            mediumCounter = mediumCounter + 1
+                        Else ' If miss or out of bounds
+                            mediumSinkProgress.down = True ' Change direction
+                            mediumCounter = 1
+                        End If
+                    Else ' If out of bounds
+                        mediumSinkProgress.down = True ' Change direction
+                        mediumCounter = 1
+                    End If
+                End If
+                If mediumSinkProgress.left = False Then ' If not already moving down
+                    If mediumSinkProgress.x + mediumCounter >= 1 Then ' If within bounds
+                        randXCoord = mediumSinkProgress.x - 1
+                        If playerBoard(mediumSinkProgress.y, randXCoord) >= 4 AndAlso playerBoard(mediumSinkProgress.y, randXCoord) <= 8 Then
+                            done = True ' Hit found, exit loop
+                        ElseIf playerBoard(mediumSinkProgress.y, randXCoord) = 2 Then ' If already hit
+                            mediumCounter = mediumCounter + 1
+                        Else ' If miss or out of bounds
+                            mediumSinkProgress.left = True ' Change direction
+                            mediumCounter = 1
+                        End If
+                    Else ' If out of bounds
+                        mediumSinkProgress.left = True ' Change direction
+                        mediumCounter = 1
+                    End If
+                End If
+                If mediumSinkProgress.right = False Then ' If not already moving down
+                    If mediumSinkProgress.x + mediumCounter <= 10 Then ' If within bounds
+                        randXCoord = mediumSinkProgress.x + 1
+                        If playerBoard(mediumSinkProgress.y, randXCoord) >= 4 AndAlso playerBoard(mediumSinkProgress.y, randXCoord) <= 8 Then
+                            done = True ' Hit found, exit loop
+                        ElseIf playerBoard(mediumSinkProgress.y, randXCoord) = 2 Then ' If already hit
+                            mediumCounter = mediumCounter + 1
+                        Else ' If miss or out of bounds
+                            mediumSinkProgress.right = True ' Change direction
+                            mediumCounter = 1
+                        End If
+                    Else ' If out of bounds
+                        mediumSinkProgress.right = True ' Change direction
+                        mediumCounter = 1
+                    End If
+                End If
+                ' Exit the loop if a hit is found
+                If done Then Exit While
             End If
         End While
 
+        ' If last move was random or ship is sunk, make a random move
+        If Not done AndAlso lastMediumMove = 0 Then
+            Do
+                randXCoord = getRandomNum(10)
+                randYCoord = getRandomNum(10)
+            Loop While playerBoard(randYCoord, randXCoord) <> 0 ' Keep generating random coordinates until a valid empty cell is found
+        End If
+
+        ' Perform the move
+        doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+        lastMediumMoveX = randXCoord
+        lastMediumMoveY = randYCoord
     End Sub
+
+
+    'Private Sub mediumComputerMove()
+    '    Dim randXCoord As Integer
+    '    Dim randYCoord As Integer
+    '    Dim done As Boolean = False
+    '    While Not done
+    '        If lastMediumMove = 1 Then ' If last move was a hit
+    '            If mediumSinkProgress.up = False Then ' If not already moving up
+    '                If mediumSinkProgress.y - mediumCounter >= 1 Then ' If within bounds
+    '                    randYCoord = mediumSinkProgress.y - 1
+    '                    If playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then ' If already hit
+    '                        mediumCounter = mediumCounter + 1
+    '                    Else ' If miss or out of bounds
+    '                        mediumSinkProgress.up = True ' Change direction
+    '                    End If
+    '                Else ' If out of bounds
+    '                    mediumSinkProgress.up = True ' Change direction
+    '                End If
+    '            End If
+    '            If mediumSinkProgress.down = False Then
+    '                If mediumSinkProgress.y + mediumCounter <= 10 Then
+    '                    randYCoord = mediumSinkProgress.y + 1
+    '                    If playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then
+    '                        mediumCounter = mediumCounter + 1
+    '                    Else
+    '                        mediumSinkProgress.down = True
+    '                    End If
+    '                Else
+    '                    mediumSinkProgress.down = True
+    '                End If
+    '            End If
+    '            If mediumSinkProgress.left = False Then
+    '                If mediumSinkProgress.x - mediumCounter >= 1 Then
+    '                    randXCoord = mediumSinkProgress.x - 1
+    '                    If playerBoard(mediumSinkProgress.y, randXCoord) = 2 Then
+    '                        mediumCounter = mediumCounter + 1
+    '                    Else
+    '                        mediumSinkProgress.left = True
+    '                    End If
+    '                Else
+    '                    mediumSinkProgress.left = True
+    '                End If
+    '            End If
+    '            If mediumSinkProgress.right = False Then
+    '                If mediumSinkProgress.x + mediumCounter <= 10 Then
+    '                    randXCoord = mediumSinkProgress.x + 1
+    '                    If playerBoard(mediumSinkProgress.y, randXCoord) = 2 Then
+    '                        mediumCounter = mediumCounter + 1
+    '                    Else
+    '                        mediumSinkProgress.right = True
+    '                    End If
+    '                Else
+    '                    mediumSinkProgress.right = True
+    '                End If
+    '            End If
+    '        End If
+    '    End While
+
+    '    ' If last move was random or ship is sunk, make a random move
+    '    If lastMediumMove = 0 Then
+    '        Do
+    '            randXCoord = getRandomNum(10)
+    '            randYCoord = getRandomNum(10)
+    '        Loop While playerBoard(randYCoord, randXCoord) <> 0 ' Keep generating random coordinates until a valid empty cell is found
+    '    End If
+
+    '    ' Perform the move
+    '    doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+    '    lastMediumMoveX = randXCoord
+    '    lastMediumMoveY = randYCoord
+    'End Sub
+
+
+    'Private Sub mediumComputerMove()
+    '    Dim randXCoord As Integer
+    '    Dim randYCoord As Integer
+
+    '    Dim done As Boolean = False
+
+    '    If lastMediumMove = 1 Then
+    '        ' hit. loop around until miss or out of bounds
+
+
+    '        If mediumSinkProgress.up = False Then
+    '            If (mediumSinkProgress.y - mediumCounter) < 1 Then
+    '                'stop
+    '                mediumSinkProgress.up = True
+    '            Else
+
+    '                randYCoord = mediumSinkProgress.y - 1
+    '            End If
+
+    '            If playerBoard(randYCoord, mediumSinkProgress.x) = 2 Then
+    '                mediumCounter = mediumCounter + 1
+    '                ' go again, not there
+    '                While Not done And mediumSinkProgress.y - mediumCounter
+
+    '                End While
+
+    '            End If
+
+
+
+
+
+
+    '        End If
+
+
+
+    '    End If
+
+
+
+
+
+
+
+
+
+
+
+
+    '    While Not done
+    '        If playerBoard(randYCoord, randXCoord) = 0 Then
+    '            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+    '            lastMediumMoveX = randXCoord
+    '            lastMediumMoveY = randYCoord
+    '            done = True
+    '        ElseIf playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8 Then
+    '            doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+    '            lastMediumDirection = 0
+    '            lastMediumMove = 1
+    '            lastMediumMoveX = randXCoord
+    '            lastMediumMoveY = randYCoord
+    '            done = True
+    '        Else
+    '            ' Change direction if the square is already hit
+
+    '        End If
+    '    End While
+
+    'End Sub
 
     'Private Sub mediumComputerMove()
     '    Dim randXCoord As Integer
