@@ -58,7 +58,7 @@ Public Class frmGameEnd
             arrHighScores(i).name = temp
         Next i
 
-        For i = 1 to 10
+        For i = 11 to 20
             FileSystem.Input(1, temp)
             arrHighScores(i).score = CInt(temp2)
         Next i
