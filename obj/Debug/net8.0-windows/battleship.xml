@@ -144,6 +144,16 @@ battleship
  In the easiest computer mode, the computer guesses random squares.
  </summary>
 </member>
+<member name="M:battleship.frmGame.mediumComputerMove">
+ <summary>
+ Computer makes a guess, if its a hit it tries around to find the entire ship
+ </summary>
+</member>
+<member name="M:battleship.frmGame.unfairComputerMove">
+ <summary>
+ Computer makes a move knowing exactly where the playerships are
+ </summary>
+</member>
 <member name="M:battleship.frmGame.GetPlayerBoardArray">
  <summary>
  Return the playerBoardArray

@@ -60,7 +60,7 @@ Public Class frmGameEnd
 
         For i = 11 to 20
             FileSystem.Input(1, temp)
-            arrHighScores(i).score = CInt(temp2)
+            arrHighScores(i).score = CInt(temp)
         Next i
 
         FileSystem.FileClose(1)
@@ -74,14 +74,14 @@ Public Class frmGameEnd
     End Sub
 
     Private Sub writeScore()
-        FileSystem.FileOpen(1, "hs.txt", OpenMode.Write)
+        FileSystem.FileOpen(1, "hs.txt", OpenMode.Output)
 
-        For i = 1 to 10 
-            FileSystem.WriteLine(1, arrHighScores(i).name
+        For i = 1 to 10
+            FileSystem.WriteLine(1, arrHighScores(i).name)
         Next i
 
         For i = 1 to 10
-            FileSystem.WriteLine(1, arrHighScores(i).score
+            FileSystem.WriteLine(1, arrHighScores(i).score)
         Next i
 
         FileSystem.FileClose(1)

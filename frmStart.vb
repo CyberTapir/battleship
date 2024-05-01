@@ -12,16 +12,16 @@
         playerName = txtPlayerName.Text
 
         If verifyName(playerName) Then
-            If rdoComputerEasy.Checked = True Then
+            If rdoComputerEasy.Checked = True And Not flag Then
                 compMode = 0
                 flag = True
-            ElseIf rdoComputerHard.Checked Then
+            ElseIf rdoComputerHard.Checked And Not flag Then
                 compMode = 2
                 flag = True
-            ElseIf rdoComputerMedium.Checked Then
+            ElseIf rdoComputerMedium.Checked And Not flag Then
                 compMode = 1
                 flag = True
-            ElseIf rdoComputerUnfair.Checked Then
+            ElseIf rdoComputerUnfair.Checked And Not flag Then
                 compMode = 3
                 flag = True
             End If
