@@ -32,14 +32,14 @@ Partial Class frmGameEnd
         ' 
         lstTopScores.FormattingEnabled = True
         lstTopScores.ItemHeight = 15
-        lstTopScores.Location = New Point(36, 103)
+        lstTopScores.Location = New Point(36, 73)
         lstTopScores.Name = "lstTopScores"
-        lstTopScores.Size = New Size(144, 319)
+        lstTopScores.Size = New Size(144, 184)
         lstTopScores.TabIndex = 0
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(260, 392)
+        btnClose.Location = New Point(283, 234)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(75, 23)
         btnClose.TabIndex = 1
@@ -48,7 +48,7 @@ Partial Class frmGameEnd
         ' 
         ' btnPlayAgain
         ' 
-        btnPlayAgain.Location = New Point(260, 363)
+        btnPlayAgain.Location = New Point(202, 234)
         btnPlayAgain.Name = "btnPlayAgain"
         btnPlayAgain.Size = New Size(75, 23)
         btnPlayAgain.TabIndex = 2
@@ -59,7 +59,7 @@ Partial Class frmGameEnd
         ' 
         lblScore.AutoSize = True
         lblScore.Font = New Font("Segoe UI", 20F)
-        lblScore.Location = New Point(140, 40)
+        lblScore.Location = New Point(98, 20)
         lblScore.Name = "lblScore"
         lblScore.Size = New Size(82, 37)
         lblScore.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class frmGameEnd
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(390, 441)
+        ClientSize = New Size(390, 276)
         Controls.Add(lblScore)
         Controls.Add(btnPlayAgain)
         Controls.Add(btnClose)

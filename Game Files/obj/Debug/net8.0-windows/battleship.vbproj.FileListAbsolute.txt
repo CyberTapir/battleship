@@ -42,3 +42,25 @@ C:\Users\callu\source\repos\battleship\bin\Debug\net8.0-windows\battleship.xml
 C:\Users\callu\source\repos\battleship\obj\Debug\net8.0-windows\battleship.xml
 C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\bin\Debug\net8.0-windows\battleship.xml
 C:\Users\callumbennett\Source\Repos\CyberTapir\battleship\obj\Debug\net8.0-windows\battleship.xml
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.exe
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.deps.json
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.runtimeconfig.json
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.dll
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.pdb
+C:\Users\callu\source\repos\battleship\Game Files\bin\Debug\net8.0-windows\battleship.xml
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.frmGame.resources
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.frmGameEnd.resources
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.frmStart.resources
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.Resources.resources
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.vbproj.GenerateResource.cache
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.AssemblyInfoInputs.cache
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.AssemblyInfo.vb
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.vbproj.CoreCompileInputs.cache
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.sourcelink.json
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.dll
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\refint\battleship.dll
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.xml
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.pdb
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\battleship.genruntimeconfig.cache
+C:\Users\callu\source\repos\battleship\Game Files\obj\Debug\net8.0-windows\ref\battleship.dll

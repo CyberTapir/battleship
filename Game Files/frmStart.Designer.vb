@@ -33,6 +33,7 @@ Partial Class frmStart
         rdoComputerUnfair = New RadioButton()
         rdoComputerHard = New RadioButton()
         rdoComputerMedium = New RadioButton()
+        Button1 = New Button()
         grpComputerLevel.SuspendLayout()
         SuspendLayout()
         ' 
@@ -128,6 +129,15 @@ Partial Class frmStart
         rdoComputerMedium.Text = "Medium"
         rdoComputerMedium.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(668, 58)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 36)
+        Button1.TabIndex = 11
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' frmStart
         ' 
         AcceptButton = btnStart
@@ -138,6 +148,7 @@ Partial Class frmStart
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(827, 590)
+        Controls.Add(Button1)
         Controls.Add(grpComputerLevel)
         Controls.Add(txtPlayerName)
         Controls.Add(btnStart)
@@ -164,5 +175,6 @@ Partial Class frmStart
     Friend WithEvents rdoComputerUnfair As RadioButton
     Friend WithEvents rdoComputerHard As RadioButton
     Friend WithEvents rdoComputerMedium As RadioButton
+    Friend WithEvents Button1 As Button
 
 End Class

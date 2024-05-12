@@ -3,7 +3,7 @@
 Public Class frmGameEnd
 
     Dim nextInt As Integer = 1
-    Dim arrHighScores() As recHighScore
+    Dim arrHighScores(11) As recHighScore
 
     Private Sub frmGameEnd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblScore.Text = "Score: " & playerScore
@@ -11,6 +11,7 @@ Public Class frmGameEnd
         arrHighScores(11).name = playerName
         arrHighScores(11).score = playerScore
         BubbleSort()
+        displayScores()
         writeScore()
     End Sub
     
@@ -19,20 +20,17 @@ Public Class frmGameEnd
         Public score As Integer
     End Structure
 
-
-
     Private Sub BubbleSort()
         Dim Last As Integer
-        Last = nextInt
+        Last = 11 ' Length of the array minus 1
         Dim Swapped As Boolean
         Swapped = True
         Dim i As Integer
-        i = 1
         While Swapped = True
             Swapped = False
-            i = 1
-            While i < Last
-                If arrHighScores(i).score < arrHighScores(i + 1).score Then
+            i = 1 ' Resetting i to 0 for correct iteration
+            While i < Last ' Condition should be less than Last
+                If arrHighScores(i).score < arrHighScores(i + 1).score Then ' Comparing in descending order
                     Swap(arrHighScores(i), arrHighScores(i + 1))
                     Swapped = True
                 End If
@@ -41,40 +39,35 @@ Public Class frmGameEnd
             Last = Last - 1
         End While
     End Sub
-    
-    Private Sub printHighScores()
-        For u = 1 To 10
-            lstTopScores.Items.Add(u & ": " & arrHighScores(u).name & ", " & arrHighScores(u).score)
-        Next u
+
+    Private Sub Swap(ByRef a As recHighScore, ByRef b As recHighScore)
+        Dim temp As recHighScore
+        temp = a
+        a = b
+        b = temp
     End Sub
-    
+
     Private Sub readHighScores()
         Dim temp As String = ""
 
-        FileSystem.FileOpen(1, "./hs.txt", OpenMode.Input)
+        FileSystem.FileOpen(1, getFile(), OpenMode.Input)
 
-        For i = 1 to 10
+        For i = 1 To 10
             FileSystem.Input(1, temp)
             arrHighScores(i).name = temp
         Next i
 
         For i = 11 to 20
             FileSystem.Input(1, temp)
-            arrHighScores(i).score = CInt(temp)
+            arrHighScores(i - 11).score = CInt(temp)
         Next i
 
         FileSystem.FileClose(1)
     End Sub
 
-    Private Sub Swap(ByVal A As recHighScore, ByVal B As recHighScore)
-        Dim Temp As recHighScore
-        Temp = A
-        A = B
-        B = Temp
-    End Sub
 
     Private Sub writeScore()
-        FileSystem.FileOpen(1, "hs.txt", OpenMode.Output)
+        FileSystem.FileOpen(1, getFile(), OpenMode.Output)
 
         For i = 1 to 10
             FileSystem.WriteLine(1, arrHighScores(i).name)
@@ -88,11 +81,31 @@ Public Class frmGameEnd
     End Sub
 
     Private Sub btnPlayAgain_Click(sender As Object, e As EventArgs) Handles btnPlayAgain.Click
-        frmGame.Show()
+        frmStart.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
+
+    Private Sub displayScores()
+        lstTopScores.Items.Clear()
+        For i = 1 To 11
+            lstTopScores.Items.Add(i & ": " & arrHighScores(i).name & ", " & arrHighScores(i).score)
+        Next i
+    End Sub
+
+    Private Function getFile()
+        Select Case compMode
+            Case 0
+                Return "./hsEasy.txt"
+            Case 1
+                Return "./hsMedium.txt"
+            Case 2
+                Return "./hsHard.txt"
+            Case 3
+                Return "./hsUnfair.txt"
+        End Select
+    End Function
 End Class

@@ -149,6 +149,11 @@ battleship
  Computer makes a guess, if its a hit it tries around to find the entire ship
  </summary>
 </member>
+<member name="M:battleship.frmGame.hardComputerMove">
+ <summary>
+ Computer makes a move based on a random number generator
+ </summary>
+</member>
 <member name="M:battleship.frmGame.unfairComputerMove">
  <summary>
  Computer makes a move knowing exactly where the playerships are

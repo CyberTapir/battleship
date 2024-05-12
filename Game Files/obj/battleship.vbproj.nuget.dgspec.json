@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj": {}
+    "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj": {
+    "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj",
+        "projectUniqueName": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj",
         "projectName": "battleship",
-        "projectPath": "C:\\Users\\callu\\source\\repos\\battleship\\battleship.vbproj",
+        "projectPath": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj",
         "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\callu\\source\\repos\\battleship\\obj\\",
+        "outputPath": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",

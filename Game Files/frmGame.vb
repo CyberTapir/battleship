@@ -45,7 +45,7 @@ Public Class frmGame
     Dim lastMediumMoveY As Integer
     Dim lastMediumDirection As Integer
 
-    Dim canMakeMove As Boolean = True
+    Dim canMakeMove As Boolean = False
 
     Dim playerCarrier As ship
     Dim playerBattleship As ship
@@ -70,6 +70,8 @@ Public Class frmGame
     Public Structure sinkProgress
         Dim x As Integer
         Dim y As Integer
+        Dim lastX As Integer
+        Dim lastY As Integer
         Dim up As Boolean
         Dim down As Boolean
         Dim left As Boolean
@@ -445,6 +447,9 @@ Public Class frmGame
         mediumCounter = 1
 
         ' set the ships on the board
+
+        lblWhosTurnIsIt.Text = "Set your ships"
+
         setShips()
 
         ' set the player score to 150
@@ -476,14 +481,12 @@ Public Class frmGame
         If playerShips = 0 Then
             MessageBox.Show("Computer win. Better luck next time", "Computer Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             playerScore = playerScore - 50
-            reset()
             frmGameEnd.Show()
             Me.Close()
             ' If the computer has no ships remaining, the player wins
         ElseIf opponentShips = 0 Then
             MessageBox.Show("Congradulations " & playerName & ", You have won!", "Player Wins!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             playerScore = playerScore + 100
-            reset()
             frmGameEnd.Show()
             Me.Close()
         Else
@@ -634,7 +637,7 @@ Public Class frmGame
         ElseIf compMode = 1 Then
             mediumComputerMove()
         ElseIf compMode = 2 Then
-            'hardComputerMove()
+            hardComputerMove()
         ElseIf compMode = 3 Then
             unfairComputerMove()
         End If
@@ -677,61 +680,82 @@ Public Class frmGame
         If lastMediumMove = 1 Then
             ' hit. loop around until miss or out of bounds
             If mediumSinkProgress.up = False And Not done Then
-                randXCoord = mediumSinkProgress.x
-                Do
-                    randYCoord = mediumSinkProgress.y - 1
-                    If randYCoord = 0 Then
-                        randYCoord = 1
-                        mediumSinkProgress.up = True
-                        randYCoord = mediumSinkProgress.y + 1
-                    End If
-                Loop Until playerBoard(randYCoord, mediumSinkProgress.x) = 0 Or playerBoard(randYCoord, mediumSinkProgress.x) = 4 Or playerBoard(randYCoord, mediumSinkProgress.x) = 5 Or playerBoard(randYCoord, mediumSinkProgress.x) = 6 Or playerBoard(randYCoord, mediumSinkProgress.x) = 7 Or playerBoard(randYCoord, mediumSinkProgress.x) = 8
+                randXCoord = mediumSinkProgress.lastX
+                randYCoord = mediumSinkProgress.lastY - 1
+                If randYCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+                    'randYCoord = 1
+                    mediumSinkProgress.up = True
+                    randYCoord = mediumSinkProgress.y + 1
+                    mediumSinkProgress.lastY = mediumSinkProgress.y + 1
+                End If
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    mediumSinkProgress.up = True
+                End If
+
                 done = True
             End If
 
             If mediumSinkProgress.down = False And Not done Then
                 randXCoord = mediumSinkProgress.x
-                Do
-                    randYCoord = mediumSinkProgress.y + 1
-                    If randYCoord = 11 Then
-                        mediumSinkProgress.down = True
-                        randYCoord = mediumSinkProgress.y
-                        If mediumSinkProgress.x - 1 <= 0 Then
-                            randXCoord = mediumSinkProgress.x + 1
-                        Else
-                            randXCoord = mediumSinkProgress.x - 1
-                        End If
+                randYCoord = mediumSinkProgress.lastY + 1
+                If randYCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+                    mediumSinkProgress.down = True
+                    randYCoord = mediumSinkProgress.y
+                    If mediumSinkProgress.x - 1 <= 0 Then
+                        randXCoord = mediumSinkProgress.x + 1
+                        mediumSinkProgress.lastX = randXCoord
+                    Else
+                        randXCoord = mediumSinkProgress.x - 1
+                        mediumSinkProgress.lastX = randXCoord
                     End If
-                Loop Until playerBoard(randYCoord, randXCoord) = 0 Or playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8
+                End If
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    mediumSinkProgress.down = True
+
+                End If
                 done = True
             End If
 
             If mediumSinkProgress.left = False And Not done Then
                 randYCoord = mediumSinkProgress.y
-                Do
-                    randXCoord = mediumSinkProgress.x - 1
-                    If randXCoord = 0 Then
-                        randXCoord = 1
-                        mediumSinkProgress.left = True
-                        randXCoord = mediumSinkProgress.x + 1
-                    End If
-                Loop Until playerBoard(randYCoord, randXCoord) = 0 Or playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8
+                randXCoord = mediumSinkProgress.lastX - 1
+                If randXCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+                    mediumSinkProgress.left = True
+                    randXCoord = mediumSinkProgress.x + 1
+                    mediumSinkProgress.lastX = randXCoord
+                End If
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    mediumSinkProgress.left = True
+                End If
                 done = True
             End If
 
             If mediumSinkProgress.right = False And Not done Then
                 randYCoord = mediumSinkProgress.y
-                Do
-                    randXCoord = mediumSinkProgress.x + 1
-                    If randXCoord = 10 Then
-                        randYCoord = getRandomNum(10)
-                        randXCoord = getRandomNum(10)
-                    End If
-                Loop Until playerBoard(randYCoord, randXCoord) = 0 Or playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8
+                randXCoord = mediumSinkProgress.lastX + 1
+                If randXCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+                    randYCoord = getRandomNum(10)
+                    randXCoord = getRandomNum(10)
+                    resetMediumHitProgress()
+                End If
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    mediumSinkProgress.right = True
+                    resetMediumHitProgress()
+                End If
+                done = True
             End If
 
             If randXCoord <> 0 And randYCoord <> 0 Then
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                If playerBoard(randYCoord, randXCoord) = 3 Then
+                    mediumSinkProgress.lastY = mediumSinkProgress.y
+                    mediumSinkProgress.lastX = mediumSinkProgress.x
+                Else
+                    mediumSinkProgress.lastX = randXCoord
+                    mediumSinkProgress.lastY = randYCoord
+                End If
+
+                'done = True
             Else
                 MsgBox("error, x and y both 0", MsgBoxStyle.Critical)
             End If
@@ -748,6 +772,8 @@ Public Class frmGame
                     doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
                     mediumSinkProgress.x = randXCoord
                     mediumSinkProgress.y = randYCoord
+                    mediumSinkProgress.lastX = randXCoord
+                    mediumSinkProgress.lastY = randYCoord
                     done = True
                     lastMediumMove = 1
                 ElseIf playerBoard(randYCoord, randXCoord) = 0 Then
@@ -759,6 +785,27 @@ Public Class frmGame
             End While
         End If
     End Sub
+
+    Private Sub resetMediumHitProgress()
+        mediumSinkProgress.up = False
+        mediumSinkProgress.down = False
+        mediumSinkProgress.left = False
+        mediumSinkProgress.right = False
+        lastMediumMove = 0
+    End Sub
+
+    ''' <summary>
+    ''' Computer makes a move based on a random number generator
+    ''' </summary>
+
+    Private Sub hardComputerMove()
+        If getRandomNum(4) = 4 Then
+            unfairComputerMove()
+        Else
+            easyComputerMove()
+        End If
+    End Sub
+
 
     ''' <summary>
     ''' Computer makes a move knowing exactly where the playerships are
@@ -920,28 +967,39 @@ Public Class frmGame
             MsgBox("The computer has sunk your carrier!", MessageBoxIcon.Asterisk)
             playerCarrier.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
-            lastMediumMove = 0
+            resetMediumHitProgress()
         ElseIf playerBattleship.length = 0 And playerBattleship.sunk = False Then
             MsgBox("The computer has sunk your battleship!", MessageBoxIcon.Asterisk)
             playerBattleship.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
-            lastMediumMove = 0
+            resetMediumHitProgress()
         ElseIf playerCruiser.length = 0 And playerCruiser.sunk = False Then
             MsgBox("The computer has sunk your cruiser!", MessageBoxIcon.Asterisk)
             playerCruiser.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
-            lastMediumMove = 0
+            resetMediumHitProgress()
         ElseIf playerSubmarine.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your submarine!", MessageBoxIcon.Asterisk)
             playerSubmarine.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
-            lastMediumMove = 0
+            resetMediumHitProgress()
         ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
-            lastMediumMove = 0
+            resetMediumHitProgress()
         End If
     End Sub
 
+    Private Sub btnShuffleShips_Click(sender As Object, e As EventArgs) Handles btnShuffleShips.Click
+        clearPictureBoxes()
+        setShips()
+    End Sub
+
+    Private Sub btnStartGame_Click(sender As Object, e As EventArgs) Handles btnStartGame.Click
+        btnShuffleShips.Visible = False
+        btnStartGame.Visible = False
+        canMakeMove = True
+        lblWhosTurnIsIt.Text = playerName & "'s Turn"
+    End Sub
 End Class

@@ -49,4 +49,8 @@
             Return True
         End If
     End Function
+
+    Private Sub frmStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPlayerName.Text = playerName
+    End Sub
 End Class
