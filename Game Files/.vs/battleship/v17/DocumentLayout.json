@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\mac\\home\\documents\\github\\battleship\\game files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\mac\\home\\documents\\github\\battleship\\game files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
@@ -28,11 +28,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmGame.vb",
               "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGame.vb",
               "RelativeDocumentMoniker": "frmGame.vb",
@@ -58,13 +58,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmGameEnd.vb",
               "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb",
               "RelativeDocumentMoniker": "frmGameEnd.vb",
               "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb",
               "RelativeToolTip": "frmGameEnd.vb",
-              "ViewState": "AQIAAFMAAAAAzczMzAwwwGsAAAAaAAAA",
+              "ViewState": "AQIAAF0AAAAAQJqZmZnJv3YAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T09:07:42.019Z",
               "EditorCaption": ""
