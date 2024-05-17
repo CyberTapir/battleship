@@ -1,30 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\",
+  "WorkspaceRootPath": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\mac\\home\\documents\\github\\battleship\\game files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgame.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmgameend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|c:\\users\\callu\\source\\repos\\battleship\\game files\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|solutionrelative:frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{2E94439F-DF0F-4F43-A8F8-CCA95D565022}|battleship.vbproj|\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmstart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,11 +34,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmGame.vb",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGame.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGame.vb",
               "RelativeDocumentMoniker": "frmGame.vb",
-              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGame.vb",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGame.vb",
               "RelativeToolTip": "frmGame.vb",
-              "ViewState": "AQIAAL4BAAAAAAAAAAAiwOgBAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwEAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T04:30:07.043Z",
               "IsPinned": true,
@@ -54,24 +48,23 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmStart.vb",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmStart.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmStart.vb",
               "RelativeDocumentMoniker": "frmStart.vb",
-              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmStart.vb",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmStart.vb",
               "RelativeToolTip": "frmStart.vb",
               "ViewState": "AQIAAA0AAAAAAAAAAAAuwDIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-12T00:01:47.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T00:01:47.058Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frmGameEnd.vb",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGameEnd.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb",
               "RelativeDocumentMoniker": "frmGameEnd.vb",
-              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGameEnd.vb",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb",
               "RelativeToolTip": "frmGameEnd.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAAAaAAAA",
+              "ViewState": "AQIAAFMAAAAAzczMzAwwwGsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T09:07:42.019Z",
               "EditorCaption": ""
@@ -80,21 +73,19 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "frmGame.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGame.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGame.vb",
               "RelativeDocumentMoniker": "frmGame.vb",
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGame.vb [Design]",
-              "RelativeToolTip": "frmGame.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T04:29:44.777Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-11T04:29:44.777Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "frmGameEnd.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGameEnd.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb",
               "RelativeDocumentMoniker": "frmGameEnd.vb",
-              "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmGameEnd.vb [Design]",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmGameEnd.vb [Design]",
               "RelativeToolTip": "frmGameEnd.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T04:29:42.918Z",
@@ -104,13 +95,11 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "frmStart.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmStart.vb",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\frmStart.vb",
               "RelativeDocumentMoniker": "frmStart.vb",
               "ToolTip": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\frmStart.vb [Design]",
-              "RelativeToolTip": "frmStart.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T04:29:41.56Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-11T04:29:41.56Z"
             }
           ]
         }

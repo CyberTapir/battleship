@@ -35,24 +35,34 @@ Public Class frmGame
     ''' </summary>
     Dim opponentShips As Integer
 
-
-    Dim playerShipLocations() As String
-
+    ''' <summary>
+    ''' Counter for the impossible game level. This will count 1-17
+    ''' </summary>
     Dim impossibleMoveCounter As Integer = 1
 
+    ''' <summary>
+    ''' Last Medium move, hit or miss
+    ''' </summary>
     Dim lastMediumMove As Integer = 0
-    Dim lastMediumMoveX As Integer
-    Dim lastMediumMoveY As Integer
-    Dim lastMediumDirection As Integer
 
+    ''' <summary>
+    ''' Flag to stop the player from making a move when the computer is, or the player is setting their ships.
+    ''' </summary>
     Dim canMakeMove As Boolean = False
 
+    ''' <summary>
+    ''' Create a record for each player ship of type ship
+    ''' </summary>
     Dim playerCarrier As ship
     Dim playerBattleship As ship
     Dim playerCruiser As ship
     Dim playerSubmarine As ship
     Dim playerDestroyer As ship
 
+
+    ''' <summary>
+    ''' Create a record of type ship for each opponent ship
+    ''' </summary>
     Dim opponentCarrier As ship
     Dim opponentBattleship As ship
     Dim opponentCruiser As ship
@@ -60,26 +70,32 @@ Public Class frmGame
     Dim opponentDestroyer As ship
 
     ''' <summary>
-    ''' 5, 4, 3, 3, 2
+    ''' Define record as ship. Properties length (integer to store ship length), and sunk (true or false)
     ''' </summary>
     Public Structure ship
         Dim length As Integer
         Dim sunk As Boolean
     End Structure
 
+    ''' <summary>
+    ''' Create record sinkProgress
+    ''' </summary>
     Public Structure sinkProgress
+        ' X & Y for guessing directions
         Dim x As Integer
         Dim y As Integer
         Dim lastX As Integer
         Dim lastY As Integer
+        ' Directions for checking if progression in direction is a good idea.
         Dim up As Boolean
         Dim down As Boolean
         Dim left As Boolean
         Dim right As Boolean
     End Structure
 
-    Dim mediumCounter As Integer
-
+    ''' <summary>
+    ''' Create a variable of type sinkProgress 
+    ''' </summary>
     Dim mediumSinkProgress As sinkProgress
     Dim hardSinkProgress As sinkProgress
 
@@ -416,7 +432,7 @@ Public Class frmGame
         initialiseControlArray()
         clearPictureBoxes()
 
-        ' set all ship properties to default for both players
+        ' set all ship properties to default for playerShips
         playerCarrier.length = 5
         playerCarrier.sunk = False
         playerBattleship.length = 4
@@ -428,6 +444,7 @@ Public Class frmGame
         playerDestroyer.length = 2
         playerDestroyer.sunk = False
 
+        ' set all ship properties to default for opponentShips
         opponentCarrier.length = 5
         opponentCarrier.sunk = False
         opponentBattleship.length = 4
@@ -439,17 +456,14 @@ Public Class frmGame
         opponentDestroyer.length = 2
         opponentDestroyer.sunk = False
 
+        ' reset record values for medium level guesses
         mediumSinkProgress.up = False
         mediumSinkProgress.down = False
         mediumSinkProgress.left = False
         mediumSinkProgress.right = False
 
-        mediumCounter = 1
-
         ' set the ships on the board
-
         lblWhosTurnIsIt.Text = "Set your ships"
-
         setShips()
 
         ' set the player score to 150
@@ -520,6 +534,7 @@ Public Class frmGame
                 ' Missed the ship
                 opponentBoard(yCoord, xCoord) = 3
 
+                ' Flash the coordinates with purple to indicate guess
                 opponentBoardArray(xCoord, yCoord).BackColor = Color.Indigo
                 delay(500)
                 opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
@@ -529,8 +544,9 @@ Public Class frmGame
                 opponentBoardArray(xCoord, yCoord).BackColor = Color.LightBlue
                 delay(500)
                 opponentBoardArray(xCoord, yCoord).BackColor = Color.Blue
-                playerScore = playerScore - 1
 
+                ' update playerscore
+                playerScore = playerScore - 1
             Else
                 ' hit  a ship. Decrement the right ship
                 If opponentBoard(yCoord, xCoord) = 4 Then
@@ -559,12 +575,15 @@ Public Class frmGame
                 delay(500)
                 opponentBoardArray(xCoord, yCoord).BackColor = Color.Red
 
+                ' update score, and indicator for gameOver
                 opponentShips = opponentShips - 1
                 playerScore = playerScore + 10
+
+                ' Check if either player has sunk a ship
                 checkForSunkShips()
             End If
 
-
+            ' If not gameover, trigger computer turn
             If isGameOver() = 0 Then
                 getComputerLevel()
             End If
@@ -578,6 +597,7 @@ Public Class frmGame
     ''' <returns>X Coordinate as type integer</returns>
     Private Function getXCoords(str As String) As Integer
         Dim result As Integer
+        ' return the integer according to the letter
         Select Case str(6)
             Case "A"
                 result = 1
@@ -629,7 +649,7 @@ Public Class frmGame
     End Function
 
     ''' <summary>
-    ''' Get the set computerlevel and return the correct subroutine.
+    ''' Retrieve the set computerlevel and return the correct subroutine.
     ''' </summary>
     Private Sub getComputerLevel()
         If compMode = 0 Then
@@ -648,8 +668,7 @@ Public Class frmGame
     ''' </summary>
     Private Sub easyComputerMove()
 
-        ' Generate random x and y values
-
+        ' Set Variables
         Dim randXCoord As Integer
         Dim randYCoord As Integer
         Dim done As Boolean = False
@@ -673,34 +692,54 @@ Public Class frmGame
     ''' Computer makes a guess, if its a hit it tries around to find the entire ship
     ''' </summary>
     Private Sub mediumComputerMove()
+        'initialise variables
         Dim randXCoord As Integer
         Dim randYCoord As Integer
         Dim done As Boolean = False
 
         If lastMediumMove = 1 Then
             ' hit. loop around until miss or out of bounds
+
+            ' Start by guessing up
             If mediumSinkProgress.up = False And Not done Then
+
+                ' set x and y
                 randXCoord = mediumSinkProgress.lastX
                 randYCoord = mediumSinkProgress.lastY - 1
+
+                ' if out of bounds, or already guessed this coordinate
                 If randYCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
-                    'randYCoord = 1
+
+                    ' Change direction, go down
                     mediumSinkProgress.up = True
                     randYCoord = mediumSinkProgress.y + 1
                     mediumSinkProgress.lastY = mediumSinkProgress.y + 1
                 End If
+
+                ' if miss, make the move but then change direction
                 If playerBoard(randYCoord, randXCoord) = 0 Then
                     mediumSinkProgress.up = True
                 End If
 
+                ' make the move
                 done = True
             End If
 
+            ' Continue, guessing down
             If mediumSinkProgress.down = False And Not done Then
+
+                ' set x and y
                 randXCoord = mediumSinkProgress.x
                 randYCoord = mediumSinkProgress.lastY + 1
+
+                ' if out of bounds, or already guessed coordinate
                 If randYCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' change direction, go left
                     mediumSinkProgress.down = True
                     randYCoord = mediumSinkProgress.y
+
+                    ' Try left, if not go right
                     If mediumSinkProgress.x - 1 <= 0 Then
                         randXCoord = mediumSinkProgress.x + 1
                         mediumSinkProgress.lastX = randXCoord
@@ -709,35 +748,56 @@ Public Class frmGame
                         mediumSinkProgress.lastX = randXCoord
                     End If
                 End If
+
+                ' if miss, make the move but next move change direction
                 If playerBoard(randYCoord, randXCoord) = 0 Then
                     mediumSinkProgress.down = True
-
                 End If
+
+                ' make the move
                 done = True
             End If
 
+            ' Continue, guessing left
             If mediumSinkProgress.left = False And Not done Then
+
+                ' set x and y
                 randYCoord = mediumSinkProgress.y
                 randXCoord = mediumSinkProgress.lastX - 1
+
+                ' if out of bounds, or already guessed coordinate
                 If randXCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' go right
                     mediumSinkProgress.left = True
                     randXCoord = mediumSinkProgress.x + 1
                     mediumSinkProgress.lastX = randXCoord
                 End If
+
+                ' if miss, make the move but next move change direction
                 If playerBoard(randYCoord, randXCoord) = 0 Then
                     mediumSinkProgress.left = True
                 End If
                 done = True
             End If
 
+            ' Continue, guessing right
             If mediumSinkProgress.right = False And Not done Then
+
+                ' set x and y
                 randYCoord = mediumSinkProgress.y
                 randXCoord = mediumSinkProgress.lastX + 1
+
+                ' if out of bounds, or already guessed coordinate
                 If randXCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' no directions left, make a random guess and reset process
                     randYCoord = getRandomNum(10)
                     randXCoord = getRandomNum(10)
                     resetMediumHitProgress()
                 End If
+
+                ' if miss, make move then reset
                 If playerBoard(randYCoord, randXCoord) = 0 Then
                     mediumSinkProgress.right = True
                     resetMediumHitProgress()
@@ -745,21 +805,23 @@ Public Class frmGame
                 done = True
             End If
 
+            ' make move if x and y are not 0
             If randXCoord <> 0 And randYCoord <> 0 Then
                 doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+
+                ' if hit, set lastY and lastX
                 If playerBoard(randYCoord, randXCoord) = 3 Then
                     mediumSinkProgress.lastY = mediumSinkProgress.y
                     mediumSinkProgress.lastX = mediumSinkProgress.x
+
+                    ' if miss, reset lastX and lastY
                 Else
                     mediumSinkProgress.lastX = randXCoord
                     mediumSinkProgress.lastY = randYCoord
                 End If
-
-                'done = True
-            Else
-                MsgBox("error, x and y both 0", MsgBoxStyle.Critical)
             End If
 
+            ' make a random guess 
         ElseIf lastMediumMove = 0 Then
             While Not done
                 ' Generate random x and y values
@@ -786,6 +848,9 @@ Public Class frmGame
         End If
     End Sub
 
+    ''' <summary>
+    ''' once ship sunk, or no directions left, reset for next ship
+    ''' </summary>
     Private Sub resetMediumHitProgress()
         mediumSinkProgress.up = False
         mediumSinkProgress.down = False
@@ -795,14 +860,13 @@ Public Class frmGame
     End Sub
 
     ''' <summary>
-    ''' Computer makes a move based on a random number generator
+    ''' Computer makes a move based on a random number generator. If 4 then guaranteed hit. otherwise, medium.
     ''' </summary>
-
     Private Sub hardComputerMove()
-        If getRandomNum(4) = 4 Then
+        If getRandomNum(7) = 4 Then
             unfairComputerMove()
         Else
-            easyComputerMove()
+            mediumComputerMove()
         End If
     End Sub
 
@@ -811,10 +875,11 @@ Public Class frmGame
     ''' Computer makes a move knowing exactly where the playerships are
     ''' </summary>
     Private Sub unfairComputerMove()
-
+        ' set variables
         Dim target As Integer
         Dim done As Boolean = False
 
+        ' set target based on how many moves currently taken
         Select Case impossibleMoveCounter
             Case 1 To 5
                 target = 4
@@ -827,6 +892,8 @@ Public Class frmGame
             Case 16 To 17
                 target = 8
         End Select
+
+        ' loop through board to get next coordinate
         For i = 1 To 10
             For j = 1 To 10
                 If playerBoard(i, j) = target And Not done Then
@@ -855,6 +922,7 @@ Public Class frmGame
 
         delay(500)
 
+        ' change turn indicator and cursor
         lblWhosTurnIsIt.Text = "Computer's Turn"
         Cursor.Current = Cursors.No
         canMakeMove = False
@@ -864,7 +932,7 @@ Public Class frmGame
         ' Update the playerBoard and change the backcolor accordingly
 
         If playerBoard(YCoord, XCoord) = 0 Then
-            ' Missed the ship
+            ' Missed the ship. Change the cell colour accordingly
             playerBoard(YCoord, XCoord) = 3
             playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
             delay(500)
@@ -876,6 +944,7 @@ Public Class frmGame
             delay(500)
             playerBoardArray(YCoord, XCoord).BackColor = Color.Blue
         Else
+            ' hit. Decrement the correct ship
             If playerBoard(YCoord, XCoord) = 4 Then
                 playerCarrier.length = playerCarrier.length - 1
             ElseIf playerBoard(YCoord, XCoord) = 5 Then
@@ -888,7 +957,7 @@ Public Class frmGame
                 playerDestroyer.length = playerDestroyer.length - 1
             End If
 
-            ' Hit a ship
+            ' Hit a ship. Change the cell colour accordingly
             playerBoard(YCoord, XCoord) = 2
             playerBoardArray(YCoord, XCoord).BackColor = Color.Indigo
             delay(500)
@@ -899,11 +968,14 @@ Public Class frmGame
             playerBoardArray(YCoord, XCoord).BackColor = Color.LightBlue
             delay(500)
             playerBoardArray(YCoord, XCoord).BackColor = Color.Red
+
+            ' decrement playerShips for gameOver, check for sunk ships and if the game is over.
             playerShips = playerShips - 1
             checkForSunkShips()
             isGameOver()
         End If
 
+        ' Set for player turn
         delay(1000)
         lblWhosTurnIsIt.Text = playerName & "'s Turn"
         Cursor.Current = Cursors.Cross
@@ -942,47 +1014,59 @@ Public Class frmGame
     ''' Check for sunk ships based on record of ship lengths. Update whether it is sunk accordingly
     ''' </summary>
     Private Sub checkForSunkShips()
+
+        ' check player sinking computer ships
         If opponentCarrier.length = 0 And opponentCarrier.sunk = False Then
             MsgBox("You have sunk the computer's carrier!", MessageBoxIcon.Asterisk)
             prgPlayerProgress.Value = prgPlayerProgress.Value + 20
             opponentCarrier.sunk = True
+
         ElseIf opponentBattleship.length = 0 And opponentBattleship.sunk = False Then
             MsgBox("You have sunk the computer's battleship!", MessageBoxIcon.Asterisk)
             opponentBattleship.sunk = True
             prgPlayerProgress.Value = prgPlayerProgress.Value + 20
+
         ElseIf opponentCruiser.length = 0 And opponentCruiser.sunk = False Then
             MsgBox("You have sunk the computer's cruiser!", MessageBoxIcon.Asterisk)
             opponentCruiser.sunk = True
             prgPlayerProgress.Value = prgPlayerProgress.Value + 20
+
         ElseIf opponentSubmarine.length = 0 And opponentSubmarine.sunk = False Then
             MsgBox("You have sunk the computer's submarine!", MessageBoxIcon.Asterisk)
             opponentSubmarine.sunk = True
             prgPlayerProgress.Value = prgPlayerProgress.Value + 20
+
         ElseIf opponentDestroyer.length = 0 And opponentDestroyer.sunk = False Then
             MsgBox("You have sunk the computer's destroyer!", MessageBoxIcon.Asterisk)
             opponentDestroyer.sunk = True
             prgPlayerProgress.Value = prgPlayerProgress.Value + 20
         End If
+
+        ' check computer sinking player ships
         If playerCarrier.length = 0 And playerCarrier.sunk = False Then
             MsgBox("The computer has sunk your carrier!", MessageBoxIcon.Asterisk)
             playerCarrier.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+
         ElseIf playerBattleship.length = 0 And playerBattleship.sunk = False Then
             MsgBox("The computer has sunk your battleship!", MessageBoxIcon.Asterisk)
             playerBattleship.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+
         ElseIf playerCruiser.length = 0 And playerCruiser.sunk = False Then
             MsgBox("The computer has sunk your cruiser!", MessageBoxIcon.Asterisk)
             playerCruiser.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+
         ElseIf playerSubmarine.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your submarine!", MessageBoxIcon.Asterisk)
             playerSubmarine.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+
         ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
@@ -991,14 +1075,26 @@ Public Class frmGame
         End If
     End Sub
 
+    ''' <summary>
+    ''' Let the player choose where they wish their ships to be.
+    ''' </summary>
+    ''' <param name="sender">Button</param>
+    ''' <param name="e">On button event</param>
     Private Sub btnShuffleShips_Click(sender As Object, e As EventArgs) Handles btnShuffleShips.Click
         clearPictureBoxes()
         setShips()
     End Sub
 
+    ''' <summary>
+    ''' Once the player is satisfied with ship placement, set the ships and start the game
+    ''' </summary>
+    ''' <param name="sender">Button</param>
+    ''' <param name="e">On button event</param>
     Private Sub btnStartGame_Click(sender As Object, e As EventArgs) Handles btnStartGame.Click
+        ' hide buttons
         btnShuffleShips.Visible = False
         btnStartGame.Visible = False
+        ' start game
         canMakeMove = True
         lblWhosTurnIsIt.Text = playerName & "'s Turn"
     End Sub
