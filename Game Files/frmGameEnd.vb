@@ -141,6 +141,8 @@ Public Class frmGameEnd
                 Return "./hsHard.txt"
             Case 3
                 Return "./hsUnfair.txt"
+            Case Else
+                Return ""
         End Select
     End Function
 End Class

@@ -57,9 +57,39 @@ battleship
  OpponentShips stores the total number of ship sections that have not been hit. When this reaches 0, the game is over.
  </summary>
 </member>
+<member name="F:battleship.frmGame.impossibleMoveCounter">
+ <summary>
+ Counter for the impossible game level and hard game level. Impossible counts 1-17, hard counts 1 to 50
+ </summary>
+</member>
+<member name="F:battleship.frmGame.canMakeMove">
+ <summary>
+ Flag to stop the player from making a move when the computer is, or the player is setting their ships.
+ </summary>
+</member>
+<member name="F:battleship.frmGame.playerCarrier">
+ <summary>
+ Create a record for each player ship of type ship
+ </summary>
+</member>
+<member name="F:battleship.frmGame.opponentCarrier">
+ <summary>
+ Create a record of type ship for each opponent ship
+ </summary>
+</member>
 <member name="T:battleship.frmGame.ship">
  <summary>
- 5, 4, 3, 3, 2
+ Define record as ship. Properties length (integer to store ship length), and sunk (true or false)
+ </summary>
+</member>
+<member name="T:battleship.frmGame.sinkProgress">
+ <summary>
+ Create record sinkProgress
+ </summary>
+</member>
+<member name="F:battleship.frmGame.mediumSinkProgress">
+ <summary>
+ Create a variable of type sinkProgress 
  </summary>
 </member>
 <member name="M:battleship.frmGame.frmGame_Load(System.Object,System.EventArgs)">
@@ -136,7 +166,7 @@ battleship
 </member>
 <member name="M:battleship.frmGame.getComputerLevel">
  <summary>
- Get the set computerlevel and return the correct subroutine.
+ Retrieve the set computerlevel and return the correct subroutine.
  </summary>
 </member>
 <member name="M:battleship.frmGame.easyComputerMove">
@@ -149,9 +179,14 @@ battleship
  Computer makes a guess, if its a hit it tries around to find the entire ship
  </summary>
 </member>
+<member name="M:battleship.frmGame.resetMediumHitProgress">
+ <summary>
+ once ship sunk, or no directions left, reset for next ship
+ </summary>
+</member>
 <member name="M:battleship.frmGame.hardComputerMove">
  <summary>
- Computer makes a move based on a random number generator
+ Computer makes more educated guesses 
  </summary>
 </member>
 <member name="M:battleship.frmGame.unfairComputerMove">
@@ -190,6 +225,61 @@ battleship
  <summary>
  Check for sunk ships based on record of ship lengths. Update whether it is sunk accordingly
  </summary>
+</member>
+<member name="M:battleship.frmGame.btnShuffleShips_Click(System.Object,System.EventArgs)">
+ <summary>
+ Let the player choose where they wish their ships to be.
+ </summary>
+ <param name="sender">Button</param>
+ <param name="e">On button event</param>
+</member>
+<member name="M:battleship.frmGame.btnStartGame_Click(System.Object,System.EventArgs)">
+ <summary>
+ Once the player is satisfied with ship placement, set the ships and start the game
+ </summary>
+ <param name="sender">Button</param>
+ <param name="e">On button event</param>
+</member>
+<member name="M:battleship.frmGameEnd.frmGameEnd_Load(System.Object,System.EventArgs)">
+ <summary>
+ On form load mainline. Display scores, and update the scores in the file
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:battleship.frmGameEnd.recHighScore">
+ <summary>
+ Record for storing high scores. Includes name and score field
+ </summary>
+</member>
+<member name="M:battleship.frmGameEnd.BubbleSort">
+ <summary>
+ Bubble sort items in arrHighScores by score descending.
+ </summary>
+</member>
+<member name="M:battleship.frmGameEnd.Swap(battleship.frmGameEnd.recHighScore@,battleship.frmGameEnd.recHighScore@)">
+ <summary>
+ Swap recHighScore values
+ </summary>
+ <param name="a">recHighScore Value</param>
+ <param name="b">recHighScore Value</param>
+</member>
+<member name="M:battleship.frmGameEnd.readHighScores">
+ <summary>
+ Read high scores and import them to arrHighScores
+ </summary>
+</member>
+<member name="M:battleship.frmGameEnd.writeScore">
+ <summary>
+ write the updated new scores to the file.
+ </summary>
+</member>
+<member name="M:battleship.frmGameEnd.btnPlayAgain_Click(System.Object,System.EventArgs)">
+ <summary>
+ If the player clicks play again, show the starting form
+ </summary>
+ <param name="sender">Button</param>
+ <param name="e">On button event</param>
 </member>
 <member name="M:battleship.frmStart.btnStart_Click(System.Object,System.EventArgs)">
  <summary>

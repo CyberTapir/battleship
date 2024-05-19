@@ -36,14 +36,16 @@ Public Class frmGame
     Dim opponentShips As Integer
 
     ''' <summary>
-    ''' Counter for the impossible game level. This will count 1-17
+    ''' Counter for the impossible game level and hard game level. Impossible counts 1-17, hard counts 1 to 50
     ''' </summary>
     Dim impossibleMoveCounter As Integer = 1
+    Dim hardMoveCounter As Integer = 0
 
     ''' <summary>
-    ''' Last Medium move, hit or miss
+    ''' Last Medium and hard move, hit or miss
     ''' </summary>
     Dim lastMediumMove As Integer = 0
+    Dim lastHardMove As Integer
 
     ''' <summary>
     ''' Flag to stop the player from making a move when the computer is, or the player is setting their ships.
@@ -858,18 +860,217 @@ Public Class frmGame
         mediumSinkProgress.right = False
         lastMediumMove = 0
     End Sub
-
-    ''' <summary>
-    ''' Computer makes a move based on a random number generator. If 4 then guaranteed hit. otherwise, medium.
-    ''' </summary>
-    Private Sub hardComputerMove()
-        If getRandomNum(7) = 4 Then
-            unfairComputerMove()
-        Else
-            mediumComputerMove()
-        End If
+    Private Sub resetHardHitProgress()
+        hardSinkProgress.up = False
+        hardSinkProgress.down = False
+        hardSinkProgress.left = False
+        hardSinkProgress.right = False
+        lastHardMove = 0
     End Sub
 
+    ''' <summary>
+    ''' Computer makes more educated guesses 
+    ''' </summary>
+    Private Sub hardComputerMove()
+        'initialise variables
+        Dim randXCoord As Integer
+        Dim randYCoord As Integer
+        Dim adjoiningCount As Integer
+        Dim hardGuess As Boolean = False
+        Dim hardGuessTimes As Integer = 0
+        Dim done As Boolean = False
+
+        If lastHardMove = 1 Then
+            ' hit. loop around until miss or out of bounds
+
+            ' Start by guessing up
+            If hardSinkProgress.up = False And Not done Then
+
+                ' set x and y
+                randXCoord = hardSinkProgress.lastX
+                randYCoord = hardSinkProgress.lastY - 1
+
+                ' if out of bounds, or already guessed this coordinate
+                If randYCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' Change direction, go down
+                    hardSinkProgress.up = True
+                    randYCoord = hardSinkProgress.y + 1
+                    hardSinkProgress.lastY = hardSinkProgress.y + 1
+                End If
+
+                ' if miss, make the move but then change direction
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    hardSinkProgress.up = True
+                End If
+
+                ' make the move
+                done = True
+            End If
+
+            ' Continue, guessing down
+            If hardSinkProgress.down = False And Not done Then
+
+                ' set x and y
+                randXCoord = hardSinkProgress.x
+                randYCoord = hardSinkProgress.lastY + 1
+
+                ' if out of bounds, or already guessed coordinate
+                If randYCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' change direction, go left
+                    hardSinkProgress.down = True
+                    randYCoord = hardSinkProgress.y
+
+                    ' Try left, if not go right
+                    If hardSinkProgress.x - 1 <= 0 Then
+                        randXCoord = hardSinkProgress.x + 1
+                        hardSinkProgress.lastX = randXCoord
+                    Else
+                        randXCoord = hardSinkProgress.x - 1
+                        hardSinkProgress.lastX = randXCoord
+                    End If
+                End If
+
+                ' if miss, make the move but next move change direction
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    hardSinkProgress.down = True
+                End If
+
+                ' make the move
+                done = True
+            End If
+
+            ' Continue, guessing left
+            If hardSinkProgress.left = False And Not done Then
+
+                ' set x and y
+                randYCoord = hardSinkProgress.y
+                randXCoord = hardSinkProgress.lastX - 1
+
+                ' if out of bounds, or already guessed coordinate
+                If randXCoord = 0 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' go right
+                    hardSinkProgress.left = True
+                    randXCoord = hardSinkProgress.x + 1
+                    hardSinkProgress.lastX = randXCoord
+                End If
+
+                ' if miss, make the move but next move change direction
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    hardSinkProgress.left = True
+                End If
+                done = True
+            End If
+
+            ' Continue, guessing right
+            If hardSinkProgress.right = False And Not done Then
+
+                ' set x and y
+                randYCoord = hardSinkProgress.y
+                randXCoord = hardSinkProgress.lastX + 1
+
+                ' if out of bounds, or already guessed coordinate
+                If randXCoord = 11 Or playerBoard(randYCoord, randXCoord) = 2 Or playerBoard(randYCoord, randXCoord) = 3 Then
+
+                    ' no directions left, make a random guess and reset process
+                    randYCoord = getRandomNum(10)
+                    randXCoord = getRandomNum(10)
+                    resetHardHitProgress()
+                End If
+
+                ' if miss, make move then reset
+                If playerBoard(randYCoord, randXCoord) = 0 Then
+                    hardSinkProgress.right = True
+                    resetHardHitProgress()
+                End If
+                done = True
+            End If
+
+            ' make move if x and y are not 0
+            If randXCoord <> 0 And randYCoord <> 0 Then
+                doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+
+                ' if hit, set lastY and lastX
+                If playerBoard(randYCoord, randXCoord) = 3 Then
+                    hardSinkProgress.lastY = hardSinkProgress.y
+                    hardSinkProgress.lastX = hardSinkProgress.x
+
+                    ' if miss, reset lastX and lastY
+                Else
+                    hardSinkProgress.lastX = randXCoord
+                    hardSinkProgress.lastY = randYCoord
+                End If
+            End If
+
+            ' make a random guess 
+        ElseIf lastHardMove = 0 Then
+            While Not done
+
+                While Not hardGuess And hardGuessTimes < 4 And hardMoveCounter < 50
+
+                    ' Generate random x and y values
+                    randXCoord = getRandomNum(10)
+                    randYCoord = getRandomNum(10)
+
+                    ' check above
+                    If randYCoord >= 2 And randYCoord <= 9 Then
+                        If playerBoard(randYCoord - 1, randXCoord) = 3 Then
+                            adjoiningCount = adjoiningCount + 1
+                        End If
+                        If playerBoard(randYCoord + 1, randXCoord) = 3 Then
+                            adjoiningCount = adjoiningCount + 1
+                        End If
+                    End If
+
+                    If randXCoord >= 2 And randXCoord <= 9 Then
+                        If playerBoard(randYCoord, randXCoord - 1) = 3 Then
+                            adjoiningCount = adjoiningCount + 1
+                        End If
+                        If playerBoard(randYCoord, randXCoord + 1) = 3 Then
+                            adjoiningCount = adjoiningCount + 1
+                        End If
+                    End If
+
+                    If adjoiningCount = 0 Then
+                        hardGuess = True
+                    End If
+
+                    If Not hardGuess And hardGuessTimes = 3 Then
+                        hardGuess = True
+                    End If
+
+                    hardGuessTimes = hardGuessTimes + 1
+
+                End While
+
+                If hardMoveCounter >= 50 Then
+                    randXCoord = getRandomNum(10)
+                    randYCoord = getRandomNum(10)
+                End If
+
+
+                ' Check if the move is valid
+                If playerBoard(randYCoord, randXCoord) = 4 Or playerBoard(randYCoord, randXCoord) = 5 Or playerBoard(randYCoord, randXCoord) = 6 Or playerBoard(randYCoord, randXCoord) = 7 Or playerBoard(randYCoord, randXCoord) = 8 Then
+                    ' Make the move
+                    doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                    hardSinkProgress.x = randXCoord
+                    hardSinkProgress.y = randYCoord
+                    hardSinkProgress.lastX = randXCoord
+                    hardSinkProgress.lastY = randYCoord
+                    done = True
+                    lastHardMove = 1
+                ElseIf playerBoard(randYCoord, randXCoord) = 0 Then
+                    ' Make the move
+                    doComputerMove(randXCoord, randYCoord, GetPlayerBoardArray())
+                    done = True
+                    lastHardMove = 0
+                End If
+            End While
+        End If
+        hardMoveCounter = hardMoveCounter + 1
+    End Sub
 
     ''' <summary>
     ''' Computer makes a move knowing exactly where the playerships are
@@ -1048,30 +1249,35 @@ Public Class frmGame
             playerCarrier.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+            resetHardHitProgress()
 
         ElseIf playerBattleship.length = 0 And playerBattleship.sunk = False Then
             MsgBox("The computer has sunk your battleship!", MessageBoxIcon.Asterisk)
             playerBattleship.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+            resetHardHitProgress()
 
         ElseIf playerCruiser.length = 0 And playerCruiser.sunk = False Then
             MsgBox("The computer has sunk your cruiser!", MessageBoxIcon.Asterisk)
             playerCruiser.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+            resetHardHitProgress()
 
         ElseIf playerSubmarine.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your submarine!", MessageBoxIcon.Asterisk)
             playerSubmarine.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+            resetHardHitProgress()
 
         ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
             resetMediumHitProgress()
+            resetHardHitProgress()
         End If
     End Sub
 
