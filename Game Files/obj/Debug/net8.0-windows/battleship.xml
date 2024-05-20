@@ -62,6 +62,11 @@ battleship
  Counter for the impossible game level and hard game level. Impossible counts 1-17, hard counts 1 to 50
  </summary>
 </member>
+<member name="F:battleship.frmGame.lastMediumMove">
+ <summary>
+ Last Medium and hard move, hit or miss
+ </summary>
+</member>
 <member name="F:battleship.frmGame.canMakeMove">
  <summary>
  Flag to stop the player from making a move when the computer is, or the player is setting their ships.
