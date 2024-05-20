@@ -82,7 +82,7 @@ Public Class frmGameEnd
         ' read score into array
         For i = 11 to 20
             FileSystem.Input(1, temp)
-            arrHighScores(i - 11).score = CInt(temp)
+            arrHighScores(i - 10).score = CInt(temp)
         Next i
 
         ' close the file

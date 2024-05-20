@@ -1272,7 +1272,7 @@ Public Class frmGame
             resetMediumHitProgress()
             resetHardHitProgress()
 
-        ElseIf playerDestroyer.length = 0 And playerSubmarine.sunk = False Then
+        ElseIf playerDestroyer.length = 0 And playerDestroyer.sunk = False Then
             MsgBox("The computer has sunk your destroyer!", MessageBoxIcon.Asterisk)
             playerDestroyer.sunk = True
             prgOpponentProgress.Value = prgOpponentProgress.Value + 20
