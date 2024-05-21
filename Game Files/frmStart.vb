@@ -53,4 +53,16 @@
     Private Sub frmStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPlayerName.Text = playerName
     End Sub
+
+    Private Sub btnRules_Click(sender As Object, e As EventArgs) Handles btnRules.Click
+        openTutorial()
+    End Sub
+
+    Private Sub openTutorial()
+        Dim openPowerpoint As New Process
+        openPowerpoint.StartInfo.UseShellExecute = True
+        openPowerpoint.StartInfo.WorkingDirectory = Application.StartupPath
+        openPowerpoint.StartInfo.FileName = "Battleship Tutorial.ppsx"
+        openPowerpoint.Start()
+    End Sub
 End Class

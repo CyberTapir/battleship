@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\callu\\.nuget\\packages\\": {}
+    "C:\\Users\\callumbennett\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\battleship.vbproj",
       "projectName": "battleship",
-      "projectPath": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\battleship.vbproj",
-      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\callu\\source\\repos\\battleship\\Game Files\\obj\\",
+      "projectPath": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\battleship.vbproj",
+      "packagesPath": "C:\\Users\\callumbennett\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\Documents\\GitHub\\battleship\\Game Files\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\callumbennett\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
