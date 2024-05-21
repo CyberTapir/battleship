@@ -80,7 +80,7 @@ Public Class frmGame
     End Structure
 
     ''' <summary>
-    ''' Create record sinkProgress
+    ''' Create record sinkProgress. Include fields for x and y coordinates, last x and y coordinates, and directions for checking if progression in direction is possible.
     ''' </summary>
     Public Structure sinkProgress
         ' X & Y for guessing directions
@@ -96,7 +96,7 @@ Public Class frmGame
     End Structure
 
     ''' <summary>
-    ''' Create a variable of type sinkProgress 
+    ''' Create a variable of type sinkProgress
     ''' </summary>
     Dim mediumSinkProgress As sinkProgress
     Dim hardSinkProgress As sinkProgress
@@ -823,7 +823,7 @@ Public Class frmGame
                 End If
             End If
 
-            ' make a random guess 
+            ' make a random guess
         ElseIf lastMediumMove = 0 Then
             While Not done
                 ' Generate random x and y values
@@ -869,7 +869,7 @@ Public Class frmGame
     End Sub
 
     ''' <summary>
-    ''' Computer makes more educated guesses 
+    ''' Computer makes more educated guesses
     ''' </summary>
     Private Sub hardComputerMove()
         'initialise variables
@@ -1004,7 +1004,7 @@ Public Class frmGame
                 End If
             End If
 
-            ' make a random guess 
+            ' make a random guess
         ElseIf lastHardMove = 0 Then
             While Not done
 

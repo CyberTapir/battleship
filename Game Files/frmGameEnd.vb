@@ -2,8 +2,10 @@
 
 Public Class frmGameEnd
 
-    ' Set variables
-    Dim nextInt As Integer = 1
+    ''' <summary>
+    ''' Array of high scores. 11th element is the current player's score
+    ''' </summary>
+    ''' <remarks>0 is not used</remarks>
     Dim arrHighScores(11) As recHighScore
 
     ''' <summary>
@@ -12,12 +14,23 @@ Public Class frmGameEnd
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub frmGameEnd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Display the player's score
         lblScore.Text = "Score: " & playerScore
+
+        ' Read the high scores from the file depending on computer difficulty
         readHighScores()
+
+        ' Set 11th element of the array to the player's name and score
         arrHighScores(11).name = playerName
         arrHighScores(11).score = playerScore
+
+        ' Sort the high scores
         BubbleSort()
+
+        ' display the high scores in the list box
         displayScores()
+
+        ' Write the high scores to the file
         writeScore()
     End Sub
 

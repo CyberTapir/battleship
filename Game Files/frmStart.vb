@@ -50,14 +50,27 @@
         End If
     End Function
 
+    ''' <summary>
+    ''' When the form is loaded, set the text box to the player's name
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub frmStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPlayerName.Text = playerName
     End Sub
 
+    ''' <summary>
+    ''' When the tutorial button is pressed, launch the tutorial
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btnRules_Click(sender As Object, e As EventArgs) Handles btnRules.Click
         openTutorial()
     End Sub
 
+    ''' <summary>
+    ''' Open the tutorial powerpoint show
+    ''' </summary>
     Private Sub openTutorial()
         Dim openPowerpoint As New Process
         openPowerpoint.StartInfo.UseShellExecute = True
