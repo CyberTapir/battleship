@@ -6,7 +6,10 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        start()
+    End Sub
 
+    Private Sub start()
         Dim flag As Boolean = False
 
         playerName = txtPlayerName.Text
@@ -34,7 +37,6 @@
         ElseIf verifyName(playerName) = False Then
             MsgBox("Please try a new name")
         End If
-
     End Sub
 
     ''' <summary>

@@ -129,11 +129,19 @@ Public Class frmGameEnd
     ''' <param name="sender">Button</param>
     ''' <param name="e">On button event</param>
     Private Sub btnPlayAgain_Click(sender As Object, e As EventArgs) Handles btnPlayAgain.Click
+        playAgain()
+    End Sub
+
+    Private Sub playAgain()
         frmStart.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        closeForm()
+    End Sub
+
+    Private Sub closeForm()
         Me.Close()
     End Sub
 

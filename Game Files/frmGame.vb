@@ -1287,6 +1287,9 @@ Public Class frmGame
     ''' <param name="sender">Button</param>
     ''' <param name="e">On button event</param>
     Private Sub btnShuffleShips_Click(sender As Object, e As EventArgs) Handles btnShuffleShips.Click
+        shuffleShips()
+    End Sub
+    Private Sub shuffleShips()
         clearPictureBoxes()
         setShips()
     End Sub
@@ -1297,6 +1300,9 @@ Public Class frmGame
     ''' <param name="sender">Button</param>
     ''' <param name="e">On button event</param>
     Private Sub btnStartGame_Click(sender As Object, e As EventArgs) Handles btnStartGame.Click
+        startGame()
+    End Sub
+    Private Sub startGame()
         ' hide buttons
         btnShuffleShips.Visible = False
         btnStartGame.Visible = False
