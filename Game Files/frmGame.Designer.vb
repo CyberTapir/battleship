@@ -2278,11 +2278,11 @@ Partial Class frmGame
         ' 
         lblPlayerProgress.AutoSize = True
         lblPlayerProgress.BackColor = Color.Transparent
-        lblPlayerProgress.Font = New Font("Arial Rounded MT Bold", 9F)
+        lblPlayerProgress.Font = New Font("Microsoft Sans Serif", 9F)
         lblPlayerProgress.ForeColor = Color.White
         lblPlayerProgress.Location = New Point(365, 506)
         lblPlayerProgress.Name = "lblPlayerProgress"
-        lblPlayerProgress.Size = New Size(99, 14)
+        lblPlayerProgress.Size = New Size(93, 15)
         lblPlayerProgress.TabIndex = 201
         lblPlayerProgress.Text = "Progress to Win"
         ' 
@@ -2290,11 +2290,11 @@ Partial Class frmGame
         ' 
         lblPlayerBoard.AutoSize = True
         lblPlayerBoard.BackColor = Color.Transparent
-        lblPlayerBoard.Font = New Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblPlayerBoard.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblPlayerBoard.ForeColor = Color.White
         lblPlayerBoard.Location = New Point(211, 81)
         lblPlayerBoard.Name = "lblPlayerBoard"
-        lblPlayerBoard.Size = New Size(147, 32)
+        lblPlayerBoard.Size = New Size(139, 31)
         lblPlayerBoard.TabIndex = 202
         lblPlayerBoard.Text = "Your Fleet"
         ' 
@@ -2302,11 +2302,11 @@ Partial Class frmGame
         ' 
         lblOpponentBoard.AutoSize = True
         lblOpponentBoard.BackColor = Color.Transparent
-        lblOpponentBoard.Font = New Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblOpponentBoard.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblOpponentBoard.ForeColor = Color.White
         lblOpponentBoard.Location = New Point(606, 84)
         lblOpponentBoard.Name = "lblOpponentBoard"
-        lblOpponentBoard.Size = New Size(217, 32)
+        lblOpponentBoard.Size = New Size(201, 31)
         lblOpponentBoard.TabIndex = 203
         lblOpponentBoard.Text = "Computer Fleet"
         ' 
@@ -2322,11 +2322,11 @@ Partial Class frmGame
         lblWhosTurnIsIt.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblWhosTurnIsIt.AutoSize = True
         lblWhosTurnIsIt.BackColor = Color.Transparent
-        lblWhosTurnIsIt.Font = New Font("Arial Rounded MT Bold", 39F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblWhosTurnIsIt.Font = New Font("Microsoft Sans Serif", 39F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblWhosTurnIsIt.ForeColor = Color.White
         lblWhosTurnIsIt.Location = New Point(321, 14)
         lblWhosTurnIsIt.Name = "lblWhosTurnIsIt"
-        lblWhosTurnIsIt.Size = New Size(358, 60)
+        lblWhosTurnIsIt.Size = New Size(329, 59)
         lblWhosTurnIsIt.TabIndex = 205
         lblWhosTurnIsIt.Text = "Player's Turn"
         lblWhosTurnIsIt.TextAlign = ContentAlignment.MiddleCenter
@@ -2335,12 +2335,12 @@ Partial Class frmGame
         ' 
         lbl1O.AutoSize = True
         lbl1O.BackColor = Color.Transparent
-        lbl1O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl1O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl1O.ForeColor = Color.Transparent
         lbl1O.Location = New Point(545, 127)
         lbl1O.Margin = New Padding(2, 0, 2, 0)
         lbl1O.Name = "lbl1O"
-        lbl1O.Size = New Size(17, 17)
+        lbl1O.Size = New Size(16, 18)
         lbl1O.TabIndex = 206
         lbl1O.Text = "1"
         ' 
@@ -2348,12 +2348,12 @@ Partial Class frmGame
         ' 
         lbl2O.AutoSize = True
         lbl2O.BackColor = Color.Transparent
-        lbl2O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl2O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl2O.ForeColor = Color.Transparent
         lbl2O.Location = New Point(582, 127)
         lbl2O.Margin = New Padding(2, 0, 2, 0)
         lbl2O.Name = "lbl2O"
-        lbl2O.Size = New Size(17, 17)
+        lbl2O.Size = New Size(16, 18)
         lbl2O.TabIndex = 207
         lbl2O.Text = "2"
         ' 
@@ -2361,12 +2361,12 @@ Partial Class frmGame
         ' 
         lbl3O.AutoSize = True
         lbl3O.BackColor = Color.Transparent
-        lbl3O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl3O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl3O.ForeColor = Color.Transparent
         lbl3O.Location = New Point(618, 127)
         lbl3O.Margin = New Padding(2, 0, 2, 0)
         lbl3O.Name = "lbl3O"
-        lbl3O.Size = New Size(17, 17)
+        lbl3O.Size = New Size(16, 18)
         lbl3O.TabIndex = 208
         lbl3O.Text = "3"
         ' 
@@ -2374,12 +2374,12 @@ Partial Class frmGame
         ' 
         lbl4O.AutoSize = True
         lbl4O.BackColor = Color.Transparent
-        lbl4O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl4O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl4O.ForeColor = Color.Transparent
         lbl4O.Location = New Point(654, 127)
         lbl4O.Margin = New Padding(2, 0, 2, 0)
         lbl4O.Name = "lbl4O"
-        lbl4O.Size = New Size(17, 17)
+        lbl4O.Size = New Size(16, 18)
         lbl4O.TabIndex = 209
         lbl4O.Text = "4"
         ' 
@@ -2387,12 +2387,12 @@ Partial Class frmGame
         ' 
         lbl5O.AutoSize = True
         lbl5O.BackColor = Color.Transparent
-        lbl5O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl5O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl5O.ForeColor = Color.Transparent
         lbl5O.Location = New Point(690, 127)
         lbl5O.Margin = New Padding(2, 0, 2, 0)
         lbl5O.Name = "lbl5O"
-        lbl5O.Size = New Size(17, 17)
+        lbl5O.Size = New Size(16, 18)
         lbl5O.TabIndex = 210
         lbl5O.Text = "5"
         ' 
@@ -2400,12 +2400,12 @@ Partial Class frmGame
         ' 
         lbl6O.AutoSize = True
         lbl6O.BackColor = Color.Transparent
-        lbl6O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl6O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl6O.ForeColor = Color.Transparent
         lbl6O.Location = New Point(725, 127)
         lbl6O.Margin = New Padding(2, 0, 2, 0)
         lbl6O.Name = "lbl6O"
-        lbl6O.Size = New Size(17, 17)
+        lbl6O.Size = New Size(16, 18)
         lbl6O.TabIndex = 211
         lbl6O.Text = "6"
         ' 
@@ -2413,12 +2413,12 @@ Partial Class frmGame
         ' 
         lbl7O.AutoSize = True
         lbl7O.BackColor = Color.Transparent
-        lbl7O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl7O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl7O.ForeColor = Color.Transparent
         lbl7O.Location = New Point(761, 127)
         lbl7O.Margin = New Padding(2, 0, 2, 0)
         lbl7O.Name = "lbl7O"
-        lbl7O.Size = New Size(17, 17)
+        lbl7O.Size = New Size(16, 18)
         lbl7O.TabIndex = 212
         lbl7O.Text = "7"
         ' 
@@ -2426,12 +2426,12 @@ Partial Class frmGame
         ' 
         lbl8O.AutoSize = True
         lbl8O.BackColor = Color.Transparent
-        lbl8O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl8O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl8O.ForeColor = Color.Transparent
         lbl8O.Location = New Point(797, 127)
         lbl8O.Margin = New Padding(2, 0, 2, 0)
         lbl8O.Name = "lbl8O"
-        lbl8O.Size = New Size(17, 17)
+        lbl8O.Size = New Size(16, 18)
         lbl8O.TabIndex = 213
         lbl8O.Text = "8"
         ' 
@@ -2439,12 +2439,12 @@ Partial Class frmGame
         ' 
         lbl9O.AutoSize = True
         lbl9O.BackColor = Color.Transparent
-        lbl9O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl9O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl9O.ForeColor = Color.Transparent
         lbl9O.Location = New Point(833, 127)
         lbl9O.Margin = New Padding(2, 0, 2, 0)
         lbl9O.Name = "lbl9O"
-        lbl9O.Size = New Size(17, 17)
+        lbl9O.Size = New Size(16, 18)
         lbl9O.TabIndex = 214
         lbl9O.Text = "9"
         ' 
@@ -2452,12 +2452,12 @@ Partial Class frmGame
         ' 
         lbl10O.AutoSize = True
         lbl10O.BackColor = Color.Transparent
-        lbl10O.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl10O.Font = New Font("Microsoft Sans Serif", 11F)
         lbl10O.ForeColor = Color.Transparent
         lbl10O.Location = New Point(864, 127)
         lbl10O.Margin = New Padding(2, 0, 2, 0)
         lbl10O.Name = "lbl10O"
-        lbl10O.Size = New Size(26, 17)
+        lbl10O.Size = New Size(24, 18)
         lbl10O.TabIndex = 215
         lbl10O.Text = "10"
         ' 
@@ -2465,12 +2465,12 @@ Partial Class frmGame
         ' 
         lbl10P.AutoSize = True
         lbl10P.BackColor = Color.Transparent
-        lbl10P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl10P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl10P.ForeColor = Color.White
         lbl10P.Location = New Point(440, 124)
         lbl10P.Margin = New Padding(2, 0, 2, 0)
         lbl10P.Name = "lbl10P"
-        lbl10P.Size = New Size(26, 17)
+        lbl10P.Size = New Size(24, 18)
         lbl10P.TabIndex = 225
         lbl10P.Text = "10"
         ' 
@@ -2478,12 +2478,12 @@ Partial Class frmGame
         ' 
         lbl9P.AutoSize = True
         lbl9P.BackColor = Color.Transparent
-        lbl9P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl9P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl9P.ForeColor = Color.White
         lbl9P.Location = New Point(409, 124)
         lbl9P.Margin = New Padding(2, 0, 2, 0)
         lbl9P.Name = "lbl9P"
-        lbl9P.Size = New Size(17, 17)
+        lbl9P.Size = New Size(16, 18)
         lbl9P.TabIndex = 224
         lbl9P.Text = "9"
         ' 
@@ -2491,12 +2491,12 @@ Partial Class frmGame
         ' 
         lbl8P.AutoSize = True
         lbl8P.BackColor = Color.Transparent
-        lbl8P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl8P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl8P.ForeColor = Color.White
         lbl8P.Location = New Point(374, 124)
         lbl8P.Margin = New Padding(2, 0, 2, 0)
         lbl8P.Name = "lbl8P"
-        lbl8P.Size = New Size(17, 17)
+        lbl8P.Size = New Size(16, 18)
         lbl8P.TabIndex = 223
         lbl8P.Text = "8"
         ' 
@@ -2504,12 +2504,12 @@ Partial Class frmGame
         ' 
         lbl7P.AutoSize = True
         lbl7P.BackColor = Color.Transparent
-        lbl7P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl7P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl7P.ForeColor = Color.White
         lbl7P.Location = New Point(338, 124)
         lbl7P.Margin = New Padding(2, 0, 2, 0)
         lbl7P.Name = "lbl7P"
-        lbl7P.Size = New Size(17, 17)
+        lbl7P.Size = New Size(16, 18)
         lbl7P.TabIndex = 222
         lbl7P.Text = "7"
         ' 
@@ -2517,12 +2517,12 @@ Partial Class frmGame
         ' 
         lbl6P.AutoSize = True
         lbl6P.BackColor = Color.Transparent
-        lbl6P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl6P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl6P.ForeColor = Color.White
         lbl6P.Location = New Point(302, 124)
         lbl6P.Margin = New Padding(2, 0, 2, 0)
         lbl6P.Name = "lbl6P"
-        lbl6P.Size = New Size(17, 17)
+        lbl6P.Size = New Size(16, 18)
         lbl6P.TabIndex = 221
         lbl6P.Text = "6"
         ' 
@@ -2530,12 +2530,12 @@ Partial Class frmGame
         ' 
         lbl5P.AutoSize = True
         lbl5P.BackColor = Color.Transparent
-        lbl5P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl5P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl5P.ForeColor = Color.White
         lbl5P.Location = New Point(265, 124)
         lbl5P.Margin = New Padding(2, 0, 2, 0)
         lbl5P.Name = "lbl5P"
-        lbl5P.Size = New Size(17, 17)
+        lbl5P.Size = New Size(16, 18)
         lbl5P.TabIndex = 220
         lbl5P.Text = "5"
         ' 
@@ -2543,12 +2543,12 @@ Partial Class frmGame
         ' 
         lbl4P.AutoSize = True
         lbl4P.BackColor = Color.Transparent
-        lbl4P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl4P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl4P.ForeColor = Color.White
         lbl4P.Location = New Point(229, 124)
         lbl4P.Margin = New Padding(2, 0, 2, 0)
         lbl4P.Name = "lbl4P"
-        lbl4P.Size = New Size(17, 17)
+        lbl4P.Size = New Size(16, 18)
         lbl4P.TabIndex = 219
         lbl4P.Text = "4"
         ' 
@@ -2556,12 +2556,12 @@ Partial Class frmGame
         ' 
         lbl3P.AutoSize = True
         lbl3P.BackColor = Color.Transparent
-        lbl3P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl3P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl3P.ForeColor = Color.White
         lbl3P.Location = New Point(194, 124)
         lbl3P.Margin = New Padding(2, 0, 2, 0)
         lbl3P.Name = "lbl3P"
-        lbl3P.Size = New Size(17, 17)
+        lbl3P.Size = New Size(16, 18)
         lbl3P.TabIndex = 218
         lbl3P.Text = "3"
         ' 
@@ -2569,12 +2569,12 @@ Partial Class frmGame
         ' 
         lbl2P.AutoSize = True
         lbl2P.BackColor = Color.Transparent
-        lbl2P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl2P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl2P.ForeColor = Color.White
         lbl2P.Location = New Point(158, 124)
         lbl2P.Margin = New Padding(2, 0, 2, 0)
         lbl2P.Name = "lbl2P"
-        lbl2P.Size = New Size(17, 17)
+        lbl2P.Size = New Size(16, 18)
         lbl2P.TabIndex = 217
         lbl2P.Text = "2"
         ' 
@@ -2582,12 +2582,12 @@ Partial Class frmGame
         ' 
         lbl1P.AutoSize = True
         lbl1P.BackColor = Color.Transparent
-        lbl1P.Font = New Font("Arial Rounded MT Bold", 11F)
+        lbl1P.Font = New Font("Microsoft Sans Serif", 11F)
         lbl1P.ForeColor = Color.White
         lbl1P.Location = New Point(122, 124)
         lbl1P.Margin = New Padding(2, 0, 2, 0)
         lbl1P.Name = "lbl1P"
-        lbl1P.Size = New Size(17, 17)
+        lbl1P.Size = New Size(16, 18)
         lbl1P.TabIndex = 216
         lbl1P.Text = "1"
         ' 
@@ -2595,12 +2595,12 @@ Partial Class frmGame
         ' 
         lblAP.AutoSize = True
         lblAP.BackColor = Color.Transparent
-        lblAP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblAP.Font = New Font("Microsoft Sans Serif", 11F)
         lblAP.ForeColor = Color.White
         lblAP.Location = New Point(92, 145)
         lblAP.Margin = New Padding(2, 0, 2, 0)
         lblAP.Name = "lblAP"
-        lblAP.Size = New Size(19, 17)
+        lblAP.Size = New Size(17, 18)
         lblAP.TabIndex = 226
         lblAP.Text = "A"
         ' 
@@ -2608,12 +2608,12 @@ Partial Class frmGame
         ' 
         lblBP.AutoSize = True
         lblBP.BackColor = Color.Transparent
-        lblBP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblBP.Font = New Font("Microsoft Sans Serif", 11F)
         lblBP.ForeColor = Color.White
         lblBP.Location = New Point(91, 180)
         lblBP.Margin = New Padding(2, 0, 2, 0)
         lblBP.Name = "lblBP"
-        lblBP.Size = New Size(19, 17)
+        lblBP.Size = New Size(18, 18)
         lblBP.TabIndex = 227
         lblBP.Text = "B"
         ' 
@@ -2621,12 +2621,12 @@ Partial Class frmGame
         ' 
         lblCP.AutoSize = True
         lblCP.BackColor = Color.Transparent
-        lblCP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblCP.Font = New Font("Microsoft Sans Serif", 11F)
         lblCP.ForeColor = Color.White
         lblCP.Location = New Point(91, 216)
         lblCP.Margin = New Padding(2, 0, 2, 0)
         lblCP.Name = "lblCP"
-        lblCP.Size = New Size(19, 17)
+        lblCP.Size = New Size(19, 18)
         lblCP.TabIndex = 228
         lblCP.Text = "C"
         ' 
@@ -2634,12 +2634,12 @@ Partial Class frmGame
         ' 
         lblDP.AutoSize = True
         lblDP.BackColor = Color.Transparent
-        lblDP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblDP.Font = New Font("Microsoft Sans Serif", 11F)
         lblDP.ForeColor = Color.White
         lblDP.Location = New Point(91, 252)
         lblDP.Margin = New Padding(2, 0, 2, 0)
         lblDP.Name = "lblDP"
-        lblDP.Size = New Size(19, 17)
+        lblDP.Size = New Size(19, 18)
         lblDP.TabIndex = 229
         lblDP.Text = "D"
         ' 
@@ -2647,12 +2647,12 @@ Partial Class frmGame
         ' 
         lblEP.AutoSize = True
         lblEP.BackColor = Color.Transparent
-        lblEP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblEP.Font = New Font("Microsoft Sans Serif", 11F)
         lblEP.ForeColor = Color.White
         lblEP.Location = New Point(92, 289)
         lblEP.Margin = New Padding(2, 0, 2, 0)
         lblEP.Name = "lblEP"
-        lblEP.Size = New Size(18, 17)
+        lblEP.Size = New Size(18, 18)
         lblEP.TabIndex = 230
         lblEP.Text = "E"
         ' 
@@ -2660,12 +2660,12 @@ Partial Class frmGame
         ' 
         lblFP.AutoSize = True
         lblFP.BackColor = Color.Transparent
-        lblFP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblFP.Font = New Font("Microsoft Sans Serif", 11F)
         lblFP.ForeColor = Color.White
         lblFP.Location = New Point(92, 327)
         lblFP.Margin = New Padding(2, 0, 2, 0)
         lblFP.Name = "lblFP"
-        lblFP.Size = New Size(17, 17)
+        lblFP.Size = New Size(17, 18)
         lblFP.TabIndex = 231
         lblFP.Text = "F"
         ' 
@@ -2673,12 +2673,12 @@ Partial Class frmGame
         ' 
         lblGP.AutoSize = True
         lblGP.BackColor = Color.Transparent
-        lblGP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblGP.Font = New Font("Microsoft Sans Serif", 11F)
         lblGP.ForeColor = Color.White
         lblGP.Location = New Point(91, 363)
         lblGP.Margin = New Padding(2, 0, 2, 0)
         lblGP.Name = "lblGP"
-        lblGP.Size = New Size(20, 17)
+        lblGP.Size = New Size(20, 18)
         lblGP.TabIndex = 232
         lblGP.Text = "G"
         ' 
@@ -2686,12 +2686,12 @@ Partial Class frmGame
         ' 
         lblHP.AutoSize = True
         lblHP.BackColor = Color.Transparent
-        lblHP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblHP.Font = New Font("Microsoft Sans Serif", 11F)
         lblHP.ForeColor = Color.White
         lblHP.Location = New Point(91, 398)
         lblHP.Margin = New Padding(2, 0, 2, 0)
         lblHP.Name = "lblHP"
-        lblHP.Size = New Size(19, 17)
+        lblHP.Size = New Size(19, 18)
         lblHP.TabIndex = 233
         lblHP.Text = "H"
         ' 
@@ -2699,12 +2699,12 @@ Partial Class frmGame
         ' 
         lblIP.AutoSize = True
         lblIP.BackColor = Color.Transparent
-        lblIP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblIP.Font = New Font("Microsoft Sans Serif", 11F)
         lblIP.ForeColor = Color.White
         lblIP.Location = New Point(94, 435)
         lblIP.Margin = New Padding(2, 0, 2, 0)
         lblIP.Name = "lblIP"
-        lblIP.Size = New Size(13, 17)
+        lblIP.Size = New Size(11, 18)
         lblIP.TabIndex = 234
         lblIP.Text = "I"
         ' 
@@ -2712,12 +2712,12 @@ Partial Class frmGame
         ' 
         lblJP.AutoSize = True
         lblJP.BackColor = Color.Transparent
-        lblJP.Font = New Font("Arial Rounded MT Bold", 11F)
+        lblJP.Font = New Font("Microsoft Sans Serif", 11F)
         lblJP.ForeColor = Color.White
         lblJP.Location = New Point(90, 470)
         lblJP.Margin = New Padding(2, 0, 2, 0)
         lblJP.Name = "lblJP"
-        lblJP.Size = New Size(17, 17)
+        lblJP.Size = New Size(16, 18)
         lblJP.TabIndex = 235
         lblJP.Text = "J"
         ' 
@@ -2725,12 +2725,12 @@ Partial Class frmGame
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label1.Font = New Font("Microsoft Sans Serif", 11F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(516, 474)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(17, 17)
+        Label1.Size = New Size(16, 18)
         Label1.TabIndex = 245
         Label1.Text = "J"
         ' 
@@ -2738,12 +2738,12 @@ Partial Class frmGame
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label2.Font = New Font("Microsoft Sans Serif", 11F)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(518, 439)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(13, 17)
+        Label2.Size = New Size(11, 18)
         Label2.TabIndex = 244
         Label2.Text = "I"
         ' 
@@ -2751,12 +2751,12 @@ Partial Class frmGame
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label3.Font = New Font("Microsoft Sans Serif", 11F)
         Label3.ForeColor = Color.White
         Label3.Location = New Point(515, 402)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(19, 17)
+        Label3.Size = New Size(19, 18)
         Label3.TabIndex = 243
         Label3.Text = "H"
         ' 
@@ -2764,12 +2764,12 @@ Partial Class frmGame
         ' 
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label4.Font = New Font("Microsoft Sans Serif", 11F)
         Label4.ForeColor = Color.White
         Label4.Location = New Point(515, 367)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(20, 17)
+        Label4.Size = New Size(20, 18)
         Label4.TabIndex = 242
         Label4.Text = "G"
         ' 
@@ -2777,12 +2777,12 @@ Partial Class frmGame
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label5.Font = New Font("Microsoft Sans Serif", 11F)
         Label5.ForeColor = Color.White
         Label5.Location = New Point(516, 331)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(17, 17)
+        Label5.Size = New Size(17, 18)
         Label5.TabIndex = 241
         Label5.Text = "F"
         ' 
@@ -2790,12 +2790,12 @@ Partial Class frmGame
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label6.Font = New Font("Microsoft Sans Serif", 11F)
         Label6.ForeColor = Color.White
         Label6.Location = New Point(516, 293)
         Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(18, 17)
+        Label6.Size = New Size(18, 18)
         Label6.TabIndex = 240
         Label6.Text = "E"
         ' 
@@ -2803,12 +2803,12 @@ Partial Class frmGame
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label7.Font = New Font("Microsoft Sans Serif", 11F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(515, 256)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(19, 17)
+        Label7.Size = New Size(19, 18)
         Label7.TabIndex = 239
         Label7.Text = "D"
         ' 
@@ -2816,12 +2816,12 @@ Partial Class frmGame
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label8.Font = New Font("Microsoft Sans Serif", 11F)
         Label8.ForeColor = Color.White
         Label8.Location = New Point(515, 220)
         Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(19, 17)
+        Label8.Size = New Size(19, 18)
         Label8.TabIndex = 238
         Label8.Text = "C"
         ' 
@@ -2829,12 +2829,12 @@ Partial Class frmGame
         ' 
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label9.Font = New Font("Microsoft Sans Serif", 11F)
         Label9.ForeColor = Color.White
         Label9.Location = New Point(515, 184)
         Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(19, 17)
+        Label9.Size = New Size(18, 18)
         Label9.TabIndex = 237
         Label9.Text = "B"
         ' 
@@ -2842,12 +2842,12 @@ Partial Class frmGame
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Arial Rounded MT Bold", 11F)
+        Label10.Font = New Font("Microsoft Sans Serif", 11F)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(516, 149)
         Label10.Margin = New Padding(2, 0, 2, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(19, 17)
+        Label10.Size = New Size(17, 18)
         Label10.TabIndex = 236
         Label10.Text = "A"
         ' 
@@ -2862,11 +2862,11 @@ Partial Class frmGame
         ' 
         lblProgress.AutoSize = True
         lblProgress.BackColor = Color.Transparent
-        lblProgress.Font = New Font("Arial Rounded MT Bold", 9F)
+        lblProgress.Font = New Font("Microsoft Sans Serif", 9F)
         lblProgress.ForeColor = Color.White
         lblProgress.Location = New Point(541, 509)
         lblProgress.Name = "lblProgress"
-        lblProgress.Size = New Size(99, 14)
+        lblProgress.Size = New Size(93, 15)
         lblProgress.TabIndex = 247
         lblProgress.Text = "Progress to Win"
         ' 
@@ -3148,6 +3148,7 @@ Partial Class frmGame
         Cursor = Cursors.Cross
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.Fixed3D
+        MaximizeBox = False
         Name = "frmGame"
         Text = " Battleship - In Game"
         CType(picPlayerA1, ComponentModel.ISupportInitialize).EndInit()
